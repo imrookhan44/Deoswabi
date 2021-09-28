@@ -1,6 +1,6 @@
 import React from 'react'
 import "../login/Login.css"
-import { AiOutlineEyeInvisible } from "react-icons/fa";
+import { AiOutlineEyeInvisible } from "react-icons/ai";
 export default function Login() {
     return (
         <div>
@@ -17,7 +17,8 @@ export default function Login() {
   <input type="text" class="form-control" placeholder="Password" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
   <span class="input-group-text" id="basic-addon2">Forgot Password?</span>
 </div>
-<AiOutlineEyeInvisible/>
+
+
 <div>
 <button type="button" class="buttons btn btn-secondary m-2">Sign Up</button>
 <button type="button" class="buttons btn btn-success m-2">Login</button>
