@@ -1,7 +1,6 @@
 .Main{
     height: 100vh;
-    /* background-color: black; */
-    background-image: url(../../assets/login/images\ \(3\).jpg);
+    background-image: url(../../assets/login/Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -9,11 +8,12 @@
     height: 12vh;
     background-size: contain;
 }
+.Logo img:hover{
+    border: green solid 4px;
+}
 .Data{
     background-color: white;
     color: black;
-    /* height: 50vh;
-    width: 40vw; */
 }
 .buttons{
     border-radius: 50px;

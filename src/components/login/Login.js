@@ -1,7 +1,6 @@
 import React from 'react'
 import "../login/Login.css"
 import Logo from "../../assets/login/Logo.png"
-// import { AiOutlineEyeInvisible } from "react-icons/ai";
 export default function Login() {
     return (
         <div>
@@ -11,8 +10,6 @@ export default function Login() {
                 <div className="Logo pb-4">
                     <img src={Logo} alt="Logo"/>
                 </div>
-
-
             <div>
             <div class="input-group mb-3">
   <input type="text" class="form-control" placeholder="Login ID" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
