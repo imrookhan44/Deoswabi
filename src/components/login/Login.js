@@ -1,16 +1,22 @@
 import React from 'react'
 import "../login/Login.css"
-import { AiOutlineEyeInvisible } from "react-icons/ai";
+import Logo from "../../assets/login/Logo.png"
+// import { AiOutlineEyeInvisible } from "react-icons/ai";
 export default function Login() {
     return (
         <div>
             <div className="Main d-flex flex-row justify-content-center align-items-center">
             
-            <div className="Data d-flex align-items-center justify-content-center">
+            <div className="Data d-flex flex-column align-items-center justify-content-center p-5">
+                <div className="Logo pb-4">
+                    <img src={Logo} alt="Logo"/>
+                </div>
+
+
             <div>
             <div class="input-group mb-3">
   <input type="text" class="form-control" placeholder="Login ID" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
-  <span class="input-group-text" id="basic-addon2">forgot login id?</span>
+  <span class="input-group-text" id="basic-addon2">Forgot Login id?</span>
 </div>
 
 <div class="input-group mb-3">
