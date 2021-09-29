@@ -1,5 +1,6 @@
 import React from 'react'
-import logo from '../components/assets/upaise-logo.jpg'
+import { Link } from 'react-router-dom'
+import logo from '../assets/upaise-logo.jpg'
 export default function Home() {
     return (
         <>
@@ -8,20 +9,20 @@ export default function Home() {
                     <div className='row'>
                         <div className='col align-self-center' >
                             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                                <a class="navbar-brand" href="#"><img src={logo} /></a>
+                                <Link class="navbar-brand" to="/"><img src={logo} /></Link>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav mr-auto">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="#">Home </a>
+                                            <Link class="nav-link" to="/">Home </Link>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Services</a>
+                                            <a class="nav-link" to="#">Services</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Login</a>
+                                            <Link class="nav-link" to="login">Login</Link>
                                         </li>
                                     </ul>
                                 </div>

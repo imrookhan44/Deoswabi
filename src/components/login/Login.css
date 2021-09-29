@@ -1,0 +1,15 @@
+.Main{
+    height: 100vh;
+    background-color: black;
+}
+
+.Data{
+    background-color: white;
+    color: black;
+    height: 70vh;
+    width: 60vw;
+}
+.buttons{
+    border-radius: 50px;
+    width: 110px;
+}
