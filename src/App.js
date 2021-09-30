@@ -1,13 +1,13 @@
 import './App.css';
-import Profile from './profile/Profile'
-import Footer from './footer/Footer';
-
-
+import Footer from '../src/Footer/Footer'
+import Profile from './profile/Profile';
+import Projeoct from './Project/Projeoct';
 function App() {
   return (
     <div className="App">
-     <Profile />
-     <Footer />
+      <Profile />
+      <Projeoct />
+    {/* <Footer />  */}
     </div>
   );
 }

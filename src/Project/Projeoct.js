@@ -1,19 +1,16 @@
 import React from 'react'
-import '../Footer/Footer.css'
+import '../Project/Project.css'
 import { IoLogoFacebook } from "react-icons/io"
 import { GrInstagram } from "react-icons/gr"
 import { FiTwitter } from "react-icons/fi"
 import { SiWhatsapp } from "react-icons/si"
-const Footer = () => {
+const Projeoct = () => {
     return (
         <div>
-            <footer className="footer">
-                <div className="container">
-                    <div
-                        style={{
-                            display: "flex",
-                        }}>
-                        <div className="footer-col">
+            <div className="">
+                <div className="four-sides">
+                    <div className="footer-col">
+                        <div className="footer-col ">
                             <h4>New Paisa</h4>
                             <ul>
                                 <li>
@@ -28,13 +25,11 @@ const Footer = () => {
                                 <li>
                                     <a href="link">Work With Us</a>
                                 </li>
-                                <li>
-                                    <a href="link"></a></li>
-                                <li>
-                                    <a href="link"></a>
-                                </li>
+
                             </ul>
                         </div>
+                    </div>
+                    <div className="margin">
                         <div className="footer-col">
                             <h4>Helps</h4>
                             <ul>
@@ -47,11 +42,11 @@ const Footer = () => {
                                 <li>
                                     <a href="link">FAQs</a>
                                 </li>
-                                <li>
-                                    <a href="link"></a>
-                                </li>
+
                             </ul>
                         </div>
+                    </div>
+                    <div className="margin">
                         <div className="footer-col">
                             <h4>Policy</h4>
                             <ul>
@@ -64,10 +59,12 @@ const Footer = () => {
                                 <li>
                                     <a href="link">FAQS</a>
                                 </li>
-                                
-                                
+
+
                             </ul>
                         </div>
+                    </div>
+                    <div className="margin">
                         <div className="footer-col">
                             <h4>Contact Us</h4>
                             <div className="social-links">
@@ -78,17 +75,19 @@ const Footer = () => {
                                     <GrInstagram style={{ fontSize: "30px", color: "#0077b5" }} />
                                 </a>
                                 <a href="link">
-                                    <FiTwitter  style={{ fontSize: "30px", color: "   #1DA1F2" }} />
+                                    <FiTwitter style={{ fontSize: "30px", color: "   #1DA1F2" }} />
                                 </a>
                                 <a href="link">
-                                    <SiWhatsapp  style={{ fontSize: "30px", color: "#de4b69" }} />
+                                    <SiWhatsapp style={{ fontSize: "30px", color: "#de4b69" }} />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </footer>
-        </div >
+
+            </div>
+        </div>
     )
 }
-export default Footer
+
+export default Projeoct
