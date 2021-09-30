@@ -1,0 +1,10 @@
+.form-control{
+    border-top: aliceblue !important;
+border-right: aliceblue !important;
+border-left: aliceblue !important;;
+border-radius: 0px !important;;
+}
+.signup{
+    font-size: xx-large;
+    font-weight: 600;
+}
