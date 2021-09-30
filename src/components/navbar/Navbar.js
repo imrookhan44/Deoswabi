@@ -8,21 +8,21 @@ export default function Home() {
                 <div className='container'>
                     <div className='row'>
                         <div className='col align-self-center' >
-                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                                <Link class="navbar-brand" to="/"><img src={logo} /></Link>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
+                            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                                <Link className="navbar-brand" to="/"><img src={logo} alt='logo' /></Link>
+                                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span className="navbar-toggler-icon"></span>
                                 </button>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav mr-auto">
-                                        <li class="nav-item active">
-                                            <Link class="nav-link" to="/">Home </Link>
+                                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul className="navbar-nav mr-auto">
+                                        <li className="nav-item active">
+                                            <Link className="nav-link" to="/">Home </Link>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" to="#">Services</a>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="Updatedacc">Updatedacc</Link>
                                         </li>
-                                        <li class="nav-item">
-                                            <Link class="nav-link" to="login">Login</Link>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="login">Login</Link>
                                         </li>
                                     </ul>
                                 </div>
