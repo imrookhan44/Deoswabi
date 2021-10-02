@@ -1,7 +1,7 @@
 import React from "react";
 import "../Signup/Signup.css";
 import signup from "../../assets/signup/signup.jpg";
-import { RiUserFill } from 'react-icons/ri';
+// import { RiUserFill } from 'react-icons/ri';
 export default function Signup() {
   return (
     <div className="container-fluid">
