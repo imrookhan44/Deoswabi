@@ -52,7 +52,7 @@ const Project = () => {
                             <h4 >Policy</h4>
                             <ul>
                                 <li>
-                                    <a href="#">contact us</a>
+                                    <a href="#">Contact us</a>
                                 </li>
                                 <li>
                                 <a href="#">Schedule of Change</a>
