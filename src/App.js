@@ -1,15 +1,14 @@
 import './App.css';
-import Footer from '../src/Footer/Footer'
-import Profile from './profile/Profile';
-import Projeoct from './Project/Projeoct';
-import Login from './components/login/Login';
+
+import Profile from './components/profile/Profile'
+ import Project from './components/Project/Project';
+// import Login from './components/login/Login';
 function App() {
   return (
     <div className="App">
       <Profile />
-      <Projeoct />
-      <Login />
-    {/* <Footer />  */}
+      <Project />
+      {/* <Login /> */}
     </div>
   );
 }
