@@ -1,6 +1,6 @@
 import React from "react";
 import "../Signup/Signup.css";
-import signup from "../../assets/signup/signup.jpg";
+import signup from "../../assets/images/signup.jpg";
 // import { RiUserFill } from 'react-icons/ri';
 export default function Signup() {
   return (

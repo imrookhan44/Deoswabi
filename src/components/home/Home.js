@@ -1,5 +1,5 @@
 import React from 'react'
-import slider1 from '../assets/money3.jpg';
+import slider1 from "../../assets/images/money3.jpg";
 
 export default function Home() {
     return (
