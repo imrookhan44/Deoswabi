@@ -1,5 +1,6 @@
 .Main{
     height: 100vh;
+    background-image: url(../../assets/login/Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }

@@ -21,6 +21,9 @@ export default function Home() {
                                         <li className="nav-item">
                                             <Link className="nav-link" to="Updatedacc">Updatedacc</Link>
                                         </li>
+                                        <li className='nav-item'>
+                                            <Link className='nav-link' to='profile'>Profile</Link>
+                                        </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" to="login">Login</Link>
                                         </li>

@@ -1,30 +1,28 @@
-
 import './App.css';
-import Login from './components/login/Login';
-import Navbar from './components/navbar/Navbar'
-import Home from './components/home/Home'
+import Navbar from './components/navbar/Navbar';
+import Home from './components/home/Home';
+import Profile from './components/profile/Profile';
 import Updatedacc from './components/updatedacc/Updatedacc';
-
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom'
 function App() {
   return (
+
     <div>
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path='/'>
+          <Route path='/'>
             <Home />
           </Route>
-          <Route exact path='/Updatedacc'>
-            <Updatedacc />
+          <Route path='/Profile'>
+            <Profile />
           </Route>
-          <Route path='/login'>
-            <Login />
+          <Route path='/Updatedacc'>
+            <Updatedacc />
           </Route>
         </Switch>
       </Router>
     </div>
-  );
+  )
 }
-
-export default App;
+export default App
