@@ -1,3 +1,7 @@
+// import logo from './logo.svg';
+import Signup from '../src/Component/Signup/Signup';
+import Signin from './Signin/Signin';
+
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
@@ -12,6 +16,8 @@ function App() {
         <Switch>
           <Route path='/profile'  component={Profile} />
           <Route path='/updatedacc' component={Updatedacc} />
+          <Route path='/signup' component={Signup} />
+          <Route path='/signin' component={Signin} />
           <Route path='/' component={Home} />
         </Switch>
       </BrowserRouter>
