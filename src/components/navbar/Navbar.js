@@ -25,9 +25,6 @@ export default function Home() {
                                             <Link className='nav-link' to='profile'>Profile</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="signin">Login</Link>
-                                        </li>
-                                        <li className="nav-item">
                                             <Link className="nav-link" to="signup">Sign up</Link>
                                         </li>
                                     </ul>

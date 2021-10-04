@@ -1,7 +1,8 @@
 import React from "react";
 import "../Signup/Signup.css";
 import signup from "../../assets/images/signup.jpg";
-// import { RiUserFill } from 'react-icons/ri';
+import { Link } from 'react-router-dom'
+
 export default function Signup() {
   return (
     <div className="container-fluid">
@@ -15,7 +16,7 @@ export default function Signup() {
                 <input type="text" className="form-control pt-4" placeholder="Password" />
                 <input type="text" className="form-control pt-4" placeholder="Repeat Password" />
                 <button type="button" className="btn btn-primary mt-4">Register</button>
-                <p className=' mt-2'>Already have an account <a href='/'> Signin </a></p>
+                <p className=' mt-2'>Already have an account <Link to='/signin'>Signin</Link> </p>
                 
                 
             </div>
