@@ -3,7 +3,6 @@ import Profile from '../profile/Profile';
 import Updatedacc from '../updatedacc/Updatedacc';
 import Signup from '../Signup/Signup';
 import Signin from '../Signin/Signin';
-
 import {  Route, Switch, } from 'react-router-dom'
 
 function Routes() {

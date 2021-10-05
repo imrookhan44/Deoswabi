@@ -1,0 +1,10 @@
+.custom_img{
+    margin-top: 40px;
+}
+.form-control:focus{
+border-top: none !important;
+border-right: none !important;
+border-left: none !important;
+box-shadow: none !important;
+outline: none !important;
+}
