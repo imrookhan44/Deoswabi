@@ -4,7 +4,7 @@ const Footer = () => {
         <>
             <div className='fixed-bottom bg-dark text-primary' >
                 <div className='row mt-3'>
-                    <div className='text-center'><p>Created by Education Fund © 2021</p></div>
+                    <div className='text-center'><p>Education Fund © 2021</p></div>
                 </div>
             </div>
         </>
