@@ -34,7 +34,7 @@ export default function Signin() {
                 <div className="row mt-5 ">
                     <div className="col-sm-3 offset-3">
                         <h3 className="signup mt-5">SignIn</h3>
-                        <input type="email" className="form-control pt-4" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} />
+                        <input type="number" className="form-control pt-4" placeholder='Phone Number'></input>
                         <input type="password" className="form-control pt-4" placeholder="Password"  onChange={(e)=>setPassword(e.target.value)}  />
                         <button type="button" className="btn btn-primary mt-4"  onClick={()=> handleSubmit()}>Sign In</button>
                     </div>

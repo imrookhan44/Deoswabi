@@ -1,5 +1,6 @@
 import React from 'react'
-import pic1 from '../../images/pic1.jpg'
+// import pic1 from '../../images/pic1.jpg'
+import slider1 from "../../assets/images/education1.jpg"
 import pic2 from  '../../images/pic2.jpg'
 import pic3 from  '../../images/pic3.jpg'
 
@@ -15,7 +16,7 @@ const Profile = () => {
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
-      <img src={pic1} class="d-block w-100" alt="..."/>
+      <img src={slider1} class="d-block w-100" alt="..."/>
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
