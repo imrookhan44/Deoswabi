@@ -1,4 +1,5 @@
 import React from 'react'
+import './Navbar.css'
 import { Link } from 'react-router-dom'
 import logo from "../../assets/images/upaise-logo.jpg";
 export default function Home() {
@@ -23,6 +24,12 @@ export default function Home() {
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" to="signup">Sign up</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="Upload">Upload</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="login">Login</Link>
                                         </li>
                                         <li> <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
                                         </li>

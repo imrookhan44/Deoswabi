@@ -1,0 +1,48 @@
+.main{
+    background-image: url(../../assets/images/human.jpg);
+    background-repeat: no-repeat;
+    background-size: 1500px 600px;
+    /* border: solid red; */
+  }
+
+
+.border{
+    border-radius: 5px;
+    border:10px solid blue;
+    color: rgb(0, 0, 7);
+    background: rgb(157, 168, 160);
+
+    
+}
+/* .form{
+    border:  solid red;
+    background-image: url(../../assets/images/human.jpg);
+    background-repeat: no-repeat;
+} */
+
+.b{
+    background-color: cornflowerblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+}
+/* input[type=text], input[type=password] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color:#f1f1f1;
+  } */
+  .img{
+      
+  }
+  .col-4{
+    background-color: rgb(255, 255, 255); 
+      
+     
+    }

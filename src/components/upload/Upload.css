@@ -1,0 +1,31 @@
+.body-a{
+    
+    background-color: greenyellow;
+    background-image: url("../../assets/images/education1.jpg");
+    
+}
+    
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .btnnn {
+    border: 2px solid rgb(14, 80, 201);
+    color: rgb(247, 241, 241);
+    background-color: rgb(14, 80, 201);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
