@@ -5,6 +5,7 @@ import Signup from '../Signup/Signup';
 import Signin from '../Signin/Signin';
 import Upload from '../upload/Upload';
 import Login from '../login/Login';
+import Userdetails from '../user details/user';
 import {  Route, Switch, } from 'react-router-dom'
  
 function Routes() {
@@ -17,6 +18,7 @@ function Routes() {
           <Route path='/signin' component={Signin} />
           <Route path='/upload' component={Upload} />
           <Route path='/login' component={Login} />
+          <Route path='/userdetails' component={Userdetails} />
 
           <Route path='/' component={Home} />
         </Switch>

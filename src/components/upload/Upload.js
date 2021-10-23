@@ -1,6 +1,7 @@
 import React from 'react'
 import './Upload.css'
 import education from '../../assets/images/education.jpg'
+import login from '../../assets/images/login.jpg'
 
 export default function Upload() {
     return (
@@ -13,6 +14,10 @@ export default function Upload() {
                     <input type="file" name="myfile" />
                 </div>
             </center>
+            {/* <div className="img">
+                        <img src= {login}>
+                        </img>
+                    </div> */}
         </div>
     )
 }
