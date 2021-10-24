@@ -1,11 +1,12 @@
 import React from 'react'
+import './Navbar.css'
 import { Link } from 'react-router-dom'
 import logo from "../../assets/images/upaise-logo.jpg";
 export default function Home() {
     return (
         <>
             <div className='container-fluid'>
-                <div className='container'>
+                <div className='container-fluide'>
                     <div className='row'>
                         <div className='col align-self-center' >
                             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,6 +24,15 @@ export default function Home() {
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" to="signup">Sign up</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="Upload">Upload</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="login">Login</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="userdetails">User details</Link>
                                         </li>
                                         <li> <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
                                         </li>
