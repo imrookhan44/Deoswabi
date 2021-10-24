@@ -32,7 +32,7 @@ export default function user() {
 
   <a href="About.html"><b>About </b></a> &nbsp; &nbsp; &nbsp;
   <a href="Timeline.html"><b>Timeline </b></a>
-  <br /><br /><br /><br />
+  <br /><br /><br /><br /><br />
 
    User id<br /><br />
    Name <br /><br />
@@ -42,7 +42,6 @@ export default function user() {
 
   </div>
 
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
   {/* <div class="grid-item">
   AAAAAAAAAAAAAAA
   </div> */}
@@ -52,7 +51,7 @@ export default function user() {
   <div class="grid-item1">
   <button type="button" class="edit">Edit Profile</button><br /><br />
   <br /><br /><br /><br />
-  <br /><br />
+  <br /><br /><br /><br />
 
   787865454546<br /><br />
    vinod thapa <br /><br />
