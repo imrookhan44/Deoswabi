@@ -10,7 +10,7 @@ export default function Upload() {
 
             <center>
                 <div class="upload-btn-wrapper mt-5">
-                    <button class="btnnn">Upload a file</button>
+                    <button class="btnnn " >Upload a file</button>
                     <input type="file" name="myfile" />
                 </div>
             </center>
