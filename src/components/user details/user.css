@@ -2,13 +2,13 @@
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
   /* background-color: #2196F3; */
-  padding: 10px;
+  /* padding: 10px; */
   margin-left: 50px;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   /* border: 1px solid rgba(0, 0, 0, 0.8); */
-  padding: 20px;
+  /* padding: 20px; */
   font-size: 17px;
   text-align: left;
   /* font-family: "Lucida Console", "Courier New", monospace; */
@@ -17,7 +17,7 @@
 .grid-item1 {
   background-color: rgba(255, 255, 255, 0.8);
   /* border: 1px solid rgba(0, 0, 0, 0.8); */
-  padding: 20px;
+  /* padding: 20px; */
   font-size: 17px;
   text-align: right;
   /* font-family: "Lucida Console", "Courier New", monospace; */

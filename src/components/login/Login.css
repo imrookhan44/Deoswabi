@@ -1,14 +1,16 @@
 .main{
     background-image: url(../../assets/images/human.jpg);
-    background-repeat: no-repeat;
-    background-size: 1500px 600px;
-    width: 1370px;
-    height: 500px;
+    /* background-repeat: no-repeat; */
+    /* background-size: 1500px 600px; */
+    /* width: 1370px; */
+    /* height: 500px; */
     /* border: solid red; */
-    position: fixed;
-    background-position: center;
+    /* position: fixed; */
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     
   }
 
@@ -47,9 +49,7 @@
     box-sizing: border-box;
     background-color:#f1f1f1;
   } */
-  .img{
-      
-  }
+  
   .col-4{
     background-color: white;
     border: 3px solid rgb(7, 7, 7);
