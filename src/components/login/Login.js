@@ -16,13 +16,13 @@ export default function Login() {
                     
                    
                     <div className="row">
-                        <div className="col-4 ms-5">
+                        <div className="col-4 ms-3">
                         
                         <div className="img">
-                        <center>
+                        <right>
                         <img src= {login}>
                         </img>
-                        </center>
+                        </right>
                     </div>
                         <h2>
                         {/* APCA Education */}
@@ -38,8 +38,6 @@ export default function Login() {
                             <button className="b" style={{width:"50%",borderRadius:"20px",}}>Sign In</button>
                         </div>
                     </div>
-                
-
                 </div>
             </form>
         </div>

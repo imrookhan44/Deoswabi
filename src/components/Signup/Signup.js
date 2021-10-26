@@ -33,7 +33,7 @@ export default function Signup() {
                 <div className="row mt-5 ">
                     <div className="col-sm-3 offset-3">
                         <h3 className="signup mt-5">Sign Up</h3>
-                        <input type='text' className='form-control pt-4' placeholder='Full Name'></input>
+                        <input type='name' className='form-control pt-4' placeholder='Full Name'></input>
                         <input type="number" className="form-control pt-4" placeholder='Phone Number'></input>
                         {/* <input type="email" className="form-control pt-4" placeholder="Email" onChange={(e) => setEmail(e.target.value)}></input> */}
                         <input type="password" className="form-control pt-4" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />

@@ -1,12 +1,5 @@
 .main{
     background-image: url(../../assets/images/human.jpg);
-    /* background-repeat: no-repeat; */
-    /* background-size: 1500px 600px; */
-    /* width: 1370px; */
-    /* height: 500px; */
-    /* border: solid red; */
-    /* position: fixed; */
-    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -14,21 +7,12 @@
     
   }
 
-
 .border{
     border-radius: 5px;
     border:10px solid blue;
     color: rgb(0, 0, 7);
-    background: rgb(157, 168, 160);
-    
-
-    
+    background: rgb(157, 168, 160);    
 }
-/* .form{
-    border:  solid red;
-    background-image: url(../../assets/images/human.jpg);
-    background-repeat: no-repeat;
-} */
 
 .b{
     background-color: cornflowerblue;
@@ -37,24 +21,14 @@
     margin: 8px 0;
     border: none;
     cursor: pointer;
-   
-    /* width: 30%; */
 }
-/* input[type=text], input[type=password] {
-    width: 30%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    background-color:#f1f1f1;
-  } */
-  
+
   .col-4{
     background-color: white;
     border: 3px solid rgb(7, 7, 7);
-    background-image: url(../../assets/images/hhhhh.png)  ;
+    background-image: url(../../assets/images/hhhhh.png);
     /* position: fixed; */
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 75vh;
+    width: 10vw;
     }
