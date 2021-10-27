@@ -1,34 +1,77 @@
-.main{
-    background-image: url(../../assets/images/human.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    
-  }
+body, html {
+  height: 100%;
+}
 
-.border{
-    border-radius: 5px;
-    border:10px solid blue;
-    color: rgb(0, 0, 7);
-    background: rgb(157, 168, 160);    
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Add styles to the form container */
+.container1 {
+  position: absolute;
+  right: 70;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+  /* input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+} */
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.button:hover {
+  opacity: 1;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto ;
+}
+
+.grid-item {
+  text-align: left;
+}
+
+
+.grid-item2 {
+  text-align:left;
+  width:
 }
 
 .b{
-    background-color: cornflowerblue;
-    color: rgb(247, 244, 244);
-    padding: 14px 20px; 
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-}
+  background-color: cornflowerblue;
+  color: rgb(247, 244, 244);
+  /* padding: 14px 20px; 
+  margin: 8px 0; */
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 50px;
 
-  .col-4{
-    background-color: white;
-    border: 3px solid rgb(7, 7, 7);
-    background-image: url(../../assets/images/hhhhh.png);
-    /* position: fixed; */
-    background-repeat: no-repeat;
-    height: 75vh;
-    width: 10vw;
-    }
+}

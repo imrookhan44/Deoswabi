@@ -54,38 +54,41 @@
       background-image: url(../../assets/images/hhhhh.png)
     }
 }   */
-.img{
-  width: 100vw;
-}
 
-.container {
+
+.containera {
   position: fixed;
-  width: 100%vw;
+  width: 100vw;
   max-width: 400px;
 }
 
-.container img {
+.containera img {
   width: 100vw;
-  height: 75vh;
+  height: auto;
+}
+
+.containera .btn {
+  position: absolute;
+  top: 70%;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 12px 24px;
+  border: 5px solid orange;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+  width: 200px;
+  height: 70px;
+  font-weight: bold;
+
   
 }
 
-.container .btn {
-  position: absolute;
-  top: 20%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
-  font-size: 30px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.container .btn:hover {
-  background-color: black;
+.containera .btn:hover {
+  background-color:rgb(34, 36, 28);
+  color: aliceblue;
 }

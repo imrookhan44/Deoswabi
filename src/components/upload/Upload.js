@@ -8,12 +8,13 @@ export default function Upload() {
        
         <div className="body-a">
 
-<div class="container">
+<div class="containera">
 
 <img className="img" src= {upload}>
                         </img> 
                        
-  <button class="btn">Button</button>
+  <button class="btn">Upload a file</button>
+  <input type="file" name="myfile" />
 </div>
 {/* 
             <center>
