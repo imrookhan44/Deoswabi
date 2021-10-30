@@ -29,40 +29,9 @@ export default function Login() {
 
                         </Formik>
  */} 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  <img className='img-fluid' src={login}/>
- 
  <br /><br /><br /><br />
 
  <h2>
@@ -81,7 +50,7 @@ export default function Login() {
                         </form>
                     </div>
                     <div className='col-sm-8'>
-                    <img className='img-fluid' src={human}/>
+                    <img className='img' src={human}/>
                     </div>
                 </div>
             </div>

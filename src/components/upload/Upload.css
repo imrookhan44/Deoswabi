@@ -56,20 +56,20 @@
 }   */
 
 
-.containera {
+.container2 {
   position: fixed;
   width: 100vw;
   max-width: 400px;
 }
 
-.containera img {
+.container2 img {
   width: 100vw;
   height: auto;
 }
 
-.containera .btn {
+.container2 .btn2 {
   position: absolute;
-  top: 70%;
+  top: 67%;
   left: 50vw;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -81,14 +81,14 @@
   cursor: pointer;
   border-radius: 20px;
   text-align: center;
-  width: 200px;
-  height: 70px;
+  width: 180px;
+  height: 60px;
   font-weight: bold;
 
   
 }
 
-.containera .btn:hover {
+.container2 .btn2:hover {
   background-color:rgb(34, 36, 28);
   color: aliceblue;
 }

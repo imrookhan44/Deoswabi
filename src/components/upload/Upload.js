@@ -6,14 +6,14 @@ import upload from '../../assets/images/upload.jpeg'
 export default function Upload() {
     return (
        
-        <div className="body-a">
+        <div className="container2">
 
-<div class="containera">
+<div class="container2">
 
-<img className="img" src= {upload}>
+<img className="img2" src= {upload}>
                         </img> 
                        
-  <button class="btn">Upload a file</button>
+  <button class="btn2">Upload a file</button>
   <input type="file" name="myfile" />
 </div>
 {/* 
