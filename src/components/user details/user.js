@@ -5,12 +5,10 @@ import './user.css'
 export default function user() {
     return (
         <div>
-        
-        <div class="grid-container">
+         <div class="grid-container">
   <div class="grid-item">
   <img src= {login}>
     </img><br /><br />
-
     <b>INTRODUCATION</b><br /><br />
     youtube <br />
     instagram <br />
@@ -56,22 +54,16 @@ export default function user() {
   787865454546<br /><br />
    vinod thapa <br /><br />
    vinodthapa@gmail.com <br /><br />
-   8459634985734856 <br /><br />
+   84596hh34985734856 <br /><br />
    web developer<br />
-
-   
   </div>
-  
-  
 </div>
-
-
         {/* <div className="img1">
     <img src= {login}>
     </img> 
-    <b className="text1"> vinod thapa<br /> web developer <br /> </b><br /><br />
+    <b className="text1">  vinod  thapa<br /> web developer <br /> </b><br /><br />
     <b>
-    introducation     
+    introducation      
     </b>
     </div>
                    
