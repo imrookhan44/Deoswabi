@@ -17,7 +17,7 @@ export default function user() {
     <div class="row pt-4">
     <div class="col ">
     <h6>Birthday  &nbsp;&nbsp;  / 20/04/2004</h6> 
-    <h6>Age  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  / 23</h6> 
+    <h6>Age  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  / 17</h6> 
     <h6>Residance     / Pakistan</h6>
     <h6>Address  &nbsp;&nbsp; / Islamabad </h6>
     </div>

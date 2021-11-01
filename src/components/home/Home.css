@@ -4,6 +4,70 @@
     background-image: url(../../assets/images/education1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    position: fixed;
+    position: relative;
     margin-bottom: 50px;
 } 
+
+.b {
+    position: absolute;
+    top: 40%;
+    left: 85vw;
+    transform: translate(-75%,);
+    -ms-transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 12px 24px;
+    border: 5px solid orange;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    width: 180px;
+    height: 60px;
+    font-weight: bold;
+}
+.btn-success{
+transform: rotate(0deg) !important;
+margin-bottom: 20px;
+background-color: black;
+position: absolute;
+/* position: absolute; */
+top: 5%;
+left: 3vw;
+transform: translate(-75%,);
+-ms-transform: translate(-50%, -50%);
+background-color: black;
+color: white;
+font-size: 20px;
+padding: 12px 24px;
+border: 5px solid orange;
+cursor: pointer;
+border-radius: 20px;
+text-align: center;
+width: 180px;
+height: 60px;
+font-weight: bold;
+}
+
+.material-icons{
+    position: absolute;
+    top: 40%;
+    left: 85vw;
+    transform: translate(-75%,);
+    -ms-transform: translate(-50%, -50%);
+    /* background-color: black; */
+    /* color: white; */
+    font-size: 20px;
+    padding: 12px 24px;
+    /* border: 5px solid orange; */
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    font-weight: bold;
+}
+
+/* .material-icons:hover {
+    background: #911a1a;
+} */

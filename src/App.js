@@ -4,6 +4,7 @@ import Navbar from './components/navbar/Navbar';
 import Footer from '../src/components/footer/Footer';
 import { BrowserRouter , Route, Switch, } from 'react-router-dom'
 import Routes from './components/routes/Routes.';
+import "fontawesome"
 import {auth} from './components/firebase'
 
 import React, {useState,useEffect} from 'react'
