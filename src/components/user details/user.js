@@ -13,7 +13,7 @@ export default function user() {
       <h1 className='heading'>About Me</h1>
       <h3 className="heading2">A Lead UX & UI designer based in Canada</h3>
       <p className="heading3">I design and develop services for customers of all sizes, <br /> specializing in creating stylish, modern websites, web <br /> services and online stores. My passion is to design <br /> digital user experiences through the bold interface and <br />digital user experiences through the bold interface and <br /> meaningful interactions</p>
-    
+     
     <div class="row pt-4">
     <div class="col ">
     <h6>Birthday  &nbsp;&nbsp;  / 20/04/2004</h6> 
