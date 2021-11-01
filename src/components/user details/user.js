@@ -46,11 +46,13 @@ export default function user() {
     <div class="col">
     <h6 class="count offset-1 h2" data-to="850" data-speed="850">850</h6>
      <p class="text m-0px font-w-600">Telephonic Talk</p>
+     <div></div>
     </div>
   </div>
     </div>
     </div>
     </div>
     </div>
+    
   )
 }
