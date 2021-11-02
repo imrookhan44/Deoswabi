@@ -1,11 +1,13 @@
 import React from 'react'
 import madik from '../../assets/images/education1.jpg'
 import im1 from '../../assets/images/money1.jpg'
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import im2 from '../../assets/images/money2.jpeg'
 import { Icon} from "react-icons/ai";
 import './Home.css'
 import Navbar from "../navbar/Navbar"
 import slider1 from "../../assets/images/education1.jpg";
+import donation from '../../assets/images/donation.png'
 
 export default function Home() {
     return (
@@ -21,17 +23,18 @@ export default function Home() {
   <div className="carousel-inner">
   
     <div className="carousel-item active">
-    {/* <i className="material-icons">cloud </i> */}
-    {/* <button style='font-size:24px'>Button <i class='fas fa-hand-holding-heart'></i></button> */}
     <button className='btn btn-success mt-4'>Donate Here</button>
+    <img className="donation" src={donation}/>
       <img src={madik} className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
     <button className='btn btn-success mt-4'>Donate Here</button>
+    <img className="donation" src={donation}/>
       <img src={im1} className="d-block w-100" alt=""/>
     </div>
     <div className="carousel-item">
     <button className='btn btn-success mt-4 bgcolor="lightgreen"'>Donate Here</button>
+    <img className="donation" src={donation}/>
       <img src={im2} className="d-block w-100" alt="..."/>
     </div>
   </div>

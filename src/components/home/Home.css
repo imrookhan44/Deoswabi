@@ -26,17 +26,19 @@
     height: 60px;
     font-weight: bold;
 }
+
+@media screen and (min-width: 375px) {
 .btn-success{
 transform: rotate(0deg) !important;
 margin-bottom: 20px;
 background-color: black;
 position: absolute;
 /* position: absolute; */
-top: 5%;
-left: 3vw;
+top: 18%;
+left: 5vw;
 transform: translate(-75%,);
 -ms-transform: translate(-50%, -50%);
-background-color: black;
+background-color: rgb(196, 15, 15);
 color: white;
 font-size: 20px;
 padding: 12px 24px;
@@ -47,6 +49,7 @@ text-align: center;
 width: 180px;
 height: 60px;
 font-weight: bold;
+}
 }
 
 .material-icons{
@@ -68,6 +71,12 @@ font-weight: bold;
     font-weight: bold;
 }
 
-/* .material-icons:hover {
-    background: #911a1a;
-} */
+@media screen and (min-width: 0px) {
+.donation{
+    width: 70px;
+    position: absolute;
+    left: 8vw;
+    top: 9%;
+    /* box-shadow: 1px 1px 10px gray; */
+}
+}

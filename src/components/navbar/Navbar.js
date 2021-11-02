@@ -36,8 +36,8 @@ export default function Home() {
                                         <li className="nav-item">
                                             <Link className="nav-link" to="userdetails">User Details</Link>
                                         </li>
-                                        <li> <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-                                        </li>
+                                        {/* <li> <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+                                        </li> */}
                                     </ul>
                                 </div>
                             </nav>
