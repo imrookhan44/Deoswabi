@@ -10,10 +10,10 @@ export default function Upload() {
 
 <div class="container2">
 
-<img className="img2" src= {upload}>
+<img className="img22" src= {upload}>
                         </img> 
                        
-  <button class="btn2">Upload a file</button>
+  <button className="btnnn">Upload a file</button>
   <input type="file" name="myfile" />
 </div>
 {/* 
