@@ -1,8 +1,6 @@
 .nav-link:hover{
-    color: rgb(245, 144, 12);
-    /* transform: translateY(0) scale(1.2); */
-    /* border-bottom: 2px 0px 0px 0px  0px solid gray;
-*/
+border-radius: 100px;
 background-color: #eab000;
 opacity: 10px;
+box-shadow: 0px 5px 20px  #eab000;
 }
