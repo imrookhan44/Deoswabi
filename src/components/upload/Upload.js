@@ -12,6 +12,11 @@ export default function Upload() {
 
 <img className="img22" src= {upload}>
                         </img> 
+                        <label for="photo">Choose a photo!</label>
+
+<input type="file"
+       id="photo" name="photo"
+       accept="image/*" />
                      
 </div>
 /* 
@@ -20,7 +25,7 @@ export default function Upload() {
                     <button class="btnnn " >Upload a file</button>
                     <input type="file" name="myfile" />
                 </div>
-            </center> */
+            </center> 
             /* <div className="img">
                         <img src= {login}>
                         </img>
