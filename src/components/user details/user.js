@@ -7,8 +7,7 @@ export default function user() {
       <div className="row pt-4">
         <div className="col-sm-6">
         <img src={apca} className="apca"/>
-        </div>
-        {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
+        </div>{/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
         <div className="col-sm-6">
         <h2> User Details</h2>
         <form className="form">
