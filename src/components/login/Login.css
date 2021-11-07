@@ -1,14 +1,4 @@
-body, html {
-  height: 100%;
-}
 
-* {
-  box-sizing: border-box;
-}
-
-
-
-/* Add styles to the form container */
 .container1 {
   position: absolute;
   right: 70;
@@ -18,21 +8,11 @@ body, html {
   background-color: white;
 }
 
-/* Full-width input fields */
-  /* input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-} */
-
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
 
-/* Set a style for the submit button */
 .button {
   background-color: #04AA6D;
   color: white;
@@ -47,8 +27,6 @@ input[type=text]:focus, input[type=password]:focus {
   opacity: 1;
 }
 
-
-
 .grid-container {
   display: grid;
   grid-template-columns: auto auto ;
@@ -58,12 +36,11 @@ input[type=text]:focus, input[type=password]:focus {
   text-align: left;
 }
 
-
 .grid-item2 {
   text-align:left;
 }
 
-.b{
+.k{
   background-color: cornflowerblue;
   color: rgb(247, 244, 244);
   /* padding: 14px 20px; 
@@ -72,6 +49,4 @@ input[type=text]:focus, input[type=password]:focus {
   cursor: pointer;
   height: 30px;
   width: 50px;
-
 }
-

@@ -1,58 +1,38 @@
 import React from 'react'
-import apca from '../../assets/images/apca.png'
+import apca from '../../assets/images/apca.svg'
 import './user.css'
 export default function user() {
   return (
-    <div className="Container d-flex text-allign-center pt-5">
-      <div class="container ">
-  <div class="row">
-    <div class="col">
-      <img src={apca} alt="" />
+    <div className="container">
+      <div className="row pt-4">
+        <div className="col-sm-6">
+        <img src={apca} className="apca"/>
+        </div>{/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
+        <div className="col-sm-6">
+        <h2> User Details</h2>
+        <form className="form">
+        <input type="name" placeholder="Full name"  name="name" className="form-control"/>
+        <input type="text" placeholder="Username" className="form-control" name="pass"/>
+        <input type="password" placeholder="Password" name="pass" className="form-control"/>
+        <input type="number" placeholder="CNIC" className="form-control" name="pass"/>
+        <input type="number" placeholder="Mobile number" className="form-control"/>
+        <input type="text" placeholder="DOB" className="form-control" name="pass"/>
+        <input type="Qualification" placeholder="Qualification" className="form-control" name="pass"/>
+        <input type="text" placeholder="Station" className="form-control" name="pass"/>
+        <input type="Address" placeholder="Address" className="form-control"/>
+        <input type="text" placeholder="First Appointment" className="form-control"/><br/>
+         <button className="control-button">Submet</button>&nbsp;
+
+        </form>
+        
+        
     </div>
-    <div class="col">
-      <h1 className='heading'>About Me</h1>
-      <h3 className="heading2">A Lead UX & UI designer based in Canada</h3>
-      <p className="heading3">I design and develop services for customers of all sizes, <br /> specializing in creating stylish, modern websites, web <br /> services and online stores. My passion is to design <br /> digital user experiences through the bold interface and <br />digital user experiences through the bold interface and <br /> meaningful interactions</p>
-     
-    <div class="row pt-4">
-    <div class="col ">
-    <h6>Birthday  &nbsp;&nbsp;  / 20/04/2004</h6> 
-    <h6>Age  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  / 17</h6> 
-    <h6>Residance     / Pakistan</h6>
-    <h6>Address  &nbsp;&nbsp; / Islamabad </h6>
+      </div>
     </div>
-    <div class="col">
-     <h6>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ imadik968@gmail.com </h6>
-     <h6>Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ +923431921863</h6>
-     <h6>Skype &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / skype34579  </h6>
-     <h6>Freelance &nbsp;/ Available</h6>
-    </div>
-    </div>
-    </div>
-    <div className="mainn">
-    <div class="row">
-    <div class="col">
-    <h6 class="count offset-1 h2" data-to="850" data-speed="850">850</h6>
-     <p class="text m-0px font-w-600">Happy Clients</p>
-    </div>
-    <div class="col">
-    <h6 class="count offset-1 h2" data-to="850" data-speed="850">850</h6>
-     <p class="text m-0px font-w-600">Project Completed</p>
-    </div>
-    <div class="col">
-    <h6 class="count offset-1 h2" data-to="850" data-speed="850">850</h6>
-     <p class="text m-0px font-w-600">Photo Capture</p>
-    </div>
-    <div class="col">
-    <h6 class="count offset-1 h2" data-to="850" data-speed="850">850</h6>
-     <p class="text m-0px font-w-600">Telephonic Talk</p>
-     <div></div>
-    </div>
-  </div>
-    </div>
-    </div>
-    </div>
-    </div>
+    
+      
+    
+
     
   )
 }

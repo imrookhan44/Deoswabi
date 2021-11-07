@@ -7,7 +7,7 @@ import { Icon} from "react-icons/ai";
 import './Home.css'
 import Navbar from "../navbar/Navbar"
 import slider1 from "../../assets/images/education1.jpg";
-import donation from '../../assets/images/donation.png'
+import donation from '../../assets/images/donation.png';
 
 export default function Home() {
     return (
@@ -23,18 +23,24 @@ export default function Home() {
   <div className="carousel-inner">
   
     <div className="carousel-item active">
-    <button className='btn btn-success mt-4'>Donate Here</button>
+    <div className="row">
+      <div className="col-sm-3  cumstim_donate">
+      {/* <button className='btn btn-success mt-4'>Donate Here</button> */}
+      <button className="btnik">Donate Here</button>
     <img className="donation" src={donation}/>
+      </div>
+    </div>
+    
       <img src={madik} className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-    <button className='btn btn-success mt-4'>Donate Here</button>
-    <img className="donation" src={donation}/>
+    <button class="btnik">Donate Here</button>
+        <img className="donation" src={donation}/>
       <img src={im1} className="d-block w-100" alt=""/>
     </div>
     <div className="carousel-item">
-    <button className='btn btn-success mt-4 bgcolor="lightgreen"'>Donate Here</button>
-    <img className="donation" src={donation}/>
+    <button class="btnik">Donate Here</button>
+        <img className="donation" src={donation}/>
       <img src={im2} className="d-block w-100" alt="..."/>
     </div>
   </div>

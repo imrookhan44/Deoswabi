@@ -6,27 +6,30 @@ import upload from '../../assets/images/upload.jpeg'
 export default function Upload() {
     return (
        
-        <div className="container2">
+        
 
 <div class="container2">
 
-<img className="img2" src= {upload}>
+<img className="img22" src= {upload}>
                         </img> 
-                       
-  <button class="btn2">Upload a file</button>
-  <input type="file" name="myfile" />
+                        <label for="photo">Choose a photo!</label>
+
+<input type="file"
+       id="photo" name="photo"
+       accept="image/*" />
+                     
 </div>
-{/* 
+/* 
             <center>
                 <div class="upload-btn-wrapper mt-5">
                     <button class="btnnn " >Upload a file</button>
                     <input type="file" name="myfile" />
                 </div>
-            </center> */}
-            {/* <div className="img">
+            </center> 
+            /* <div className="img">
                         <img src= {login}>
                         </img>
-                    </div> */}
-        </div>
+                    </div> */
+        
     )
 }
