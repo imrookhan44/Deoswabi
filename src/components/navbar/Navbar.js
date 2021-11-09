@@ -17,7 +17,7 @@ export default function Home() {
                                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul className="navbar-nav mr-auto">
                                         <li className="nav-item active">
-                                            <Link className="nav-link" to="/">Home </Link>
+                                            <Link className="nav-link" to="/"> Home </Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" to="History">History</Link>
@@ -35,6 +35,9 @@ export default function Home() {
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" to="userdetails">User Details</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="Download">Download</Link>
                                         </li>
                                         {/* <li> <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
                                         </li> */}

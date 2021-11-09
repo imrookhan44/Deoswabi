@@ -32,22 +32,8 @@ color: white;
         max-width: 5%;
         max-width: 400px;
         position: absolute;
-        /* transform: rotate(0deg) !important; */
-        /* margin-bottom: 20px; */
-        /* background-color: black; */
-        /* position: absolute; */
         top: 18%;
         left: 5vw;
-        /* transform: translate(-75%,); */
-        /* -ms-transform: translate(-50%, -50%); */
-        /* background-color: rgb(196, 15, 15); */
-        /* color: white; */
-        /* font-size: 20px; */
-        /* padding: 12px 24px; */
-        /* border: 5px solid orange; */
-        /* cursor: pointer; */
-        /* border-radius: 20px; */
-        /* text-align: center; */
         width: 180px;
         height: 60px;
         font-weight: bold;
@@ -98,7 +84,7 @@ color: white;
         border: none;
         /* cursor: pointer; */
         border-radius: 5px;
-        text-align: center;
+        text-align: right;
         width: 200px;
         /* max-width: 400px; */
         left: 6vw;
@@ -156,3 +142,61 @@ color: white;
     background-color: black;
     box-shadow: 0px 5px 30px black;
 }
+
+
+
+.navbar-home {
+    overflow: hidden;
+    background-color: green;
+    width: 140px;
+  }
+  
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar-home a:hover, .dropdown:hover .dropbtn {
+  /*  background-color: black;
+  */}
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .dropdown-content a:hover {
+  /*  background-color: #ddd;
+  */}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .pic{
+    width: 150px;
+  }

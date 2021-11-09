@@ -3,7 +3,7 @@ import apca from '../../assets/images/apca.svg'
 import './user.css'
 export default function user() {
   return (
-    <div className="container">
+    <div className="container userDetails">
       <div className="row pt-4">
         <div className="col-sm-6">
         <img src={apca} className="apca"/>

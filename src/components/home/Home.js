@@ -26,7 +26,8 @@ export default function Home() {
     <div className="row">
       <div className="col-sm-3  cumstim_donate">
       {/* <button className='btn btn-success mt-4'>Donate Here</button> */}
-      <button className="btnik">Donate Here</button>
+      
+      <button class="btnik">Donate Here</button>
     <img className="donation" src={donation}/>
       </div>
     </div>
