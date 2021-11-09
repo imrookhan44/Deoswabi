@@ -1,60 +1,61 @@
-import React from 'react'
+import React, { useState } from 'react'
 import madik from '../../assets/images/education1.jpg'
 import im1 from '../../assets/images/money1.jpg'
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import im2 from '../../assets/images/money2.jpeg'
-import { Icon} from "react-icons/ai";
+import { Icon } from "react-icons/ai";
 import './Home.css'
 import Navbar from "../navbar/Navbar"
 import slider1 from "../../assets/images/education1.jpg";
 import donation from '../../assets/images/donation.png';
+import easypaisa from '../../assets/images/easypaisa.jpg';
+import bank from '../../assets/images/bank.png';
+import cnic from '../../assets/images/cnic.jpg';
+import { Modal } from 'react-bootstrap'
 
 export default function Home() {
-    return (
-        // <div className='container-fluid'> 
-           
-        
-        //    <img src={slider1} className='img-fluid' />        
-                
-            
-        // </div>
-<>
- <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div className="carousel-inner">
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const checkbtn = () => {
+    console.log('btnchecking', handleShow)
+  }
+  return (
+    <>
+      <Modal show={show} onHide={handleClose} className="modal-home">
+        <Modal.Header closeButton>
+          <Modal.Title></Modal.Title>
+          <h2>Donate Here </h2>
+        </Modal.Header>
+        <Modal.Body >
+        <tr>
+        <td><a href="home"> <img src={easypaisa} className="im1"/></a></td>
+        <td><a href="home"><img src={bank} className="im1"/></a></td>
+        <td><a href="home"><img src={cnic} className="im1"/></a></td>
   
-    <div className="carousel-item active">
-    <div className="row">
-      <div className="col-sm-3  cumstim_donate">
-      {/* <button className='btn btn-success mt-4'>Donate Here</button> */}
-      
-      <button class="btnik">Donate Here</button>
-    <img className="donation" src={donation}/>
+           </tr>
+
+        </Modal.Body>
+        
+      </Modal>
+      <button className='btnik' onClick={handleShow}>Donate Here</button>
+
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src={madik} alt="First slide" />
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src={im1} alt="Second slide" />
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src={im2} alt="Third slide" />
+          </div>
+        </div>
       </div>
-    </div>
-    
-      <img src={madik} className="d-block w-100" alt="..."/>
-    </div>
-    <div className="carousel-item">
-    <button class="btnik">Donate Here</button>
-        <img className="donation" src={donation}/>
-      <img src={im1} className="d-block w-100" alt=""/>
-    </div>
-    <div className="carousel-item">
-    <button class="btnik">Donate Here</button>
-        <img className="donation" src={donation}/>
-      <img src={im2} className="d-block w-100" alt="..."/>
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
-{/* <button className='btn btn-danger mt-4'>donation button</button> */}
-</>
-    )
+    </>
+
+
+  )
 }
