@@ -12,17 +12,17 @@ import React, {useState,useEffect} from 'react'
 
 
 function App() {
-  const [user,setUser] = useState ('null')
-  useEffect(()=>{
-    auth.onAuthStateChanged(user=>{
-      if(user) setUser()
-      else setUser(null)
+  // const [user,setUser] = useState ('null')
+  // useEffect(()=>{
+  //   auth.onAuthStateChanged(user=>{
+  //     if(user) setUser()
+  //     else setUser(null)
 
 
       
-    })
+  //   })
 
-  },[] )
+  // },[] )
 
   return (
 
