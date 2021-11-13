@@ -26,7 +26,7 @@ export default function Home() {
       <Modal show={show} onHide={handleClose} className="modal-home">
         <Modal.Header closeButton>
           <Modal.Title></Modal.Title>
-          <h2>Donate Here </h2>
+          <h2 className="modelbutton">Donate Here </h2>
         </Modal.Header>
         <Modal.Body >
         <tr>
@@ -47,6 +47,7 @@ export default function Home() {
             <img class="d-block w-100" src={madik} alt="First slide" />
           </div>
           <div class="carousel-item">
+            {/* <img className="donation" src="{donation}"></img>con */}
             <img class="d-block w-100" src={im1} alt="Second slide" />
           </div>
           <div class="carousel-item">
