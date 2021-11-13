@@ -22,7 +22,6 @@ export default function user() {
         <input type="Address" placeholder="Address" className="form-control"/>
         <input type="text" placeholder="First Appointment" className="form-control"/><br/>
          <button className="control-button">Submet</button>&nbsp;
-
         </form>
         
         
