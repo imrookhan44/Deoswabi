@@ -9,6 +9,7 @@ import Userdetails from '../user details/user';
 import Download from '../Download/Download';
 import Admin from '../Admin/Admin';
 import {  Route, Switch, } from 'react-router-dom'
+import easyDonation from '../donation/EasyDonation';
  
 function Routes() {
   return (
@@ -23,6 +24,7 @@ function Routes() {
           <Route path='/userdetails' component={Userdetails} />
           <Route path='/download' component={Download} />
           <Route path='/Admin' component={Admin} />
+          <Route path='/donation/easyDonation' component={easyDonation} />
           <Route path='/' component={Home} />
         </Switch>
   )

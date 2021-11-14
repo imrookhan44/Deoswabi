@@ -21,10 +21,8 @@ export default function user() {
         <input type="text" placeholder="Station" className="form-control" name="pass"/>
         <input type="Address" placeholder="Address" className="form-control"/>
         <input type="text" placeholder="First Appointment" className="form-control"/><br/>
-         <button className="control-button">Submet</button>&nbsp;
+         <button className="control-button">Submit</button>&nbsp;
         </form>
-        
-        
     </div>
       </div>
     </div>
