@@ -32,22 +32,8 @@ color: white;
         max-width: 5%;
         max-width: 400px;
         position: absolute;
-        /* transform: rotate(0deg) !important; */
-        /* margin-bottom: 20px; */
-        /* background-color: black; */
-        /* position: absolute; */
         top: 18%;
         left: 5vw;
-        /* transform: translate(-75%,); */
-        /* -ms-transform: translate(-50%, -50%); */
-        /* background-color: rgb(196, 15, 15); */
-        /* color: white; */
-        /* font-size: 20px; */
-        /* padding: 12px 24px; */
-        /* border: 5px solid orange; */
-        /* cursor: pointer; */
-        /* border-radius: 20px; */
-        /* text-align: center; */
         width: 180px;
         height: 60px;
         font-weight: bold;
@@ -88,7 +74,7 @@ color: white;
 
 @media screen and (max-width: 2652px) {
     .btnik {
-        position: absolute;
+        position: relative;
         /* transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%); */
         background-color: #555;
@@ -98,7 +84,7 @@ color: white;
         border: none;
         /* cursor: pointer; */
         border-radius: 5px;
-        text-align: center;
+        text-align: right;
         width: 200px;
         /* max-width: 400px; */
         left: 6vw;
@@ -110,7 +96,7 @@ color: white;
     }
 }
 
-@media screen and (max-width: 1000px) {
+ @media screen and (max-width: 1000px) {
     .btnik {
         font-size: 10px;
     }
@@ -152,7 +138,59 @@ color: white;
     }
 }
 
+
 .btnik:hover {
     background-color: black;
-    box-shadow: 0px 5px 30px black;
+    box-shadow: 0px 5px 30px lightgray
 }
+.im1{
+    width: 150px;
+    /* display: flex; */
+    /* padding-left: 20px; */
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .im1 {
+        width: 1440px;
+    }
+}
+                                             
+@media screen and (max-width:900px) {
+    .im1 {
+        width: 130px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .im1 {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .im1 {
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .im1 {
+      width: 100;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .im1 {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {f
+    .im1 {
+        font-size: px;
+    }
+}
+
+

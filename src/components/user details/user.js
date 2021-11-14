@@ -3,7 +3,7 @@ import apca from '../../assets/images/apca.svg'
 import './user.css'
 export default function user() {
   return (
-    <div className="container">
+    <div className="container userDetails">
       <div className="row pt-4">
         <div className="col-sm-6">
         <img src={apca} className="apca"/>
@@ -22,7 +22,6 @@ export default function user() {
         <input type="Address" placeholder="Address" className="form-control"/>
         <input type="text" placeholder="First Appointment" className="form-control"/><br/>
          <button className="control-button">Submet</button>&nbsp;
-
         </form>
         
         

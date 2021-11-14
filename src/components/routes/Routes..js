@@ -6,6 +6,8 @@ import Signin from '../Signin/Signin';
 import Upload from '../upload/Upload';
 import Login from '../login/Login';
 import Userdetails from '../user details/user';
+import Download from '../Download/Download';
+import Admin from '../Admin/Admin';
 import {  Route, Switch, } from 'react-router-dom'
  
 function Routes() {
@@ -19,7 +21,8 @@ function Routes() {
           <Route path='/upload' component={Upload} />
           <Route path='/login' component={Login} />
           <Route path='/userdetails' component={Userdetails} />
-
+          <Route path='/download' component={Download} />
+          <Route path='/Admin' component={Admin} />
           <Route path='/' component={Home} />
         </Switch>
   )
