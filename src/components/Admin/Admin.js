@@ -24,7 +24,7 @@ export class Admin extends Component {
             let downloadURL = UploadTask.snapshot.downloadURL
         })
     }
-    showImag=()=>{
+    showImage=()=>{
         let storageRef = firebase.storage().ref()
         let spaceRef = storageRef.child('images/'+this.state.files[0].name)
         storageRef.child('images/'+this.state.files[0].name).getDownloadURL().then((url)=>{
