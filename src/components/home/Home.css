@@ -192,5 +192,21 @@ color: white;
         font-size: px;
     }
 }
-
+.bg_img{
+    background: url(../../assets/images/education1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 435px !important;
+    
+}
+.custom_width{
+    width: 100px !important;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+.custom_margin_btn{
+    margin-top: 140px !important;
+    width: 140px;
+    background-color: red;
+}
 

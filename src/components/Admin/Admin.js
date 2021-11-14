@@ -1,5 +1,6 @@
 import React, { Component, component } from 'react'
 import firebase from '../firebase'
+import './Admin.css'
 export class Admin extends Component {
     constructor(props){
         super(props);
@@ -36,7 +37,7 @@ export class Admin extends Component {
         return (
             <div>
 <input type="file" onChange={(e)=>{this.handleChange(e.target.files)}}/>
-<button onClick={this.handleSave}>Save</button>
+<button className="Adminpage" onClick={this.handleSave}>Save</button>
 <button onClick={this.showImage}>Show image</button>
 <img id="new-img"/>
 

@@ -1,15 +1,13 @@
-/* div {
-    position: relative;
-    overflow: hidden;
-  }
-  .input-Admin {
-    position: relative; 
-    font-size: 50;
-     opacity: 0;
-    right: 0;
-    top: 0;
-    width: 16px
-  }  */
-
-
+.Adminpage{
+  background-color: lightgray;
+  border:none;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
   
+}
+.Adminpage:hover{
+  box-shadow: 5px 5px 5px gray;
+  background-color: lightpink;
+  border:2px solid lightpink;
+}
