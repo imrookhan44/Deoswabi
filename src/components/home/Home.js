@@ -32,8 +32,8 @@ export default function Home() {
         <Modal.Body >
         <tr>
         <td><Link to= '/donation/easyDonation'><img src={easypaisa} className="im1"/></Link></td>
-        <td><Link to= '/donation/easyDonation'><img src={bank} className="im1"/></Link></td>
-        <td><Link to= '/donation/easyDonation'><img src={cnic} className="im1"/></Link></td>
+        <td><Link to= '/BankDonation/BankDonation'><img src={bank} className="im1"/></Link></td>
+        <td><Link to= '/CnicDonation/CnicDonation'><img src={cnic} className="im1"/></Link></td>
   
            </tr>
 
