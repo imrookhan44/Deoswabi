@@ -24,7 +24,7 @@ function Routes() {
           <Route path='/userdetails' component={Userdetails} />
           <Route path='/download' component={Download} />
           <Route path='/Admin' component={Admin} />
-          <Route path='/donation/easyDonation' component={easyDonation} />
+          <Route path='/donation/EasyDonation' component={easyDonation} />
           <Route path='/' component={Home} />
         </Switch>
   )
