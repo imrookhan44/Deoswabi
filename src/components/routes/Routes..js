@@ -12,6 +12,7 @@ import {  Route, Switch, } from 'react-router-dom'
 import easyDonation from '../donation/EasyDonation';
 import BankDonation from '../BankDonation/BankDonation';
 import CnicDonation from '../CnicDonation/CnicDonation';
+import ImageUpload from '../ImageUpload/ImageUpload';
  
 function Routes() {
   return (
@@ -29,6 +30,8 @@ function Routes() {
           <Route path='/donation' component={easyDonation} />
           <Route path='/BankDonation' component={BankDonation} />
           <Route path='/CnicDonation' component={CnicDonation} />
+          <Route path='/ImageUpload' component={ImageUpload} />
+
           <Route path='/' component={Home} />
         </Switch>
   )
