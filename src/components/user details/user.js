@@ -10,7 +10,7 @@ export default function user() {
         </div>{/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
         <div className="col-sm-6">
         <h2> User Details</h2>
-        <form className="form">
+        {/* <form className="form">
         <input type="name" placeholder="Full name"  name="name" className="form-control"/>
         <input type="text" placeholder="Username" className="form-control" name="pass"/>
         <input type="password" placeholder="Password" name="pass" className="form-control"/>
@@ -22,6 +22,16 @@ export default function user() {
         <input type="Address" placeholder="Address" className="form-control"/>
         <input type="text" placeholder="First Appointment" className="form-control"/><br/>
          <button className="control-button">Submit</button>&nbsp;
+        </form> */}
+        <form>
+          <div>
+            <p>
+              <label>Full name</label>
+            </p>
+            <p>
+              <input></input>
+            </p>
+          </div>
         </form>
     </div>
       </div>

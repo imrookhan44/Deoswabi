@@ -14,8 +14,8 @@ const easyDonation = () => {
         <div className="col-sm-6">
         <h2> <font color="blue">Enter Details</font></h2>
         <form className="form">
-        <input type="name" placeholder="CNIC/PHONE"  name="name" className="form-control"/>
-        <input type="password" placeholder="Password" className="form-control" name="pass"/><br/>
+        <input type="name" placeholder="CNIC/PHONE"  name="name" className="form-control" style={{width:'200px'}}/>
+        <input type="password" placeholder="Password" className="form-control" name="pass" style={{width:'200px'}}/><br/>
          <button style={{backgroundColor:'rgb(10, 78, 206)',width:'100px',color:'white',height:'40px',borderRadius:'10px',border:'none'}}>Submit</button>
         </form>
     </div>
