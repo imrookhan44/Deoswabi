@@ -1,7 +1,9 @@
 import React from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
+
 import logo from "../../assets/images/upaise-logo.jpg";
+import { Navbar } from 'react-bootstrap';
 export default function Home() {
     return (
         <>
@@ -9,11 +11,15 @@ export default function Home() {
                 <div className='container-fluide'>
                     <div className='row'>
                         <div className='col align-self-center' >
-                            <nav className="navbar navbar-expand-lg navbar-light bg-white">
+                            {/* <nav className="navbar navbar-expand-lg navbar-light bg-white"> */}
+                            
                                 <Link className="navbar-brand" to="/"><img style={{ height: '70px' }} src={logo} alt='logo' /></Link>
-                                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <Navbar collapseOnSelect  expand="lg">
+                            <Navbar.Toggle className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"/>
+                            <Navbar.Collapse>
+                                 {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span className="navbar-toggler-icon"></span>
-                                </button>
+                                </button>  */}
                                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul className="navbar-nav mr-auto">
                                         <li className="nav-item active">
@@ -49,7 +55,9 @@ export default function Home() {
                                         </li> */}
                                     </ul>
                                 </div>
-                            </nav>
+                                </Navbar.Collapse>
+                                </Navbar>
+                            {/* </nav> */}
                         </div>
                     </div>
                 </div>
