@@ -47,7 +47,7 @@ class ImageUpload extends Component {
     }
     render() {
         const style = {
-            height: '30vh',
+            height: '40vh',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -60,7 +60,7 @@ class ImageUpload extends Component {
                     <img src={this.state.url || ''} alt="Uploaded images" height="300" width="400" />
                     <div className='ab' style={{}}></div>
                     <label> <i style={{ fontsize: '31px', border: '1px solid black' }}> </i>  </label>
-                    <input type="file" onChange={this.handleChange} />
+                    <input type="file" onChange={this.handleChange} style={{height:"100px"}}/>
                     <button onClick={this.handleUpload}>Upload</button>
                     <progress value={this.state.progress} max="100" />
                 </div>
