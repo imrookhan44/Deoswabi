@@ -7,11 +7,12 @@ import { Icon } from "react-icons/ai";
 import './Home.css'
 import Navbar from "../navbar/Navbar"
 import slider1 from "../../assets/images/education1.jpg";
-import donation from '../../assets/images/donation.png';
+import Donation from '../../assets/images/donation.png';
 import easypaisa from '../../assets/images/easypaisa.jpg';
 import bank from '../../assets/images/bank.png';
 import cnic from '../../assets/images/cnic.jpg';
 import { Modal } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   const [show, setShow] = useState(false);
@@ -30,30 +31,24 @@ export default function Home() {
         </Modal.Header>
         <Modal.Body >
         <tr>
-        <td><a href="home"> <img src={easypaisa} className="im1"/></a></td>
-        <td><a href="home"><img src={bank} className="im1"/></a></td>
-        <td><a href="home"><img src={cnic} className="im1"/></a></td>
+        <td><Link to= '/donation/easyDonation'><img src={easypaisa} className="im1"/></Link></td>
+        <td><Link to= '/BankDonation/BankDonation'><img src={bank} className="im1"/></Link></td>
+        <td><Link to= '/CnicDonation/CnicDonation'><img src={cnic} className="im1"/></Link></td>
   
            </tr>
 
         </Modal.Body>
         
       </Modal>
-      <button className='btnik' onClick={handleShow}>Donate Here</button>
-
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src={madik} alt="First slide" />
-          </div>
-          <div class="carousel-item">
-            {/* <img className="donation" src="{donation}"></img>con */}
-            <img class="d-block w-100" src={im1} alt="Second slide" />
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src={im2} alt="Third slide" />
-          </div>
+      
+      <div className='container-fluid'>
+      <div className='bg_img'>
+        <div className='ms-4 ps-4'>
+          <img className='img img-responsive custom_width' src={Donation} />
         </div>
+      <button className='btn btn-success custom_margin_btn' onClick={handleShow}>Donate Here</button>
+      <div className=''></div>
+      </div>
       </div>
     </>
 

@@ -1,26 +1,16 @@
 import React,{ useState } from 'react'
 import { Nav, Modal} from 'react-bootstrap';
-import { Button,NavDropdown,Navbar,Container,FormControl,Form, } from 'react-bootstrap';
+// import { Button,NavDropdown,Navbar,Container,FormControl,Form, } from 'react-bootstrap';
 import logo from "../../assets/images/upaise-logo.jpg";
 import { Link } from 'react-router-dom'
 
 
 
 function Download() {
-
-
     return (
         <div>
-           {/* <div className='row mt-4'> 
-        <div className='col-sm-6 offset-3'>
-        <div class="file btn btn-lg btn-primary">
-            File Upload
-        <input type="file" name="file" className="input-Admin" />
-        </div>
-        </div>
-        </div>  */}
-
-<Navbar bg="white" expand="lg" >
+          
+{/* <Navbar bg="white" expand="lg" >
   <Container fluid>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
@@ -37,7 +27,7 @@ function Download() {
       </Nav>
     </Navbar.Collapse>
   </Container>
-</Navbar>
+</Navbar> */}
         
         </div>
 
