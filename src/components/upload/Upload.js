@@ -5,9 +5,13 @@ import upload from '../../assets/images/upload.jpeg'
 
 export default function Upload() {
     return (
-<div class="container2">
-<img className="img22" src= {upload}>
-                        </img>                
+     
+<div class="container">
+<img className="container-img22" src= {upload}></img>
+<button  class="btnupload">
+<input type="file" style={{backgroundColor:'none', width:'200px'}}></input>
+</button>
+                                      
 </div>  
     )
 }

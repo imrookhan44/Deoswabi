@@ -43,6 +43,9 @@ export default function Home() {
                                             <Link className="nav-link" to="Admin">Admin</Link>
                                         </li>
                                         <li className="nav-item">
+                                            <Link className="nav-link" to="Test">Test</Link>
+                                        </li>
+                                        <li className="nav-item">
                                             <Link className="nav-link" to="ImageUpload">ImageUpload</Link>
                                         </li>
                                         {/* <li> <a h   ef="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
