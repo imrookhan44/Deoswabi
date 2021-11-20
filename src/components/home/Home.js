@@ -34,19 +34,15 @@ export default function Home() {
         <td><Link to= '/donation/easyDonation'><img src={easypaisa} className="im1"/></Link></td>
         <td><Link to= '/BankDonation/BankDonation'><img src={bank} className="im1"/></Link></td>
         <td><Link to= '/CnicDonation/CnicDonation'><img src={cnic} className="im1"/></Link></td>
-  
            </tr>
-
         </Modal.Body>
-        
       </Modal>
-      
       <div className='container-fluid'>
       <div className='bg_img'>
         <div className='ms-4 ps-4'>
           <img className='img img-responsive custom_width' src={Donation} />
         </div>
-      <button className='btn btn-success custom_margin_btn' onClick={handleShow}>Donate Here</button>
+      <button  className='btn btn-success custom_margin_btn' onClick={handleShow}>Donate Here</button>
       <div className=''></div>
       </div>
       </div>

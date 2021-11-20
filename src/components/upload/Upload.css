@@ -1,10 +1,11 @@
 .img22{
-  position: relative;
+  /* position: relative; */
   width: 100%;
   height: auto;
   position: fixed;
-}
 
+}
+/* 
 .uploadbutton .btn {
     position: absolute;
     top: 50%;
@@ -23,5 +24,43 @@
   
   .uploadbutton .btn:hover {
     background-color: black;
+  } */
+
+
+  .container {
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
   }
+  
+  .container-img22 {
+    width: 100vw;
+    height: 630px;
+    position: fixed;
+  }
+  
+   .btnupload {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color:gray;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    position: fixed;
+   
+  }
+  
+  .container .btnupload:hover {
+    background-color: orange;
+  }
+
+ 
+                                            
 
