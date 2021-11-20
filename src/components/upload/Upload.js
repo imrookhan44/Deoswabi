@@ -9,7 +9,7 @@ export default function Upload() {
 <div class="container">
 <img className="container-img22" src= {upload}></img>
 <button  class="btnupload">
-<input type="file" style={{backgroundColor:'none', width:'200px'}}></input>
+<input type="file" style={{border:"unset", width:'200px'}}></input>
 </button>
                                       
 </div>  
