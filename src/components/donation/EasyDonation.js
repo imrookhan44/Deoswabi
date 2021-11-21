@@ -3,9 +3,9 @@ import apca from '../../assets/images/apca.svg'
 
 const easyDonation = () => {
     return (
-        <>
-      <div>
-      <div className="container userDetails">
+      
+      
+      <div className="container-fluid userDetails">
       <div className="row pt-4">
         <div className="col-sm-6">
         <img src={apca} className="apca"/>
@@ -21,8 +21,8 @@ const easyDonation = () => {
     </div>
       </div>
     </div>
-            </div>
-        </>
+          
+      
     );
 }
 export default easyDonation;
