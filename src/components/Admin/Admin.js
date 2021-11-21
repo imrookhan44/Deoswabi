@@ -37,13 +37,11 @@ export class Admin extends Component {
     render() {
         return (
             <div>&nbsp;
-                <input type='file' />
-                <button className='btn btn-success'>Upload image here</button>
-                {/* <input type="file" onChange={(e) => { this.handleChange(e.target.files) }} />
+                <input type="file" onChange={(e) => { this.handleChange(e.target.files) }} />
                 <button className="Adminpage" onClick={this.handleSave}>Save</button>&nbsp;
                 <button onClick={this.showImage}>Show image</button><br />&nbsp;<br />&nbsp;
-                <img id="new-img" height="300px" width="400px" /> */}
-                {/* <img id="new-img1" height="300px" width="300px"/>
+                <img id="new-img" height="300px" width="400px" /> 
+                 {/* <img id="new-img1" height="300px" width="300px"/>
                 <img id="new-img2" height="300px" width="300px"/>
                 <img id="new-img3" height="300px" width="300px"/> */}
 

@@ -41,8 +41,8 @@ export default function Home() {
       <div className='bg_img'>
         <div className='ms-4 ps-4'>
           <img className='img img-responsive custom_width' src={Donation} />
-        </div>
-      <button  className='btn btn-success custom_margin_btn' onClick={handleShow}>Donate Here</button>
+        </div><br/>
+      <button  className='custom_margin_btn' onClick={handleShow} >Donate Here</button>
       <div className=''></div>
       </div>
       </div>
