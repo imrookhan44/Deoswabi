@@ -4,7 +4,7 @@ import './user.css'
 export default function user() {
   return (
     <div className="container-fluid userDetails">
-      <div className="row pt-4">
+      <div className="row pt-4 ">
       <div className="col-sm-6 col-lg-6">
         <h2> User Details</h2>
         <form className="form">
@@ -19,10 +19,8 @@ export default function user() {
         <input type="Address" placeholder="Address" className="form-control"/>
         <input type="text" placeholder="First Appointment" className="form-control"/><br/>
          <button className="control-button">Submit</button>&nbsp;
-        </form>
-        
+        </form>        
     </div>
-
 
         <div className="col-sm-6 col-lg-6">
         <img src={apca} className="apca"/>

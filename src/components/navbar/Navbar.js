@@ -13,8 +13,9 @@ export default function Home() {
                         <div className='col-lg-12 align-self-center' >
                             {/* <nav className="navbar navbar-expand-lg navbar-light bg-white"> */}
                             
-                                <Link className="navbar-brand" to="/"><img style={{ height: '70px' }} src={logo} alt='logo' /></Link>
                                 <Navbar collapseOnSelect  expand="lg">
+                                <Link className="navbar-brand" to="/"><img style={{ height: '70px' }} src={logo} alt='logo' /></Link>
+
                             <Navbar.Toggle className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"/>
                             <Navbar.Collapse>
                                  {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
