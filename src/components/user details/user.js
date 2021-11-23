@@ -5,10 +5,7 @@ export default function user() {
   return (
     <div className="container-fluid userDetails">
       <div className="row pt-4">
-        <div className="col-sm-6 col-lg-6">
-        <img src={apca} className="apca"/>
-        </div>{/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
-        <div className="col-sm-6 col-lg-6">
+      <div className="col-sm-6 col-lg-6">
         <h2> User Details</h2>
         <form className="form">
         <input type="name" placeholder="Full name"  name="name" className="form-control"/>
@@ -25,6 +22,12 @@ export default function user() {
         </form>
         
     </div>
+
+
+        <div className="col-sm-6 col-lg-6">
+        <img src={apca} className="apca"/>
+        </div>
+        
       </div>
     </div>
     
