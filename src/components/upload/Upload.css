@@ -5,26 +5,7 @@
   position: fixed;
 
 }
-/* 
-.uploadbutton .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: #555;
-    color: white;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .uploadbutton .btn:hover {
-    background-color: black;
-  } */
+
 
 
   .container {
@@ -41,7 +22,7 @@
   
    .btnupload {
     position: absolute;
-    top: 85%;
+    top: 83%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -56,12 +37,64 @@
     position: fixed;
     border: 2px solid green;
     box-shadow: 0px 0px 10px green;
+    width: 250px;
   }
+    
   
   .container .btnupload:hover {
     background-color: green;
   }
 
- 
+
+
+
+  @media screen and (max-width: 1000px) {
+    .btnupload {
+        width: 200px;
+        font-size: 10px;
+      margin-top: 70px;
+    }
+}
+                                             
+@media screen and (max-width:900px) {
+    .btnupload {
+        width: 158px;
+        font-size: 9px;
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .btnupload {
+        width: 148px;
+        font-size: 8px;
+      margin-top: 70px;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+  .btnupload {
+      width: 100px;
+      font-size: 5px;
+      margin-top: 85px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .btnupload {
+      width: 50px;
+      font-size: 6px;
+      margin-top: 70px;
+
+  }
+}
+@media screen and (max-width: 768px) {
+  .btnupload {
+      width: 120px;
+      font-size: 6px;
+      margin-bottom: 200px;
+
+  }
+}
                                             
 
