@@ -8,9 +8,9 @@ export default function Home() {
     return (
         <>
             <div className='container-fluid'>
-                <div className='container-fluide'>
+              
                     <div className='row'>
-                        <div className='col align-self-center' >
+                        <div className='col-lg-12 align-self-center' >
                             {/* <nav className="navbar navbar-expand-lg navbar-light bg-white"> */}
                             
                                 <Link className="navbar-brand" to="/"><img style={{ height: '70px' }} src={logo} alt='logo' /></Link>
@@ -63,7 +63,7 @@ export default function Home() {
                             {/* </nav> */}
                         </div>
                     </div>
-                </div>
+               
             </div>
         </>
     )

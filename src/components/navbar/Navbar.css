@@ -1,9 +1,9 @@
-#nav-link{
+.nav-link{
     border-radius: 100px;
     /* background-color: red; */
 }
 
-#nav-link:hover{
+.nav-link:hover{
 border-radius: 100px;
 background-color: #51c979;
 opacity: 10px;
