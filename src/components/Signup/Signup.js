@@ -28,24 +28,44 @@ export default function Signup() {
     }
 
     return (
-        <div className="container-fluid">
-            <div className="container mt-5 ">
-                <div className="row mt-5 ">
-                    <div className="col-sm-3 offset-0">
-                        <h3 className="signup mt-5">Sign Up</h3>
-                        <input type='text' className='form-control pt-4' placeholder='Full Name'  title="Please Enter your full name"></input>
-                        <input type="number" className="form-control pt-4" placeholder='Phone Number'></input>
-                        {/* <input type="email" className="form-control pt-4" placeholder="Email" onChange={(e) => setEmail(e.target.value)}></input> */}
-                        <input type="password" className="form-control pt-4" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-                        <input type="password" className="form-control pt-4" placeholder="Repeat Password" />
-                        <button className="btn btn-primary mt-4"  onClick={() => handleSubmit()}>Register</button>
-                        <p className=' mt-2'>Already have an account <Link to='/signin'>Sign In?</Link> </p>
-                    </div>
-                    <div className='col-sm-3 mt-5'>
-                        <img src={signup} alt='signup' />
-                    </div>
-                </div> 
-            </div>
+        // <div className="container-fluid">
+        //     <div className="container mt-5 ">
+        //         <div className="row mt-5 ">
+        //             <div className="col-sm-3 offset-0">
+        //                 <h3 className="signup mt-5">Sign Up</h3>
+        //                 <input type='text' className='form-control pt-4' placeholder='Full Name'  title="Please Enter your full name"></input>
+        //                 <input type="number" className="form-control pt-4" placeholder='Phone Number'></input>
+        //                 {/* <input type="email" className="form-control pt-4" placeholder="Email" onChange={(e) => setEmail(e.target.value)}></input> */}
+        //                 <input type="password" className="form-control pt-4" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+        //                 <input type="password" className="form-control pt-4" placeholder="Repeat Password" />
+        //                 <button className="btn btn-primary mt-4"  onClick={() => handleSubmit()}>Register</button>
+        //                 <p className=' mt-2'>Already have an account <Link to='/signin'>Sign In?</Link> </p>
+        //             </div>
+        //             <div className='col-sm-3 mt-5'>
+        //                 <img src={signup} alt='signup' />
+        //             </div>
+        //         </div> 
+        //     </div>
+        // </div>
+        <div className=" userDetails pt-4">
+      <div className="row pt-4 ">
+      <div className="col-sm-6 col-lg-6">
+        <h2 style={{marginLeft:'120px',marginTop:'100px'}}> Sign Up</h2>
+        <form className="sign Up" style={{marginLeft:'100px',width:'250px'}}>
+        <input type="name" placeholder="Full name"  name="name" className="form-control"title="Please enter your full name"/>
+        <input type="number" placeholder="Phone Number" className="form-control" name="pass"title="Please enter only number"/>
+        <input type="password" placeholder="Password" name="pass" className="form-control"title="Please enter your password"/>
+        <input type="password" placeholder="Repeat Password" name="pass" className="form-control"title="Please enter your conform password"/>
+        <button className="btn btn-primary mt-4"  onClick={() => handleSubmit()}>Register</button>
+        <p className=' mt-2'>Already have an account <Link to='/signin'>Sign In?</Link> </p>
+        </form>  
+    </div>
+
+        <div className="col-sm-6 col-lg-6">
+        <img src={signup}className='imgimgimg'/>
         </div>
+        
+      </div>
+    </div>
     )
 }
