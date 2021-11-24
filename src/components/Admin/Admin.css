@@ -1,13 +1,95 @@
-.Adminpage{
+.Adminpage {
   background-color: lightgray;
-  border:none;
+  border: none;
   width: 100px;
   height: 40px;
-  border-radius: 20px;
-  
+
+
 }
-.Adminpage:hover{
+
+.Adminpage:hover {
   box-shadow: 5px 5px 5px gray;
   background-color: lightpink;
-  border:2px solid lightpink;
+  border: 2px solid lightpink;
+}
+
+.admin {
+  font-size: xx-large;
+  font-weight: 400px;
+
+
+
+
+}
+
+.image {
+  margin-top: 40px;
+  display: flex;
+
+  width: 250px;
+
+
+
+}
+
+
+.adminpanel {
+
+  margin: auto;
+  width: 900px;
+  height: 400px;
+  box-shadow: 10px 10px 10px 10px gray;
+}
+
+@media screen and (max-width: 500px) {
+  .adminpanel {
+
+
+    width: 360px;
+
+
+  }
+}
+@media screen and (max-width: 768px) {
+  .adminpanel {
+
+
+    width: 300px;
+    height: 340px;
+
+
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .image {
+
+    display: none;
+
+
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .form-controls {
+
+    width: 200px;
+
+    display: flex;
+
+
+  }
+}
+
+
+.form-controls {
+  border: none;
+}
+
+#button {
+  width: 90px;
+  border-radius: 4px;
+
+
 }
