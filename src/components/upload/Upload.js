@@ -11,7 +11,7 @@ export default function Upload() {
 <button  class="btnupload">
 <input type="file"></input>
 </button>
-                                      
+                              
 </div>  
     )
 }
