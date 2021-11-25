@@ -6,7 +6,7 @@ export default function user() {
     <div className="userDetails">
       <div className="row pt-5">
       <div className="col-sm-12 col-lg-12">
-        <h3 className="offset-5"> User Details</h3>
+        <h3 className="offset-4"> User Details</h3>
         <form className="form offset-3">
         <input type="name" placeholder="Full name"  name="name" className="form-control" style={{width:'250px'}}/>
         <input type="text" placeholder="Username" className="form-control" name="pass"style={{width:'250px'}}/>
