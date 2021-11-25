@@ -31,7 +31,7 @@ export default function Login() {
 //                 </div>
 //             </div>
 //         </div>
-<div className=" userDetails">
+<div className=" userDetails" style={{width:'500px'}}>
       <div className="row pt-4 ">
       <div className="col-sm-12 col-lg-12">
         <p style={{marginLeft:'100px'}}>

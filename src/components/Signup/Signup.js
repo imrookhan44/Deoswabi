@@ -47,7 +47,7 @@ export default function Signup() {
         //         </div> 
         //     </div>
         // </div>
-        <div className=" userDetails pt-4">
+        <div className=" userDetails pt-4" style={{width:'500px'}}>
       <div className="row pt-4 ">
       <div className="col-sm-12 col-lg-12">
         <h2 style={{marginLeft:'130px',marginTop:'100px'}}> Sign Up</h2>

@@ -45,7 +45,7 @@ export default function Signin() {
         //         </div>
         //     </div>
         // </div>
-        <div className=" userDetails">
+        <div className=" userDetails" style={{width:'500px'}}>
       <div className="row pt-4 ">
       <div className="col-sm-6 col-lg-6">
         <h2 style={{marginLeft:'130px',marginTop:'100px'}}> Sign In</h2>
