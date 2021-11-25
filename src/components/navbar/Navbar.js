@@ -2,7 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 
-import logo from "../../assets/images/upaise-logo.jpg";
+import logo from "../../assets/images/apca logo.png";
 import { Navbar } from 'react-bootstrap';
 export default function Home() {
     return (
@@ -12,9 +12,8 @@ export default function Home() {
                     <div className='row'>
                         <div className='col-lg-12 align-self-center' >
                             {/* <nav className="navbar navbar-expand-lg navbar-light bg-white"> */}
-                            
                                 <Navbar collapseOnSelect  expand="lg">
-                                <Link className="navbar-brand" to="/"><img style={{ height: '70px' }} src={logo} alt='logo' /></Link>
+                                <Link className="navbar-brand" to="/"><img style={{ height: '60px' }} src={logo} alt='logo' /></Link>
 
                             <Navbar.Toggle className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"/>
                             <Navbar.Collapse>

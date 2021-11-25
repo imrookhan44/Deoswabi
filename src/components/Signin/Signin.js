@@ -48,8 +48,8 @@ export default function Signin() {
         <div className=" userDetails">
       <div className="row pt-4 ">
       <div className="col-sm-6 col-lg-6">
-        <h2 style={{marginLeft:'120px',marginTop:'100px'}}> Sign In</h2>
-        <form className="sign Up" style={{marginLeft:'100px',width:'250px'}}>
+        <h2 style={{marginLeft:'130px',marginTop:'100px'}}> Sign In</h2>
+        <form className="sign Up" style={{marginLeft:'120px',width:'200px'}}>
         <input type="number" placeholder="Phone Number" className="form-control" name="pass" title="Please enter only number"/>
         <input type="password" placeholder="Password" name="pass" className="form-control" title="Please enter your password"/>
         <button className="btn btn-primary mt-4"  onClick={() => handleSubmit()}>Sign In</button>
@@ -58,7 +58,7 @@ export default function Signin() {
     </div>
 
         <div className="col-sm-6 col-lg-6">
-        <img src={signin} style={{}} className="imgimgimg1"/>
+        {/* <img src={signin} style={{}} className="imgimgimg1"/> */}
         </div>
         </div>
         </div>
