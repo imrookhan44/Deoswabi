@@ -3,10 +3,10 @@ import apca from '../../assets/images/apca.svg'
 import './user.css'
 export default function user() {
   return (
-    <div className="container-fluid userDetails">
-      <div className="row pt-4 ">
+    <div className="userDetails ">
+      <div className="row pt-5">
       <div className="col-sm-6 col-lg-6">
-        <h2> User Details</h2>
+        <h3 className="offset-5"> User Details</h3>
         <form className="form">
         <input type="name" placeholder="Full name"  name="name" className="form-control"/>
         <input type="text" placeholder="Username" className="form-control" name="pass"/>
@@ -18,12 +18,12 @@ export default function user() {
         <input type="text" placeholder="Station" className="form-control" name="pass"/>
         <input type="Address" placeholder="Address" className="form-control"/>
         <input type="text" placeholder="First Appointment" className="form-control"/><br/>
-         <button className="control-button">Submit</button>&nbsp;
-        </form>        
+         <button className="control-button ">Submit</button>&nbsp;
+        </form>
+        
     </div>
-
-        <div className="col-sm-6 col-lg-6">
-        <img src={apca} className="apca"/>
+<div className="col-sm-4 col-lg-4">
+        <img src={apca} className="apca  "/>
         </div>
         
       </div>
