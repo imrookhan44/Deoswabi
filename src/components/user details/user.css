@@ -35,6 +35,8 @@
 .form-control {
   background-color: lightgray;
   color: black;
+  /* width: 10%; */
+  /* margin-left: 200px; */
 }
 
 .userDetails {

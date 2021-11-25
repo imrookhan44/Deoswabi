@@ -54,3 +54,15 @@ input[type=text]:focus, input[type=password]:focus {
   box-shadow: 10px 10px 10px gray;
   background-color: blue;
 }
+
+@media screen and (max-width: 643px) {
+  .imgimgimg {
+      display: none;
+  }
+}
+@media screen and (max-width: 643px) {
+  .userDetails{
+      width: 360px;
+      
+  }
+}
