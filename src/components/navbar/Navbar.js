@@ -13,14 +13,16 @@ export default function Home() {
                         <div className='col-lg-12 align-self-center' >
                             {/* <nav className="navbar navbar-expand-lg navbar-light bg-white"> */}
                             
-                                <Link className="navbar-brand" to="/"><img style={{ height: '70px' }} src={logo} alt='logo' /></Link>
+                                
                                 <Navbar collapseOnSelect  expand="lg">
+
                             <Navbar.Toggle className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"/>
                             <Navbar.Collapse>
                                  {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span className="navbar-toggler-icon"></span>
                                 </button>  */}
                                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                                <Link className="navbar-brand" to="/"><img style={{ height: '70px' }} src={logo} alt='logo' /></Link>
                                     <ul className="navbar-nav mr-auto">
                                         <li className="nav-item active">
                                             <Link className="nav-link" to="/"> Home </Link>
@@ -48,9 +50,7 @@ export default function Home() {
                                         <li className="nav-item">
                                             <Link className="nav-link" to="Admin">Admin</Link>
                                         </li>
-                                        <li className="nav-item">
-                                            <Link className="nav-link" to="Test">Test</Link>
-                                        </li>
+                                       
                                         <li className="nav-item">
                                             <Link className="nav-link" to="ImageUpload">ImageUpload</Link>
                                         </li>
