@@ -97,10 +97,11 @@
     }
 }
 
- @media screen and (max-width: 1000px) {
+ @media screen and (max-width: 1355) {
     .custom_margin_btn {
         width: 100px;
         margin-left: 10px;
+        font-size: 10px;
     }
 }
                                              
@@ -108,6 +109,8 @@
     .custom_margin_btn {
         width: 90px;
         margin-left: 20px;
+        font-size: 9px;
+
     }
 }
 
@@ -115,7 +118,7 @@
     .custom_margin_btn {
         width: 80px;
         margin-left: 30px;
-
+        font-size: 10px;
     }
 }
 
@@ -123,7 +126,7 @@
     .custom_margin_btn {
         width: 70px;
         margin-left: 40px;
-
+        font-size: 10px;
     }
 }
 
@@ -131,13 +134,14 @@
     .custom_margin_btn {
         width: 60px;
         margin-left: 50px;
-
+        font-size: 10px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .custom_margin_btn {
         width: 50px;
+        font-size: 10px;
     }
 }
 
@@ -204,13 +208,13 @@
 .custom_width{
     width: 70px !important;
     margin-top: 80px;
-    margin-left: 30px;   
+    margin-left: -20px;   
 }
 .custom_margin_btn{
-    margin-left: 50px;
+    margin-left: 10px;
     background-color: cornflowerblue;
-    height: 50px;
-    width: 170px;
+    height: 6%;
+    width: 15%;
     color: white;
     border-radius: 10px;
     border:none
