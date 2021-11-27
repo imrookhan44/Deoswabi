@@ -8,7 +8,7 @@ function CnicDonation() {
         <div className="row ">
           <div className=" col pt-5  ">
             <h3 className="admin mt-4">Easypaisa Donation</h3>
-            <div className="row-easypaisa">
+            <div className="row-easypaisa offset-2">
             <input
               type="Number"
               className="form-controlss pt-2 "
