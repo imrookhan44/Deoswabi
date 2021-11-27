@@ -47,23 +47,23 @@ export default function Signup() {
         //         </div> 
         //     </div>
         // </div>
-        <div className=" userDetails pt-4">
+        <div className=" userDetails pt-4" style={{width:'500px'}}>
       <div className="row pt-4 ">
-      <div className="col-sm-6 col-lg-6">
-        <h2 style={{marginLeft:'120px',marginTop:'100px'}}> Sign Up</h2>
-        <form className="sign Up" style={{marginLeft:'100px',width:'250px'}}>
+      <div className="col-sm-12 col-lg-12">
+        <h2 style={{marginLeft:'130px',marginTop:'100px'}}> Sign Up</h2>
+        <form className="sign Up" style={{marginLeft:'120px',width:'250px'}}>
         <input type="name" placeholder="Full name"  name="name" className="form-control"title="Please enter your full name"/>
         <input type="number" placeholder="Phone Number" className="form-control" name="pass"title="Please enter only number"/>
         <input type="password" placeholder="Password" name="pass" className="form-control"title="Please enter your password"/>
         <input type="password" placeholder="Repeat Password" name="pass" className="form-control"title="Please enter your conform password"/>
         <button className="btn btn-primary mt-4"  onClick={() => handleSubmit()}>Register</button>
-        <p className=' mt-2'>Already have an account <Link to='/signin'>Sign In?</Link> </p>
+        <p className=' mt-2'>Already have an account&nbsp;<Link to='/signin'>Sign In?</Link> </p>
         </form>  
     </div>
 
-        <div className="col-sm-6 col-lg-6">
+        {/* <div className="col-sm-6 col-lg-6">
         <img src={signup}className='imgimgimg'/>
-        </div>
+        </div> */}
         
       </div>
     </div>

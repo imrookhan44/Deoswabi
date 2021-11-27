@@ -31,30 +31,27 @@ export default function Login() {
 //                 </div>
 //             </div>
 //         </div>
-<div className=" userDetails pt-4">
+<div className=" userDetails" style={{width:'500px'}}>
       <div className="row pt-4 ">
-      <div className="col-sm-6 col-lg-6">
-        <h2 style={{marginLeft:'120px'}}>
-        <img className='img-fluid' src={login}/>
-        <br/>
-        <h2>
-     APCA Education <br/></h2><h3>
-All Pakistan Clerk Assocition
-</h3> 
-         </h2>
-        <form className="sign Up" style={{marginLeft:'100px',width:'250px'}}>
-        <input type="text" placeholder="Username"  name="name" className="form-control"title="Please enter your full name"/>
+      <div className="col-sm-12 col-lg-12">
+        <p style={{marginLeft:'100px'}}>
+          {/* <img className='img-fluid' src={login}/> */}
+         <h2 className="h2">APCA Education</h2>
+        <h4> All Pakistan Clerk Association</h4>
+      </p>
+         
+        <form className="sign Up" style={{marginLeft:'100px',width:'250px',marginTop:'60px'}}>
+        <input type="text" placeholder="Username"  name="name" className="form-control"title="Please enter your full name"/><br/>
         <input type="password" placeholder="Password" name="pass" className="form-control"title="Please enter your password"/><br/>
      <input type="checkbox"></input> <b>Remember Username</b> 
-
         <button className="btn btn-primary mt-4">Sign In</button>
         </form>  
     </div>
 
-        <div className="col-sm-6 col-lg-6">
+        {/* <div className="col-sm-6 col-lg-6">
         <img src={human}className='imgimgimg' style={{width:'400px',height:'300px'}}/>
-        </div>
-      </div>
+        </div> */}
+      </div> 
     </div>
 
     )
