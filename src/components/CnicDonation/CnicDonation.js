@@ -1,28 +1,37 @@
-import React from 'react';
-import apca from '../../assets/images/apca.svg'
+import React from "react";
+import './CnicDonation.css';
 
-const CnicDonation = () => {
-    return (
-        <>
-      <div>
-      <div className="container-fluid userDetails">
-      <div className="row pt-4">
-        <div className="col-sm-6">
-        <img src={apca} className="apca"/>
+function CnicDonation() {
+  return (
+    <div>
+      <div className=" mt-5 adminpanel ">
+        <div className="row ">
+          <div className=" col pt-5">
+            <h3 className="admin mt-4  ">CNIC Transaction</h3>
+            <div className="row-cnic">
+            <input
+              type="Number"
+              className="form-controlss pt-2 "
+              placeholder="CNIC Here"
+            ></input>
+            &nbsp;
+            {/* <input
+              type="password"
+              className="form-controls mt-2 pt-2"
+              placeholder="Pin Here"
+            /> */}
+            </div>
+            <div>
+              {" "}
+              <button className="btn btn-primary mt-4" id="button">
+                Submit
+              </button>{" "}
+            </div>
+          </div>
         </div>
-        {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
-        <div className="col-sm-6">
-        <h2> <font color="blue">Cnic Donation</font></h2>
-        <form className="form">
-        <input type="name" placeholder="CNIC/PHONE"  name="name" className="form-control"/>
-        <input type="password" placeholder="Password" className="form-control" name="pass"/><br/>
-         <button style={{backgroundColor:'rgb(10, 78, 206)',width:'100px',color:'white',height:'40px',borderRadius:'10px',border:'none'}}>Submit</button>
-        </form>
-    </div>
       </div>
     </div>
-            </div>
-        </>
-    );
+  );
 }
+
 export default CnicDonation;
