@@ -11,11 +11,12 @@ function Signup() {
       <div>
         <div className=" mt-4 adminpanelsss ">
           <div className="row ">
-            <div className=" col-4 mt-5 offset-4 ">
-              <h3 className="admin mt-3">Sign Up Here</h3>
+            <div className=" col-4 mt-5 offset-3">
+              <h3 className="admin mt-3 offset-6">Sign Up Here</h3>
+              <div className="row-signup offset-6">
               <input
                 type="Name"
-                className="form-controls pt-2 "
+                className="form-controlss pt-2 "
                 placeholder="Name Here"
               ></input>
               <input
@@ -37,13 +38,11 @@ function Signup() {
                 className="form-controls pt-2 "
                 placeholder="Password"
               ></input>
-              <div className="Me mt-2 ">
-                  <input type="checkbox"></input> <b>Remember Me</b>
-                  </div>
+              </div>
               
               <div>
                 {" "}
-                <button className="btn btn-primary mt-4" id="button">
+                <button className="btn btn-primary mt-4 offset-6" id="button">
                   SignUp
                 </button>{" "}
               </div>

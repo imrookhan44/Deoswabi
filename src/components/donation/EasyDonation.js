@@ -7,7 +7,7 @@ function CnicDonation() {
       <div className=" mt-5 adminpanel ">
         <div className="row ">
           <div className=" col pt-5  ">
-            <h3 className="admin mt-4">Easypaisa Donation</h3>
+            <h3 className="admin mt-3">Easypaisa Donation</h3>
             <div className="row-easypaisa offset-2">
             <input
               type="Number"

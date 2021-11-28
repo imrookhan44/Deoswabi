@@ -8,7 +8,7 @@ function BankDonation() {
         <div className="row ">
           <div className=" col pt-5  ">
             <h3 className="admin mt-4">Bank Transaction</h3>
-            <div className="row-donation">
+            <div className="row-donation offset-2">
             <input
               type="Number"
               className="form-controlss pt-2 "

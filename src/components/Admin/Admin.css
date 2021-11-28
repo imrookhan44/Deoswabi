@@ -41,7 +41,8 @@
   margin: auto;
   width: 650px;
   height: 400px;
-  box-shadow: 2px 4px 17px 3px grey
+  box-shadow: 2px 4px 17px 3px grey;
+  border-radius:20px;
 }
 
 @media screen and (max-width: 500px) {
