@@ -4,4 +4,13 @@
   text-decoration: none;
 }
 
-
+.nav-link:hover {
+   
+  
+   border-radius: 100px;
+  background-color: #51c979;
+  box-shadow: 0px 5px 20px #51c979;
+  font-size: 20px; 
+}
+.navbar {
+}
