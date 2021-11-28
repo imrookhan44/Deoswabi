@@ -30,7 +30,6 @@ function CnicDonation() {
           </div>
 
           <div className="  col-sm-3 col-3">
-            {/* <img className="custom-img image " src={signin} alt='signup' /> */}
           </div>
         </div>
       </div>

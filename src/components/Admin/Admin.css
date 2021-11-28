@@ -4,7 +4,6 @@
   width: 100px;
   height: 40px;
   box-shadow: 2px 4px 17px 3px grey
-
 }
 
 .Adminpage:hover {
@@ -16,8 +15,8 @@
 .admin {
   font-size: xx-large;
   font-weight: 400px;
-  
-  
+
+
 
 
 
@@ -25,24 +24,13 @@
 
 }
 
-/* .image {
-  margin-top: 100px;
-  display: flex;
-
-  width: 200px;
-
-
-
-} */
-
-
 .adminpanel {
 
   margin: auto;
   width: 650px;
   height: 400px;
   box-shadow: 2px 4px 17px 3px grey;
-  border-radius:20px;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 500px) {
@@ -54,6 +42,7 @@
 
   }
 }
+
 @media screen and (max-width: 768px) {
   .adminpanel {
 
@@ -90,7 +79,7 @@
 .form-controls {
   border: 1px solid #bbb9b9;
   outline: none;
-  border-width: 0px 0px 1px 0  ;
+  border-width: 0px 0px 1px 0;
   width: 100%;
 }
 

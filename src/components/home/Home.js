@@ -27,10 +27,6 @@ export default function Home() {
      
       <div className='container-fluid'>
       <div className='bg_img'>
-        {/* <div className='ms-4 ps-4'>
-          <img className='img img-responsive custom_width' src={Donation} />
-        </div><br/> */}
-      
       </div>
       </div>
     

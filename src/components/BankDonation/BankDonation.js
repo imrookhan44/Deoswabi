@@ -7,7 +7,7 @@ function BankDonation() {
       <div className=" mt-5 adminpanel ">
         <div className="row ">
           <div className=" col pt-5  ">
-            <h3 className="admin mt-4">Bank Transaction</h3>
+            <h3 className="admin mt-4">Bank Donation</h3>
             <div className="row-donation offset-2">
             <input
               type="Number"
