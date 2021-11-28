@@ -45,7 +45,14 @@ All Pakistan Clerk Assocition
         <form className="sign Up" style={{marginLeft:'100px',width:'250px'}}>
         <input type="text" placeholder="Username"  name="name" className="form-control"title="Please enter your full name"/>
         <input type="password" placeholder="Password" name="pass" className="form-control"title="Please enter your password"/><br/>
-     <input type="checkbox"></input> <b>Remember Username</b> 
+     
+     
+     <input type="checkbox"></input> <b>Remember Username</b> <br /> <br/>
+   
+
+
+
+      {/* Don't have an account? <br /><a href="SignUP" className="anchor"> Register Here </a><br /> */}
 
         <button className="btn btn-primary mt-4">Sign In</button>
         </form>  

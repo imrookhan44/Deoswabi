@@ -37,3 +37,6 @@ border-radius: 0px !important;
         width: 360px;
     }
   }
+  .text-error{
+      color: red;
+  }
