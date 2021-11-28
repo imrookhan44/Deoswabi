@@ -87,6 +87,10 @@ export default function Home() {
                                         </li>
                                         {/* <li> <a h   ef="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
                                         </li> */}
+                                        
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="index">Donate Here</Link>
+                                        </li>
                                     </ul>
                                 </div>
                             </Navbar.Collapse>

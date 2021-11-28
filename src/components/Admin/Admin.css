@@ -3,7 +3,7 @@
   border: none;
   width: 100px;
   height: 40px;
-
+  box-shadow: 2px 4px 17px 3px grey
 
 }
 
@@ -16,29 +16,32 @@
 .admin {
   font-size: xx-large;
   font-weight: 400px;
+  
+  
+
 
 
 
 
 }
 
-.image {
-  margin-top: 40px;
+/* .image {
+  margin-top: 100px;
   display: flex;
 
-  width: 250px;
+  width: 200px;
 
 
 
-}
+} */
 
 
 .adminpanel {
 
   margin: auto;
-  width: 900px;
+  width: 650px;
   height: 400px;
-  box-shadow: 10px 10px 10px 10px gray;
+  box-shadow: 2px 4px 17px 3px grey
 }
 
 @media screen and (max-width: 500px) {
@@ -84,7 +87,10 @@
 
 
 .form-controls {
-  border: none;
+  border: 1px solid #bbb9b9;
+  outline: none;
+  border-width: 0px 0px 1px 0  ;
+  width: 100%;
 }
 
 #button {
