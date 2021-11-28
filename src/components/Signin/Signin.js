@@ -53,6 +53,7 @@ export default function Signin() {
         <input type="number" placeholder="Phone Number" className="form-control" name="pass" title="Please enter only number"/>
         <input type="password" placeholder="Password" name="pass" className="form-control" title="Please enter your password"/>
         <button className="btn btn-primary mt-4"  onClick={() => handleSubmit()}>Sign In</button>
+        
         {/* <p className=' mt-2'>Already have an account <Link to='/signin'>Sign In?</Link> </p> */}
         </form>  
     </div>

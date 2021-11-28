@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import logo from "../../assets/images/apca logo.png";
 import { Navbar } from 'react-bootstrap';
+import { withWidth } from "@material-ui/core";
 export default function Home() {
     return (
         <>
@@ -15,7 +16,7 @@ export default function Home() {
                         {/* <Navbar collapseOnSelect expand="lg"> */}
                         {/* <Link className="navbar-brand" to="/"><img style={{ height: '60px' }} src={logo} alt='logo' /></Link> */}
 
-                        <Navbar collapseOnSelect expand="lg">
+                        <Navbar collapseOnSelect expand="lg" >
                             <Navbar.Toggle
                                 className="navbar-toggler"
                                 type="button"
@@ -26,15 +27,13 @@ export default function Home() {
                                 aria-label="Toggle navigation"
                             />
                             <Navbar.Collapse>
-                                {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span className="navbar-toggler-icon"></span>
-                                </button>  */}
+                               
                                 <div
                                     className="collapse navbar-collapse"
                                     id="navbarSupportedContent"
                                 >
                                     <Link className="navbar-brand" to="/">
-                                        <img style={{ height: "70px" }} src={logo} alt="logo" />
+                                        <img style={{ height: "45px", width:"35px" }} src={logo} alt="logo" />
                                     </Link>
                                     <ul className="  navbar-nav ">
                                         <li className="nav-item active">
