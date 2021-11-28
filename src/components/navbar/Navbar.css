@@ -1,6 +1,7 @@
-.nav-link {
-  border-radius: 100px;
-  /* background-color: red; */
+.nav-item{
+  
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .nav-link:hover {
