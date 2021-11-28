@@ -13,6 +13,7 @@ import easyDonation from '../donation/EasyDonation';
 import BankDonation from '../BankDonation/BankDonation';
 import CnicDonation from '../CnicDonation/CnicDonation';
 import ImageUpload from '../ImageUpload/ImageUpload';
+import index from "../donation/index"
 import Test from '../Admin/Test'
  
 function Routes() {
@@ -29,9 +30,10 @@ function Routes() {
           <Route path='/download' component={Download} />
           <Route path='/Admin' component={Admin} />
           <Route path='/Test' component={Test} />
-          <Route path='/donation' component={easyDonation} />
+          <Route path='/index' component={index} />
           <Route path='/BankDonation' component={BankDonation} />
           <Route path='/CnicDonation' component={CnicDonation} />
+          <Route path='/donation'component={easyDonation} />
           <Route path='/ImageUpload' component={ImageUpload} />
 
           <Route path='/' component={Home} />

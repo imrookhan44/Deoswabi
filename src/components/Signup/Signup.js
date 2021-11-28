@@ -4,10 +4,14 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { auth } from "../firebase";
 import { useHistory } from "react-router-dom";
-import { useFormik, ErrorMessage } from "formik";
+import { useFormik, phoneRegExp } from "formik";
 import * as yup from "yup";
 
+
+
+
 const validationSchema = yup.object().shape({
+
   fullName: yup
     .string()
     .required("First name is required." )
@@ -21,15 +25,18 @@ const validationSchema = yup.object().shape({
     .string()
     .required("password is required.")
     .min(6, "Minimum 6 characters required"),
-  mobileNumber: yup.number("enter valid number")
-  .integer()
+  mobileNumber: yup.string()
+  .required("enter valid phone number")
+  .min(10, "minimum 10 characters required")
+  
 });
 
 export default function Signup() {
+  
   const formik = useFormik({
     initialValues: {
       firstName: "",
-      mobileNumber: undefined,
+      mobileNumber: '',
       password: "",
       repeatPassword: "",
     },

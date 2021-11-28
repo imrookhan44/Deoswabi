@@ -1,42 +1,6 @@
-.form-control{
-border-top: aliceblue !important;
-border-right: aliceblue !important;
-border-left: aliceblue !important;
-border-radius: 0px !important;
+.Me{
+    font: menu;
 }
-.signup{
-    font-size: xx-large;
-    font-weight: 100;
+.text-error{
+    color:  red;
 }
-.custom_img{
-    margin-top: 40px;
-
-}
-.form1{
-    width: 50px;
-}
-.userDetails{
-    width: 900px;
-    height: 600px;
-    padding-top: 30px;
-    
-}
-
-.imgimgimg{
-    width:300px;
-    margin-Top:100px;
-}
-
-@media screen and (max-width: 643px) {
-    .imgimgimg {
-        display: none;
-    }
-  }
-  @media screen and (max-width: 643px) {
-    .userDetails{
-        width: 360px;
-    }
-  }
-  .text-error{
-      color: red;
-  }

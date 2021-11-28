@@ -23,30 +23,18 @@ export default function Home() {
     console.log('btnchecking', handleShow)
   }
   return (
-    <>
-      <Modal show={show} onHide={handleClose} className="modal-home">
-        <Modal.Header closeButton>
-          <Modal.Title></Modal.Title>
-          <h2 className="modelbutton">Donate Here </h2>
-        </Modal.Header>
-        <Modal.Body >
-        <tr>
-        <td><Link to= '/donation/easyDonation'><img src={easypaisa} className="im1"/></Link></td>
-        <td><Link to= '/BankDonation/BankDonation'><img src={bank} className="im1"/></Link></td>
-        <td><Link to= '/CnicDonation/CnicDonation'><img src={cnic} className="im1"/></Link></td>
-           </tr>
-        </Modal.Body>
-      </Modal>
+  
+     
       <div className='container-fluid'>
       <div className='bg_img'>
-        <div className='ms-4 ps-4'>
+        {/* <div className='ms-4 ps-4'>
           <img className='img img-responsive custom_width' src={Donation} />
-        </div><br/>
-      <button  className='custom_margin_btn' onClick={handleShow} >Donate Here</button>
-      <div className=''></div>
+        </div><br/> */}
+      
       </div>
       </div>
-    </>
+    
+
 
 
   )
