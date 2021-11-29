@@ -42,7 +42,8 @@ export default function Signup() {
     },
     onSubmit: (values) => {
       alert(
-        "Registration Form Submitted \n " + JSON.stringify(values, null, 2)
+        "Form submitted"
+      
       );
     },
     validationSchema: validationSchema,
