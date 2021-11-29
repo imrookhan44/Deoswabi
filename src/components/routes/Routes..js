@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react';
+import firebase from 'firebase';
+
 import Home from '../home/Home';
 import Profile from '../profile/Profile';
 import Updatedacc from '../updatedacc/Updatedacc';
@@ -15,8 +18,14 @@ import CnicDonation from '../CnicDonation/CnicDonation';
 import ImageUpload from '../ImageUpload/ImageUpload';
 import index from "../donation/index"
 import Test from '../Admin/Test'
- 
+
+
+  
+  
 function Routes() {
+  const [oldUserState, setOlduserState] = useState(false);
+  const [user] = useState();
+  const [oldUser] = useState();
   return (
 
         <Switch>
@@ -37,6 +46,7 @@ function Routes() {
           {/* <Route path='/ImageUpload' component={ImageUpload} /> */}
 
           <Route path='/' component={Home} />
+          {user ? <Routes /> : oldUser && <Login />}
         </Switch>
   )
 }

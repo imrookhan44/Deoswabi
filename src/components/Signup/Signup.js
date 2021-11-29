@@ -4,55 +4,133 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { auth } from "../firebase";
 import { useHistory } from "react-router-dom";
+import { useFormik, phoneRegExp } from "formik";
+import * as yup from "yup";
 
-function Signup() {
+const validationSchema = yup.object().shape({
+  fullName: yup
+    .string()
+    .required("Name is required.")
+    .min(4, "Minimum 4 characters required"),
+
+  password: yup
+    .string()
+    .required("password is required.")
+    .min(6, "Minimum 6 characters required"),
+  repeatPassword: yup
+    .string()
+    .required("password is required.")
+    .min(6, "Minimum 6 characters required"),
+  mobileNumber: yup
+    .string()
+    .required("Enter valid phone")
+    .min(10, "minimum 10 characters required"),
+});
+
+export default function Signup() {
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      mobileNumber: "",
+      password: "",
+      repeatPassword: "",
+    },
+    onSubmit: (values) => {
+      alert("Form submitted");
+    },
+    validationSchema: validationSchema,
+  });
+
+  const renderErrorMessage = (field) => {
+    return (
+      formik.touched[field] && (
+        <div class="text-error">{formik.errors[field]}</div>
+      )
+    );
+  };
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const history = useHistory();
+  const handleSubmit = async (e) => {
+    
+    console.log(email, password);
+    try {
+      const result = await auth
+        .createUserWithEmailAndPassword(email, password)
+        .then((res) => {
+          console.log("res ", res);
+          history.push("/");
+        });
+    
+      console.log("RESULT CONST :", result);
+    } catch (err) {
+      console.log("err ;  :", err);
+      
+    }
+  };
+
   return (
-    <div>
-      <div className=" mt-4 adminpanel ">
-        <div className="row mt-5">
-          <div className=" col-4 mt-5 offset-3   ">
-            <h3 className="admin mt-1 offset-5   pt-1">SignUp </h3>
-            <div className="row-signup offset-3">
-              <div className="col-lg-6 ">
-              <input
-                type="Name"
-                className="form-controlssss pt-2  "
-                placeholder="Name"
-              ></input>
-              <input
-                type="Name"
-                className="form-controlssss pt-2 "
-                placeholder="Full Name"
-              ></input>
-              <input
-                type="Number"
-                className="form-controlssss pt-2 "
-                placeholder="Phone Number"
-              ></input>
-              <input
-                type="Email"
-                className="form-controlssss pt-2 "
-                placeholder="Email"
-              ></input>
-              <input
-                type="Password"
-                className="form-controlssss pt-2 "
-                placeholder="Password"
-              ></input>
-              </div>
-            </div>
-
+ 
+    <div className=" adminpanel mt-5">
+      <div className="row mt-3">
+        <div className="col-4 offset-3">
+          <h3 className="admin  offset-5   pt-2">SignUp </h3>
+          <form
+            autoComplete="off"
+            className="row-signup offset-3"
+            onSubmit={formik.handleSubmit}
+          >
             <div>
-              {" "}
-              <button className="btn btn-primary mt-4 offset-5" id="button">
-                SignUp
-              </button>{" "}
+              <input
+                type="name"
+                placeholder="Full name"
+                name="name"
+                className="form-controlsssss pt-2 "
+                title="Please enter your full name"
+                {...formik.getFieldProps("fullName")}
+              />
+              {renderErrorMessage("fullName")}
+              <input
+                type="number"
+                placeholder="Phone Number"
+                className="form-controlsssss pt-2 "
+                name="pass"
+                title="Please enter only number"
+                {...formik.getFieldProps("mobileNumber")}
+              />
+              {renderErrorMessage("mobileNumber")}
+              <input
+                type="password"
+                placeholder="Password"
+                name="pass"
+                className="form-controlsssss pt-2 "
+                title="Please enter your password"
+                {...formik.getFieldProps("password")}
+              />
+              {renderErrorMessage("password")}
+              <input
+                type="password"
+                placeholder="Repeat Password"
+                name="pass"
+                className="form-controlsssss pt-2 "
+                title="Please enter your conform password"
+                {...formik.getFieldProps("repeatPassword")}
+              />
+              {renderErrorMessage("repeatPassword")}&nbsp;
+              <button
+                lassName="btn  mt-4 offset-5"
+                id="button"
+                onClick={() => handleSubmit()}
+              >
+                Register
+              </button>
+              <p className=" mt-2">
+                Already have an account <Link to="/signin">Sign In?</Link>{" "}
+              </p>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
   );
 }
-
-export default Signup;
