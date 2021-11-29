@@ -31,10 +31,10 @@ function Routes() {
           <Route path='/Admin' component={Admin} />
           <Route path='/Test' component={Test} />
           <Route path='/index' component={index} />
-          <Route path='/BankDonation' component={BankDonation} />
+          <Route path='/BankDonation'  component={BankDonation} />
           <Route path='/CnicDonation' component={CnicDonation} />
           <Route path='/donation'component={easyDonation} />
-          <Route path='/ImageUpload' component={ImageUpload} />
+          {/* <Route path='/ImageUpload' component={ImageUpload} /> */}
 
           <Route path='/' component={Home} />
         </Switch>

@@ -93,7 +93,11 @@ export default function Home() {
                 
                     </div>
                 </div>
-            </div>
-        </>
-    );
+             
+            {/* </nav> */}
+          </div>
+   
+    
+    </>
+  );
 }

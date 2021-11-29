@@ -8,7 +8,6 @@ const Footer = () => {
                     &nbsp;<a href="www.facebook.com" class="fa fa-facebook" target="www.facebook.com"></a> &nbsp;&nbsp;
                     <a href="www.twitter.com" class="fa fa-twitter"></a>&nbsp;&nbsp;
                     <a href="www.google.com" class="fa fa-google"></a>&nbsp;&nbsp;
-                    {/* <a href="#" class="fa fa-linkedin"></a>&nbsp; */}
                     <a href="#" class="fa fa-youtube"></a>&nbsp;&nbsp;
 
 
