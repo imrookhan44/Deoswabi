@@ -9,8 +9,8 @@ function Login() {
     <div>
       <div className=" mt-4 adminpanel ">
         <div className="row ">
-          <div className=" col-4 offset-4 ">
-            <h3 className="admin mt-3">Login Page</h3>
+          <div className=" col-5 offset-4 ">
+            <h3 className="admin mt-5 pt-4 ">Login Page</h3>
             <input
               type="number"
               className="form-controls pt-2 "
@@ -30,10 +30,12 @@ function Login() {
               <button className="btn btn-primary mt-4" id="button">
                 Login
               </button>{" "}
-            </div>
+            </div><br />
+            
           </div>
 
-          <div className="  col-sm-3 col-3">
+          <div className>
+           
             {/* <img className="custom-img image " src={signin} alt='signup' /> */}
           </div>
         </div>
