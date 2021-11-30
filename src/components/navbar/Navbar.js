@@ -49,12 +49,12 @@ export default function Home() {
                       <Link className="nav-link" to="signup" id="third">
                         Sign Up
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                       <Link className="nav-link" to="login" id="fourth">
                         Login
                       </Link>
-                    </li> */}
+                    </li>
 
                     <li className="nav-item"></li>
                     <li className="nav-item">
