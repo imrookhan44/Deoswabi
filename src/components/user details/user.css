@@ -8,20 +8,21 @@
 }
 
 .form {
-  width: 340px;
+  width: 260px;
+  
 
-  height: 75vh;
+  
 }
 
 .control-button {
-  width: 12vw;
-  background-color: rgb(73, 111, 184);
-  height: 8vh;
+  
+  
+  /* height: 8vh;
   color: white;
   font-size: 20px;
   border-radius: 5px;
-  font-weight: 400;
-  border: none;
+  font-weight: 400; */
+  
 }
 
 @media screen and (max-width: 500px) {
@@ -31,13 +32,15 @@
 }
 
 .control-button:hover {
-  box-shadow: 10px 10px 10px gray;
+  box-shadow: 10px 10px 10px 10px gray;
   background-color: blue;
 }
 
 .form-control {
   background-color: lightgray;
   color: black;
+  
+  
   /* width: 10%; */
   /* margin-left: 200px; */
 }
@@ -78,4 +81,9 @@
   .form {
     width: 370px;
   }
+}
+#bTN{
+  
+  width: 90px;
+  
 }

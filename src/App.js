@@ -6,16 +6,36 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Routes from "./components/routes/Routes.";
 import "fontawesome";
 import { auth } from "./components/firebase";
-
+import Login from "./components/login/Login";
 import React, { useState, useEffect } from "react";
 
+
 function App() {
+  const [user, setUser] = useState(null)
+  useEffect(() => {
+    auth.onAuthStateChanged(user=>{
+      if(user) setUser(user)
+      else setUser(null)
+    })
+  
+    
+  }, [])
   return (
+   
+
     <BrowserRouter>
+    
+    
+
       <Navbar />
-      <Routes />
+    
+
       <Footer />
+    
+      <Routes />
+    
     </BrowserRouter>
+  
   );
 }
 export default App;
