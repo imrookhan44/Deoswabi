@@ -42,7 +42,7 @@ function Login() {
         toast("Login Successfully");
       })
       .catch((err) => {
-        toast("Register First ");
+        toast ("Register First ");
       });
   };
   const [email, setEmail] = useState("");
@@ -55,7 +55,7 @@ function Login() {
         <div className=" mt-5 adminpanel ">
           <div className="row ">
             <div className=" col-5 offset-4 ">
-              <h3 className="admin mt-5 pt-4 ">Login Page</h3>
+              <h3 className="admin mt-5 pt-4 ">Login</h3>
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"

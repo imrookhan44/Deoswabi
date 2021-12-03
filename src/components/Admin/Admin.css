@@ -35,31 +35,20 @@
 
 @media screen and (max-width: 500px) {
   .adminpanel {
-
-
     width: 360px;
-
-
   }
 }
 
 @media screen and (max-width: 768px) {
   .adminpanel {
-
-
     width: 300px;
     height: 340px;
-
-
   }
 }
 
 @media screen and (max-width: 868px) {
   .image {
-
     display: none;
-
-
   }
 }
 
@@ -68,10 +57,9 @@
   .form-controls {
 
     width: 200px;
-
     display: flex;
-
-
+    font-size: 10px;
+    font-weight: bold;
   }
 }
 
@@ -86,6 +74,4 @@
 #button {
   width: 90px;
   border-radius: 4px;
-
-
 }

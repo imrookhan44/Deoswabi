@@ -84,6 +84,7 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
+              
                 <button className="btn-primary"  onClick={() => history.goBack('/')} ><AiOutlineArrowLeft /></button>
               </Navbar.Collapse>
             </Navbar>
