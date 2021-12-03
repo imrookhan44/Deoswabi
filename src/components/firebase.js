@@ -4,12 +4,12 @@ import "firebase/database";
 import "firebase/storage";
 import "firebase/firestore";
 const firebaseConfig = {
-  apiKey: "AIzaSyCuJiVGaSqUhz1JvjoHX8SOowQZSOt8OKY",
-  authDomain: "apca-ede85.firebaseapp.com",
-  projectId: "apca-ede85",
-  storageBucket: "apca-ede85.appspot.com",
-  messagingSenderId: "813674036273",
-  appId: "1:813674036273:web:5f07058b13c23fa2106910",
+  apiKey: "AIzaSyArLVA_Lde73VMAie7cH4wLj2RLeGNPDqw",
+  authDomain: "apca-9ca67.firebaseapp.com",
+  projectId: "apca-9ca67",
+  storageBucket: "apca-9ca67.appspot.com",
+  messagingSenderId: "842905420618",
+  appId: "1:842905420618:web:5ef68d99cf7211327cf7b3"
 };
 let InitFirebase;
 InitFirebase = firebase.initializeApp(firebaseConfig);

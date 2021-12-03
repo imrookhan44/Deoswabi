@@ -11,13 +11,13 @@ function CnicDonation() {
             <div className="row-easypaisa offset-2">
             <input
               type="Number"
-              className="form-controlss pt-2 "
+              className="form-controls23 pt-2 "
               placeholder="Account Here"
             ></input>
             &nbsp;
             <input
               type="password"
-              className="form-controls mt-2 pt-2"
+              className="form-controls23 mt-2 pt-2"
               placeholder="Pin Here"
             />
             </div>
