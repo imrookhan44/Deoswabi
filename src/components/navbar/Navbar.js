@@ -1,11 +1,15 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import logo from "../../assets/images/apca logo.png";
 import { Navbar } from "react-bootstrap";
 
 export default function Home() {
+  let history =  useHistory()
   return (
     <>
       <div className="container-fluid" id="Main">
@@ -80,6 +84,7 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
+                <button className="btn-primary"  onClick={() => history.goBack('/')} ><AiOutlineArrowLeft /></button>
               </Navbar.Collapse>
             </Navbar>
           </div>

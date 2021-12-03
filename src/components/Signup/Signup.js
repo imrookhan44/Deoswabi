@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { auth } from "../firebase";
 import { useHistory } from "react-router-dom";
-import { useFormik, phoneRegExp } from "formik";
+import { useFormik } from "formik";
 import * as yup from "yup";
 
 const validationSchema = yup.object().shape({
