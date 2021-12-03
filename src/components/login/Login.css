@@ -1,4 +1,6 @@
-.Checkbox{
-    font: menu;
-    
+.Checkbox {
+  font: menu;
+}
+.Anchor {
+  text-decoration: none;
 }

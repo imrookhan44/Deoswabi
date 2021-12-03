@@ -1,46 +1,101 @@
-import React from "react";
-import { Formik, Form, Field } from "formik";
+import React, { useState } from "react";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import firebase from "firebase";
+import { db } from "../firebase";
 import "./Login.css";
-import login from "../../assets/images/login.jpg";
-import human from "../../assets/images/human.jpg";
+
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useToast } from "react-toastify";
+toast.configure();
+const validationSchema = yup.object().shape({
+  Email: yup.string().required("Email is required."),
+  
+
+  password: yup.string().required("password is required."),
+});
 
 function Login() {
+  
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+
+      password: "",
+    },
+    onSubmit: (values) => {},
+    validationSchema: validationSchema,
+  });
+  const renderErrorMessage = (field) => {
+    return (
+      formik.touched[field] && (
+        <div class="text-error">{formik.errors[field]}</div>
+      )
+    );
+  };
+  const notify = () => {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        toast("Login Successfully");
+      })
+      .catch((err) => {
+        toast("Register First ");
+      });
+  };
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  console.log(firebase.auth());
+  const signInHandler = () => {};
   return (
     <div>
-      <div className=" mt-4 adminpanel ">
-        <div className="row ">
-          <div className=" col-4 offset-4 ">
-            <h3 className="admin mt-3">Login Page</h3>
-            <input
-              type="number"
-              className="form-controls pt-2 "
-              placeholder="Phone Number"
-            ></input>
-            <input
-              type="password"
-              className="form-controls mt-2 pt-2"
-              placeholder="Password"
-            />
-            <div className="Checkbox mt-2">
-              <input type="checkbox"></input> <b>Remember me</b>
+      <form onSubmit={formik.handleSubmit} autoComplete="off">
+        <div className=" mt-5 adminpanel ">
+          <div className="row ">
+            <div className=" col-5 offset-4 ">
+              <h3 className="admin mt-5 pt-4 ">Login Page</h3>
+              <input
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                className="form-controls pt-2 "
+                placeholder=" Email address"
+                {...formik.getFieldProps("email")}
+              ></input>
+              {renderErrorMessage("email")}
+              <input
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                className="form-controls mt-2 pt-2"
+                placeholder="Password"
+                {...formik.getFieldProps("password")}
+              />{" "}
+              {renderErrorMessage("password")}
+              <div className="Checkbox mt-2">
+                <input type="checkbox"></input> <b>Remember me</b>
               </div>
-            
-            <div>
-              {" "}
-              <button className="btn btn-primary mt-4" id="button">
-                Login
-              </button>{" "}
+              <div>
+                {" "}
+                <button
+                  onClick={(signInHandler, notify)}
+                  className="btn btn-primary mt-4"
+                  id="button"
+                >
+                  Login
+                </button>{" "}
+              </div>
+              <br />
+            </div>
+
+            <div className>
+              {/* <img className="custom-img image " src={signin} alt='signup' /> */}
             </div>
           </div>
-
-          <div className="  col-sm-3 col-3">
-            {/* <img className="custom-img image " src={signin} alt='signup' /> */}
-          </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
-
 
 export default Login;
