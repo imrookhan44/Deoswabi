@@ -1,0 +1,14 @@
+.displayImage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.displayImage>div{
+    height: 150px;
+    width: 150px;
+    border: 1px solid;
+    margin: 5px;
+    
+}
