@@ -7,12 +7,46 @@ import { Link } from 'react-router-dom'
 
 
 function Download() {
-    return (
-        <div>
-          
-{/* <Navbar bg="white" expand="lg" >
-  <Container fluid>
-    <Navbar.Toggle aria-controls="navbarScroll" />
+
+
+// // Create a reference to the file we want to download
+// var starsRef = storageRef.child('images/stars.jpg');
+
+// // Get the download URL
+// starsRef.getDownloadURL()
+// .then((url) => {
+//   // Insert url into an <img> tag to "download"
+// })
+// .catch((error) => {
+//   // A full list of error codes is available at
+//   // https://firebase.google.com/docs/storage/web/handle-errors
+//   switch (error.code) {
+//     case 'storage/object-not-found':
+//       // File doesn't exist
+//       break;
+//     case 'storage/unauthorized':
+//       // User doesn't have permission to access the object
+//       break;
+//     case 'storage/canceled':
+//       // User canceled the upload
+//       break;
+
+//     // ...
+
+//     case 'storage/unknown':
+//       // Unknown error occurred, inspect the server response
+//       break;
+//   }
+// });
+
+
+
+
+
+
+
+  return(
+    {/* <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
     <Link className="navbar-brand" to="/"/><img style={{ height: '70px' }} src={logo} alt='logo' />
       <Nav className="me-auto my-2 my-lg-0 "style={{ maxHeight: '100px' }}navbarScroll>
@@ -25,14 +59,11 @@ function Download() {
         <Nav.Link href="#action1">Download</Nav.Link>
         <Nav.Link href="#action2">Admin</Nav.Link>
       </Nav>
-    </Navbar.Collapse>
-  </Container>
-</Navbar> */}
-        
-        </div>
+    </Navbar.Collapse> */}
 
-        
-    )
+
+  )
+    
 }
 
 export default Download
