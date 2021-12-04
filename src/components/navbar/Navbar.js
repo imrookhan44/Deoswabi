@@ -74,8 +74,13 @@ export default function Home() {
                     </li>
 
                     <li className="nav-item">
-                      <Link className="nav-link" to="index" id="ten">
+                      <Link className="nav-link" to="donation" id="ten">
                         Donate Here
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="fileUpload" id="ten">
+                        file upload
                       </Link>
                     </li>
                   </ul>
