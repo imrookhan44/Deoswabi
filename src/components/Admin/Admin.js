@@ -1,9 +1,9 @@
 import React,{useState} from "react";
 import firebase from "firebase";
-import { useToasts } from 'react-toast-notifications'
+// import { useToasts } from 'react-toast-notifications'
 import "./Admin.css";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css'; 
+import "react-toastify/dist/ReactToastify.css";
 toast.configure()
 function Admin() {
   const notify= () =>{

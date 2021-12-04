@@ -19,7 +19,7 @@ export default function Home() {
       <div className="container-fluid" id="Main">
         <div className="row">
           <div className="col-lg-12 align-self-center">
-          <div onClick={()=> {auth?.signOut()}}> {auth?.currentUser?.email} </div>
+          {/* <div onClick={()=> {auth?.signOut()}}> {auth?.currentUser?.email} </div> */}
             <Navbar collapseOnSelect expand="lg">
               <Navbar.Toggle
                 className="navbar-toggler"
@@ -31,8 +31,8 @@ export default function Home() {
                 aria-label="Toggle navigation"
               />
               <Navbar.Collapse>
-          <div onClick={()=> {auth?.signOut()}}>user. : {auth?.currentUser?.email} 
-          </div>
+          {/* <div onClick={()=> {auth?.signOut()}}>user. : {auth?.currentUser?.email} 
+          </div> */}
                 <div
                   className="collapse navbar-collapse"
                   id="navbarSupportedContent"
@@ -100,7 +100,7 @@ export default function Home() {
               </Navbar.Collapse>
               {auth?.currentUser?.uid && (
                 <NavDropdown title={auth?.currentUser?.email}>
-                  <NavDropdown.Item onClick={Logout}>Logout</NavDropdown.Item>
+                  <NavDropdown.Item onClick={()=> {auth?.signOut()}}>Logout</NavDropdown.Item>
                 </NavDropdown>
               )}
             </Navbar>
