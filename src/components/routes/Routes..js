@@ -27,20 +27,21 @@ function Routes(isLoggedIn) {
   const [oldUser] = useState();
   return (
     <Switch>
-      <SecureRoute path="/profile" component={Profile} />
-      <SecureRoute path="/updatedacc" component={Updatedacc} />
-      <SecureRoute path="/signup" component={Signup} />
-      <SecureRoute path="/signin" component={Signin} />
-      <SecureRoute path="/upload" component={Upload} />
+      <Route path="/profile" component={Profile} />
+      <Route path="/updatedacc" component={Updatedacc} />
+      <Route path="/signup" component={Signup} />
+      <Route path="/signin" component={Signin} />
+      <Route path="/upload" component={Upload} />
       <Route path="/login" component={Login} />
       <secureRoute path="/userdetails" component={Userdetails} />
       <SecureRoute path="/download" component={Download} />
       <Route path="/Admin" component={Admin} />
-      <SecureRoute path="/Test" component={Test} />
-      <SecureRoute path="/index" component={index} />
-      <SecureRoute path="/BankDonation" component={BankDonation} />
-      <SecureRoute path="/CnicDonation" component={CnicDonation} />
-      <SecureRoute path="/donation" component={easyDonation} />
+      <Route path="/Test" component={Test} />
+      <Route path="/donation" component={index} />
+      <Route path="/BankDonation" component={BankDonation} />
+      <Route path="/CnicDonation" component={CnicDonation} />
+      <Route path="/easypaisaDonation" component={easyDonation} />
+      <Route path="/fileUpload" component={ImageUpload} />
       {/* <Route path='/ImageUpload' component={ImageUpload} /> */}
 
       <Route path="/" component={isLoggedIn ? Home : Login} />
