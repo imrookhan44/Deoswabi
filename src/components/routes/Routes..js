@@ -19,6 +19,7 @@ import CnicDonation from "../CnicDonation/CnicDonation";
 import ImageUpload from "../ImageUpload/ImageUpload";
 import index from "../donation/index";
 import Test from "../Admin/Test";
+import dropdown from "../../dropdown/dropdown";
 
 function Routes(isLoggedIn) {
   const [oldUserState, setOlduserState] = useState(false);
@@ -40,6 +41,7 @@ function Routes(isLoggedIn) {
       <SecureRoute path="/BankDonation" component={BankDonation} />
       <SecureRoute path="/CnicDonation" component={CnicDonation} />
       <SecureRoute path="/donation" component={easyDonation} />
+      <Route path="/dropdown" component={dropdown} />
       {/* <Route path='/ImageUpload' component={ImageUpload} /> */}
 
       <Route path="/" component={isLoggedIn ? Home : Login} />

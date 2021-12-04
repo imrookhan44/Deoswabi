@@ -76,12 +76,25 @@ export default function Home() {
                         Admin
                       </Link>
                     </li>
-
                     <li className="nav-item">
                       <Link className="nav-link" to="index" id="ten">
                         Donate Here
                       </Link>
                     </li>
+                    
+                    <li className="nav-item">
+                      <Link className="nav-link" to="dropdown">
+                  <li class="dropdown">
+                    <a href="Home" className="drop">Dropdown</a>
+                    <div className="dropdown-content">
+                    <Link  className="nav-link" to="Login">Login</Link>
+                    <Link  className="nav-link" to="Admin">Admin</Link>
+                    
+                    </div>
+                  </li>
+                      </Link>
+                    </li>
+                    
                   </ul>
                 </div>
               
