@@ -33,7 +33,7 @@ function Routes(isLoggedIn) {
       <SecureRoute path="/signin" component={Signin} />
       <SecureRoute path="/upload" component={Upload} />
       <Route path="/login" component={Login} />
-      <SecureRoute path="/userdetails" component={Userdetails} />
+      <secureRoute path="/userdetails" component={Userdetails} />
       <SecureRoute path="/download" component={Download} />
       <Route path="/Admin" component={Admin} />
       <SecureRoute path="/Test" component={Test} />
