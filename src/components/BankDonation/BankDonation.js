@@ -11,13 +11,13 @@ function BankDonation() {
             <div className="row-donation offset-2">
             <input
               type="Number"
-              className="form-controlss pt-2 "
+              className="form-controls22 pt-2 "
               placeholder="Account Here"
             ></input>
             &nbsp;
             <input
               type="password"
-              className="form-controls mt-2 pt-2"
+              className="form-controls22 mt-2 pt-2"
               placeholder="Pin Here"
             />
             </div>

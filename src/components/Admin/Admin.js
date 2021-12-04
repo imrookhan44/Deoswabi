@@ -1,7 +1,33 @@
-import React from "react";
+import React,{useState} from "react";
+import firebase from "firebase";
+import { useToasts } from 'react-toast-notifications'
 import "./Admin.css";
-
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'; 
+toast.configure()
 function Admin() {
+  const notify= () =>{
+    firebase.auth().signInWithEmailAndPassword(email,password)
+    .then((auth)=>{
+       toast("Login Succesfully"); 
+    }).catch((err)=>{
+      toast("invalid Email/Password ");
+    })
+ 
+  }
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+ console.log(firebase.auth())
+ const signInHandler = () =>{
+  // firebase.auth().signInWithEmailAndPassword(email, password)
+  // .then((auth) => { 
+   
+  // })
+  
+  
+
+  }
+
   return (
     <div>
       <div className=" mt-5 adminpanel ">
@@ -11,12 +37,14 @@ function Admin() {
             <form>
             <input
               type="email"
+              onChange={e=>setEmail(e.target.value)}
               className="form-controls pt-2 "
               placeholder="Enter your email"
             ></input>
             
             <input
               type="password"
+              onChange={e=>setPassword(e.target.value)}
               className="form-controls mt-2 pt-2"
               placeholder="Password"
             />
@@ -24,7 +52,7 @@ function Admin() {
             <div>
             
               {" "}
-              <button className="btn btn-primary mt-4   " id="button">
+              <button onClick={signInHandler, notify} className="btn btn-primary mt-4   " id="button">
                 Login
               </button>{" "}
              
