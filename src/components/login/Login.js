@@ -9,31 +9,10 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useToast } from "react-toastify";
 toast.configure();
-const validationSchema = yup.object().shape({
-  Email: yup.string().required("Email is required."),
-  
-
-  password: yup.string().required("password is required."),
-});
 
 function Login() {
   
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-
-      password: "",
-    },
-    onSubmit: (values) => {},
-    validationSchema: validationSchema,
-  });
-  const renderErrorMessage = (field) => {
-    return (
-      formik.touched[field] && (
-        <div class="text-error">{formik.errors[field]}</div>
-      )
-    );
-  };
+  
   const notify = () => {
     firebase
       .auth()
@@ -43,15 +22,17 @@ function Login() {
       })
       .catch((err) => {
         toast("Register First ");
-      });
-  };
+      })
+  }
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   console.log(firebase.auth());
-  const signInHandler = () => {};
+  const signInHandler = () => {
+    
+  }
   return (
     <div>
-      <form onSubmit={formik.handleSubmit} autoComplete="off">
+      <div  autoComplete="off">
         <div className=" mt-5 adminpanel ">
           <div className="row ">
             <div className=" col-5 offset-4 ">
@@ -61,17 +42,17 @@ function Login() {
                 type="email"
                 className="form-controls pt-2 "
                 placeholder=" Email address"
-                {...formik.getFieldProps("email")}
+              
               ></input>
-              {renderErrorMessage("email")}
+            
               <input
                 onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 className="form-controls mt-2 pt-2"
                 placeholder="Password"
-                {...formik.getFieldProps("password")}
+                
               />{" "}
-              {renderErrorMessage("password")}
+          
               <div className="Checkbox mt-2">
                 <input type="checkbox"></input> <b>Remember me</b>
               </div>
@@ -93,7 +74,7 @@ function Login() {
             </div>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 }

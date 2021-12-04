@@ -6,10 +6,14 @@ import { useHistory } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import logo from "../../assets/images/apca logo.png";
-import { Navbar } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { auth } from "../firebase";
 
 export default function Home() {
-  let history =  useHistory()
+  let history = useHistory();
+  function Logout() {
+    history.push("/Login");
+  }
   return (
     <>
       <div className="container-fluid" id="Main">
@@ -84,8 +88,18 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <button className="btn-primary"  onClick={() => history.goBack('/')} ><AiOutlineArrowLeft /></button>
+                <button
+                  className="btn-primary"
+                  onClick={() => history.goBack("/")}
+                >
+                  <AiOutlineArrowLeft />
+                </button>
               </Navbar.Collapse>
+              {auth?.currentUser?.uid && (
+                <NavDropdown title={auth?.currentUser?.email}>
+                  <NavDropdown.Item onClick={Logout}>Logout</NavDropdown.Item>
+                </NavDropdown>
+              )}
             </Navbar>
           </div>
         </div>
