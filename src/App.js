@@ -6,22 +6,24 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Routes from "./components/routes/Routes.";
 import "fontawesome";
 import { auth } from "./components/firebase";
-
+import Login from "./components/login/Login";
 import React, { useState, useEffect } from "react";
 import { route } from "fontawesome";
+import AdminNavbar from "./components/common/admin-navbar/admin-navbar";
 
 const authentication={
-  isLoggedIn:false,
+  // isLoggedIn:false,
   onAuthtication(){
-    this.isLoggedIn=true;
+    // this.isLoggedIn=true;
   },
   getLogInStatus(){
-
-    return this.isLoggedIn;
+    // return this.isLoggedIn;
+    return auth?.currentUser?.uid;
   }
 }
 
 export function SecureRoute(props) {
+  console.log("auth user 2 ", auth?.currentUser?.email)
   return(
     <Route path={props.path} render={data=>authentication.getLogInStatus()?(
       <props.component {...data}></props.component>):
@@ -29,13 +31,33 @@ export function SecureRoute(props) {
   )
 }
 
+
 function App() {
+  const [user, setUser] = useState(null)
+  useEffect(() => {
+    auth.onAuthStateChanged(user=>{
+      if(user) setUser(user)
+      else setUser(null)
+    })
+  
+    
+  }, [])
   return (
+   
+
     <BrowserRouter>
+    
+    
+
       <Navbar />
-      <Routes />
+    
+
       <Footer />
+    
+      <Routes />
+    
     </BrowserRouter>
+  
   );
 }
 export default App;

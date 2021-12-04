@@ -1,25 +1,19 @@
 import React from "react";
-import "./Navbar.css";
+// import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import logo from "../../../assets/images/apca logo.png";
+import { Navbar } from "react-bootstrap";
+import { auth } from "../../../components/firebase";
 
-import logo from "../../assets/images/apca logo.png";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { auth } from "../firebase";
-
-export default function Home() {
-  let history = useHistory();
-  function Logout() {
-    history.push("/Login");
-  }
+export default function AdminNavbar() {
   return (
     <>
       <div className="container-fluid" id="Main">
+           I am admin
         <div className="row">
           <div className="col-lg-12 align-self-center">
-          <div onClick={()=> {auth?.signOut()}}> {auth?.currentUser?.email} </div>
+          <div onClick={()=> {auth?.signOut()}}> Admin {auth?.currentUser?.email} </div>
             <Navbar collapseOnSelect expand="lg">
               <Navbar.Toggle
                 className="navbar-toggler"
@@ -31,8 +25,6 @@ export default function Home() {
                 aria-label="Toggle navigation"
               />
               <Navbar.Collapse>
-          <div onClick={()=> {auth?.signOut()}}>user. : {auth?.currentUser?.email} 
-          </div>
                 <div
                   className="collapse navbar-collapse"
                   id="navbarSupportedContent"
@@ -48,12 +40,12 @@ export default function Home() {
                     <li className="nav-item active">
                       <Link className="nav-link" to="/" id="first">
                         {" "}
-                        Home{" "}
+                        admin page 1 {" "}
                       </Link>
                     </li>
                     <li className="nav-item">
                       <Link className="nav-link" to="History" id="second">
-                        History
+                        admin page 2
                       </Link>
                     </li>
                     {/* <li className="nav-item">
@@ -85,29 +77,13 @@ export default function Home() {
                     </li> */}
 
                     <li className="nav-item">
-                      <Link className="nav-link" to="donation" id="ten">
+                      <Link className="nav-link" to="index" id="ten">
                         Donate Here
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="fileUpload" id="ten">
-                        file upload
                       </Link>
                     </li>
                   </ul>
                 </div>
-                <button
-                  className="btn-primary"
-                  onClick={() => history.goBack("/")}
-                >
-                  <AiOutlineArrowLeft />
-                </button>
               </Navbar.Collapse>
-              {auth?.currentUser?.uid && (
-                <NavDropdown title={auth?.currentUser?.email}>
-                  <NavDropdown.Item onClick={Logout}>Logout</NavDropdown.Item>
-                </NavDropdown>
-              )}
             </Navbar>
           </div>
         </div>
