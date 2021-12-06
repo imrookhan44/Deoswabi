@@ -21,15 +21,9 @@ function Login() {
         toast("Login Successfully");
       })
       .catch((err) => {
-<<<<<<< HEAD
         toast ("Register First ");
       });
   };
-=======
-        toast("Register First ");
-      })
-  }
->>>>>>> dc71adea7e2ba8b9c18e61f3e4f8d328cd8c63f2
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   console.log(firebase.auth());

@@ -30,7 +30,7 @@ function Admin() {
 
   return (
     <div>
-      <div className=" mt-5 adminpanel ">
+      <div className=" mt-5 adminpanel " >
         <div className="row ">
           <div className=" col-4 offset-4 pt-3  ">
             <h3 className="admin mt-5">Admin</h3>

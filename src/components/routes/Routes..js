@@ -19,11 +19,7 @@ import CnicDonation from "../CnicDonation/CnicDonation";
 import ImageUpload from "../ImageUpload/ImageUpload";
 import index from "../donation/index";
 import Test from "../Admin/Test";
-<<<<<<< HEAD
 import dropdown from "../../dropdown/dropdown";
-=======
-import { home } from "fontawesome";
->>>>>>> dc71adea7e2ba8b9c18e61f3e4f8d328cd8c63f2
 
 function Routes(isLoggedIn) {
   const [oldUserState, setOlduserState] = useState(false);
@@ -40,21 +36,12 @@ function Routes(isLoggedIn) {
       <secureRoute path="/userdetails" component={Userdetails} />
       <SecureRoute path="/download" component={Download} />
       <Route path="/Admin" component={Admin} />
-<<<<<<< HEAD
       <SecureRoute path="/Test" component={Test} />
       <SecureRoute path="/index" component={index} />
       <SecureRoute path="/BankDonation" component={BankDonation} />
       <SecureRoute path="/CnicDonation" component={CnicDonation} />
       <SecureRoute path="/donation" component={easyDonation} />
       <Route path="/dropdown" component={dropdown} />
-=======
-      <Route path="/Test" component={Test} />
-      <Route path="/donation" component={index} />
-      <Route path="/BankDonation" component={BankDonation} />
-      <Route path="/CnicDonation" component={CnicDonation} />
-      <Route path="/easypaisaDonation" component={easyDonation} />
-      <Route path="/fileUpload" component={ImageUpload} />
->>>>>>> dc71adea7e2ba8b9c18e61f3e4f8d328cd8c63f2
       {/* <Route path='/ImageUpload' component={ImageUpload} /> */}
 
       <Route path="/" component={isLoggedIn ? Home : Login} />
