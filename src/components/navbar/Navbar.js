@@ -12,7 +12,7 @@ import { auth } from "../firebase";
 export default function Home() {
   let history = useHistory();
   function Logout() {
-    history.push("/Login");
+    history.push("Login");
   }
   return (
     <>

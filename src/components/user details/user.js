@@ -10,10 +10,7 @@ import * as yup from "yup";
 
 toast.configure();
 
-
-
 const User = () => {
-  
   const notify = () => toast("Form Successfully Submitted");
 
   const [fullName, setFullName] = useState("");
@@ -71,48 +68,47 @@ const User = () => {
     setAppointment("");
   };
   return (
-    <div className="userDetails mt-2">
+    <div className="userDetails mt-3">
       <div className="row pt-2">
         <div className="col-sm-12 col-lg-12">
           <h3 className="offset-4"> User Details</h3>
           <form
             autoComplete="off"
             className="form offset-3"
-            onSubmit={(handleSubmit)}
+            onSubmit={handleSubmit}
           >
             <input
               value={fullName}
+              required="required"
               type="name"
               placeholder="Full name"
               name="name"
               className="form-control"
               onChange={(e) => setFullName(e.target.value)}
-              
             />
-          
 
             <input
               value={password}
+              required="required"
               type="password"
               placeholder="Password"
               name="pass"
               className="form-control"
-              
               onChange={(e) => setPassword(e.target.value)}
             />
-      
+
             <input
-             
               value={cnic}
+              required="required"
               type="number"
               placeholder="CNIC"
               className="form-control"
               name="pass"
               onChange={(e) => setCnic(e.target.value)}
             />
-            
+
             <input
-            
+            required="required"
               value={email}
               type="email"
               placeholder="Email Address"
@@ -121,16 +117,16 @@ const User = () => {
             />
 
             <input
-       
+            required="required"
               value={mobile}
               type="number"
               placeholder="Mobile number"
               className="form-control"
               onChange={(e) => setMobile(e.target.value)}
             />
-           
-            <input
 
+            <input
+            required="required"
               value={dateOfBirth}
               type="date"
               id="birthday"
@@ -139,9 +135,9 @@ const User = () => {
               name="pass"
               onChange={(e) => setDateOfBirth(e.target.value)}
             />
-            
+
             <input
-             
+            required="required"
               value={qualification}
               type="Qualification"
               placeholder="Qualification"
@@ -149,40 +145,40 @@ const User = () => {
               name="pass"
               onChange={(e) => setQualification(e.target.value)}
             />
-           
+
             <input
+            required="required"
               value={station}
-         
               type="text"
               placeholder="Station"
               className="form-control"
               name="pass"
               onChange={(e) => setStation(e.target.value)}
             />
- 
+
             <input
-             
+            required="required"
               value={address}
               type="Address"
               placeholder="Address"
               className="form-control"
               onChange={(e) => setAddress(e.target.value)}
             />
-         
+
             <input
-            
+            required="required"
               value={firstAppointment}
               type="text"
               placeholder="First Appointment"
               className="form-control"
               onChange={(e) => setAppointment(e.target.value)}
             />
-            
+
             <br />
             <button
               className="btn-primary  control-button "
               id="bTN"
-              onClick={(notify)}
+              onClick={notify}
               style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
             >
               Submit

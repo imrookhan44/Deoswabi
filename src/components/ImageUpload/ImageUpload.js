@@ -1,9 +1,12 @@
 import React, { Component } from "react";
-import { InitFirebase, storage } from "../firebase";
-import "firebase/database"
+import { storage } from "../firebase";
+import "firebase/database";
 import firebase from "firebase";
-import { auth } from "google-auth-library";
-import "./imageUpload.css"
+
+import "./imageUpload.css";
+import { AiFillDelete } from "react-icons/ai";
+import { RiFolderDownloadFill } from "react-icons/ri";
+import pdf from "../../assets/images/pdf.png";
 
 class ImageUpload extends Component {
   constructor(props) {
@@ -13,25 +16,25 @@ class ImageUpload extends Component {
       url: "",
       progress: 0,
       documents: [],
-      bookName:""
+      bookName: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
   }
   componentDidMount() {
-    const dbRef = firebase.database().ref('url');
-    dbRef.on('value', (snapshot) => {
+    const dbRef = firebase.database().ref("url");
+    dbRef.on("value", (snapshot) => {
       const data = snapshot.val();
       let objValues = Object.values(data);
-      console.log(objValues)
+      console.log(objValues);
       let objKeys = Object.keys(data);
-      console.log(objKeys)
-      objValues.map((item, index) => item["xid"] = objKeys[index]);
-      this.setState({ documents: objValues})
+      console.log(objKeys);
+      objValues.map((item, index) => (item["xid"] = objKeys[index]));
+      this.setState({ documents: objValues });
       console.log("data docs ", this.state.documents);
       console.log("data objcet  ", objValues);
       // updateStarCount(postElement, data);
-    })
+    });
     // dbRef.get().then((snapshot) => {
     // if (snapshot.exists()) {
     //   console.log(snapshot.val());
@@ -50,18 +53,19 @@ class ImageUpload extends Component {
     }
   };
   writeFileUrl = () => {
-    firebase.database().ref('url').push(
-      {
+    firebase
+      .database()
+      .ref("url")
+      .push({
         url: this.state.url,
         uid: Math.floor(Math.random() * 100),
-        name : this.state.bookName
-      }
-    )
-  }
+        name: this.state.bookName,
+      });
+  };
   handleUpload = () => {
     const { image } = this.state;
     const uploadTask = storage.ref(`images/${image.name}`).put(image);
-    console.log(image.name)
+    console.log(image.name);
     uploadTask.on(
       "state_changed",
       (snapshot) => {
@@ -82,18 +86,13 @@ class ImageUpload extends Component {
             console.log(url);
             this.setState({ url });
 
-            this.writeFileUrl(url)
+            this.writeFileUrl(url);
           });
-
       }
     );
-    
   };
 
   //write files at realtime database
-
-
-
 
   //Delete files
   deleteItem = (item) => {
@@ -103,21 +102,27 @@ class ImageUpload extends Component {
     // let y = this.state.docEntries.find(item => item[1].uid == id);
     // console.log("y : ", y);
     // let delID = y[0];
-    const dbRef = firebase.database().ref("url").child(item.xid).remove(oncomplete => {
-      console.log(" on complete : ", oncomplete)
-    }).then(res => { console.log("res : ", res) }).catch(e => {
-      console.log("err : ", e)
-    })
+    const dbRef = firebase
+      .database()
+      .ref("url")
+      .child(item.xid)
+      .remove((oncomplete) => {
+        console.log(" on complete : ", oncomplete);
+      })
+      .then((res) => {
+        console.log("res : ", res);
+      })
+      .catch((e) => {
+        console.log("err : ", e);
+      });
     // dbRef.remove();
-    console.log(item.xid)
+    console.log(item.xid);
+  };
 
-  }
-
-//book name
-handleInputChange = (e)=>{
-this.setState({bookName : e.target.value})
-}
-
+  //book name
+  handleInputChange = (e) => {
+    this.setState({ bookName: e.target.value });
+  };
 
   render() {
     const style = {
@@ -129,48 +134,61 @@ this.setState({bookName : e.target.value})
     };
     return (
       <div className="container">
-          <div className="row">
-            <div className="col-12">
+        <div className="row">
+          <div className="col-12">
             <div style={style}>
-          <div className="ab" style={{}}></div>
-          {/* <label>
+              <div className="ab" style={{}}></div>
+              {/* <label>
             {" "}
             <i style={{ fontsize: "31px", border: "1px solid black" }}>
               {" "}
             </i>{" "}
           </label> */}
-        
-          <input
-            type="file"
-            onChange={this.handleChange}
-            style={{ height: "100px" }}
-          />
-          <label>file name</label>
-            <input type="text" onChange={(e)=>this.handleInputChange(e)} />
-            <br />
-          <button onClick={this.handleUpload}>Upload</button>
-          <progress value={this.state.progress} max="100" />
-          
-        </div>
-            </div>
-            <hr />
-            <div className="row">
-              <div className="displayImage">
-            {this.state.documents && this.state.documents.length > 0 && this.state.documents.map((item, index) => (
-         <div><a href={item?.url} target="_blank"> download url</a>
 
-            <button onClick={() => this.deleteItem(item)}> delete item</button>
-            <h6>{item.name}</h6></div>
-        
-          // <div>test</div>
-        ))}
-
-            </div>
+              <input
+                type="file"
+                onChange={this.handleChange}
+                style={{ height: "100px" }}
+              />
+              <label>file name</label>
+              <input type="text" onChange={(e) => this.handleInputChange(e)} />
+              <br />
+              <button onClick={this.handleUpload}>Upload</button>
+              <progress value={this.state.progress} max="100" />
             </div>
           </div>
+          <hr />
+          <div className="row">
+            <div className="displayImage">
+              {this.state.documents &&
+                this.state.documents.length > 0 &&
+                this.state.documents.map((item, index) => (
+                  <div>
+                    <a className="download" href={item?.url} target="_blank">
+                      {" "}
+                      <RiFolderDownloadFill size="20px" /> Download
+                    </a>
+                    &nbsp;&nbsp;&nbsp;
+                    <button
+                      className="Button"
+                      onClick={() => this.deleteItem(item)}
+                    >
+                      <AiFillDelete size="20px" />
+                    </button>
+                    <div className="pdf">
+                      <img src={pdf} style={{ width: "150px" }} />
+                    </div>
+                    <h6 className="itemName">
+                      <b>{item.name}</b>
+                    </h6>
+                  </div>
+
+                  // <div>test</div>
+                ))}
+            </div>
+          </div>
+        </div>
       </div>
-
-
     );
   }
 }

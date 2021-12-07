@@ -11,12 +11,15 @@ export default function index() {
       <div className="row pt-5 ms-5">
         <div className=" colssss py-2 col-lg-3 col-md-3  col-sm-3 offset-1">
           <td>
-            <Link to="/donation">
-              < img   src={easypaisa} className="im1" alt="easyPaisaImage" />
+            <Link to="/EasyDonation">
+              <img src={easypaisa} className="im1" alt="easyPaisaImage" />
             </Link>
           </td>
         </div>
-        <div className=" colssss col-lg-3 col-md-3  col-sm-3 offset-1" id="col2">
+        <div
+          className=" colssss col-lg-3 col-md-3  col-sm-3 offset-1"
+          
+        >
           <td>
             <Link to="/BankDonation">
               <img src={bank} className="im1" alt="bankDonationImage" />
@@ -26,7 +29,7 @@ export default function index() {
         <div className=" colssss col-lg-3 py-2 col-md-3 col-sm-3 offset-1  ">
           <td>
             <Link to="/CnicDonation">
-              <img src={cnic} className="im1"  alt="CnicDonationImage"/>
+              <img src={cnic} className="im1" alt="CnicDonationImage" />
             </Link>
           </td>
         </div>
