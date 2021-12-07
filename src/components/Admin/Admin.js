@@ -42,7 +42,7 @@ function Admin() {
               placeholder="Enter your email"
             ></input>
             
-            <input
+            <input 
               type="password"
               onChange={e=>setPassword(e.target.value)}
               className="form-controls mt-2 pt-2"
