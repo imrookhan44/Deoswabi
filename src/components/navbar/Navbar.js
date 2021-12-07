@@ -89,19 +89,23 @@ export default function Home() {
                         Donate Here
                       </Link>
                     </li>
+                    
                     <li className="nav-item">
-                      <Link className="nav-link" to="fileUpload" id="ten">
-                        file upload
+                      <Link className="nav-link" to="dropdown">
+                  <li class="dropdown">
+                    <a href="Home" className="drop">Dropdown</a>
+                    <div className="dropdown-content"><br/>
+                    <Link  className="nav-link" to="Login">Login</Link>
+                    <Link  className="nav-link" to="Admin">Admin</Link>
+                    </div>
+                  </li>
                       </Link>
                     </li>
+                    
                   </ul>
                 </div>
-                <button
-                  className="btn-primary"
-                  onClick={() => history.goBack("/")}
-                >
-                  <AiOutlineArrowLeft />
-                </button>
+              
+                <button className="btn-primary"  onClick={() => history.goBack('/')} ><AiOutlineArrowLeft /></button>
               </Navbar.Collapse>
               {auth?.currentUser?.uid && (
                 <NavDropdown title={auth?.currentUser?.email}>
