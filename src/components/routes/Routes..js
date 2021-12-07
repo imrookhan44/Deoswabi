@@ -13,13 +13,13 @@ import Download from "../Download/Download";
 import Admin from "../Admin/Admin";
 import { Route, Switch } from "react-router-dom";
 import { SecureRoute } from "../../App";
-import easyDonation from "../donation/EasyDonation";
+// import easyDonation from "../donation/EasyDonation";
 import BankDonation from "../BankDonation/BankDonation";
 import CnicDonation from "../CnicDonation/CnicDonation";
 import ImageUpload from "../ImageUpload/ImageUpload";
 import index from "../donation/index";
 import Test from "../Admin/Test";
-import dropdown from "../../dropdown/dropdown";
+import EasyDonation from "../donation/EasyDonation";
 
 function Routes(isLoggedIn) {
   const [oldUserState, setOlduserState] = useState(false);
@@ -33,19 +33,19 @@ function Routes(isLoggedIn) {
       <Route path="/signin" component={Signin} />
       <Route path="/upload" component={Upload} />
       <Route path="/login" component={Login} />
-      <secureRoute path="/userdetails" component={Userdetails} />
+      <Route path="/userdetails" component={Userdetails} />
       <SecureRoute path="/download" component={Download} />
       <Route path="/Admin" component={Admin} />
-      <SecureRoute path="/Test" component={Test} />
-      <SecureRoute path="/index" component={index} />
-      <SecureRoute path="/BankDonation" component={BankDonation} />
-      <SecureRoute path="/CnicDonation" component={CnicDonation} />
-      <SecureRoute path="/donation" component={easyDonation} />
-      <Route path="/dropdown" component={dropdown} />
+      <Route path="/Test" component={Test} />
+      <Route path="/donation" component={index} />
+      <Route path="/BankDonation" component={BankDonation} />
+      <Route path="/CnicDonation" component={CnicDonation} />
+      <Route path="/easyDonation" component={EasyDonation} />
+      <Route path="/fileUpload" component={ImageUpload} />
       {/* <Route path='/ImageUpload' component={ImageUpload} /> */}
 
       <Route path="/" component={isLoggedIn ? Home : Login} />
-      {user ? <Routes /> : oldUser && <Login />} 
+      {user ? <Routes /> : oldUser && <Login />}
     </Switch>
   );
 }
