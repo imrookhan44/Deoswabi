@@ -61,11 +61,11 @@ export default function Home() {
                         Sign Up
                       </Link>
                     </li> */}
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                       <Link className="nav-link" to="login" id="fourth">
                         Login
                       </Link>
-                    </li>
+                    </li> */}
 
                     <li className="nav-item"></li>
                     <li className="nav-item">
@@ -89,13 +89,8 @@ export default function Home() {
                         Donate Here
                       </Link>
                     </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="ImageUpload" id="ten">
-                        upload File
-                      </Link>
-                    </li>
                     
-                    {/* <li className="nav-item">
+                    <li className="nav-item">
                       <Link className="nav-link" to="dropdown">
                   <li class="dropdown">
                     <a href="Home" className="drop">Dropdown</a>
@@ -105,7 +100,7 @@ export default function Home() {
                     </div>
                   </li>
                       </Link>
-                    </li> */}
+                    </li>
                     
                   </ul>
                 </div>
