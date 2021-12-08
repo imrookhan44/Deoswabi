@@ -6,9 +6,10 @@
 }
 
 .displayImage > div {
-  height: 150px;
+  
+  /* height: 150px;
   width: 150px;
-  border: 1px solid;
+  border: 1px solid; */
   margin: 5px;
 }
 .download {
@@ -18,8 +19,10 @@
   text-decoration: none;
 }
 .Button {
-  margin-top: 4px;
+  /* margin-top: 4px; */
+ 
 }
+
 .pdf {
   display: flex;
   justify-content: center;

@@ -41,7 +41,7 @@ function Routes(isLoggedIn) {
       <Route path="/BankDonation" component={BankDonation} />
       <Route path="/CnicDonation" component={CnicDonation} />
       <Route path="/easyDonation" component={EasyDonation} />
-      <Route path="/fileUpload" component={ImageUpload} />
+      <Route path="/ImageUpload" component={ImageUpload} />
       {/* <Route path='/ImageUpload' component={ImageUpload} /> */}
 
       <Route path="/" component={isLoggedIn ? Home : Login} />

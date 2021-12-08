@@ -92,13 +92,13 @@ export default function Home() {
                     
                     <li className="nav-item">
                       <Link className="nav-link" to="dropdown">
-                  {/* <li class="dropdown">
+                  <li class="dropdown">
                     <a href="Home" className="drop">Dropdown</a>
                     <div className="dropdown-content"><br/>
                     <Link  className="nav-link" to="Login">Login</Link>
                     <Link  className="nav-link" to="Admin">Admin</Link>
                     </div>
-                  </li> */}
+                  </li>
                       </Link>
                     </li>
                     
