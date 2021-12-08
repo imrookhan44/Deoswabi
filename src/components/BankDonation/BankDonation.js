@@ -17,7 +17,8 @@ function BankDonation() {
               ></input>
               &nbsp;
               <input
-                type="password"
+                Password="password"
+                type="Number"
                 className="form-controls22 mt-2 p-2"
                 placeholder="Pin Here"
               />

@@ -61,11 +61,11 @@ export default function Home() {
                         Sign Up
                       </Link>
                     </li> */}
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                       <Link className="nav-link" to="login" id="fourth">
                         Login
                       </Link>
-                    </li>
+                    </li> */}
 
                     <li className="nav-item"></li>
                     <li className="nav-item">

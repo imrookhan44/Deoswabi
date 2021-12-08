@@ -16,7 +16,8 @@ function EasyDonation() {
                 placeholder="Account Here"
               ></input>
               <input
-                type="password"
+                Password="password"
+                type= "Number"
                 className="form-controls23 mt-2 p-2"
                 placeholder="Pin Here"
               />
