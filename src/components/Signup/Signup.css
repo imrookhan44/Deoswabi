@@ -1,13 +1,17 @@
-.form-control{
-    border-top: aliceblue !important;
-border-right: aliceblue !important;
-border-left: aliceblue !important;;
-border-radius: 0px !important;;
+.Me{
+    font: menu;
 }
-.signup{
-    font-size: xx-large;
-    font-weight: 600;
+.form-controlsssss{
+    border: 1px solid #bbb9b9;
+    outline: none;
+    border-width: 0px 0px 1px 0  ;
+    width: 196% ;
+    height: auto;
+    
 }
-.custom_img{
-    margin-top: 40px;
+.text-error{
+    
+    color: red;
+    
 }
+

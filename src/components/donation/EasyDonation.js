@@ -1,28 +1,41 @@
-import React from 'react';
-import apca from '../../assets/images/apca.svg'
+import React from "react";
+import './EasyDonation.css';
 
-const easyDonation = () => {
-    return (
-      
-      
-      <div className="container-fluid userDetails">
-      <div className="row pt-4">
-        <div className="col-sm-6">
-        <img src={apca} className="apca"/>
+function CnicDonation() {
+  return (
+    <div>
+      <div className=" mt-5 adminpanel ">
+        <div className="row ">
+          <div className=" col pt-5  ">
+            <h3 className="admin mt-3">Easypaisa Donation</h3>
+            <div className="row-easypaisa offset-2">
+            <input
+              type="Number"
+              className="form-controls23 pt-2 "
+              placeholder="Account Here"
+            ></input>
+            &nbsp;
+            <input
+              type="password"
+              className="form-controls23 mt-2 pt-2"
+              placeholder="Pin Here"
+            />
+            </div>
+            <div>
+              {" "}
+              <button className="btn btn-primary mt-4   " id="button">
+                Submit
+              </button>{" "}
+            </div>
+          </div>
+
+          <div className="  col-sm-3 col-3">
+          </div>
         </div>
-        {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
-        <div className="col-sm-6">
-        <h2> <font color="blue">Enter Details</font></h2>
-        <form className="form">
-        <input type="name" placeholder="CNIC/PHONE"  name="name" className="form-control" style={{width:'200px'}}/><br/>
-        {/* <input type="password" placeholder="Password" className="form-control" name="pass" style={{width:'200px'}}/><br/> */}
-         <button style={{backgroundColor:'rgb(10, 78, 206)',width:'100px',color:'white',height:'40px',borderRadius:'10px',border:'none'}}>Submit</button>
-        </form>
-    </div>
       </div>
     </div>
-          
-      
-    );
+  );
 }
-export default easyDonation;
+
+export default CnicDonation;
+

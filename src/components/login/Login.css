@@ -1,56 +1,12 @@
-
-.container1 {
-  position: absolute;
-  right: 70;
-  margin: 20px;
-  max-width: 300px;
-  padding: 16px;
-  background-color: white;
+.Checkbox {
+  font: menu;
 }
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+.Anchor {
+  text-decoration: none;
+}
+.form-controls1 {
+  border: 1px solid #bbb9b9;
   outline: none;
-}
-
-.button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.button:hover {
-  opacity: 1;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto ;
-}
-
-.grid-item {
-  text-align: left;
-}
-
-.grid-item2 {
-  text-align:left;
-}
-
-.k{
-  background-color: cornflowerblue;
-  color: rgb(247, 244, 244);
-  /* padding: 14px 20px; 
-  margin: 8px 0; */
-  border: none;
-  cursor: pointer;
-  height: 30px;
-  width: 50px;
-}
-.k:hover{
-  box-shadow: 10px 10px 10px gray;
-  background-color: blue;
+  border-width: 0px 0px 1px 0;
+  width: 125%;
 }

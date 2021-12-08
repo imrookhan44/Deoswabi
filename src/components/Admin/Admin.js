@@ -1,53 +1,72 @@
-import React, { Component, component } from 'react'
-import firebase from '../firebase'
-import './Admin.css'
-export class Admin extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            files: null
-        }
+import React,{useState} from "react";
+import firebase from "firebase";
+import { useToasts } from 'react-toast-notifications'
+import "./Admin.css";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'; 
+toast.configure()
+function Admin() {
+  const notify= () =>{
+    firebase.auth().signInWithEmailAndPassword(email,password)
+    .then((auth)=>{
+       toast("Login Succesfully"); 
+    }).catch((err)=>{
+      toast("invalid Email/Password ");
+    })
+ 
+  }
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+ console.log(firebase.auth())
+ const signInHandler = () =>{
+  // firebase.auth().signInWithEmailAndPassword(email, password)
+  // .then((auth) => { 
+   
+  // })
+  
+  
 
-    }
-    handleChange = (files) => {
-        this.setState({
-            files: files
+  }
 
-        })
-    }
-    handleSave = () => {
-        let bucketName = 'images'
-        let files = this.state.files[0]
-        let storageRef = firebase.storage().ref(`${bucketName}/${files.name}`)
-        let UploadTask = storageRef.put(files)
-        UploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
-            () => {
-                let downloadURL = UploadTask.snapshot.downloadURL
-            })
-    }
-    showImage = () => {
-        let storageRef = firebase.storage().ref()
-        let spaceRef = storageRef.child('images/' + this.state.files[0].name)
-        storageRef.child('images/' + this.state.files[0].name).getDownloadURL().then((url) => {
-            console.log(url)
-            document.getElementById('new-img').src = url
+  return (
+    <div>
+      <div className=" mt-5 adminpanel ">
+        <div className="row ">
+          <div className=" col-4 offset-4 pt-3  ">
+            <h3 className="admin mt-5">Admin</h3>
+            <form>
+            <input
+              type="email"
+              onChange={e=>setEmail(e.target.value)}
+              className="form-controls pt-2 "
+              placeholder="Enter your email"
+            ></input>
             
-        })
-    }
-    render() {
-        return (
-            <div>&nbsp;
-                <input type="file" onChange={(e) => { this.handleChange(e.target.files) }} />
-                <button className="Adminpage" onClick={this.handleSave}>Save</button>&nbsp;
-                <button onClick={this.showImage}>Show image</button><br />&nbsp;<br />&nbsp;
-                <img id="new-img" height="300px" width="400px" /> 
-                 {/* <img id="new-img1" height="300px" width="300px"/>
-                <img id="new-img2" height="300px" width="300px"/>
-                <img id="new-img3" height="300px" width="300px"/> */}
-
+            <input
+              type="password"
+              onChange={e=>setPassword(e.target.value)}
+              className="form-controls mt-2 pt-2"
+              placeholder="Password"
+            />
+            </form>
+            <div>
+            
+              {" "}
+              <button onClick={signInHandler, notify} className="btn btn-primary mt-4   " id="button">
+                Login
+              </button>{" "}
+             
             </div>
+          </div>
 
-        )
-    }
+          <div className="  col-sm-3 col-3">
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-export default Admin
+
+export default Admin;
+
+

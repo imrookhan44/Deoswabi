@@ -1,42 +1,82 @@
-import React from 'react'
-import { Formik, Form, Field } from 'formik';
-import './Login.css'
-import login from '../../assets/images/login.jpg'
-import human from '../../assets/images/human.jpg'
+import React, { useState } from "react";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import firebase from "firebase";
+import { db } from "../firebase";
+import "./Login.css";
 
-export default function Login() {
-    return (
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useToast } from "react-toastify";
+toast.configure();
 
-        <div class="">
-
-            <div className='container-fluid'>
-                <div className='row'>
-                    <div className='col-sm-4'>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <img className='img-fluid' src={login}/>
- <br />
- <h2>
-                   APCA Education
-                        <br />
-                        </h2>
-                        <h3>
-                      All Pakistan Clerk Assocition
-                    </h3> 
-                        <form >
-                            <input className="border" type="text" placeholder="Username" style={{ outline: "none", borderRadius: "20px", width: "70%", padding: "12px 20px", margin: "8px 0px", display: "inline-block", border: "1px solid #ccc", boxsizing: "border-box", backgroundcolor: "#f1f1f1" }}></input><br />
-                            <input className="border" type="password" placeholder="Password" style={{ outline: "none", borderRadius: "20px", width: "70%", padding: "12px 20px", margin: "8px 0px", display: "inline-block", border: "1px solid #ccc", boxsizing: "border-box", backgroundcolor: "#f1f1f1" }}></input><br /><br />
-                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></input> <b>Remember Username</b> <br /><br />
-                           &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <button className="k" style={{ width: "30%", borderRadius: "20px", height: "6vh"}}>Sign In</button>
-                        </form>
-                    </div>
-                    <div className='col-sm-8'>
-                    <br />
-                    <br />
-                    <img className='img' src={human}/>
-                    </div>
-                </div>
+function Login() {
+  
+  
+  const notify = () => {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        toast("Login Successfully");
+      })
+      .catch((err) => {
+        toast("Register First ");
+      })
+  }
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  console.log(firebase.auth());
+  const signInHandler = () => {
+    
+  }
+  return (
+    <div>
+      <div  autoComplete="off">
+        <div className=" mt-5 adminpanel ">
+          <div className="row ">
+            <div className=" col-5 offset-4 ">
+              <h3 className="admin mt-5 pt-4 ">Login Page</h3>
+              <input
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                className="form-controls pt-2 "
+                placeholder=" Email address"
+              
+              ></input>
+            
+              <input
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                className="form-controls mt-2 pt-2"
+                placeholder="Password"
+                
+              />{" "}
+          
+              <div className="Checkbox mt-2">
+                <input type="checkbox"></input> <b>Remember me</b>
+              </div>
+              <div>
+                {" "}
+                <button
+                  onClick={(signInHandler, notify)}
+                  className="btn btn-primary mt-4"
+                  id="button"
+                >
+                  Login
+                </button>{" "}
+              </div>
+              <br />
             </div>
-        </div>
 
-    )
+            <div className>
+              {/* <img className="custom-img image " src={signin} alt='signup' /> */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
+
+export default Login;

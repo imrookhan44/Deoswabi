@@ -1,12 +1,22 @@
-.nav-link{
-    border-radius: 100px;
-    /* background-color: red; */
+.nav-item{
+  
+  font-weight: 400;
+  
+  
+}
+#Main{
+  
+  background-color: #212529;
+  color: white;
 }
 
-.nav-link:hover{
-border-radius: 100px;
-background-color: #51c979;
-opacity: 10px;
-box-shadow: 0px 5px 20px  #51c979;
-font-size: 20px;
+#first, #second, #third, #fourth,#fifth, #sixth,#seven, #eight,#nine, #ten{
+  color: white;
 }
+.nav-item:hover{
+  box-shadow: 0 0 10px 0 white inset, 0 0 20px 2px white;
+  
+}
+
+
+

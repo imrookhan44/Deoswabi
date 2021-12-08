@@ -8,3 +8,15 @@ border-left: none !important;
 box-shadow: none !important;
 outline: none !important;
 }
+
+.imgimgimg1{
+    width:200px;
+    margin-Top:100px;
+
+}
+@media screen and (max-width: 643px) {
+    .imgimgimg1 {
+        display: none;
+
+    }
+  }
