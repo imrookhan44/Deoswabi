@@ -35,7 +35,7 @@ function Routes(isLoggedIn) {
       <Route path="/login" component={Login} />
       <Route path="/userdetails" component={Userdetails} />
       <SecureRoute path="/download" component={Download} />
-      <Route path="/Admin" component={Admin} />
+      <Route exacts path="/Admin" component={Admin} />
       <Route path="/Test" component={Test} />
       <Route path="/donation" component={index} />
       <Route path="/BankDonation" component={BankDonation} />

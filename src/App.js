@@ -10,6 +10,7 @@ import Login from "./components/login/Login";
 import React, { useState, useEffect } from "react";
 import { route } from "fontawesome";
 import AdminNavbar from "./components/common/admin-navbar/admin-navbar";
+import Admin from "./components/Admin/Admin";
 
 
 const authentication={
@@ -47,16 +48,9 @@ function App() {
    
    
     <BrowserRouter>
-    
-    
-
-      <Navbar />
-    
-
+    {auth?.currentUser?.email && <Navbar />}
       <Footer />
-    
-      <Routes />
-    
+      {auth?.currentUser?.email ? <Routes /> : <Login />}
     </BrowserRouter>
   
   );
