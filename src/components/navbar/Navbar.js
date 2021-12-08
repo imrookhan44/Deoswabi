@@ -89,8 +89,13 @@ export default function Home() {
                         Donate Here
                       </Link>
                     </li>
-                    
                     <li className="nav-item">
+                      <Link className="nav-link" to="ImageUpload" id="ten">
+                        upload File
+                      </Link>
+                    </li>
+                    
+                    {/* <li className="nav-item">
                       <Link className="nav-link" to="dropdown">
                   <li class="dropdown">
                     <a href="Home" className="drop">Dropdown</a>
@@ -100,7 +105,7 @@ export default function Home() {
                     </div>
                   </li>
                       </Link>
-                    </li>
+                    </li> */}
                     
                   </ul>
                 </div>
