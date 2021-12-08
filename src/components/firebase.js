@@ -4,12 +4,13 @@ import "firebase/database";
 import "firebase/storage";
 import "firebase/firestore";
 const firebaseConfig = {
-  apiKey: "AIzaSyArLVA_Lde73VMAie7cH4wLj2RLeGNPDqw",
-  authDomain: "apca-9ca67.firebaseapp.com",
-  projectId: "apca-9ca67",
-  storageBucket: "apca-9ca67.appspot.com",
-  messagingSenderId: "842905420618",
-  appId: "1:842905420618:web:5ef68d99cf7211327cf7b3"
+  apiKey: "AIzaSyCdOEGsqTGOaAiFtZSmP9f4itKSfHmELr8",
+  authDomain: "fir-app-cc066.firebaseapp.com",
+  databaseURL: "https://fir-app-cc066-default-rtdb.firebaseio.com",
+  projectId: "fir-app-cc066",
+  storageBucket: "fir-app-cc066.appspot.com",
+  messagingSenderId: "32749480634",
+  appId: "1:32749480634:web:df22fba82342d11dacf083"
 };
 let InitFirebase;
 InitFirebase = firebase.initializeApp(firebaseConfig);
