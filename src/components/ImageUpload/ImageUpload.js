@@ -164,19 +164,19 @@ class ImageUpload extends Component {
                 this.state.documents.length > 0 &&
                 this.state.documents.map((item, index) => (
                   <div>
-                    <a className="download" href={item?.url} target="_blank">
+                    {/* <a className="download" href={item?.url} target="_blank">
                       {" "}
                       <RiFolderDownloadFill size="20px" /> Download
-                    </a>
+                    </a> */}
                     &nbsp;&nbsp;&nbsp;
                     <button
-                      className="Button"
+                      className="Button offset-8"
                       onClick={() => this.deleteItem(item)}
                     >
                       <AiFillDelete size="20px" />
                     </button>
                     <div className="pdf">
-                      <img src={pdf} style={{ width: "150px" }} />
+                      <img src={pdf} style={{ width: "200px" }} />
                     </div>
                     <h6 className="itemName">
                       <b>{item.name}</b>
