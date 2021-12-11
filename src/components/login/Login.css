@@ -1,7 +1,14 @@
+#LoginForm {
+  box-shadow: 2px 4px 17px 3px grey;
+  border-radius: 20px;
+  height: 360px;
+  width: 500px;
+  margin: auto;
+}
 .Checkbox {
   font: menu;
 }
-.Anchor {
+/* .Anchor {
   text-decoration: none;
 }
 .form-controls1 {
@@ -9,7 +16,48 @@
   outline: none;
   border-width: 0px 0px 1px 0;
   width: 150px;
-}
-.admin{
+} */
+.admin {
   margin-left: 30px;
+}
+@media screen and (max-width: 580px) {
+  #LoginForm {
+    width: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  #inputs {
+    /* border: black solid; */
+    width: auto;
+  }
+}
+.Head {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  
+  animation-name: sample;
+  animation-duration: 2s;
+  /* -o-animation-direction: alternate; */
+  animation-iteration-count: infinite;
+  /* animation-delay: 2s; */
+  /* animation-timing-function: cubic-bezier(0.1, 0.4, 1.0, 0.1) ; */
+  width: 500px;
+}
+@keyframes sample{
+  0%{
+    border-radius: 0%;
+  }
+  100%{
+    border-radius: 50%; background-color: #0066ff
+
+    ; color: white;
+  }
+}
+@media screen and (max-width:400px) {
+  
+  .Head{
+    border: solid black;
+    /* width: fit-content; */
+  }
 }

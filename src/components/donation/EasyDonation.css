@@ -33,3 +33,26 @@
   display: flex;
   justify-content: center;
 }
+/* @media screen and (max-width:400px) {
+  .offset-3{
+  
+    width: 180px;
+  }
+  
+} */
+@media screen and (max-width:800px) {
+  .row-easypaisa{
+height: 260px;
+    width: 160px;
+  }
+  
+}
+@media screen and (max-width:400px) {
+  .adminpanel{
+height: 400px;
+    width: fit-content;
+  }
+  
+}
+
+

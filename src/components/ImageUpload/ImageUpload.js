@@ -133,7 +133,7 @@ class ImageUpload extends Component {
       justifyContent: "center",
     };
     return (
-      <div className="container">
+      <div className="">
         <div className="row">
           <div className="col-12">
             <div style={style}>
@@ -158,19 +158,19 @@ class ImageUpload extends Component {
             </div>
           </div>
           <hr />
-          <div className="row">
+          <div className="">
             <div className="displayImage">
               {this.state.documents &&
                 this.state.documents.length > 0 &&
                 this.state.documents.map((item, index) => (
                   <div>
-                    {/* <a className="download" href={item?.url} target="_blank">
+                    <a className="download" href={item?.url} target="_blank">
                       {" "}
-                      <RiFolderDownloadFill size="20px" /> Download
-                    </a> */}
+                      <RiFolderDownloadFill size="25px" /> Download
+                    </a>
                     &nbsp;&nbsp;&nbsp;
                     <button
-                      className="Button offset-8"
+                      className="Button"
                       onClick={() => this.deleteItem(item)}
                     >
                       <AiFillDelete size="20px" />

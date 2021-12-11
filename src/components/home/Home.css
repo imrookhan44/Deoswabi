@@ -225,7 +225,7 @@
     color:white;
 }
 
-@media screen and (max-width: 1355px) {
+/* @media screen and (max-width: 1355px) {
     .bg_img {
         width: 1200;
         background-position: center;
@@ -283,4 +283,13 @@
 }
 
 
+ */
+ @media screen and (max-width: 400px){
+     .bg_img{
+         
+         width: 390px;
+     }
 
+ }
+     
+ 

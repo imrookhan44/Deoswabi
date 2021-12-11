@@ -4,7 +4,7 @@ import './CnicDonation.css';
 function CnicDonation() {
   return (
     <div>
-      <div className=" mt-5 adminpanel ">
+      <div className=" mt-5 CNICDonation ">
         <div className="row ">
           <div className=" col pt-2">
             <h3 className="admin mt-4  ">CNIC Transfer</h3><br />
@@ -13,14 +13,14 @@ function CnicDonation() {
             <br/>
             <input
               type="Number"
-              className="form-controlss p-2 "
+              className="form-controlss p-2 " id="input"
               placeholder="for example: 61101-9876543-2"
             ></input>
            <br />
           Enter Mobile Number
             <input
               type="Number"
-              className="form-controlss p-2 "
+              className="form-controlss p-2 " id="input"
               placeholder="Enter Receiver's Number"
             ></input>
             </div>

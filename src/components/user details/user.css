@@ -1,35 +1,18 @@
-.apca {
+/* .apca {
   width: 300px;
 
   height: 400px;
   float: right;
 
   padding-top: 100px;
-}
+} */
 
 .form {
   width: 260px;
   
-
-  
 }
 
-.control-button {
-  
-  
-  /* height: 8vh;
-  color: white;
-  font-size: 20px;
-  border-radius: 5px;
-  font-weight: 400; */
-  
-}
 
-@media screen and (max-width: 500px) {
-  .control-button {
-    width: 100px;
-  }
-}
 
 .control-button:hover {
   box-shadow: 10px 10px 10px 10px gray;
@@ -39,39 +22,36 @@
 .form-control {
   background-color: lightgray;
   color: black;
-  
-  
-  /* width: 10%; */
-  /* margin-left: 200px; */
+
 }
 
 .userDetails {
-  /* border-radius: 5px; */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  width: 480px;
+  width: 420px;
   border: rgb(213, 210, 210) 1px solid;
-  height: 560px;
+
+  height: 505px;
   margin: auto;
 }
 
-@media screen and (max-width: 565px) {
+/* @media screen and (max-width: 565px) {
   .userDetails {
     width: 390px;
     height: 800px;
   }
-}
+} */
 
-@media screen and (max-width: 565px) {
+/* @media screen and (max-width: 565px) {
   .apca {
     width: 390px;
     height: 400px;
     display: none;
   }
-}
+} */
 
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
   .offset-5 {
     display: flex;
     justify-content: left;
@@ -82,11 +62,24 @@
   .form {
     width: 370px;
   }
-}
-#bTN{
-  
+} */
+#bTN {
   width: 90px;
   height: 50px;
-  
 }
 
+@media screen and (max-width: 400px) {
+  .userDetails {
+    width: 330px;
+    float: left;
+  
+  }
+}
+@media screen and (max-width: 400px) {
+  .offset-3 {
+    padding-right: 80px;
+    
+  
+    
+  }
+}

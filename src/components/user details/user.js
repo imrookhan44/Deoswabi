@@ -68,9 +68,9 @@ const User = () => {
     setAppointment("");
   };
   return (
-    <div className="userDetails mt-3">
-      <div className="row pt-2">
-        <div className="col-sm-12 col-lg-12">
+    <div className="userDetails mt-2">
+      <div className="row pt-1">
+        <div className="col-sm-12 col-lg-12 col-md-12">
           <h3 className="offset-4"> User Details</h3>
           <form
             autoComplete="off"
