@@ -58,6 +58,6 @@
   
   .Head{
     border: solid black;
-    /* width: fit-content; */
+    width: 50px;
   }
 }
