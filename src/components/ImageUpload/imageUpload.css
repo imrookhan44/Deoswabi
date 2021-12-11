@@ -3,16 +3,20 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+  
 }
 
-.displayImage > div {
-  margin: 5px;
-}
+
+
+
 .download {
-  margin-top: 4px;
-
+  
+padding-left: 20px;
   color: black;
   text-decoration: none;
+}
+.Button {
+  margin-top: 4px;
 }
 
 .pdf {
@@ -23,3 +27,21 @@
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 480px) {
+  .displayImage {
+    display: inline;
+  }
+}
+@media screen and (max-width: 400px){
+  
+  .download{
+    
+    margin-left: 80px;
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+  
+  

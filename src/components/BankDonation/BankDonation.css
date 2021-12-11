@@ -1,13 +1,51 @@
+.adminpanell {
+  
+  width: 550px;
+  margin: auto;
+  box-shadow: 2px 4px 17px 3px grey;
+  border-radius: 20px;
+  height: 360px;
+}
 .form-controls22 {
   border: 1px solid #bbb9b9;
 
   width: 75%;
+  
 }
 
 #dropdown-button-light-example1 {
   border: 1px solid #bbb9b9;
-  width: 317px;
+  width: 306px;
+  
 }
 #button {
   width: 100px;
 }
+@media screen and (max-width:500px) {
+  .row-donation{
+  
+  width: 200px;
+  
+  
+  }
+}
+@media screen and (max-width:500px) {
+  .adminpanell{
+  
+  width: 300px;
+  /* float: left; */
+  
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #dropdown-button-light-example1{
+  
+    width: auto;
+  }
+  
+  
+  
+}
+
+

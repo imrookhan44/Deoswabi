@@ -6,7 +6,7 @@ function EasyDonation() {
     <div>
       <div className=" mt-5 adminpanel ">
         <div className="row">
-          <div className=" col-12 pt-4  ">
+          <div className=" col-12 pt-5  ">
             <h3 className="admins offset-3">EasyPaisa Donation</h3>
             <div className="row-easypaisa offset-3">
               <b>Enter Receiver's Details</b> <br />

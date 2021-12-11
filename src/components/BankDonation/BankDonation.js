@@ -5,8 +5,8 @@ import { Dropdown } from "react-bootstrap";
 function BankDonation() {
   return (
     <div>
-      <div className=" mt-5  adminpanel ">
-        <div className="row ">
+      <div className=" mt-5  adminpanell ">
+        <div className="rowss ">
           <div className=" col pt-3">
             <h3 className="admin mt-2">Bank Donation</h3>
             <div className="row-donation offset-2 mt-4">

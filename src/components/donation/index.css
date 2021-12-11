@@ -3,3 +3,18 @@
   border: 2px #4fe287;
   border-radius: 20px;
 }
+
+.colssss{
+  /* border: solid black; */
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 400px) {
+  .colssss{
+  padding-top: 30px
+  ;
+  display: flex;
+  justify-content: center;
+  }
+  
+}
