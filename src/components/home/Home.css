@@ -1,286 +1,256 @@
-    .img-fluid {
-    max-width: 100%;
-    height: 50vh;
-    background-image: url(../../assets/images/education1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    background-position: center;
-    margin-bottom: 50px;
+.img-fluid {
+  max-width: 100%;
+  height: 50vh;
+  background-image: url(../../assets/images/education1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  margin-bottom: 50px;
 }
 
 .b {
+  position: absolute;
+  top: 40%;
+  left: 85vw;
+  transform: translate(-75%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 12px 24px;
+  border: 5px solid orange;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+  width: 180px;
+  height: 60px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 2652px) {
+  .btn-success {
+    max-width: 5%;
+    max-width: 400px;
     position: absolute;
-    top: 40%;
-    left: 85vw;
-    transform: translate(-75%, );
-    -ms-transform: translate(-50%, -50%);
-    background-color: black;
-    color: white;
-    font-size: 20px;
-    padding: 12px 24px;
-    border: 5px solid orange;
-    cursor: pointer;
-    border-radius: 20px;
-    text-align: center;
+    top: 18%;
+    left: 5vw;
     width: 180px;
     height: 60px;
     font-weight: bold;
-}
-                                             
-@media screen and (max-width: 2652px) {
-    .btn-success {
-        max-width: 5%;
-        max-width: 400px;
-        position: absolute;
-        top: 18%;
-        left: 5vw;
-        width: 180px;
-        height: 60px;
-        font-weight: bold;
-    }
+  }
 }
 
 .material-icons {
+  position: absolute;
+  top: 40%;
+  left: 85vw;
+  transform: translate(-75%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 20px;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 2652px) {
+  .donation {
+    width: 70px;
+    max-width: 400px;
     position: absolute;
-    top: 40%;
-    left: 85vw;
-    transform: translate(-75%, );
-    -ms-transform: translate(-50%, -50%);
-    /* background-color: black; */
-    /* color: white; */
-    font-size: 20px;
-    padding: 12px 24px;
-    /* border: 5px solid orange; */
-    cursor: pointer;
-    border-radius: 20px;
-    text-align: center;
-    /* width: 70px;
-    height: 70px; */
-    font-weight: bold;
+    left: 8vw;
+    top: 9%;
+    max-width: 5%;
+  }
 }
 
 @media screen and (max-width: 2652px) {
-    .donation {
-        width: 70px;
-        max-width: 400px;
-        position: absolute;
-        left: 8vw;
-        top: 9%;
-        /* flex: 5%; */
-        max-width: 5%;
-        /* box-shadow: 1px 1px 10px gray; */
-    }
+  .btnik {
+    position: relative;
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 1%;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+    width: 200px;
+    left: 6vw;
+    top: 22%;
+    max-width: 10%;
+    max-height: 10%;
+    display: flex;
+  }
 }
 
-@media screen and (max-width: 2652px) {
-    .btnik {
-        position: relative;
-        /* transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%); */
-        background-color: #555;
-        color: white;
-        font-size: 16px;
-        padding: 1%;
-        border: none;
-        /* cursor: pointer; */
-        border-radius: 5px;
-        text-align: right;
-        width: 200px;
-        /* max-width: 400px; */
-        left: 6vw;
-        top: 22%;
-        /* flex: 5%; */
-        max-width: 10%;
-        max-height: 10%;
-        display: flex;
-    }
+@media screen and (max-width: 1355) {
+  .custom_margin_btn {
+    width: 100px;
+    margin-left: 10px;
+    font-size: 10px;
+  }
 }
 
- @media screen and (max-width: 1355) {
-    .custom_margin_btn {
-        width: 100px;
-        margin-left: 10px;
-        font-size: 10px;
-    }
-}
-                                             
-@media screen and (max-width:900px) {
-    .custom_margin_btn {
-        width: 90px;
-        margin-left: 20px;
-        font-size: 9px;
-
-    }
+@media screen and (max-width: 900px) {
+  .custom_margin_btn {
+    width: 90px;
+    margin-left: 20px;
+    font-size: 9px;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .custom_margin_btn {
-        width: 80px;
-        margin-left: 30px;
-        font-size: 10px;
-    }
+  .custom_margin_btn {
+    width: 80px;
+    margin-left: 30px;
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 700px) {
-    .custom_margin_btn {
-        width: 70px;
-        margin-left: 40px;
-        font-size: 10px;
-    }
+  .custom_margin_btn {
+    width: 70px;
+    margin-left: 40px;
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .custom_margin_btn {
-        width: 60px;
-        margin-left: 50px;
-        font-size: 10px;
-    }
+  .custom_margin_btn {
+    width: 60px;
+    margin-left: 50px;
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .custom_margin_btn {
-        width: 50px;
-        font-size: 10px;
-    }
+  .custom_margin_btn {
+    width: 50px;
+    font-size: 10px;
+  }
 }
 
-
-.im1{
-    width: 150px;
-    /* display: flex; */
-    /* padding-left: 20px; */
+.im1 {
+  width: 150px;
 }
-
-
 
 @media screen and (max-width: 1000px) {
-    .im1 {
-        width: 1440px;
-    }
+  .im1 {
+    width: 1440px;
+  }
 }
-                                             
-@media screen and (max-width:900px) {
-    .im1 {
-        width: 130px;
-    }
+
+@media screen and (max-width: 900px) {
+  .im1 {
+    width: 130px;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .im1 {
-        width: 120px;
-    }
+  .im1 {
+    width: 120px;
+  }
 }
 
 @media screen and (max-width: 700px) {
-    .im1 {
-        width: 110px;
-    }
+  .im1 {
+    width: 110px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .im1 {
-      width: 100;
-    }
+  .im1 {
+    width: 100;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .im1 {
-        width: 50px;
-    }
+  .im1 {
+    width: 50px;
+  }
 }
 
-@media screen and (max-width: 400px) {f
-    .im1 {
-        font-size: px;
-    }
+@media screen and (max-width: 400px) {
+  f .im1 {
+    font-size: px;
+  }
 }
-.bg_img{
-    background: url(../../assets/images/education1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 600px !important;
-    width: 100%;
-    background-position: center;
-    /* position: fixed; */
-    
+.bg_img {
+  background: url(../../assets/images/education1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px !important;
+  width: 100%;
+  background-position: center;
 }
-.custom_width{
-    width: 70px !important;
-    margin-top: 80px;
-    margin-left: -20px;   
+.custom_width {
+  width: 70px !important;
+  margin-top: 80px;
+  margin-left: -20px;
 }
-.custom_margin_btn{
-    margin-left: 10px;
-    background-color: cornflowerblue;
-    height: 6%;
-    width: 15%;
-    color: white;
-    border-radius: 10px;
-    border:none
+.custom_margin_btn {
+  margin-left: 10px;
+  background-color: cornflowerblue;
+  height: 6%;
+  width: 15%;
+  color: white;
+  border-radius: 10px;
+  border: none;
 }
 .custom_margin_btn:hover {
-    background-color: black;
-    box-shadow: 0px 5px 30px lightgray;
-    color:white;
+  background-color: black;
+  box-shadow: 0px 5px 30px lightgray;
+  color: white;
 }
 
 @media screen and (max-width: 1355px) {
-    .bg_img {
-        width: 1200;
-        background-position: center;
-    }
+  .bg_img {
+    width: 1200;
+    background-position: center;
+  }
 }
-                                             
-@media screen and (max-width:1200px) {
-    .bg_img {
-        width: 1000px;
-        background-position: center;
 
-    }
+@media screen and (max-width: 1200px) {
+  .bg_img {
+    width: 1000px;
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 1000px) {
-    .bg_img {
-        width: 800px;
-        background-position: center;
-
-    }
+  .bg_img {
+    width: 800px;
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .bg_img {
-        width: 600px;
-        background-position: center;
-
-    }
+  .bg_img {
+    width: 600px;
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .bg_img {
-      width: 400;
-      background-position: center;
-
-    }
+  .bg_img {
+    width: 400;
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 300px) {
-    .bg_img {
-        width: 100px;
-        background-position: center;
-
-    }
+  .bg_img {
+    width: 100px;
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 200px) {
-    .bg_img {
-        width: 100px;
-        background-position: center;
-        height: 100px;
-
-
-    }
+  .bg_img {
+    width: 100px;
+    background-position: center;
+    height: 100px;
+  }
 }
-
-
-

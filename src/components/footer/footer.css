@@ -1,18 +1,16 @@
-
 .fa {
-    font-size: 20px;
-    width: 20px;
-    margin: 2px 0px;
-    border-radius: 100px;
-    text-decoration: none;
-  }
-  
-  .fa:hover {
-      background-color: skyblue;
-      box-shadow: 0px 0px 20px cornflowerblue;
-  }
-  
-  img{
-      width: 70px;
-  }
- 
+  font-size: 20px;
+  width: 20px;
+  margin: 2px 0px;
+  border-radius: 100px;
+  text-decoration: none;
+}
+
+.fa:hover {
+  background-color: skyblue;
+  box-shadow: 0px 0px 20px cornflowerblue;
+}
+
+img {
+  width: 70px;
+}
