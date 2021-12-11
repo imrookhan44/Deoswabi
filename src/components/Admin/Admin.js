@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import firebase from "firebase";
-// import { useToasts } from 'react-toast-notifications'
 import "./Admin.css";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 toast.configure();
 function Admin() {
   const notify = () => {
@@ -17,18 +17,15 @@ function Admin() {
         toast("invalid Email/Password ");
       });
   };
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   console.log(firebase.auth());
-  const signInHandler = () => {
-    // firebase.auth().signInWithEmailAndPassword(email, password)
-    // .then((auth) => {
-    // })
-  };
+  const signInHandler = () => {};
 
   return (
     <div>
-      <div className=" mt-5 adminpanel " >
+      <div className=" mt-5 adminpanel ">
         <div className="row ">
           <div className=" col-4 offset-4 pt-3  ">
             <h3 className="admin mt-5">Admin</h3>
@@ -52,7 +49,7 @@ function Admin() {
             <div>
               {" "}
               <button
-              onSubmit="return validate()"
+                onSubmit="return validate()"
                 onClick={(signInHandler, notify)}
                 className="btn btn-primary mt-4   "
                 id="button"

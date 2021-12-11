@@ -1,12 +1,11 @@
 import "../Signin/signin.css";
-import signin from "../../assets/images/signin.jpg";
 import React, { useState } from "react";
 import { auth } from "../firebase";
 import { useHistory } from "react-router-dom";
 
 export default function Signin() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email] = useState("");
+  const [password] = useState("");
   const history = useHistory();
   const handleSubmit = async (e) => {
     console.log(email, password);

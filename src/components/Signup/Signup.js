@@ -48,11 +48,10 @@ export default function Signup() {
       )
     );
   };
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email] = useState("");
+  const [password] = useState("");
   const history = useHistory();
   const handleSubmit = async (e) => {
-    
     console.log(email, password);
     try {
       const result = await auth
@@ -61,16 +60,14 @@ export default function Signup() {
           console.log("res ", res);
           history.push("/");
         });
-    
+
       console.log("RESULT CONST :", result);
     } catch (err) {
       console.log("err ;  :", err);
-      
     }
   };
 
   return (
- 
     <div className=" adminpanel mt-5">
       <div className="row mt-3">
         <div className="col-4 offset-3">

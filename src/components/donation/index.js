@@ -16,10 +16,7 @@ export default function index() {
             </Link>
           </td>
         </div>
-        <div
-          className=" colssss col-lg-3 col-md-3  col-sm-3 offset-1"
-          
-        >
+        <div className=" colssss col-lg-3 col-md-3  col-sm-3 offset-1">
           <td>
             <Link to="/BankDonation">
               <img src={bank} className="im1" alt="bankDonationImage" />

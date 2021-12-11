@@ -1,5 +1,6 @@
 import React from "react";
 import "./EasyDonation.css";
+
 function EasyDonation() {
   return (
     <div>
@@ -17,7 +18,7 @@ function EasyDonation() {
               ></input>
               <input
                 Password="password"
-                type= "Number"
+                type="Number"
                 className="form-controls23 mt-2 p-2"
                 placeholder="Pin Here"
               />
