@@ -17,13 +17,13 @@ function BankDonation() {
               ></input>
               &nbsp;
               <input
-                type="password"
+                Password="password"
+                type="Number"
                 className="form-controls22 mt-2 p-2"
                 placeholder="Pin Here"
               />
               &nbsp;
               <div>
-                
                 Select Your Bank
                 <Dropdown className="DropDown">
                   <Dropdown.Toggle

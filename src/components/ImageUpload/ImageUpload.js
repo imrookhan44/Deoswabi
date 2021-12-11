@@ -1,11 +1,10 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from "react";
 import { storage } from "../firebase";
 import "firebase/database";
 import firebase from "firebase";
-
 import "./imageUpload.css";
 import { AiFillDelete } from "react-icons/ai";
-import { RiFolderDownloadFill } from "react-icons/ri";
 import pdf from "../../assets/images/pdf.png";
 
 class ImageUpload extends Component {
@@ -33,18 +32,7 @@ class ImageUpload extends Component {
       this.setState({ documents: objValues });
       console.log("data docs ", this.state.documents);
       console.log("data objcet  ", objValues);
-      // updateStarCount(postElement, data);
     });
-    // dbRef.get().then((snapshot) => {
-    // if (snapshot.exists()) {
-    //   console.log(snapshot.val());
-    // } else {
-    //   console.log("No data available");
-    // }
-    // })
-    // .catch((error) => {
-    //   console.error(error);
-    // });
   }
   handleChange = (e) => {
     if (e.target.files[0]) {
@@ -92,16 +80,7 @@ class ImageUpload extends Component {
     );
   };
 
-  //write files at realtime database
-
-  //Delete files
   deleteItem = (item) => {
-    // let x = this.state.documents.find(item => item.uid == id);
-    // console.log("x : ", x);
-    // console.log("doc Entries : ", this.state.docEntries);
-    // let y = this.state.docEntries.find(item => item[1].uid == id);
-    // console.log("y : ", y);
-    // let delID = y[0];
     const dbRef = firebase
       .database()
       .ref("url")
@@ -115,11 +94,9 @@ class ImageUpload extends Component {
       .catch((e) => {
         console.log("err : ", e);
       });
-    // dbRef.remove();
     console.log(item.xid);
   };
 
-  //book name
   handleInputChange = (e) => {
     this.setState({ bookName: e.target.value });
   };
@@ -138,13 +115,6 @@ class ImageUpload extends Component {
           <div className="col-12">
             <div style={style}>
               <div className="ab" style={{}}></div>
-              {/* <label>
-            {" "}
-            <i style={{ fontsize: "31px", border: "1px solid black" }}>
-              {" "}
-            </i>{" "}
-          </label> */}
-
               <input
                 type="file"
                 onChange={this.handleChange}
@@ -182,8 +152,6 @@ class ImageUpload extends Component {
                       <b>{item.name}</b>
                     </h6>
                   </div>
-
-                  // <div>test</div>
                 ))}
             </div>
           </div>

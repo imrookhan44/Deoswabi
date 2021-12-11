@@ -2,24 +2,19 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-
 import { AiOutlineArrowLeft } from "react-icons/ai";
-
 import logo from "../../assets/images/apca logo.png";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, NavDropdown } from "react-bootstrap";
 import { auth } from "../firebase";
 
 export default function Home() {
   let history = useHistory();
-  function Logout() {
-    history.push("Login");
-  }
+
   return (
     <>
       <div className="container-fluid" id="Main">
         <div className="row">
           <div className="col-lg-12 align-self-center">
-          {/* <div onClick={()=> {auth?.signOut()}}> {auth?.currentUser?.email} </div> */}
             <Navbar collapseOnSelect expand="lg">
               <Navbar.Toggle
                 className="navbar-toggler"
@@ -31,8 +26,6 @@ export default function Home() {
                 aria-label="Toggle navigation"
               />
               <Navbar.Collapse>
-          {/* <div onClick={()=> {auth?.signOut()}}>user. : {auth?.currentUser?.email} 
-          </div> */}
                 <div
                   className="collapse navbar-collapse"
                   id="navbarSupportedContent"
@@ -56,16 +49,6 @@ export default function Home() {
                         History
                       </Link>
                     </li>
-                    {/* <li className="nav-item">
-                      <Link className="nav-link" to="signup" id="third">
-                        Sign Up
-                      </Link>
-                    </li> */}
-                    <li className="nav-item">
-                      <Link className="nav-link" to="login" id="fourth">
-                        Login
-                      </Link>
-                    </li>
 
                     <li className="nav-item"></li>
                     <li className="nav-item">
@@ -73,55 +56,53 @@ export default function Home() {
                         User Details
                       </Link>
                     </li>
-                    {/* <li className="nav-item">
-                      <Link className="nav-link" to="Download" id="seven">
-                        Download
-                      </Link>
-                    </li> */}
-                    {/* <li className="nav-item">
-                      <Link className="nav-link" to="Admin" id="eight">
-                        Admin
-                      </Link>
-                    </li> */}
-
                     <li className="nav-item">
                       <Link className="nav-link" to="donation" id="ten">
                         Donate Here
                       </Link>
                     </li>
+
                     <li className="nav-item">
-                      <Link className="nav-link" to="ImageUpload" id="ten">
-                        upload File
+                      <Link className="nav-link" to="dropdown">
+                        <li class="dropdown">
+                          <a href="Home" className="drop">
+                            Dropdown
+                          </a>
+                          <div className="dropdown-content">
+                            <br />
+                            <Link className="nav-link" to="Login">
+                              Login
+                            </Link>
+                            <Link className="nav-link" to="Admin">
+                              Admin
+                            </Link>
+                          </div>
+                        </li>
                       </Link>
                     </li>
-                    
-                    {/* <li className="nav-item">
-                      <Link className="nav-link" to="dropdown">
-                  <li class="dropdown">
-                    <a href="Home" className="drop">Dropdown</a>
-                    <div className="dropdown-content"><br/>
-                    <Link  className="nav-link" to="Login">Login</Link>
-                    <Link  className="nav-link" to="Admin">Admin</Link>
-                    </div>
-                  </li>
-                      </Link>
-                    </li> */}
-                    
                   </ul>
                 </div>
-              
-                <button className="btn-primary"  onClick={() => history.goBack('/')} ><AiOutlineArrowLeft /></button>
+                <button
+                  className="btn-primary"
+                  onClick={() => history.goBack("/")}
+                >
+                  <AiOutlineArrowLeft />
+                </button>
               </Navbar.Collapse>
               {auth?.currentUser?.uid && (
                 <NavDropdown title={auth?.currentUser?.email}>
-                  <NavDropdown.Item onClick={()=> {auth?.signOut()}}>Logout</NavDropdown.Item>
+                  <NavDropdown.Item
+                    onClick={() => {
+                      auth?.signOut();
+                    }}
+                  >
+                    Logout
+                  </NavDropdown.Item>
                 </NavDropdown>
               )}
             </Navbar>
           </div>
         </div>
-
-        {/* </nav> */}
       </div>
     </>
   );

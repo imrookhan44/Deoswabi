@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 import logo from "../../../assets/images/apca logo.png";
@@ -10,10 +9,17 @@ export default function AdminNavbar() {
   return (
     <>
       <div className="container-fluid" id="Main">
-           I am admin
+        I am admin
         <div className="row">
           <div className="col-lg-12 align-self-center">
-          <div onClick={()=> {auth?.signOut()}}> Admin {auth?.currentUser?.email} </div>
+            <div
+              onClick={() => {
+                auth?.signOut();
+              }}
+            >
+              {" "}
+              Admin {auth?.currentUser?.email}{" "}
+            </div>
             <Navbar collapseOnSelect expand="lg">
               <Navbar.Toggle
                 className="navbar-toggler"
@@ -40,7 +46,7 @@ export default function AdminNavbar() {
                     <li className="nav-item active">
                       <Link className="nav-link" to="/" id="first">
                         {" "}
-                        admin page 1 {" "}
+                        admin page 1{" "}
                       </Link>
                     </li>
                     <li className="nav-item">
@@ -48,11 +54,7 @@ export default function AdminNavbar() {
                         admin page 2
                       </Link>
                     </li>
-                    {/* <li className="nav-item">
-                      <Link className="nav-link" to="signup" id="third">
-                        Sign Up
-                      </Link>
-                    </li> */}
+
                     <li className="nav-item">
                       <Link className="nav-link" to="login" id="fourth">
                         Login
@@ -65,16 +67,6 @@ export default function AdminNavbar() {
                         User Details
                       </Link>
                     </li>
-                    {/* <li className="nav-item">
-                      <Link className="nav-link" to="Download" id="seven">
-                        Download
-                      </Link>
-                    </li> */}
-                    {/* <li className="nav-item">
-                      <Link className="nav-link" to="Admin" id="eight">
-                        Admin
-                      </Link>
-                    </li> */}
 
                     <li className="nav-item">
                       <Link className="nav-link" to="index" id="ten">
@@ -87,8 +79,6 @@ export default function AdminNavbar() {
             </Navbar>
           </div>
         </div>
-
-        {/* </nav> */}
       </div>
     </>
   );

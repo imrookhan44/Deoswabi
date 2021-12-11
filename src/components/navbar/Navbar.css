@@ -1,50 +1,46 @@
-.nav-item{
-  
+.nav-item {
   font-weight: 400;
-  
-  
 }
-#Main{
-  
+#Main {
   background-color: #212529;
   color: white;
 }
 
-#first, #second, #third, #fourth,#fifth, #sixth,#seven, #eight,#nine, #ten{
+#first,
+#second,
+#third,
+#fourth,
+#fifth,
+#sixth,
+#seven,
+#eight,
+#nine,
+#ten {
   color: white;
 }
-.nav-item:hover{
+.nav-item:hover {
   box-shadow: 0 0 10px 0 white inset, 0 0 20px 2px white;
-  
 }
-
-
-
-
-
-
-
 
 li {
   float: left;
 }
 
-li a, .drop {
+li a,
+.drop {
   display: inline-block;
   color: white;
   text-align: center;
-  /* padding: 14px 16px; */
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .drop {
+li a:hover,
+.dropdown:hover .drop {
   color: white;
-  
 }
 
 li.dropdown {
   display: inline-block;
-  
 }
 
 .dropdown-content {
@@ -53,7 +49,7 @@ li.dropdown {
   position: absolute;
   background-color: none;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -63,17 +59,13 @@ li.dropdown {
   text-decoration: none;
   display: block;
   text-align: left;
-
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
- padding-top:10px;
- /* margin-top: 25px;
- position: fixed; */
+  padding-top: 10px;
 }
-
-
-

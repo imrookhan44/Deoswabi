@@ -1,5 +1,5 @@
 import React from "react";
-import './CnicDonation.css';
+import "./CnicDonation.css";
 
 function CnicDonation() {
   return (
@@ -7,7 +7,8 @@ function CnicDonation() {
       <div className=" mt-5 CNICDonation ">
         <div className="row ">
           <div className=" col pt-2">
-            <h3 className="admin mt-4  ">CNIC Transfer</h3><br />
+            <h3 className="admin mt-4  ">CNIC Transfer</h3>
+            <br />
             <div className="row-cnic pt-2">
             Enter CNIC Number
             <br/>

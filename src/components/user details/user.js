@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import apca from "../../assets/images/apca.svg";
 import "./user.css";
 import { db, auth } from "../firebase";
-import { useFormik } from "formik";
-import * as yup from "yup";
 
 toast.configure();
 
@@ -49,7 +46,6 @@ const User = () => {
       })
       .then(() => {
         setLoader(false);
-        // alert("Your message has been submitted");
       })
       .catch((error) => {
         alert(error.message);
@@ -108,7 +104,7 @@ const User = () => {
             />
 
             <input
-            required="required"
+              required="required"
               value={email}
               type="email"
               placeholder="Email Address"
@@ -117,7 +113,7 @@ const User = () => {
             />
 
             <input
-            required="required"
+              required="required"
               value={mobile}
               type="number"
               placeholder="Mobile number"
@@ -126,18 +122,17 @@ const User = () => {
             />
 
             <input
-            required="required"
+              required="required"
               value={dateOfBirth}
               type="date"
               id="birthday"
               name="birthday"
               className="form-control"
-              name="pass"
               onChange={(e) => setDateOfBirth(e.target.value)}
             />
 
             <input
-            required="required"
+              required="required"
               value={qualification}
               type="Qualification"
               placeholder="Qualification"
@@ -147,7 +142,7 @@ const User = () => {
             />
 
             <input
-            required="required"
+              required="required"
               value={station}
               type="text"
               placeholder="Station"
@@ -157,7 +152,7 @@ const User = () => {
             />
 
             <input
-            required="required"
+              required="required"
               value={address}
               type="Address"
               placeholder="Address"
@@ -166,7 +161,7 @@ const User = () => {
             />
 
             <input
-            required="required"
+              required="required"
               value={firstAppointment}
               type="text"
               placeholder="First Appointment"

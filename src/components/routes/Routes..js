@@ -22,7 +22,6 @@ import Test from "../Admin/Test";
 import EasyDonation from "../donation/EasyDonation";
 
 function Routes(isLoggedIn) {
-  const [oldUserState, setOlduserState] = useState(false);
   const [user] = useState();
   const [oldUser] = useState();
   return (
@@ -35,14 +34,13 @@ function Routes(isLoggedIn) {
       <Route path="/login" component={Login} />
       <Route path="/userdetails" component={Userdetails} />
       <SecureRoute path="/download" component={Download} />
-      <Route path="/Admin" component={Admin} />
+      <Route exacts path="/Admin" component={Admin} />
       <Route path="/Test" component={Test} />
       <Route path="/donation" component={index} />
       <Route path="/BankDonation" component={BankDonation} />
       <Route path="/CnicDonation" component={CnicDonation} />
       <Route path="/easyDonation" component={EasyDonation} />
       <Route path="/ImageUpload" component={ImageUpload} />
-      {/* <Route path='/ImageUpload' component={ImageUpload} /> */}
 
       <Route path="/" component={isLoggedIn ? Home : Login} />
       {user ? <Routes /> : oldUser && <Login />}

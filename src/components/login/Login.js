@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import { useFormik } from "formik";
-import * as yup from "yup";
 import firebase from "firebase";
-import { db } from "../firebase";
 import "./Login.css";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useToast } from "react-toastify";
 toast.configure();
 
 function Login() {
@@ -66,9 +62,7 @@ function Login() {
               <br />
             </div>
 
-            <div className>
-              {/* <img className="custom-img image " src={signin} alt='signup' /> */}
-            </div>
+            <div className></div>
           </div>
         </div>
       </div>
