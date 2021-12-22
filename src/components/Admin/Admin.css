@@ -1,11 +1,9 @@
-
-
 .Adminpage {
   background-color: lightgray;
   border: none;
   width: 100px;
   height: 40px;
-  box-shadow: 2px 4px 17px 3px grey
+  box-shadow: 2px 4px 17px 3px grey;
 }
 
 .Adminpage:hover {
@@ -17,17 +15,9 @@
 .admin {
   font-size: xx-large;
   font-weight: 400px;
-
-
-
-
-
-
-
 }
 
 .adminpanel {
-
   margin: auto;
   width: 650px;
   height: 400px;
@@ -54,17 +44,14 @@
   }
 }
 
-
 @media screen and (max-width: 500px) {
   .form-controls {
-
     width: 100px;
     display: flex;
     font-size: 10px;
     font-weight: bold;
   }
 }
-
 
 .form-controls {
   border: 1px solid #bbb9b9;
@@ -77,6 +64,6 @@
   width: 90px;
   border-radius: 4px;
 }
-.admin{
+.admin {
   margin-left: 30px;
 }
