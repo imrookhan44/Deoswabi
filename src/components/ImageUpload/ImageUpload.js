@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-import { InitFirebase, storage } from "../firebase";
+import { storage } from "../firebase";
+import "firebase/database";
+import firebase from "firebase";
+
+import "./imageUpload.css";
+import { AiFillDelete } from "react-icons/ai";
+import { RiFolderDownloadFill } from "react-icons/ri";
+import pdf from "../../assets/images/pdf.png";
+
 class ImageUpload extends Component {
   constructor(props) {
     super(props);
@@ -7,21 +15,57 @@ class ImageUpload extends Component {
       image: null,
       url: "",
       progress: 0,
+      documents: [],
+      bookName: "",
     };
-
     this.handleChange = this.handleChange.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
   }
-  componentDidMount() {}
+  componentDidMount() {
+    const dbRef = firebase.database().ref("url");
+    dbRef.on("value", (snapshot) => {
+      const data = snapshot.val();
+      let objValues = Object.values(data);
+      console.log(objValues);
+      let objKeys = Object.keys(data);
+      console.log(objKeys);
+      objValues.map((item, index) => (item["xid"] = objKeys[index]));
+      this.setState({ documents: objValues });
+      console.log("data docs ", this.state.documents);
+      console.log("data objcet  ", objValues);
+      // updateStarCount(postElement, data);
+    });
+    // dbRef.get().then((snapshot) => {
+    // if (snapshot.exists()) {
+    //   console.log(snapshot.val());
+    // } else {
+    //   console.log("No data available");
+    // }
+    // })
+    // .catch((error) => {
+    //   console.error(error);
+    // });
+  }
   handleChange = (e) => {
     if (e.target.files[0]) {
       const image = e.target.files[0];
       this.setState(() => ({ image }));
     }
   };
+  writeFileUrl = () => {
+    firebase
+      .database()
+      .ref("url")
+      .push({
+        url: this.state.url,
+        uid: Math.floor(Math.random() * 100),
+        name: this.state.bookName,
+      });
+  };
   handleUpload = () => {
     const { image } = this.state;
     const uploadTask = storage.ref(`images/${image.name}`).put(image);
+    console.log(image.name);
     uploadTask.on(
       "state_changed",
       (snapshot) => {
@@ -41,10 +85,45 @@ class ImageUpload extends Component {
           .then((url) => {
             console.log(url);
             this.setState({ url });
+
+            this.writeFileUrl(url);
           });
       }
     );
   };
+
+  //write files at realtime database
+
+  //Delete files
+  deleteItem = (item) => {
+    // let x = this.state.documents.find(item => item.uid == id);
+    // console.log("x : ", x);
+    // console.log("doc Entries : ", this.state.docEntries);
+    // let y = this.state.docEntries.find(item => item[1].uid == id);
+    // console.log("y : ", y);
+    // let delID = y[0];
+    const dbRef = firebase
+      .database()
+      .ref("url")
+      .child(item.xid)
+      .remove((oncomplete) => {
+        console.log(" on complete : ", oncomplete);
+      })
+      .then((res) => {
+        console.log("res : ", res);
+      })
+      .catch((e) => {
+        console.log("err : ", e);
+      });
+    // dbRef.remove();
+    console.log(item.xid);
+  };
+
+  //book name
+  handleInputChange = (e) => {
+    this.setState({ bookName: e.target.value });
+  };
+
   render() {
     const style = {
       height: "40vh",
@@ -54,35 +133,62 @@ class ImageUpload extends Component {
       justifyContent: "center",
     };
     return (
-      <>
-        <div style={style}>
-          <img
-            src={this.state.url || ""}
-            alt="Uploaded images"
-            height="300"
-            width="400"
-          />
-          <div className="ab" style={{}}></div>
-          <label>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div style={style}>
+              <div className="ab" style={{}}></div>
+              {/* <label>
             {" "}
             <i style={{ fontsize: "31px", border: "1px solid black" }}>
               {" "}
             </i>{" "}
-          </label>
-          <input
-            type="file"
-            onChange={this.handleChange}
-            style={{ height: "100px" }}
-          />
-          <button onClick={this.handleUpload}>Upload</button>
-          <progress value={this.state.progress} max="100" />
+          </label> */}
+
+              <input
+                type="file"
+                onChange={this.handleChange}
+                style={{ height: "100px" }}
+              />
+              <label>file name</label>
+              <input type="text" onChange={(e) => this.handleInputChange(e)} />
+              <br />
+              <button onClick={this.handleUpload}>Upload</button>
+              <progress value={this.state.progress} max="100" />
+            </div>
+          </div>
+          <hr />
+          <div className="row">
+            <div className="displayImage">
+              {this.state.documents &&
+                this.state.documents.length > 0 &&
+                this.state.documents.map((item, index) => (
+                  <div>
+                    {/* <a className="download" href={item?.url} target="_blank">
+                      {" "}
+                      <RiFolderDownloadFill size="20px" /> Download
+                    </a> */}
+                    &nbsp;&nbsp;&nbsp;
+                    <button
+                      className="Button offset-8"
+                      onClick={() => this.deleteItem(item)}
+                    >
+                      <AiFillDelete size="20px" />
+                    </button>
+                    <div className="pdf">
+                      <img src={pdf} style={{ width: "200px" }} />
+                    </div>
+                    <h6 className="itemName">
+                      <b>{item.name}</b>
+                    </h6>
+                  </div>
+
+                  // <div>test</div>
+                ))}
+            </div>
+          </div>
         </div>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-        </ul>
-      </>
+      </div>
     );
   }
 }

@@ -1,35 +1,33 @@
 import React from "react";
-import './EasyDonation.css';
-
-function CnicDonation() {
+import "./EasyDonation.css";
+function EasyDonation() {
   return (
     <div>
       <div className=" mt-5 adminpanel ">
-        <div className="row ">
-          <div className=" col pt-5  ">
-            <h3 className="admin mt-3">Easypaisa Donation</h3>
-            <div className="row-easypaisa offset-2">
-            <input
-              type="Number"
-              className="form-controls23 pt-2 "
-              placeholder="Account Here"
-            ></input>
-            &nbsp;
-            <input
-              type="password"
-              className="form-controls23 mt-2 pt-2"
-              placeholder="Pin Here"
-            />
+        <div className="row">
+          <div className=" col-12 pt-4  ">
+            <h3 className="admins offset-3">EasyPaisa Donation</h3>
+            <div className="row-easypaisa offset-3">
+              <b>Enter Receiver's Details</b> <br />
+              Enter Mobile Number
+              <input
+                type="Number"
+                className="form-controls23 mt-2 p-2 "
+                placeholder="Account Here"
+              ></input>
+              <input
+                Password="password"
+                type= "Number"
+                className="form-controls23 mt-2 p-2"
+                placeholder="Pin Here"
+              />
+              <div>
+                {" "}
+                <button className="btn btn-primary mt-4 offset-4  " id="button">
+                  Next
+                </button>{" "}
+              </div>
             </div>
-            <div>
-              {" "}
-              <button className="btn btn-primary mt-4   " id="button">
-                Submit
-              </button>{" "}
-            </div>
-          </div>
-
-          <div className="  col-sm-3 col-3">
           </div>
         </div>
       </div>
@@ -37,5 +35,4 @@ function CnicDonation() {
   );
 }
 
-export default CnicDonation;
-
+export default EasyDonation;

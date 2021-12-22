@@ -12,14 +12,14 @@ import { auth } from "../firebase";
 export default function Home() {
   let history = useHistory();
   function Logout() {
-    history.push("/Login");
+    history.push("Login");
   }
   return (
     <>
       <div className="container-fluid" id="Main">
         <div className="row">
           <div className="col-lg-12 align-self-center">
-          <div onClick={()=> {auth?.signOut()}}> {auth?.currentUser?.email} </div>
+          {/* <div onClick={()=> {auth?.signOut()}}> {auth?.currentUser?.email} </div> */}
             <Navbar collapseOnSelect expand="lg">
               <Navbar.Toggle
                 className="navbar-toggler"
@@ -31,8 +31,8 @@ export default function Home() {
                 aria-label="Toggle navigation"
               />
               <Navbar.Collapse>
-          <div onClick={()=> {auth?.signOut()}}>user. : {auth?.currentUser?.email} 
-          </div>
+          {/* <div onClick={()=> {auth?.signOut()}}>user. : {auth?.currentUser?.email} 
+          </div> */}
                 <div
                   className="collapse navbar-collapse"
                   id="navbarSupportedContent"
@@ -61,11 +61,11 @@ export default function Home() {
                         Sign Up
                       </Link>
                     </li> */}
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                       <Link className="nav-link" to="login" id="fourth">
                         Login
                       </Link>
-                    </li>
+                    </li> */}
 
                     <li className="nav-item"></li>
                     <li className="nav-item">
@@ -85,22 +85,31 @@ export default function Home() {
                     </li> */}
 
                     <li className="nav-item">
-                      <Link className="nav-link" to="index" id="ten">
+                      <Link className="nav-link" to="donation" id="ten">
                         Donate Here
                       </Link>
                     </li>
+                    
+                    <li className="nav-item">
+                      <Link className="nav-link" to="dropdown">
+                  <li class="dropdown">
+                    <a href="Home" className="drop">Dropdown</a>
+                    <div className="dropdown-content"><br/>
+                    <Link  className="nav-link" to="Login">Login</Link>
+                    <Link  className="nav-link" to="Admin">Admin</Link>
+                    </div>
+                  </li>
+                      </Link>
+                    </li>
+                    
                   </ul>
                 </div>
-                <button
-                  className="btn-primary"
-                  onClick={() => history.goBack("/")}
-                >
-                  <AiOutlineArrowLeft />
-                </button>
+              
+                <button className="btn-primary"  onClick={() => history.goBack('/')} ><AiOutlineArrowLeft /></button>
               </Navbar.Collapse>
               {auth?.currentUser?.uid && (
                 <NavDropdown title={auth?.currentUser?.email}>
-                  <NavDropdown.Item onClick={Logout}>Logout</NavDropdown.Item>
+                  <NavDropdown.Item onClick={()=> {auth?.signOut()}}>Logout</NavDropdown.Item>
                 </NavDropdown>
               )}
             </Navbar>
