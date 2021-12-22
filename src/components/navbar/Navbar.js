@@ -61,25 +61,13 @@ export default function Home() {
                         Donate Here
                       </Link>
                     </li>
-
                     <li className="nav-item">
-                      <Link className="nav-link" to="dropdown">
-                        <li class="dropdown">
-                          <a href="Home" className="drop">
-                            Dropdown
-                          </a>
-                          <div className="dropdown-content">
-                            <br />
-                            <Link className="nav-link" to="Login">
-                              Login
-                            </Link>
-                            <Link className="nav-link" to="Admin">
-                              Admin
-                            </Link>
-                          </div>
-                        </li>
+                      <Link className="nav-link" to="ImageUpload" id="ten">
+                        Upload File
                       </Link>
                     </li>
+
+                   
                   </ul>
                 </div>
                 <button
