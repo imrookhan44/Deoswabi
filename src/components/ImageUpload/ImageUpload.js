@@ -7,7 +7,6 @@ import "./imageUpload.css";
 import { AiFillDelete } from "react-icons/ai";
 import { RiFolderDownloadFill } from "react-icons/all";
 
-
 import pdf from "../../assets/images/pdf.png";
 
 class ImageUpload extends Component {
