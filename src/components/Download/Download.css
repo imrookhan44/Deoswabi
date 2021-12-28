@@ -1,0 +1,7 @@
+.download1{
+    background-color: lightcyan;
+    display: flex;
+    width: 700px;
+    flex-direction: column;
+    flex-basis: 30%;
+}

@@ -1,10 +1,9 @@
-import React from "react";
-import "./Home.css";
+import React from 'react'
 
 export default function Home() {
-    return (
-    <div className="container-fluid">
-      <div className="bg_img"></div>
+  return (
+    <div>
+      <p>THIS I SHOM E</p>
     </div>
-  );
+  )
 }

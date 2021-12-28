@@ -4,13 +4,18 @@ import "firebase/database";
 import "firebase/storage";
 import "firebase/firestore";
 const firebaseConfig = {
-  apiKey: "AIzaSyArLVA_Lde73VMAie7cH4wLj2RLeGNPDqw",
-  authDomain: "apca-9ca67.firebaseapp.com",
-  projectId: "apca-9ca67",
-  storageBucket: "apca-9ca67.appspot.com",
-  messagingSenderId: "842905420618",
-  appId: "1:842905420618:web:5ef68d99cf7211327cf7b3"
+  apiKey: "AIzaSyBzfg3xiSnoTOCZcv1kAnRRGt1tl8DojJo",
+  authDomain: "fir-tutorial-c1f87.firebaseapp.com",
+  databaseURL: "https://fir-tutorial-c1f87-default-rtdb.firebaseio.com",
+  projectId: "fir-tutorial-c1f87",
+  storageBucket: "fir-tutorial-c1f87.appspot.com",
+  messagingSenderId: "611466670485",
+  appId: "1:611466670485:web:d5994bc0aaa3d90ba1069c",
+  measurementId: "G-TWBGL9DQK4"
 };
+
+
+
 let InitFirebase;
 InitFirebase = firebase.initializeApp(firebaseConfig);
 console.log("firebase in utils", firebase.database());

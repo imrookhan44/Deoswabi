@@ -44,4 +44,7 @@ padding-left: 20px;
 }
 
   
-  
+  #uncontrolled-tab-example{
+    text-align: center;
+    color: red;
+  }

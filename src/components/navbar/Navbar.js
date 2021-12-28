@@ -66,6 +66,11 @@ export default function Home() {
                         Upload File
                       </Link>
                     </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="Download" id="ten">
+                        Download
+                      </Link>
+                    </li>
 
                    
                   </ul>

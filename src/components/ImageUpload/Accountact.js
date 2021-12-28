@@ -9,10 +9,8 @@ import { AiFillDelete } from "react-icons/ai";
 import { RiFolderDownloadFill } from "react-icons/all";
 
 import pdf from "../../assets/images/pdf.png";
-import HrUpload from "./HrUpload";
-import Accountant from "./Accountact";
 
-class ImageUpload extends Component {
+class Accountant extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,7 +24,7 @@ class ImageUpload extends Component {
     this.handleUpload = this.handleUpload.bind(this);
   }
   componentDidMount() {
-    const dbRef = firebase.database().ref("url");
+    const dbRef = firebase.database().ref("accounts");
     dbRef.on("value", (snapshot) => {
       const data = snapshot.val();
       let objValues = Object.values(data);
@@ -48,7 +46,7 @@ class ImageUpload extends Component {
   writeFileUrl = () => {
     firebase
       .database()
-      .ref("url")
+      .ref("accounts")
       .push({
         url: this.state.url,
         uid: Math.floor(Math.random() * 100),
@@ -88,7 +86,7 @@ class ImageUpload extends Component {
   deleteItem = (item) => {
     const dbRef = firebase
       .database()
-      .ref("url")
+      .ref("accounts")
       .child(item.xid)
       .remove((oncomplete) => {
         console.log(" on complete : ", oncomplete);
@@ -116,11 +114,13 @@ class ImageUpload extends Component {
     
     return (
       
-      <div className="">
-        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
-  <Tab eventKey="home" title="Finance">
-  <div className="row">
-          <div className="col-12">
+     
+         
+  <div className="">
+        
+        <div className="row">
+  <div className="col-12">
+            
             <div style={style}>
               <div className="ab" style={{}}></div>
               <input
@@ -135,6 +135,7 @@ class ImageUpload extends Component {
               <progress value={this.state.progress} max="100" />
             </div>
           </div>
+          
           <hr />
           <div className="">
             <div className="displayImage">
@@ -163,22 +164,13 @@ class ImageUpload extends Component {
                 ))}
             </div>
           </div>
-        </div>
-    <pak />
-  </Tab>
-  <Tab eventKey="profile" title="HR">
-    <HrUpload/>
-    <pak />
-  </Tab>
-  <Tab eventKey="contact" title="Accounts" >
-    <Accountant/>
-    <pak />
-  </Tab>
-</Tabs>
-        
+          </div>
       </div>
+   
+         
+        
     );
   }
 }
 
-export default ImageUpload;
+export default Accountant;

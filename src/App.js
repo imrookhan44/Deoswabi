@@ -4,6 +4,7 @@ import Footer from "../src/components/footer/Footer";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import Routes from "./components/routes/Routes.";
 import "fontawesome";
+import Home from '../src/components/home/Home';
 import { auth } from "./components/firebase";
 import Login from "./components/login/Login";
 import React, { useState, useEffect } from "react";
@@ -40,7 +41,9 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
+    
       {auth?.currentUser?.email && <Navbar />}
+      
       <Footer />
       {auth?.currentUser?.email ? <Routes /> : <Login />}
     </BrowserRouter>

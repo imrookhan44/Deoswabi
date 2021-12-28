@@ -62,6 +62,7 @@ function UploadImage() {
   return (
     <div className="App">
       <div>
+        
         <input type="file" multiple onChange={formHandler} className="input" />
         <button onClick={uploadFiles}>Upload</button>
       </div>
