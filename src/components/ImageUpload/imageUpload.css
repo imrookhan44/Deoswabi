@@ -19,14 +19,8 @@ padding-left: 20px;
   margin-top: 4px;
 }
 
-.pdf {
-  display: flex;
-  justify-content: center;
-}
-.itemName {
-  display: flex;
-  justify-content: center;
-}
+
+
 @media screen and (max-width: 480px) {
   .displayImage {
     display: inline;
@@ -48,3 +42,5 @@ padding-left: 20px;
     text-align: center;
     color: red;
   }
+ 
+  

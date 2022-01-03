@@ -92,15 +92,15 @@ class FinanceResult extends Component {
      
          
   
-          <div className="container">
+          <div className="container-fluid">
             <div className="row">
-              <div className="col-lg-6">
+              <div className="col-12" id="pak">
             
             
               {this.state.documents &&
                 this.state.documents.length > 0 &&
                 this.state.documents.map((item, index) => (
-                  <div>
+                  <div className="dataa">
                     <a className="download" href={item?.url} target="_blank">
                       {" "}
                       <RiFolderDownloadFill size="25px" /> Download

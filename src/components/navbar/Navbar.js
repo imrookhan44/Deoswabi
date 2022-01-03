@@ -71,7 +71,11 @@ export default function Home() {
                         Download
                       </Link>
                     </li>
-
+                    <li className="nav-item">
+                      <Link className="nav-link" to="SchoolStatus" id="second">
+                        School Status
+                      </Link>
+                    </li>
                    
                   </ul>
                 </div>

@@ -1,7 +1,20 @@
-.download1{
-    background-color: lightcyan;
+#pak{
     display: flex;
-    width: 700px;
-    flex-direction: column;
-    flex-basis: 30%;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+  background-color: lavender;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
+
+
+.dataa{
+    flex-basis: 20%;
+}
+.itemName{
+   
+ 
+    width: 90%;
+    flex-wrap: nowrap; 
+  }

@@ -37,8 +37,12 @@ class AccountsResult extends Component {
       console.log("data objcet  ", objValues);
     });
   }
+  
   handleChange = (e) => {
+    
     if (e.target.files[0]) {
+     
+      
       const image = e.target.files[0];
       this.setState(() => ({ image }));
     }
@@ -54,6 +58,8 @@ class AccountsResult extends Component {
       });
   };
   handleUpload = () => {
+    
+    
     const { image } = this.state;
     const uploadTask = storage.ref(`images/${image.name}`).put(image);
     console.log(image.name);
@@ -87,16 +93,15 @@ class AccountsResult extends Component {
   render() {
     
     return (
-      
-     
-         
-  
-          <div className="">
-            <div className="displayImage">
+      <div className="container-fluid">
+            <div className="row">
+              <div className="col-12" id="pak">
+            
+            
               {this.state.documents &&
                 this.state.documents.length > 0 &&
                 this.state.documents.map((item, index) => (
-                  <div>
+                  <div className="dataa">
                     <a className="download" href={item?.url} target="_blank">
                       {" "}
                       <RiFolderDownloadFill size="25px" /> Download
@@ -112,10 +117,8 @@ class AccountsResult extends Component {
                   </div>
                 ))}
             </div>
-          </div>
-        
-   
-         
+            </div></div>
+          
         
     );
   }

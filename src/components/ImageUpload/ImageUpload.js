@@ -119,8 +119,9 @@ class ImageUpload extends Component {
       <div className="">
         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
   <Tab eventKey="home" title="Finance">
-  <div className="row">
-          <div className="col-12">
+  <div className="container-fluid">
+        <div className="row" >
+  <div className="col-12">
             <div style={style}>
               <div className="ab" style={{}}></div>
               <input
@@ -136,12 +137,15 @@ class ImageUpload extends Component {
             </div>
           </div>
           <hr />
-          <div className="">
-            <div className="displayImage">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-12" id="pak">
+            
+            
               {this.state.documents &&
                 this.state.documents.length > 0 &&
                 this.state.documents.map((item, index) => (
-                  <div>
+                  <div className="dataa">
                     <a className="download" href={item?.url} target="_blank">
                       {" "}
                       <RiFolderDownloadFill size="25px" /> Download
@@ -162,8 +166,14 @@ class ImageUpload extends Component {
                   </div>
                 ))}
             </div>
+            </div></div>
+          
+        
+          
+         
           </div>
         </div>
+        
     <pak />
   </Tab>
   <Tab eventKey="profile" title="HR">

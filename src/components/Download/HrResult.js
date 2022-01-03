@@ -4,6 +4,7 @@ import { storage } from "../firebase";
 import "firebase/database";
 import firebase from "firebase";
 
+
 import {Tab,pak,Tabs} from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
 import { RiFolderDownloadFill } from "react-icons/all";
@@ -11,10 +12,14 @@ import { RiFolderDownloadFill } from "react-icons/all";
 import pdf from "../../assets/images/pdf.png";
 
 class HrUpload extends Component {
+  
   constructor(props) {
+    
     super(props);
     this.state = {
+     
       image: null,
+    
       url: "",
       progress: 0,
       documents: [],
@@ -44,9 +49,7 @@ class HrUpload extends Component {
     }
   };
   writeFileUrl = () => {
-    firebase
-      .database()
-      .ref("Hr")
+    firebase.database().ref("Hr")
       .push({
         url: this.state.url,
         uid: Math.floor(Math.random() * 100),
@@ -91,32 +94,36 @@ class HrUpload extends Component {
      
          
   
-          <div className="">
-            <div className="displayImage">
-              {this.state.documents &&
-                this.state.documents.length > 0 &&
-                this.state.documents.map((item, index) => (
-                  <div>
-                    <a className="download" href={item?.url} target="_blank">
-                      {" "}
-                      <RiFolderDownloadFill size="25px" /> Download
-                    </a>
-                    &nbsp;&nbsp;&nbsp;
-                    
-                    <div className="pdf">
-                      <img src={pdf} style={{ width: "200px" }} />
-                    </div>
-                    <h6 className="itemName">
-                      <b>{item.name}</b>
-                    </h6>
-                  </div>
-                ))}
+      <div className="container-fluid">
+      <div className="row">
+        <div className="col-12" id="pak">
+      
+      
+        {this.state.documents &&
+          this.state.documents.length > 0 &&
+          this.state.documents.map((item, index) => (
+            <div className="dataa">
+              <a className="download" href={item?.url} target="_blank">
+                {" "}
+                <RiFolderDownloadFill size="25px" /> Download
+              </a>
+              &nbsp;&nbsp;&nbsp;
+              
+              <div className="pdf">
+                <img src={pdf} style={{ width: "200px" }} />
+              </div>
+              <h6 className="itemName">
+                <b>{item.name}</b>
+              </h6>
+           
             </div>
-          </div>
-        
-   
-         
-        
+          ))}
+      </div>
+      </div>
+      </div>
+    
+  
+  
     );
   }
 }

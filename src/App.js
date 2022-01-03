@@ -16,6 +16,7 @@ const authentication = {
 };
 
 export function SecureRoute(props) {
+ 
   console.log("auth user 2 ", auth?.currentUser?.email);
   return (
     <Route
@@ -41,7 +42,7 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
-    
+     
       {auth?.currentUser?.email && <Navbar />}
       
       <Footer />

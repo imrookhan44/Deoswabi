@@ -1,9 +1,16 @@
 import React from 'react'
+import BudgetData from '../../School Status/BugdetData'
+import Contacts from '../../School Status/Contacts'
+import SchoolBudgetForm from '../../School Status/SchoolBudgetForm'
 
-export default function Home() {
-  return (
-    <div>
-      <p>THIS I SHOM E</p>
-    </div>
-  )
+
+ const Home=()=> {
+    return (
+        <div>
+           <Contacts/>
+           {/* <SchoolBudgetForm/> */}
+           <BudgetData/>
+        </div>
+    )
 }
+export default Home;

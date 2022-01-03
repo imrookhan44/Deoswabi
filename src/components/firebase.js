@@ -1,8 +1,8 @@
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
-import "firebase/storage";
 import "firebase/firestore";
+import 'firebase/storage';
 const firebaseConfig = {
   apiKey: "AIzaSyBzfg3xiSnoTOCZcv1kAnRRGt1tl8DojJo",
   authDomain: "fir-tutorial-c1f87.firebaseapp.com",
@@ -17,9 +17,11 @@ const firebaseConfig = {
 
 
 let InitFirebase;
-InitFirebase = firebase.initializeApp(firebaseConfig);
+var fireDb=firebase.initializeApp(firebaseConfig);
 console.log("firebase in utils", firebase.database());
 const storage = firebase.storage();
-const auth = firebase.auth();
+var auth = firebase.auth();
 const db = firebase.firestore();
-export { storage, InitFirebase, firebase as default, auth, db };
+export { storage, firebase as default, auth, db,fireDb };
+
+

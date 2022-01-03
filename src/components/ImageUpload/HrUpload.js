@@ -11,6 +11,8 @@ import { RiFolderDownloadFill } from "react-icons/all";
 import pdf from "../../assets/images/pdf.png";
 
 class HrUpload extends Component {
+ 
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -20,6 +22,7 @@ class HrUpload extends Component {
       documents: [],
       bookName: "",
     };
+    
     this.handleChange = this.handleChange.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
   }
@@ -83,7 +86,9 @@ class HrUpload extends Component {
     );
   };
 
-  deleteItem = (item) => {
+  deleteItem = (item) =>
+   {
+   
     const dbRef = firebase
       .database()
       .ref("Hr")
@@ -116,9 +121,8 @@ class HrUpload extends Component {
       
      
          
-  <div className="">
-        
-        <div className="row">
+  <div className="container-fluid">
+        <div className="row" >
   <div className="col-12">
             
             <div style={style}>
@@ -135,15 +139,18 @@ class HrUpload extends Component {
               <progress value={this.state.progress} max="100" />
             </div>
           </div>
-          
-          <hr />
-          <div className="">
-            <div className="displayImage">
+          <hr/>
+         
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-12" id="pak">
+            
+            
               {this.state.documents &&
                 this.state.documents.length > 0 &&
                 this.state.documents.map((item, index) => (
-                  <div>
-                    <a className="download" href={item?.url} target="_blank">
+                  <div className="dataa">
+                    <a className="download" href={item.url} target="_blank">
                       {" "}
                       <RiFolderDownloadFill size="25px" /> Download
                     </a>
@@ -159,12 +166,18 @@ class HrUpload extends Component {
                     </div>
                     <h6 className="itemName">
                       <b>{item.name}</b>
+
                     </h6>
                   </div>
                 ))}
             </div>
+            </div></div>
+          
+        
+          
+         
           </div>
-          </div>
+        
       </div>
    
          

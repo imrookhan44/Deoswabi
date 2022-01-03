@@ -116,8 +116,8 @@ class Accountant extends Component {
       
      
          
-  <div className="">
-        
+  <div className="container-fluid">
+
         <div className="row">
   <div className="col-12">
             
@@ -137,12 +137,16 @@ class Accountant extends Component {
           </div>
           
           <hr />
-          <div className="">
-            <div className="displayImage">
+          
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-12" id="pak">
+            
+            
               {this.state.documents &&
                 this.state.documents.length > 0 &&
                 this.state.documents.map((item, index) => (
-                  <div>
+                  <div className="dataa">
                     <a className="download" href={item?.url} target="_blank">
                       {" "}
                       <RiFolderDownloadFill size="25px" /> Download
@@ -163,12 +167,14 @@ class Accountant extends Component {
                   </div>
                 ))}
             </div>
-          </div>
-          </div>
-      </div>
-   
-         
+            </div></div>
+          
         
+          
+         
+          </div>
+          </div>
+     
     );
   }
 }

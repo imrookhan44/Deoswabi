@@ -4,12 +4,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 import "./user.css";
 import { db, auth } from "../firebase";
-
 toast.configure();
-
 const User = () => {
   const notify = () => toast("Form Successfully Submitted");
-
   const [fullName, setFullName] = useState("");
   const [password, setPassword] = useState("");
   const [cnic, setCnic] = useState("");
@@ -22,15 +19,12 @@ const User = () => {
   const [address, setAddress] = useState("");
   const [firstAppointment, setAppointment] = useState("");
   const [loader, setLoader] = useState(false);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(email, password);
     const result = await auth.createUserWithEmailAndPassword(email, password);
-
     e.preventDefault();
     setLoader(true);
-
     db.collection("clerks")
       .add({
         fullName: fullName,
