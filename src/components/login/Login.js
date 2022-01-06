@@ -26,7 +26,7 @@ function Login() {
     <div>
     <div className="row offset-0">
     <div className="col">
-   <h3 className="Head mt-3"> Welcome to APCA </h3>
+   <h3 className="Head mt-3"> Welcome to District Education Office Female Swabi </h3>
    </div>
    </div>
       <div autoComplete="off">

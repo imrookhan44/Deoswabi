@@ -57,15 +57,16 @@ export default function Home() {
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="donation" id="ten">
+                      {/* <Link className="nav-link" to="donation" id="ten">
                         Donate Here
-                      </Link>
+                      </Link> */}
                     </li>
                     <li className="nav-item">
                       <Link className="nav-link" to="ImageUpload" id="ten">
                         Upload File
                       </Link>
                     </li>
+<<<<<<< HEAD
                     <li className="nav-item">
                       <Link className="nav-link" to="importLink" id="seven">
                         Import Link
@@ -73,6 +74,8 @@ export default function Home() {
                     </li>
 
 
+=======
+>>>>>>> c95df1c555b4968c36df8cbb49869234da970549
                   </ul>
                 </div>
                 <button
