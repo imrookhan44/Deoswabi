@@ -21,7 +21,7 @@ import index from "../donation/index";
 import Test from "../Admin/Test";
 import EasyDonation from "../donation/EasyDonation";
 import SchoolStatus from "../../School Status/SchoolStatus";
-
+import ImportLink from "../ImportLink/ImportLink";
 function Routes(isLoggedIn) {
   const [user] = useState();
   const [oldUser] = useState();
@@ -43,6 +43,10 @@ function Routes(isLoggedIn) {
       <Route path="/easyDonation" component={EasyDonation} />
       <Route path="/SchoolStatus" component={SchoolStatus}/>
       <Route path="/ImageUpload" component={ImageUpload} />
+      <Route path="/importLink" component={ImportLink} />
+
+
+
 
       <Route path="/" component={isLoggedIn ?TodoApp : Login} />
       {user ? <Routes /> : oldUser && <Login />}
