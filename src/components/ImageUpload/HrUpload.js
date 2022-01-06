@@ -9,10 +9,10 @@ import { AiFillDelete } from "react-icons/ai";
 import { RiFolderDownloadFill } from "react-icons/all";
 
 import pdf from "../../assets/images/pdf.png";
-import HrUpload from "./HrUpload";
-import Accountant from "./Accountact";
 
-class ImageUpload extends Component {
+class HrUpload extends Component {
+ 
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -22,11 +22,12 @@ class ImageUpload extends Component {
       documents: [],
       bookName: "",
     };
+    
     this.handleChange = this.handleChange.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
   }
   componentDidMount() {
-    const dbRef = firebase.database().ref("url");
+    const dbRef = firebase.database().ref("Hr");
     dbRef.on("value", (snapshot) => {
       const data = snapshot.val();
       let objValues = Object.values(data);
@@ -48,7 +49,7 @@ class ImageUpload extends Component {
   writeFileUrl = () => {
     firebase
       .database()
-      .ref("url")
+      .ref("Hr")
       .push({
         url: this.state.url,
         uid: Math.floor(Math.random() * 100),
@@ -85,12 +86,11 @@ class ImageUpload extends Component {
     );
   };
 
-  deleteItem = (item) => {
+  deleteItem = (item) =>
+   {
+   
     const dbRef = firebase
-      .database()
-      .ref("url")
-      .child(item.xid)
-      .remove((oncomplete) => {
+      .database().ref("Hr").child(item.xid).remove((oncomplete) => {
         console.log(" on complete : ", oncomplete);
       })
       .then((res) => {
@@ -116,12 +116,12 @@ class ImageUpload extends Component {
     
     return (
       
-      <div className="">
-        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
-  <Tab eventKey="home" title="Finance">
+     
+         
   <div className="container-fluid">
         <div className="row" >
   <div className="col-12">
+            
             <div style={style}>
               <div className="ab" style={{}}></div>
               <input
@@ -136,7 +136,8 @@ class ImageUpload extends Component {
               <progress value={this.state.progress} max="100" />
             </div>
           </div>
-          <hr />
+          <hr/>
+         
           <div className="container-fluid">
             <div className="row">
               <div className="col-12" id="pak">
@@ -146,7 +147,7 @@ class ImageUpload extends Component {
                 this.state.documents.length > 0 &&
                 this.state.documents.map((item, index) => (
                   <div className="dataa">
-                    <a className="download" href={item?.url} target="_blank">
+                    <a className="download" href={item.url} target="_blank">
                       {" "}
                       <RiFolderDownloadFill size="25px" /> Download
                     </a>
@@ -162,6 +163,7 @@ class ImageUpload extends Component {
                     </div>
                     <h6 className="itemName">
                       <b>{item.name}</b>
+
                     </h6>
                   </div>
                 ))}
@@ -172,23 +174,13 @@ class ImageUpload extends Component {
           
          
           </div>
-        </div>
-        
-    <pak />
-  </Tab>
-  <Tab eventKey="profile" title="HR">
-    <HrUpload/>
-    <pak />
-  </Tab>
-  <Tab eventKey="contact" title="Accounts" >
-    <Accountant/>
-    <pak />
-  </Tab>
-</Tabs>
         
       </div>
+   
+         
+        
     );
   }
 }
 
-export default ImageUpload;
+export default HrUpload;

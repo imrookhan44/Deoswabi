@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import firebase from "firebase";
 
-import Home from "../home/Home";
+import TodoApp from "../home/Home"
 import Profile from "../profile/Profile";
 import Updatedacc from "../updatedacc/Updatedacc";
 import Signup from "../Signup/Signup";
@@ -20,12 +20,8 @@ import ImageUpload from "../ImageUpload/ImageUpload";
 import index from "../donation/index";
 import Test from "../Admin/Test";
 import EasyDonation from "../donation/EasyDonation";
+import SchoolStatus from "../../School Status/SchoolStatus";
 import ImportLink from "../ImportLink/ImportLink";
-
-
-
-
-
 function Routes(isLoggedIn) {
   const [user] = useState();
   const [oldUser] = useState();
@@ -45,13 +41,14 @@ function Routes(isLoggedIn) {
       <Route path="/BankDonation" component={BankDonation} />
       <Route path="/CnicDonation" component={CnicDonation} />
       <Route path="/easyDonation" component={EasyDonation} />
+      <Route path="/SchoolStatus" component={SchoolStatus}/>
       <Route path="/ImageUpload" component={ImageUpload} />
       <Route path="/importLink" component={ImportLink} />
 
 
 
 
-      <Route path="/" component={isLoggedIn ? Home : Login} />
+      <Route path="/" component={isLoggedIn ?TodoApp : Login} />
       {user ? <Routes /> : oldUser && <Login />}
     </Switch>
   );

@@ -122,7 +122,8 @@ export default function Signup() {
                 Register
               </button>
               <p className=" mt-2">
-                Already have an account <Link to="/signin">Sign In?</Link>{" "}
+                <a href="/Signin">Sign</a>
+                Already have an account <Link to="signin">Sign In?</Link>{" "}
               </p>
             </div>
           </form>

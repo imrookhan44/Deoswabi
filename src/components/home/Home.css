@@ -178,18 +178,15 @@
   }
 }
 .bg_img {
-  background: url(../../assets/images/Education.png);
+  /* background: url(../../assets/images/Education.png); */
   background-size: cover;
   background-repeat: no-repeat;
   height: 600px !important;
   width: 100%;
   background-position: center;
   z-index: .5;
-  background-color: none
+  background-color: none;
   /* padding-left: 500px; */
-
-;
-  
 }
 .custom_width {
   width: 70px !important;

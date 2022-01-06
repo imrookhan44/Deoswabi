@@ -1,0 +1,20 @@
+#pak{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+  background-color: lavender;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.dataa{
+    flex-basis: 20%;
+}
+.itemName{
+   
+ 
+    width: 90%;
+    flex-wrap: nowrap; 
+  }
