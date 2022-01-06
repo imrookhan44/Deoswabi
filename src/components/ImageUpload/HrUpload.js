@@ -90,10 +90,7 @@ class HrUpload extends Component {
    {
    
     const dbRef = firebase
-      .database()
-      .ref("Hr")
-      .child(item.xid)
-      .remove((oncomplete) => {
+      .database().ref("Hr").child(item.xid).remove((oncomplete) => {
         console.log(" on complete : ", oncomplete);
       })
       .then((res) => {
