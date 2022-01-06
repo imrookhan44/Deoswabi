@@ -34,9 +34,7 @@ export default function Home() {
             })
           }
         </tbody>
-
       </div>
-
     </div>
   );
 }

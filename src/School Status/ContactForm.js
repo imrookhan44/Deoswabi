@@ -75,7 +75,7 @@ const ContactForm = (props) => {
                     />
                 </div>
                 <div className="form-group input-group col-md-6">
-                   
+                  s 
                     <input className="form-control" placeholder="Remaining in Second Doss" name="remainingSecondDoss"
                         value={values.remainingSecondDoss}
                         onChange={handleInputChange}

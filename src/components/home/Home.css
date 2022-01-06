@@ -185,11 +185,8 @@
   width: 100%;
   background-position: center;
   z-index: .5;
-  background-color: none
+  background-color: none;
   /* padding-left: 500px; */
-
-;
-  
 }
 .custom_width {
   width: 70px !important;
