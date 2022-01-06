@@ -20,6 +20,11 @@ import ImageUpload from "../ImageUpload/ImageUpload";
 import index from "../donation/index";
 import Test from "../Admin/Test";
 import EasyDonation from "../donation/EasyDonation";
+import ImportLink from "../ImportLink/ImportLink";
+
+
+
+
 
 function Routes(isLoggedIn) {
   const [user] = useState();
@@ -41,6 +46,10 @@ function Routes(isLoggedIn) {
       <Route path="/CnicDonation" component={CnicDonation} />
       <Route path="/easyDonation" component={EasyDonation} />
       <Route path="/ImageUpload" component={ImageUpload} />
+      <Route path="/importLink" component={ImportLink} />
+
+
+
 
       <Route path="/" component={isLoggedIn ? Home : Login} />
       {user ? <Routes /> : oldUser && <Login />}

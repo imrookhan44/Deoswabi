@@ -5,9 +5,10 @@ import "./footer.css";
 const Footer = () => {
   return (
     <>
+
       <div className="fixed-bottom bg-dark text-primary">
-        <div className="row mt-3">
-          <div className="text-center">
+        <div className="row mb-3">
+          <div className=" text-center">
             Education Fund © 2021 &nbsp;
             <a
               href="https://www.facebook.com/"
@@ -36,6 +37,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
     </>
   );
 };
