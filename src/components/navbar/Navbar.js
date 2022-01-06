@@ -66,8 +66,13 @@ export default function Home() {
                         Upload File
                       </Link>
                     </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="importLink" id="seven">
+                        Import Link
+                      </Link>
+                    </li>
 
-                   
+
                   </ul>
                 </div>
                 <button
