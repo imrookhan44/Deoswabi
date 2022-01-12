@@ -58,22 +58,22 @@ const User = () => {
     setAppointment("");
   };
   return (
+  
     <div className="userDetails mt-2">
       <div className="row pt-1">
         <div className="col-sm-12 col-lg-12 col-md-12">
-          <h3 className="offset-4"> User Details</h3>
+          <h3 className="offset-5"> User Details</h3>
           <form
             autoComplete="off"
             className="form offset-3"
-            onSubmit={handleSubmit}
-          >
+            onSubmit={handleSubmit} >
             <input
               value={fullName}
               required="required"
               type="name"
               placeholder="Full name"
               name="name"
-              className="form-control"
+              className="form-control1"
               onChange={(e) => setFullName(e.target.value)}
             />
 
@@ -83,7 +83,7 @@ const User = () => {
               type="password"
               placeholder="Password"
               name="pass"
-              className="form-control"
+              className="form-control1"
               onChange={(e) => setPassword(e.target.value)}
             />
 
@@ -92,7 +92,7 @@ const User = () => {
               required="required"
               type="number"
               placeholder="CNIC"
-              className="form-control"
+              className="form-control1"
               name="pass"
               onChange={(e) => setCnic(e.target.value)}
             />
@@ -102,7 +102,7 @@ const User = () => {
               value={email}
               type="email"
               placeholder="Email Address"
-              className="form-control"
+              className="form-control1"
               onChange={(e) => setEmail(e.target.value)}
             />
 
@@ -111,7 +111,7 @@ const User = () => {
               value={mobile}
               type="number"
               placeholder="Mobile number"
-              className="form-control"
+              className="form-control1"
               onChange={(e) => setMobile(e.target.value)}
             />
 
@@ -121,7 +121,7 @@ const User = () => {
               type="date"
               id="birthday"
               name="birthday"
-              className="form-control"
+              className="form-control1"
               onChange={(e) => setDateOfBirth(e.target.value)}
             />
 
@@ -130,7 +130,7 @@ const User = () => {
               value={qualification}
               type="Qualification"
               placeholder="Qualification"
-              className="form-control"
+              className="form-control1"
               name="pass"
               onChange={(e) => setQualification(e.target.value)}
             />
@@ -140,7 +140,7 @@ const User = () => {
               value={station}
               type="text"
               placeholder="Station"
-              className="form-control"
+              className="form-control1"
               name="pass"
               onChange={(e) => setStation(e.target.value)}
             />
@@ -150,7 +150,7 @@ const User = () => {
               value={address}
               type="Address"
               placeholder="Address"
-              className="form-control"
+              className="form-control1"
               onChange={(e) => setAddress(e.target.value)}
             />
 
@@ -159,23 +159,27 @@ const User = () => {
               value={firstAppointment}
               type="text"
               placeholder="First Appointment"
-              className="form-control"
+              className="form-control1"
               onChange={(e) => setAppointment(e.target.value)}
             />
 
             <br />
+           <div className="submitbtnuser">
+
             <button
-              className="btn-primary  control-button "
+              className="btn-primary  controlbutton "
               id="bTN"
               onClick={notify}
-              style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
-            >
+              
+              >
               Submit
             </button>
+              </div>
           </form>
         </div>
       </div>
     </div>
+  
   );
 };
 export default User;
