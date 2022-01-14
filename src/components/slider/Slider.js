@@ -17,7 +17,7 @@ const   history=useHistory()
     <img
       className="d-block w-100"
       alt="First slide"
-      src={slidertwo}
+      src={sliderone}
     />
     <Carousel.Caption>
       {/* <h3>First slide label</h3>
@@ -27,7 +27,7 @@ const   history=useHistory()
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={sliderone}
+      src={slidertwo}
       alt="Second slide"
     />
 
