@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
 
-      <div className="fixed-bottom bg-dark text-primary">
+      <div className="fixed-bottom bg-dark text-primary ">
         <div className="row mb-3">
           <div className=" text-center">
             Education Fund © 2021 &nbsp;

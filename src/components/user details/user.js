@@ -58,41 +58,32 @@ const User = () => {
     setAppointment("");
   };
   return (
+  
     <div className="userDetails mt-2">
       <div className="row pt-1">
         <div className="col-sm-12 col-lg-12 col-md-12">
-          <h3 className="offset-4"> User Details</h3>
+          <h3 className="offset-5 userdetailtext"> User Details</h3>
           <form
             autoComplete="off"
-            className="form offset-3"
-            onSubmit={handleSubmit}
-          >
+            className="form offset-3 userdivform"
+            onSubmit={handleSubmit} >
             <input
               value={fullName}
               required="required"
               type="name"
-              placeholder="Full name"
+              placeholder="  Full name"
               name="name"
-              className="form-control"
+              className="form-control1"
               onChange={(e) => setFullName(e.target.value)}
             />
 
-            <input
-              value={password}
-              required="required"
-              type="password"
-              placeholder="Password"
-              name="pass"
-              className="form-control"
-              onChange={(e) => setPassword(e.target.value)}
-            />
 
             <input
               value={cnic}
               required="required"
               type="number"
-              placeholder="CNIC"
-              className="form-control"
+              placeholder="  CNIC"
+              className="form-control1"
               name="pass"
               onChange={(e) => setCnic(e.target.value)}
             />
@@ -101,8 +92,8 @@ const User = () => {
               required="required"
               value={email}
               type="email"
-              placeholder="Email Address"
-              className="form-control"
+              placeholder="  Email Address"
+              className="form-control1"
               onChange={(e) => setEmail(e.target.value)}
             />
 
@@ -110,8 +101,8 @@ const User = () => {
               required="required"
               value={mobile}
               type="number"
-              placeholder="Mobile number"
-              className="form-control"
+              placeholder="  Mobile number"
+              className="form-control1"
               onChange={(e) => setMobile(e.target.value)}
             />
 
@@ -120,8 +111,8 @@ const User = () => {
               value={dateOfBirth}
               type="date"
               id="birthday"
-              name="birthday"
-              className="form-control"
+              name="  birthday"
+              className="form-control1"
               onChange={(e) => setDateOfBirth(e.target.value)}
             />
 
@@ -129,8 +120,8 @@ const User = () => {
               required="required"
               value={qualification}
               type="Qualification"
-              placeholder="Qualification"
-              className="form-control"
+              placeholder="  Qualification"
+              className="form-control1"
               name="pass"
               onChange={(e) => setQualification(e.target.value)}
             />
@@ -139,8 +130,8 @@ const User = () => {
               required="required"
               value={station}
               type="text"
-              placeholder="Station"
-              className="form-control"
+              placeholder="  Station"
+              className="form-control1"
               name="pass"
               onChange={(e) => setStation(e.target.value)}
             />
@@ -149,8 +140,8 @@ const User = () => {
               required="required"
               value={address}
               type="Address"
-              placeholder="Address"
-              className="form-control"
+              placeholder="  Address"
+              className="form-control1"
               onChange={(e) => setAddress(e.target.value)}
             />
 
@@ -158,24 +149,37 @@ const User = () => {
               required="required"
               value={firstAppointment}
               type="text"
-              placeholder="First Appointment"
-              className="form-control"
+              placeholder="  First Appointment"
+              className="form-control1"
               onChange={(e) => setAppointment(e.target.value)}
             />
 
             <br />
+<input
+  value={password}
+  required="required"
+  type="password"
+  placeholder="  Password"
+  name="pass"
+  className="form-control1"
+  onChange={(e) => setPassword(e.target.value)}
+/>
+           <div className="submitbtnuser">
+
             <button
-              className="btn-primary  control-button "
+              className="  controlbutton "
               id="bTN"
               onClick={notify}
-              style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
-            >
+              
+              >
               Submit
             </button>
+              </div>
           </form>
         </div>
       </div>
     </div>
+  
   );
 };
 export default User;

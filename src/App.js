@@ -4,7 +4,7 @@ import Footer from "../src/components/footer/Footer";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import Routes from "./components/routes/Routes.";
 import "fontawesome";
-import Home from '../src/components/home/Home';
+import Home from './components/Adminpage/Adminpage';
 import { auth } from "./components/firebase";
 import Login from "./components/login/Login";
 import React, { useState, useEffect } from "react";
