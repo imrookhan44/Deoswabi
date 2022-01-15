@@ -48,8 +48,8 @@ function Routes(isLoggedIn) {
 
 
 
-      <Route path="/" component={isLoggedIn ?TodoApp : Login} />
-      {user ? <Routes /> : oldUser && <Login />}
+      {/* <Route path="/" component={isLoggedIn ?TodoApp : Login} /> */}
+      {/* {user ? <Routes /> : oldUser && <Login />} */}
     </Switch>
   );
 }
