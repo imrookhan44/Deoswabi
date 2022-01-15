@@ -4,15 +4,15 @@ import { storage } from "../firebase";
 import "firebase/database";
 import firebase from "firebase";
 import "./imageUpload.css";
-import {Tab,pak,Tabs} from "react-bootstrap";
+import { Tab, pak, Tabs } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
 import { RiFolderDownloadFill } from "react-icons/all";
 
 import pdf from "../../assets/images/pdf.png";
 
 class HrUpload extends Component {
- 
-  
+
+
   constructor(props) {
     super(props);
     this.state = {
@@ -22,22 +22,24 @@ class HrUpload extends Component {
       documents: [],
       bookName: "",
     };
-    
+
     this.handleChange = this.handleChange.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
   }
   componentDidMount() {
     const dbRef = firebase.database().ref("Hr");
     dbRef.on("value", (snapshot) => {
-      const data = snapshot.val();
-      let objValues = Object.values(data);
-      console.log(objValues);
-      let objKeys = Object.keys(data);
-      console.log(objKeys);
-      objValues.map((item, index) => (item["xid"] = objKeys[index]));
-      this.setState({ documents: objValues });
-      console.log("data docs ", this.state.documents);
-      console.log("data objcet  ", objValues);
+      if (snapshot && snapshot?.val()) {
+        const data = snapshot.val();
+        let objValues = Object.values(data);
+        console.log(objValues);
+        let objKeys = Object.keys(data);
+        console.log(objKeys);
+        objValues.map((item, index) => (item["xid"] = objKeys[index]));
+        this.setState({ documents: objValues });
+        console.log("data docs ", this.state.documents);
+        console.log("data objcet  ", objValues);
+      }
     });
   }
   handleChange = (e) => {
@@ -86,9 +88,8 @@ class HrUpload extends Component {
     );
   };
 
-  deleteItem = (item) =>
-   {
-   
+  deleteItem = (item) => {
+
     const dbRef = firebase
       .database().ref("Hr").child(item.xid).remove((oncomplete) => {
         console.log(" on complete : ", oncomplete);
@@ -113,15 +114,15 @@ class HrUpload extends Component {
       alignItems: "center",
       justifyContent: "center",
     };
-    
+
     return (
-      
-     
-         
-  <div className="container-fluid">
+
+
+
+      <div className="container-fluid">
         <div className="row" >
-  <div className="col-12">
-            
+          <div className="col-12">
+
             <div style={style}>
               <div className="ab" style={{}}></div>
               <input
@@ -136,49 +137,49 @@ class HrUpload extends Component {
               <progress value={this.state.progress} max="100" />
             </div>
           </div>
-          <hr/>
-         
+          <hr />
+
           <div className="container-fluid">
             <div className="row">
               <div className="col-12" id="pak">
-            
-            
-              {this.state.documents &&
-                this.state.documents.length > 0 &&
-                this.state.documents.map((item, index) => (
-                  <div className="dataa">
-                    <a className="download" href={item.url} target="_blank">
-                      {" "}
-                      <RiFolderDownloadFill size="25px" /> Download
-                    </a>
-                    &nbsp;&nbsp;&nbsp;
-                    <button
-                      className="Button"
-                      onClick={() => this.deleteItem(item)}
-                    >
-                      <AiFillDelete size="20px" />
-                    </button>
-                    <div className="pdf">
-                      <img src={pdf} style={{ width: "200px" }} />
-                    </div>
-                    <h6 className="itemName">
-                      <b>{item.name}</b>
 
-                    </h6>
-                  </div>
-                ))}
-            </div>
+
+                {this.state.documents &&
+                  this.state.documents.length > 0 &&
+                  this.state.documents.map((item, index) => (
+                    <div className="dataa">
+                      <a className="download" href={item.url} target="_blank">
+                        {" "}
+                        <RiFolderDownloadFill size="25px" /> Download
+                      </a>
+                      &nbsp;&nbsp;&nbsp;
+                      <button
+                        className="Button"
+                        onClick={() => this.deleteItem(item)}
+                      >
+                        <AiFillDelete size="20px" />
+                      </button>
+                      <div className="pdf">
+                        <img src={pdf} style={{ width: "200px" }} />
+                      </div>
+                      <h6 className="itemName">
+                        <b>{item.name}</b>
+
+                      </h6>
+                    </div>
+                  ))}
+              </div>
             </div></div>
-          
-        
-          
-         
-          </div>
-        
+
+
+
+
+        </div>
+
       </div>
-   
-         
-        
+
+
+
     );
   }
 }
