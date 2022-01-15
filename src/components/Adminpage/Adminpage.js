@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./Home.css";
+import "./Adminpage.css";
 import firebaseDb from "firebase";
 import BudgetData from "../../School Status/BugdetData";
 import Contacts from "../../School Status/Contacts";
 
-export default function Home() {
+export default function Adminpage() {
   var [contactObjects, setContactObjects] = useState({})
   var [currentId, setCurrentId] = useState('')
 
@@ -19,11 +19,16 @@ export default function Home() {
     })
   }, [])// similar to componentDidMount
   return (
-    <div className="container">
-      <div className="bg_img">
+    <div className=" fullcontianerofhome">
+      
+  <div className="alldivs">
+<h2 className="Headinginadmin">Enter Covid(19) Data</h2>
 <Contacts/>
+<h1 className="Headinginadmin">Enter Budget Data</h1>
+
 <BudgetData/>
-        <tbody>
+    </div>    
+        {/* <tbody className="unknowthings">
           {
             Object.keys(contactObjects).map(id => {
               return <tr key={id}>
@@ -33,8 +38,9 @@ export default function Home() {
               </tr>
             })
           }
-        </tbody>
-      </div>
+        </tbody> */}
+      
+     
     </div>
   );
 }

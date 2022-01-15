@@ -1,0 +1,39 @@
+.contactformfulldiv{
+    margin-top: 10px;
+   border: 1px solid black;
+   border-radius: 10px;
+   
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+}
+.contactformfulldivform{
+ margin-top: 20px;
+ text-align: center;
+}
+.textfieldnameforstyle{
+    font-style: italic;
+    width :100%;
+    border: solid black 1px !important ;
+    border-radius: 30px !important;
+    /* box-sizing: border-box; */
+}
+.textfieldnameforstyle:hover{
+    /* box-shadow: royalblue; */
+   
+    
+  }
+  .saveupdatecontactformbtn{
+      margin-bottom: 10px;
+      background-color: black !important;
+      border-radius: 20px !important;
+      color: #fff !important;
+  }
+  .saveupdatecontactformbtn:hover{
+      box-shadow: 1px 5px 10px 5px rgb(61, 58, 58);
+  }
+
+  @media screen and  (max-width: 880px) {
+      
+  }
+ 

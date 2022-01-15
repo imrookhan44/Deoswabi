@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import firebase from "firebase";
 
-import TodoApp from "../home/Home"
+import TodoApp from "../Adminpage/Adminpage"
 import Profile from "../profile/Profile";
 import Updatedacc from "../updatedacc/Updatedacc";
 import Signup from "../Signup/Signup";
@@ -22,6 +22,7 @@ import Test from "../Admin/Test";
 import EasyDonation from "../donation/EasyDonation";
 import SchoolStatus from "../../School Status/SchoolStatus";
 import ImportLink from "../ImportLink/ImportLink";
+import Slider from "../slider/Slider";
 function Routes(isLoggedIn) {
   const [user] = useState();
   const [oldUser] = useState();
@@ -43,7 +44,8 @@ function Routes(isLoggedIn) {
       <Route path="/easyDonation" component={EasyDonation} />
       <Route path="/SchoolStatus" component={SchoolStatus}/>
       <Route path="/ImageUpload" component={ImageUpload} />
-      <Route path="/importLink" component={ImportLink} />
+      {/* <Route path="/importLink" component={ImportLink} /> */}
+      <Route path="/Home" component={Slider} />
 
 
 

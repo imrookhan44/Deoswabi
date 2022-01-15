@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ContactForm from "./ContactForm"
 import firebaseDb from "firebase";
-
+import './Contacts.css'
 const Contacts = () => {
 
     var [contactObjects, setContactObjects] = useState({})
@@ -55,25 +55,32 @@ const Contacts = () => {
             )
         }
     }
-
+    // col-lg-8 col-md-8 col-sm-12 col-xs-12 
     return (
-        <>
-           
-            <div className="row">
-                <div className="col-md-5">
+            
+            <div className="row" id="contactsfulldiv" >
+               <div className="contactformdivincontact">
+
+                <div className=" col-lg-4 col-md-4 col-sm-12 col-xs-12  " >
                     <ContactForm {...({ addOrEdit, currentId, contactObjects })} />
                 </div>
-                <div className="col-md-7">
-                    <table className="table table-borderless table-stripped">
-                        <thead className="thead-light">
+               </div>
+
+               <hr className="hrdivcontacts"/>
+               <br/>
+               <h2>Covid(19) Data List</h2>
+                <div className="col-12 tabledivcontacts "  >
+                <div  className="tablediv" style={{overflow:"auto"}}>
+                    <table  className="table  table-dark" >
+                        <thead className="" >
                             <tr>
-                                <th>School Name</th>
-                                <th>Total Student</th>
-                                <th>First Doss </th>
-                                <th>Remaining First Doss </th>
-                                <th>Second Doss </th>
-                                <th>Remaining Second Doss </th>
-                                <th>Actions</th>
+                                <th scope="col"  >School Name</th>
+                                <th scope="col">Total Student</th>
+                                <th scope="col">First Doss </th>
+                                <th scope="col">Remaining First Doss </th>
+                                <th scope="col">Second Doss </th>
+                                <th scope="col">Remaining Second Doss </th>
+                                <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -99,11 +106,11 @@ const Contacts = () => {
                             }
                         </tbody>
                     </table>
-
+                            </div>
                 </div>
-            </div>
-        </>
-    );
+                </div>
+               
+  );
 }
 
 export default Contacts;

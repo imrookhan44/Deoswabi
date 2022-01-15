@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './ContactForm.css'
 
 const SchoolBudgetForm = (props) => {
     const initialFieldValues = {
@@ -36,41 +37,52 @@ const SchoolBudgetForm = (props) => {
     
 
     return (
-        <form autoComplete="off" onSubmit={handleFormSubmit} style={{padding:"20px"}}>
-            <div className="form-group input-group">
+        <div className="contactformfulldiv " style={{padding:'20px'}}>
+        <form autoComplete="off" onSubmit={handleFormSubmit} className="contactformfulldivform" >
+            <div className="form-row">
+            
+
+            <div className="form-group input-group ">
                
-                <input className="form-control" placeholder="School Name" name="schoolNames"
+                <input className="form-control textfieldnameforstyle " placeholder="School Name" name="schoolNames"
                     value={values.schoolNames}
+                required
+                    onChange={handleInputChange}
+                    />
+            </div>
+                    
+                <div className="form-group input-group ">
+                    
+                    <input className="form-control textfieldnameforstyle" placeholder="Total Student" name="totalBudget"
+                        value={values.totalBudget}
+                    required
+                        onChange={handleInputChange}
+                    />
+                </div>
+                <div className="form-group input-group ">
+                   
+                    <input className="form-control textfieldnameforstyle" placeholder="Spending Buget" name="spendingBudget"
+                        value={values.spendingBudget}
+                    required
+                        onChange={handleInputChange}
+                    />
+                </div>
+            
+            <div className="form-group ">
+                <input className="form-control textfieldnameforstyle" placeholder="Remaining Budget" name="remainingBudget"
+                    value={values.remainingBudget}
+                required
                     onChange={handleInputChange}
                 />
             </div>
-            <div className="form-row">
-                <div className="form-group input-group col-md-6">
-                    
-                    <input className="form-control" placeholder="Total Student" name="totalBudget"
-                        value={values.totalBudget}
-                        onChange={handleInputChange}
-                    />
-                </div>
-                <div className="form-group input-group col-md-6">
-                   
-                    <input className="form-control" placeholder="Spending Buget" name="spendingBudget"
-                        value={values.spendingBudget}
-                        onChange={handleInputChange}
-                    />
-                </div>
             </div>
-            <div className="form-group">
-                <input className="form-control" placeholder="Remaining Budget" name="remainingBudget"
-                    value={values.remainingBudget}
-                    onChange={handleInputChange}
-      SA          />
-            </div>
-            <div className="form-group">
-                <input type="submit" value={props.currentId == '' ? "Save" : "Update"} className="btn btn-primary btn-block" />
+            <br/>
+            <div className="form-group ">
+                <input type="submit" value={props.currentId == '' ? "Save" : "Update"} className="btn saveupdatecontactformbtn btn-block" />
             </div>
            
         </form >
+        </div>
     );
 }
 

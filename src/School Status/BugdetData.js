@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SchoolBudgetForm from "./SchoolBudgetForm";
 import firebaseDb from "firebase";
+import './BudgetData.css'
 
 const BudgetData = () => {
 
@@ -58,12 +59,17 @@ const BudgetData = () => {
     return (
         <>
            
-            <div className="row">
-            <div className="col-md-5">
+            <div className=" "  >
+            <div className="row budgetdatarowschoolbgform " id="divrow"  >
+            <div className="col-md-4 col-sm-12 col-xs-12 schoolbudgetformdiv" >
                     <SchoolBudgetForm {...({ addOrEdit, currentId, contactObjects })} />
                 </div>
-                <div className="col-md-7">
-                    <table className="table table-borderless table-stripped">
+                <hr/>
+                <br/>
+                <h2>Budget Data List</h2>
+                <br/>
+                <div className="col-12 schoolbudgetformdiv " style={{overflow: "auto"}} >
+                    <table className="table table-dark " >
                         <thead className="thead-light">
                             <tr>
                                 <th>School Name</th>
@@ -98,6 +104,7 @@ const BudgetData = () => {
                     </table>
 
                 </div>
+            </div>
             </div>
         </>
     );

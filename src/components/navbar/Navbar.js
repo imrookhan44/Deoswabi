@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import logo from "../../assets/images/apca logo.png";
+import logo from "../../assets/images/apcalogo1.png";
 import { Navbar, NavDropdown } from "react-bootstrap";
 import { auth } from "../firebase";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <div className="container-fluid" id="Main">
         <div className="row">
           <div className="col-lg-12 align-self-center">
-            <Navbar collapseOnSelect expand="lg">
+            <Navbar collapseOnSelect expand="lg" >
               <Navbar.Toggle
                 className="navbar-toggler"
                 type="button"
@@ -32,28 +32,21 @@ export default function Home() {
                 >
                   <Link className="navbar-brand" to="/">
                     <img
-                      style={{ height: "43px", width: "35px" }}
+                      style={{ height: "45px", width: "45px" }}
                       src={logo}
                       alt="logo"
                     />
                   </Link>
                   <ul className="  navbar-nav ">
                     <li className="nav-item active">
-                      <Link className="nav-link" to="/" id="first">
+                      <Link className="nav-link" to="/Home" id="first">
                         {" "}
                         Home{" "}
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="History" id="second">
-                        History
-                      </Link>
-                    </li>
-
-                    <li className="nav-item"></li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="userdetails" id="sixth">
-                        User Details
+                      <Link className="nav-link" to="/" id="second">
+                        Admin
                       </Link>
                     </li>
                     <li className="nav-item">
@@ -66,7 +59,12 @@ export default function Home() {
                         Upload File
                       </Link>
                     </li>
-
+                      <li className="nav-item"></li>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="userdetails" id="sixth">
+                          User Details
+                        </Link>
+                      </li>
                     <li className="nav-item">
                       <Link className="nav-link" to="Download" id="ten">
                         Download
@@ -78,11 +76,11 @@ export default function Home() {
                       </Link>
                     </li>
                    
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                       <Link className="nav-link" to="importLink" id="seven">
                         Import Link
                       </Link>
-                    </li>
+                    </li> */}
 
 
                   </ul>
