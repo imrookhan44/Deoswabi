@@ -9,6 +9,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { RiFolderDownloadFill } from "react-icons/all";
 
 import pdf from "../../assets/images/pdf.png";
+import { object } from "yup/lib/locale";
 
 class AccountsResult extends Component {
   constructor(props) {
@@ -27,14 +28,14 @@ class AccountsResult extends Component {
     const dbRef = firebase.database().ref("accounts");
     dbRef.on("value", (snapshot) => {
       const data = snapshot.val();
-      let objValues = Object.values(data);
+      let objValues = Object?.values(data);
       console.log(objValues);
       let objKeys = Object.keys(data);
       console.log(objKeys);
       objValues.map((item, index) => (item["xid"] = objKeys[index]));
       this.setState({ documents: objValues });
       console.log("data docs ", this.state.documents);
-      console.log("data objcet  ", objValues);
+      console.log("data object  ", objValues);
     });
   }
   

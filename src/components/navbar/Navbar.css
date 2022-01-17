@@ -72,3 +72,12 @@ li.dropdown {
   display: block;
   padding-top: 10px;
 }
+
+.navdropDown{
+  
+  display: flex;
+  justify-content: flex-end;
+  /* width: 100%; */
+  margin: auto;
+  margin-right: -50rem ;
+}
