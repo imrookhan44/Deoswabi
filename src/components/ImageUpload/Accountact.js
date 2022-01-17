@@ -27,7 +27,7 @@ class Accountant extends Component {
     const dbRef = firebase.database().ref("accounts");
     dbRef.on("value", (snapshot) => {
       const data = snapshot.val();
-      let objValues = Object.values(data);
+      let objValues = Object?.values(data);
       console.log(objValues);
       let objKeys = Object.keys(data);
       console.log(objKeys);

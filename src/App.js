@@ -1,15 +1,14 @@
+import React, { useState, useEffect } from "react";
+import Routes from "./components/routes/Routes.";
+import { auth } from "./components/firebase";
+import Login from "./components/login/Login";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "../src/components/footer/Footer";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
-import Routes from "./components/routes/Routes.";
-import "fontawesome";
-import Home from './components/Adminpage/Adminpage';
-import { auth } from "./components/firebase";
-import Login from "./components/login/Login";
-import React, { useState, useEffect } from "react";
+
 const authentication = {
-  onAuthtication() {},
+  onAuthentication() {},
   getLogInStatus() {
     return auth?.currentUser?.uid;
   },
@@ -33,20 +32,21 @@ export function SecureRoute(props) {
 }
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
   useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      if (user) setUser(user);
-      else setUser(null);
+    auth.onAuthStateChanged((currentUser) => {
+      if (currentUser) setCurrentUser(currentUser);
+      else setCurrentUser(null);
     });
   }, []);
   return (
     <BrowserRouter>
-     
-      {auth?.currentUser?.email && <Navbar />}
+      {/* {auth?.currentUser?.email &&  */}
+      <Navbar admin={currentUser?.email == "imrankhan@gmail.com" ? true : false} />
       
+      <Routes  />
       <Footer />
-      {auth?.currentUser?.email ? <Routes /> : <Login />}
+      
     </BrowserRouter>
   );
 }

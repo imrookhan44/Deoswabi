@@ -8,8 +8,8 @@ const Footer = () => {
 
       <div className="fixed-bottom bg-dark text-primary ">
         <div className="row mb-3">
-          <div className=" text-center">
-            Education Fund © 2021 &nbsp;
+          <div className=" text-center mt-1">
+            Education Fund © 2021-22 &nbsp;
             <a
               href="https://www.facebook.com/"
               target={"blank"}
@@ -22,11 +22,11 @@ const Footer = () => {
               className="fa fa-twitter"
             ></a>
             &nbsp;&nbsp;
-            <a
+            {/* <a
               href="https://www.google.com/"
               target={"blank"}
               className="fa fa-google"
-            ></a>
+            ></a> */}
             &nbsp;&nbsp;
             <a
               href="https://www.youtube.com/"

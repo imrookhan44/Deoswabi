@@ -3,7 +3,6 @@ import firebase from "firebase";
 import "./Admin.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 toast.configure();
 function Admin() {
   const notify = () => {
@@ -11,10 +10,10 @@ function Admin() {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
-        toast("Login Succesfully");
+        toast.success("Login Succesfully");
       })
       .catch((err) => {
-        toast("invalid Email/Password ");
+        toast.error("invalid Email/Password ");
       });
   };
 

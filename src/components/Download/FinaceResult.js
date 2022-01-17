@@ -28,7 +28,7 @@ class FinanceResult extends Component {
     const dbRef = firebase.database().ref("url");
     dbRef.on("value", (snapshot) => {
       const data = snapshot.val();
-      let objValues = Object.values(data);
+      let objValues = Object?.values(data);
       console.log(objValues);
       let objKeys = Object.keys(data);
       console.log(objKeys);
