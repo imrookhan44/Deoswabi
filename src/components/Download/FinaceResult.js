@@ -5,7 +5,7 @@ import "firebase/database";
 import "./Download.css";
 import firebase from "firebase";
 
-import {Tab,pak,Tabs} from "react-bootstrap";
+import { Tab, pak, Tabs } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
 import { RiFolderDownloadFill } from "react-icons/all";
 
@@ -27,15 +27,17 @@ class FinanceResult extends Component {
   componentDidMount() {
     const dbRef = firebase.database().ref("url");
     dbRef.on("value", (snapshot) => {
-      const data = snapshot.val();
-      let objValues = Object?.values(data);
-      console.log(objValues);
-      let objKeys = Object.keys(data);
-      console.log(objKeys);
-      objValues.map((item, index) => (item["xid"] = objKeys[index]));
-      this.setState({ documents: objValues });
-      console.log("data docs ", this.state.documents);
-      console.log("data objcet  ", objValues);
+      if (snapshot && snapshot.val()) {
+        const data = snapshot.val();
+        let objValues = Object?.values(data);
+        console.log(objValues);
+        let objKeys = Object.keys(data);
+        console.log(objKeys);
+        objValues.map((item, index) => (item["xid"] = objKeys[index]));
+        this.setState({ documents: objValues });
+        console.log("data docs ", this.state.documents);
+        console.log("data objcet  ", objValues);
+      }
     });
   }
   handleChange = (e) => {
@@ -84,44 +86,31 @@ class FinanceResult extends Component {
     );
   };
 
- 
   render() {
-    
     return (
-      
-     
-         
-  
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-12" id="pak">
-            
-            
-              {this.state.documents &&
-                this.state.documents.length > 0 &&
-                this.state.documents.map((item, index) => (
-                  <div className="dataa">
-                    <a className="download" href={item?.url} target="_blank">
-                      {" "}
-                      <RiFolderDownloadFill size="25px" /> Download
-                    </a>
-                    &nbsp;&nbsp;&nbsp;
-                    
-                    <div className="pdf">
-                      <img src={pdf} style={{ width: "200px" }} />
-                    </div>
-                    <h6 className="itemName">
-                      <b>{item.name}</b>
-                    </h6>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-12" id="pak">
+            {this.state.documents &&
+              this.state.documents.length > 0 &&
+              this.state.documents.map((item, index) => (
+                <div className="dataa">
+                  <a className="download" href={item?.url} target="_blank">
+                    {" "}
+                    <RiFolderDownloadFill size="25px" /> Download
+                  </a>
+                  &nbsp;&nbsp;&nbsp;
+                  <div className="pdf">
+                    <img src={pdf} style={{ width: "200px" }} />
                   </div>
-                ))}
-            </div>
-            </div></div>
-          
-        
-   
-         
-        
+                  <h6 className="itemName">
+                    <b>{item.name}</b>
+                  </h6>
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
     );
   }
 }

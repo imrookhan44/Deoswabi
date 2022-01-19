@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./ImportLink.css";
 import ContactForm from "../ContactForm";
 import firebaseDb from "firebase";
 const ImportLink = () => {
@@ -9,7 +8,7 @@ const ImportLink = () => {
   useEffect(() => {
     firebaseDb
       .database()
-      .ref("contacts")
+      .ref("news")
       .on("value", (snapshot) => {
         if (snapshot.val() != null)
           setContactObjects({
@@ -23,7 +22,7 @@ const ImportLink = () => {
     if (currentId == "")
       firebaseDb
         .database()
-        .ref("contacts")
+        .ref("news")
         .push(obj, (err) => {
           if (err) console.log(err);
           else setCurrentId("");
@@ -31,7 +30,7 @@ const ImportLink = () => {
     else
       firebaseDb
         .database()
-        .ref(`contacts/${currentId}`)
+        .ref(`news/${currentId}`)
         .set(obj, (err) => {
           if (err) console.log(err);
           else setCurrentId("");
@@ -43,7 +42,7 @@ const ImportLink = () => {
       debugger;
       firebaseDb
         .database()
-        .ref(`contacts/${key}`)
+        .ref(`news/${key}`)
         .remove((err) => {
           if (err) console.log(err);
           else setCurrentId("");

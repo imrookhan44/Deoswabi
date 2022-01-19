@@ -1,12 +1,12 @@
+* {
+  box-sizing: border-box;
+}
 
 .nav-item {
-  font-weight: 400;
+  font-weight: 500;
 }
 #Main {
   background-color: #212529;
-  color: white;
-  background-repeat: no-repeat;
-  
 }
 
 #first,
@@ -24,60 +24,6 @@
 .nav-item:hover {
   box-shadow: 0 0 10px 0 white inset, 0 0 20px 2px white;
 }
-
-li {
-  float: left;
-}
-
-li a,
-.drop {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-}
-
-li a:hover,
-.dropdown:hover .drop {
-  color: white;
-}
-
-li.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  color: black;
-  display: none;
-  position: absolute;
-  background-color: none;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-  padding-top: 10px;
-}
-
-.navdropDown{
-  
-  display: flex;
-  justify-content: flex-end;
-  /* width: 100%; */
-  margin: auto;
-  margin-right: -50rem ;
+.Logout{
+background-color: white;
 }

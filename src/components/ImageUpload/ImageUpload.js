@@ -28,6 +28,7 @@ class ImageUpload extends Component {
   componentDidMount() {
     const dbRef = firebase.database().ref("url");
     dbRef.on("value", (snapshot) => {
+      if(snapshot && snapshot.val()){
       const data = snapshot.val();
       let objValues = Object.values(data);
       console.log(objValues);
@@ -37,6 +38,7 @@ class ImageUpload extends Component {
       this.setState({ documents: objValues });
       console.log("data docs ", this.state.documents);
       console.log("data objcet  ", objValues);
+    }
     });
   }
   handleChange = (e) => {

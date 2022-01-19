@@ -21,13 +21,17 @@ import SchoolStatus from "../../School Status/SchoolStatus";
 import ImportLink from "../ImportLink/ImportLink";
 import Slider from "../slider/Slider";
 import Adminpage from "../Adminpage/Adminpage";
-import AdminNavbar from "../adminNavbar/AdminNavbar";
+// import AdminNavbar from "../navbarLinks/NavbarLink";
+// import NavbarLink from "../navbarLinks/NavbarLink";
+import NavbarLink from "../adminNavbar/NavbarLink";
+import News from "../news/News"
 function Routes(isLoggedIn) {
   const [user] = useState();
   const [oldUser] = useState();
   return (
     <Switch>
       <Route path="/profile" component={Profile} />
+      <Route path="/news" component={News} />
       <Route path="/updatedacc" component={Updatedacc} />
       <Route path="/signup" component={Signup} />
       <Route path="/signin" component={Signin} />
@@ -37,7 +41,7 @@ function Routes(isLoggedIn) {
       <Route path="/download" component={Download} />
       <Route exacts path="/adminPage" component={Adminpage} />
       <Route exacts path="/admin" component={Admin} />
-      <Route exacts path="/adminNavbar" component={AdminNavbar} />
+      {/* <Route exacts path="/adminNavbar" component={AdminNavbar} /> */}
       <Route path="/Test" component={Test} />
       <Route path="/donation" component={index} />
       <Route path="/BankDonation" component={BankDonation} />
@@ -45,6 +49,8 @@ function Routes(isLoggedIn) {
       <Route path="/easyDonation" component={EasyDonation} />
       <Route path="/SchoolStatus" component={SchoolStatus} />
       <Route path="/ImageUpload" component={ImageUpload} />
+      <Route path="/importLink" component={ImportLink} />
+      <Route path="/navbarLink" component={NavbarLink} />
       <Route path="/" component={Slider} />
 
       <Route path="admin" component={isLoggedIn ?Adminpage : Admin} /> 
