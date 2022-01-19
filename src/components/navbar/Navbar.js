@@ -54,26 +54,43 @@ export default function Home({ admin }) {
                       )}
                     </li>
                     <li className="nav-item">
-                      {/* <Link className="nav-link" to="donation" id="ten">
-                        Donate Here
-                      </Link> */}
+                      {admin && (
+                        <Link className="nav-link" to="importLink" id="ten">
+                          Links
+                        </Link>
+                      )}
+                    </li>
+                    <li className="nav-item">
+                      {!admin && (
+                        <Link className="nav-link" to="navbarLink" id="ten">
+                          Links
+                        </Link>
+                      )}
                     </li>
                     <li className="nav-item">
                       {admin && (
                         <Link className="nav-link" to="ImageUpload" id="ten">
-                          Upload File
+                          Upload
                         </Link>
                       )}
                     </li>
                     <li className="nav-item"></li>
                     <li className="nav-item">
-                      {admin && (
+                      {!admin && (
                         <Link className="nav-link" to="userdetails" id="sixth">
-                          User Details
+                          Registration
                         </Link>
                       )}
                     </li>
-                    <li className="nav-item"></li>
+                    <li className="nav-item">
+
+
+                    {admin && (
+                        <Link className="nav-link" to="news" id="sixth">
+                          News
+                        </Link>
+                      )}
+                    </li>
                     <li className="nav-item">
                       {admin && (
                         <Link className="nav-link" to="adminPage" id="sixth">
@@ -99,16 +116,31 @@ export default function Home({ admin }) {
                         </Link>
                       )}
                     </li>
-                    <NavDropdown
-                    className="navdropDown   " style={{border: "solid ", backgroundColor: "white", marginLeft: "65rem"}}
+                  </ul>
+
+                  {auth?.currentUser?.uid && (
+                    <NavDropdown title={auth?.currentUser?.email} className="Logout">
+                      <NavDropdown.Item
+                        onClick={() => {
+                          auth?.signOut();
+                        }}
+                      >
+                        Logout
+                      </NavDropdown.Item>
+                    </NavDropdown>
+                  )}
+
+                  <NavDropdown
+                    className="nav  offset-7"
                     title={
                       <span>
-                        <BsThreeDotsVertical  />
+                        <BsThreeDotsVertical />
                       </span>
                     }
-                    id="collasible-nav-dropdown"
+                    id="eleven"
                   >
                     <NavDropdown.Item
+                      id="eleven"
                       onClick={() => {
                         history.push("Admin");
                       }}
@@ -116,25 +148,7 @@ export default function Home({ admin }) {
                       Admin
                     </NavDropdown.Item>
                   </NavDropdown>
-                  </ul>
-       
-                  <div className="offset-4" style={{backgroundColor: "white"}}>
-                    {auth?.currentUser?.uid && (
-                      <NavDropdown title={auth?.currentUser?.email}>
-                        <NavDropdown.Item
-                          onClick={() => {
-                            auth?.signOut();
-                          }}
-                        >
-                          Logout
-                        </NavDropdown.Item>
-                      </NavDropdown>
-                    )}
-                  </div>
-                 
-          
                 </div>
-          
               </Navbar.Collapse>
             </Navbar>
           </div>

@@ -6,7 +6,7 @@ import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "../src/components/footer/Footer";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
-
+import News from "./components/news/News"
 const authentication = {
   onAuthentication() {},
   getLogInStatus() {
@@ -45,7 +45,11 @@ function App() {
       <Navbar admin={currentUser?.email == "imrankhan@gmail.com" ? true : false} />
       
       <Routes  />
+
+      
       <Footer />
+
+      
       
     </BrowserRouter>
   );

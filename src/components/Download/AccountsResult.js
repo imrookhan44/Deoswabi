@@ -4,7 +4,7 @@ import { storage } from "../firebase";
 import "firebase/database";
 import firebase from "firebase";
 import "./Download.css";
-import {Tab,pak,Tabs} from "react-bootstrap";
+import { Tab, pak, Tabs } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
 import { RiFolderDownloadFill } from "react-icons/all";
 
@@ -27,23 +27,22 @@ class AccountsResult extends Component {
   componentDidMount() {
     const dbRef = firebase.database().ref("accounts");
     dbRef.on("value", (snapshot) => {
-      const data = snapshot.val();
-      let objValues = Object?.values(data);
-      console.log(objValues);
-      let objKeys = Object.keys(data);
-      console.log(objKeys);
-      objValues.map((item, index) => (item["xid"] = objKeys[index]));
-      this.setState({ documents: objValues });
-      console.log("data docs ", this.state.documents);
-      console.log("data object  ", objValues);
+      if (snapshot && snapshot.val()) {
+        const data = snapshot.val();
+        let objValues = Object?.values(data);
+        console.log(objValues);
+        let objKeys = Object.keys(data);
+        console.log(objKeys);
+        objValues.map((item, index) => (item["xid"] = objKeys[index]));
+        this.setState({ documents: objValues });
+        console.log("data docs ", this.state.documents);
+        console.log("data object  ", objValues);
+      }
     });
   }
-  
+
   handleChange = (e) => {
-    
     if (e.target.files[0]) {
-     
-      
       const image = e.target.files[0];
       this.setState(() => ({ image }));
     }
@@ -59,8 +58,6 @@ class AccountsResult extends Component {
       });
   };
   handleUpload = () => {
-    
-    
     const { image } = this.state;
     const uploadTask = storage.ref(`images/${image.name}`).put(image);
     console.log(image.name);
@@ -90,37 +87,31 @@ class AccountsResult extends Component {
     );
   };
 
- 
   render() {
-    
     return (
       <div className="container-fluid">
-            <div className="row">
-              <div className="col-12" id="pak">
-            
-            
-              {this.state.documents &&
-                this.state.documents.length > 0 &&
-                this.state.documents.map((item, index) => (
-                  <div className="dataa">
-                    <a className="download" href={item?.url} target="_blank">
-                      {" "}
-                      <RiFolderDownloadFill size="25px" /> Download
-                    </a>
-                    &nbsp;&nbsp;&nbsp;
-                    
-                    <div className="pdf">
-                      <img src={pdf} style={{ width: "200px" }} />
-                    </div>
-                    <h6 className="itemName">
-                      <b>{item.name}</b>
-                    </h6>
+        <div className="row">
+          <div className="col-12" id="pak">
+            {this.state.documents &&
+              this.state.documents.length > 0 &&
+              this.state.documents.map((item, index) => (
+                <div className="dataa">
+                  <a className="download" href={item?.url} target="_blank">
+                    {" "}
+                    <RiFolderDownloadFill size="25px" /> Download
+                  </a>
+                  &nbsp;&nbsp;&nbsp;
+                  <div className="pdf">
+                    <img src={pdf} style={{ width: "200px" }} />
                   </div>
-                ))}
-            </div>
-            </div></div>
-          
-        
+                  <h6 className="itemName">
+                    <b>{item.name}</b>
+                  </h6>
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
     );
   }
 }

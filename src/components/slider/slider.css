@@ -34,7 +34,8 @@ justify-content: center;
     margin-top: 30px !important;
     /* display: flex; */
     justify-content: center;
-    /* background-color: indigo; */
+  
+   
 }
 .btngroupslider{
     width: 200px;
@@ -97,4 +98,13 @@ width:90% !important;
     display: flex;
     justify-content:center;
 }
+
+
+.Anchor{
+    /* border: 1px solid #e65858; */
+    text-decoration: none;
+}
+
+
+
 

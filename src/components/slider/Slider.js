@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { Carousel, Button, Card } from "react-bootstrap";
 import "./slider.css";
@@ -7,9 +7,23 @@ import sliderone from "../../assets/images/sliderone.jpg";
 import slidertwo from "../../assets/images/slidertwo.jpg";
 import sliderthree from "../../assets/images/sliderthree.jpg";
 import shahram from "../../assets/images/shahram.jpeg";
-import hafiz from "../../assets/images/hafiz.png";
+import firebaseDb from "firebase";
 
 const Slider = () => {
+  var [contactObjects, setContactObjects] = useState({});
+
+  useEffect(() => {
+    firebaseDb
+      .database()
+      .ref("news")
+      .on("value", (snapshot) => {
+        if (snapshot.val() != null)
+          setContactObjects({
+            ...snapshot.val(),
+          });
+        else setContactObjects({});
+      });
+  }, []);
   const history = useHistory();
   return (
     <>
@@ -106,7 +120,7 @@ const Slider = () => {
             <Card style={{ width: "18rem" }}>
               <Card.Img variant="top" src={image} />
               <Card.Body>
-                <Card.Title>DEO Female Swabi-Dr. Ms Namehere</Card.Title>
+                <Card.Title>DEO Female Swabi-Dr. Ms Sofia Tabassum</Card.Title>
                 <Card.Text className="cardtextsliderdiv">
                   <p>
                     Education is a fundamental human right. It is education,
@@ -128,9 +142,9 @@ const Slider = () => {
             </Card>
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 carddivslider">
-            <div class="col-sm-6">
-              <h2 class="anno-header"> News and Events:</h2>
-              <div class="anno">
+            <div className="col-sm-6">
+              <h2 className="anno-header"> Announcement:</h2>
+              <div className="anno">
                 <marquee
                   direction="up"
                   scrollamount="1"
@@ -139,37 +153,35 @@ const Slider = () => {
                   style={{ height: "290px", textAlign: "justify" }}
                 >
                   <ul style={{ lineHeight: "36px" }}>
-                    <li>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </li>
+                    <div className="row">
+                      <div className="">
+                        {/* <ContactForm {...{ currentId, contactObjects }} /> */}
+                      </div>
+                      <div className="">
+                        <table className="table table-borderless table-stripped">
+                          <thead className="thead-light">
+                            <tr>
+                              {/* <th>Announcement
+</th> */}
 
-                    <li>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </li>
+                              {/* <th>Actions</th> */}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {Object.keys(contactObjects).map((id) => {
+                              return (
+                                <tr key={id}>
+                                  <td>{contactObjects[id].fullName}</td>
 
-                    <li>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </li>
-
-                    <li>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </li>
-
-                    <li>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </li>
-
-                    <li>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </li>
-
-                    <li>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </li>
-
-                    <li>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </li>
+                                  <td>{contactObjects[id].email}</td>
+                                  <td></td>
+                                </tr>
+                              );
+                            })}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </ul>
                 </marquee>
               </div>
