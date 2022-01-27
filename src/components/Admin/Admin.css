@@ -38,18 +38,18 @@
   }
 }
 
-@media screen and (max-width: 868px) {
-  .image {
-    display: none;
-  }
-}
+
 
 @media screen and (max-width: 500px) {
   .form-controls {
     width: 100px;
-    display: flex;
-    font-size: 10px;
+
     font-weight: bold;
+  }
+
+  .admin {
+
+    margin-left: 0rem !important;
   }
 }
 
@@ -64,6 +64,7 @@
   width: 90px;
   border-radius: 4px;
 }
+
 .admin {
   margin-left: 30px;
 }

@@ -1,0 +1,13 @@
+.table-responsive{
+    border: 1px solid #bbb9b9;
+    
+}
+
+@media screen and (max-width: 500px){
+    .table-responsive{
+    
+        margin-right: -5rem;
+        /* width: 8rem; */
+    }
+    
+}

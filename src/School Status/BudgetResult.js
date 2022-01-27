@@ -2,7 +2,6 @@ import React from 'react';
 import firebaseDb from "firebase";
 import { useState,useEffect } from 'react'
 const  BudgetResult=()=> {
-    
     var [contactObjects, setContactObjects] = useState({})
     var [currentId, setCurrentId] = useState('');
     useEffect(() => {
@@ -16,8 +15,6 @@ const  BudgetResult=()=> {
 
         })
     }, [])// similar to componentDidMount
-
-
     return (
         <div>
             <div className='table-responsive '>

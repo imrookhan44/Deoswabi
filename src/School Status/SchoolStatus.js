@@ -76,7 +76,7 @@ const SchoolStatus = () => {
           <BudgetResult />
           <paki />
         </Tab>
-        <Tab eventKey="contact" title="Accounts">
+        <Tab eventKey="contact" title="Daily Attendance">
           <paki />
         </Tab>
       </Tabs>

@@ -6,16 +6,19 @@ import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "../src/components/footer/Footer";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
-import News from "./components/news/News"
+import { db } from "./components/firebase";
+
 const authentication = {
-  onAuthentication() {},
+  isLoggedIn: false,
+  onAuthentication() { 
+    this.isLoggedIn  = true
+   },
   getLogInStatus() {
     return auth?.currentUser?.uid;
   },
 };
 
 export function SecureRoute(props) {
- 
   console.log("auth user 2 ", auth?.currentUser?.email);
   return (
     <Route
@@ -24,33 +27,56 @@ export function SecureRoute(props) {
         authentication.getLogInStatus() ? (
           <props.component {...data}></props.component>
         ) : (
-          <Redirect to={{ pathname: "/" }}></Redirect>
+          <Redirect to={{ pathname: "/login" }}></Redirect>
         )
       }
-    ></Route>
+    />
   );
 }
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+  const [userDetails, setUserDetails] = useState(null);
   useEffect(() => {
-    auth.onAuthStateChanged((currentUser) => {
-      if (currentUser) setCurrentUser(currentUser);
+
+    auth.onAuthStateChanged((user) => {
+      if (user) setCurrentUser(user);
       else setCurrentUser(null);
+      getUserDetails();
     });
+    getUserDetails();
+
   }, []);
+
+  const getUserDetails = () => {
+    if (auth?.currentUser?.email) {
+      console.log(" user ", auth?.currentUser?.email);
+      db.collection("clerksData")
+        .where("email", "==", auth?.currentUser?.email)
+        .get()
+        .then((res) => {
+          console.log("curent user details", res.docs.map((item) => item.data()));
+          let user = res.docs.map((item) => item.data());
+          user = user[0];
+          setUserDetails(user);
+          console.log(" userdetails ", userDetails);
+        })
+        .catch((e) => console.error(e));
+    }
+  }
   return (
     <BrowserRouter>
-      {/* {auth?.currentUser?.email &&  */}
-      <Navbar admin={currentUser?.email == "imrankhan@gmail.com" ? true : false} />
-      
-      <Routes  />
+      <Navbar
+        admin={userDetails?.role}
 
-      
+
+      // admin={currentUser?.email == "imrankhan@gmail.com" ? true : false}
+      />
+
+
+      <Routes />
+
       <Footer />
-
-      
-      
     </BrowserRouter>
   );
 }

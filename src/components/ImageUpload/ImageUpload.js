@@ -4,7 +4,7 @@ import { storage } from "../firebase";
 import "firebase/database";
 import firebase from "firebase";
 import "./imageUpload.css";
-import {Tab,pak,Tabs} from "react-bootstrap";
+import { Tab, pak, Tabs } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
 import { RiFolderDownloadFill } from "react-icons/all";
 
@@ -28,17 +28,17 @@ class ImageUpload extends Component {
   componentDidMount() {
     const dbRef = firebase.database().ref("url");
     dbRef.on("value", (snapshot) => {
-      if(snapshot && snapshot.val()){
-      const data = snapshot.val();
-      let objValues = Object.values(data);
-      console.log(objValues);
-      let objKeys = Object.keys(data);
-      console.log(objKeys);
-      objValues.map((item, index) => (item["xid"] = objKeys[index]));
-      this.setState({ documents: objValues });
-      console.log("data docs ", this.state.documents);
-      console.log("data objcet  ", objValues);
-    }
+      if (snapshot && snapshot.val()) {
+        const data = snapshot.val();
+        let objValues = Object.values(data);
+        console.log(objValues);
+        let objKeys = Object.keys(data);
+        console.log(objKeys);
+        objValues.map((item, index) => (item["xid"] = objKeys[index]));
+        this.setState({ documents: objValues });
+        console.log("data docs ", this.state.documents);
+        console.log("data objcet  ", objValues);
+      }
     });
   }
   handleChange = (e) => {
@@ -115,79 +115,78 @@ class ImageUpload extends Component {
       alignItems: "center",
       justifyContent: "center",
     };
-    
+
     return (
-      
+
       <div className="">
         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
-  <Tab eventKey="home" title="Finance">
-  <div className="container-fluid">
-        <div className="row" >
-  <div className="col-12">
-            <div style={style}>
-              <div className="ab" style={{}}></div>
-              <input
-                type="file"
-                onChange={this.handleChange}
-                style={{ height: "100px" }}
-              />
-              <label>file name</label>
-              <input type="text" onChange={(e) => this.handleInputChange(e)} />
-              <br />
-              <button onClick={this.handleUpload}>Upload</button>
-              <progress value={this.state.progress} max="100" />
-            </div>
-          </div>
-          <hr />
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-12" id="pak">
-            
-            
-              {this.state.documents &&
-                this.state.documents.length > 0 &&
-                this.state.documents.map((item, index) => (
-                  <div className="dataa">
-                    <a className="download" href={item?.url} target="_blank">
-                      {" "}
-                      <RiFolderDownloadFill size="25px" /> Download
-                    </a>
-                    &nbsp;&nbsp;&nbsp;
-                    <button
-                      className="Button"
-                      onClick={() => this.deleteItem(item)}
-                    >
-                      <AiFillDelete size="20px" />
-                    </button>
-                    <div className="pdf">
-                      <img src={pdf} style={{ width: "200px" }} />
-                    </div>
-                    <h6 className="itemName">
-                      <b>{item.name}</b>
-                    </h6>
+          <Tab eventKey="home" title="Finance">
+            <div className="container-fluid">
+              <div className="row" >
+                <div className="col-12">
+                  <div style={style}>
+                    <div className="ab" style={{}}></div>
+                    <input
+                      type="file"
+                      onChange={this.handleChange}
+                      style={{ height: "100px" }}
+                    />
+                    <label>file name</label>
+                    <input type="text" onChange={(e) => this.handleInputChange(e)} />
+                    <br />
+                    <button onClick={this.handleUpload}>Upload</button>
+                    <progress value={this.state.progress} max="100" />
                   </div>
-                ))}
+                </div>
+                <hr />
+                <div className="container-fluid">
+                  <div className="row">
+                    <div className="col-12" id="pak">
+
+
+                      {this.state.documents &&
+                        this.state.documents.length > 0 &&
+                        this.state.documents.map((item, index) => (
+                          <div className="dataa">
+                            <a className="download" href={item?.url} target="_blank">
+                              {" "}
+                              <RiFolderDownloadFill size="25px" /> Download
+                            </a>
+                            &nbsp;&nbsp;&nbsp;
+                            <button
+                              className="Button"
+                              onClick={() => this.deleteItem(item)}
+                            >
+                              <AiFillDelete size="20px" />
+                            </button>
+                            <div className="pdf">
+                              <img src={pdf} style={{ width: "200px" }} />
+                            </div>
+                            <h6 className="itemName">
+                              <b>{item.name}</b>
+                            </h6>
+                          </div>
+                        ))}
+                    </div>
+                  </div></div>
+
+
+
+              </div>
             </div>
-            </div></div>
-          
-        
-          
-         
-          </div>
-        </div>
-        
-    <pak />
-  </Tab>
-  <Tab eventKey="profile" title="HR">
-    <HrUpload/>
-    <pak />
-  </Tab>
-  <Tab eventKey="contact" title="Accounts" >
-    <Accountant/>
-    <pak />
-  </Tab>
-</Tabs>
-        
+
+            <pak />
+          </Tab>
+          <Tab eventKey="profile" title="HR">
+            <HrUpload />
+            <pak />
+          </Tab>
+          <Tab eventKey="contact" title="Accounts" >
+            <Accountant />
+            <pak />
+          </Tab>
+        </Tabs>
+
       </div>
     );
   }

@@ -57,12 +57,13 @@ const ImportLink = () => {
             <ContactForm {...{ addOrEdit, currentId, contactObjects }} />
           </div>
           <div className="col-md-7">
-            <table className="table table-borderless table-stripped">
+            <table className="table table-borderLess table-stripped">
               <thead className="thead-light">
                 <tr>
-                  <th>Site Name</th>
+                  <th>Num</th>
 
-                  <th>Link</th>
+
+                  <th>News</th> 
                   <th>Actions</th>
                 </tr>
               </thead>

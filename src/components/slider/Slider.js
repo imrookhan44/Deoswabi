@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
-import { Carousel, Button, Card } from "react-bootstrap";
+import { Carousel, Button, Card, Modal, Row, Col } from "react-bootstrap";
 import "./slider.css";
 import image from "../../assets/images/forpic.png";
 import sliderone from "../../assets/images/sliderone.jpg";
@@ -25,23 +25,37 @@ const Slider = () => {
       });
   }, []);
   const history = useHistory();
+  const [show, setShow] = useState(true);
   return (
     <>
+      <Modal
+        show={show}
+        onHide={() => setShow(false)}
+        dialogClassName="modal-lg" style={{ display: "flex", alignItems: "center" }}
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Lorem Ipsum Dolor
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </Modal.Body>
+      </Modal>
       <div className="slider">
         <Carousel>
           <Carousel.Item>
             <img className="d-block w-100" alt="First slide" src={sliderone} />
             <Carousel.Caption>
-              {/* <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img className="d-block w-100" src={slidertwo} alt="Second slide" />
 
             <Carousel.Caption>
-              {/* <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>

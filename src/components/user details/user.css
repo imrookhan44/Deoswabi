@@ -75,8 +75,9 @@
 
 @media screen and (max-width: 768px) {
   .userDetails {
-    width: 390px;
-    height: 800px;
+    width: 50%;
+    border: solid;
+    height: 55vh;
     margin: auto;
   }
 }
@@ -100,4 +101,7 @@
   .offset-5 {
     font-weight: bold;
   }
+}
+#span{
+  border: red;
 }
