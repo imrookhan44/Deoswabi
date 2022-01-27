@@ -44,16 +44,7 @@
   /* animation-timing-function: cubic-bezier(0.1, 0.4, 1.0, 0.1) ; */
   width: 700px;
 }
-@keyframes sample {
-  0% {
-    border-radius: 0%;
-  }
-  100% {
-    border-radius: 20%;
-    background-color: #0066ff;
-    color: white;
-  }
-}
+
 @media screen and (max-width: 400px) {
   .Head {
     width: 300px;
@@ -61,3 +52,6 @@
   
   }
 }
+
+
+

@@ -9,7 +9,7 @@ const ImportLink = () => {
   useEffect(() => {
     firebaseDb
       .database()
-      .ref("contacts")
+      .ref("links")
       .on("value", (snapshot) => {
         if (snapshot.val() != null)
           setContactObjects({
@@ -23,7 +23,7 @@ const ImportLink = () => {
     if (currentId == "")
       firebaseDb
         .database()
-        .ref("contacts")
+        .ref("links")
         .push(obj, (err) => {
           if (err) console.log(err);
           else setCurrentId("");
@@ -31,7 +31,7 @@ const ImportLink = () => {
     else
       firebaseDb
         .database()
-        .ref(`contacts/${currentId}`)
+        .ref(`links/${currentId}`)
         .set(obj, (err) => {
           if (err) console.log(err);
           else setCurrentId("");
@@ -43,7 +43,7 @@ const ImportLink = () => {
       debugger;
       firebaseDb
         .database()
-        .ref(`contacts/${key}`)
+        .ref(`links/${key}`)
         .remove((err) => {
           if (err) console.log(err);
           else setCurrentId("");
@@ -61,7 +61,7 @@ const ImportLink = () => {
             <table className="table table-borderless table-stripped">
               <thead className="thead-light">
                 <tr>
-                  <th>Site Name</th>
+                  <th>Num</th>
 
                   <th>Link</th>
                   <th>Actions</th>

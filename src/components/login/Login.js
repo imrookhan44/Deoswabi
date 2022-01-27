@@ -12,10 +12,10 @@ function Login() {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
-        toast("Login Successfully");
+        toast.success("Login Successfully");
       })
       .catch((err) => {
-        toast("Register First ");
+        toast.error("Register First ");
       });
   };
   const [email, setEmail] = useState("");
@@ -26,19 +26,18 @@ function Login() {
     <div>
     <div className="row offset-0">
     <div className="col">
-   <h3 className="Head mt-3"> Welcome to District Education Office Female Swabi </h3>
    </div>
    </div>
-      <div autoComplete="off">
+      <div autoComplete="">
         <div className=" mt-5  " id="LoginForm">
           <div className="row ">
             <div className=" col-5 offset-4 ">
-              <h3 className="admin mt-5 ">Login</h3>
+              <h3 className="admin mt-5">Login</h3>
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 className="form-controls mt-3 " id="inputs"
-                placeholder=" Email address"
+                placeholder="Email address"
               ></input>
               <input
                 onChange={(e) => setPassword(e.target.value)}
@@ -47,9 +46,9 @@ function Login() {
                 placeholder="Password"
               />{" "}
               <div className="Checkbox mt-2">
-                <input type="checkbox"></input> <b>Remember me</b>
+                {/* <input type="checkbox"></input> <b>Remember me</b> */}
               </div>
-              <div>
+              <div className="ms-4">
                 {" "}
                 <button
                   onClick={(signInHandler, notify)}

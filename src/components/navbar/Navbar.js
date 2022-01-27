@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";
 import logo from "../../assets/images/apcalogo1.png";
 import { Navbar, NavDropdown } from "react-bootstrap";
 // import { auth } from "../firebase";
@@ -10,13 +10,24 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 export default function Home({ admin }) {
   console.log("admin:", admin);
   let history = useHistory();
-  const [currentUser, setCurrentUser] = useState(null);
-  useEffect(() => {
-    auth.onAuthStateChanged((currentUser) => {
-      if (currentUser) setCurrentUser(currentUser);
-      else setCurrentUser(null);
-    });
-  }, []);
+  const [currentUser, setUserDetails] = useState(null);
+  // useEffect(() => {
+  //   if (auth?.currentUser?.email) {
+  //     console.log(" user ", auth?.currentUser?.email);
+  //     db.collection("clerksData")
+  //       .where("email", "==", auth?.currentUser?.email)
+  //       .get()
+  //       .then((res) => {
+  //         console.log("current user details", res.docs.map((item) => item.data()));
+  //         let user = res.docs.map((item) => item.data());
+  //         user = user[0];
+  //         setUserDetails(user);
+  //       })
+  //       .catch((e) => console.error(e));
+
+  //   }
+  //   // });
+  // }, []);
   return (
     <>
       <div className="container-fluid" id="Main">
@@ -44,7 +55,7 @@ export default function Home({ admin }) {
                       alt="logo"
                     />
                   </Link>
-                  <ul className="  navbar-nav ">
+                  <ul className="navbar-nav">
                     <li className="nav-item active">
                       {!admin && (
                         <Link className="nav-link" to="/Home" id="first">
@@ -85,7 +96,7 @@ export default function Home({ admin }) {
                     <li className="nav-item">
 
 
-                    {admin && (
+                      {admin && (
                         <Link className="nav-link" to="news" id="sixth">
                           News
                         </Link>
@@ -94,7 +105,14 @@ export default function Home({ admin }) {
                     <li className="nav-item">
                       {admin && (
                         <Link className="nav-link" to="adminPage" id="sixth">
-                          AdminPage
+                          Data Page
+                        </Link>
+                      )}
+                    </li>
+                    <li className="nav-item">
+                      {admin && (
+                        <Link className="nav-link" to="manageUser" id="sixth">
+                          ManageUsers
                         </Link>
                       )}
                     </li>
@@ -116,13 +134,27 @@ export default function Home({ admin }) {
                         </Link>
                       )}
                     </li>
+                    {/* <li className="nav-item">
+                      {!admin && (
+                        <Link
+                          className="nav-link"
+                          to="admin"
+                          id="second"
+                          onClick={() => {
+                            history.push("Admin");
+                          }}
+                        >
+                          Admin
+                        </Link>
+                      )}
+                    </li> */}
                   </ul>
-
                   {auth?.currentUser?.uid && (
-                    <NavDropdown title={auth?.currentUser?.email} className="Logout">
+                    <NavDropdown title={auth?.currentUser?.email} className="Logout offset-7">
                       <NavDropdown.Item
                         onClick={() => {
-                          auth?.signOut();
+                          auth?.signOut().then(res => console.log("sign out res ", res)).catch(e => console.error(e))
+                          console.log("signOut:", currentUser)
                         }}
                       >
                         Logout
@@ -130,7 +162,7 @@ export default function Home({ admin }) {
                     </NavDropdown>
                   )}
 
-                  <NavDropdown
+                  {/* <NavDropdown
                     className="nav  offset-7"
                     title={
                       <span>
@@ -147,7 +179,7 @@ export default function Home({ admin }) {
                     >
                       Admin
                     </NavDropdown.Item>
-                  </NavDropdown>
+                  </NavDropdown> */}
                 </div>
               </Navbar.Collapse>
             </Navbar>

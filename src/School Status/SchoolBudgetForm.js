@@ -51,25 +51,25 @@ const SchoolBudgetForm = (props) => {
                     />
             </div>
                     
-                <div className="form-group input-group ">
+                <div className="form-group input-group mt-3">
                     
-                    <input className="form-control textfieldnameforstyle" placeholder="Total Student" name="totalBudget"
+                    <input type="number" className="form-control textfieldnameforstyle" placeholder="Total Student" name="totalBudget"
                         value={values.totalBudget}
                     required
                         onChange={handleInputChange}
                     />
                 </div>
-                <div className="form-group input-group ">
+                <div className="form-group input-group mt-3 ">
                    
-                    <input className="form-control textfieldnameforstyle" placeholder="Spending Buget" name="spendingBudget"
+                    <input type="number" className="form-control textfieldnameforstyle" placeholder="Spending Buget" name="spendingBudget"
                         value={values.spendingBudget}
                     required
                         onChange={handleInputChange}
                     />
                 </div>
             
-            <div className="form-group ">
-                <input className="form-control textfieldnameforstyle" placeholder="Remaining Budget" name="remainingBudget"
+            <div className="form-group mt-3">
+                <input type="number" className="form-control textfieldnameforstyle" placeholder="Remaining Budget" name="remainingBudget"
                     value={values.remainingBudget}
                 required
                     onChange={handleInputChange}

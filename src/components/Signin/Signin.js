@@ -23,11 +23,12 @@ export default function Signin() {
   };
 
   return (
-    <div className=" userDetails" style={{ width: "500px" }}>
+    <div className="userDetails" style={{ width: "500px" }}>
       <div className="row pt-4 ">
         <div className="col-sm-6 col-lg-6">
-          <h2 style={{ marginLeft: "130px", marginTop: "100px" }}> Sign In</h2>
-          <form
+          <h2 style={{ marginLeft: "130px", marginTop: "100px" }}>Login</h2>
+          <div
+          autoComplete="on"
             className="sign Up"
             style={{ marginLeft: "120px", width: "200px" }}
           >
@@ -51,7 +52,7 @@ export default function Signin() {
             >
               Sign In
             </button>
-          </form>
+          </div>
         </div>
 
         <div className="col-sm-6 col-lg-6"></div>
