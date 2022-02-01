@@ -24,16 +24,22 @@ import Adminpage from "../Adminpage/Adminpage";
 import NavbarLink from "../adminNavbar/NavbarLink";
 import News from "../news/News";
 import ManageUser from "../user details/manageUsers/ManageUser";
-import ProtectedRoutes from "../ProtectedRoutes";
-function Routes(isLoggedIn) {
+// import ProtectedRoutes from "../ProtectedRoutes";
+import { SecuredRoute } from "../../App";
+import NotAdmin from "../NotAdmin";
+function Routes(props) {
+  let { userDetails, isLoggedIn } = props;
+  // debugger
   const [user] = useState();
   const [oldUser] = useState();
+
   return (
     <Switch>
       <Route path="/profile" component={Profile} />
-      <securedRoute path="/news" component={News} />
+      <SecuredRoute path="/news" component={News} userDetails={userDetails} />
       <Route path="/updatedacc" component={Updatedacc} />
       <Route path="/signup" component={Signup} />
+      <Route path="/notAdmin" component={NotAdmin} />
       <Route path="/signin" component={Signin} />
       <Route path="/upload" component={Upload} />
       <Route path="/login" component={Login} />
@@ -48,10 +54,10 @@ function Routes(isLoggedIn) {
       <Route path="/easyDonation" component={EasyDonation} />
       <Route path="/SchoolStatus" component={SchoolStatus} />
       <Route path="/ImageUpload" component={ImageUpload} />
-      <securedRoute path="/importLink" component={ImportLink} />
+      <SecuredRoute path="/importLink" component={ImportLink} userDetails={userDetails} />
       <Route path="/navbarLink" component={NavbarLink} />
-      <Route path="/manageUser" component={ManageUser} />
-      <Route path="/" exact component={Slider} />
+      <SecuredRoute path="/manageUser" component={ManageUser} userDetails={userDetails} />
+      <Route path="/"  component={Slider} />
       <Route path="admin" component={isLoggedIn ? Adminpage : Admin} />
       {user ? <Routes /> : oldUser && <Admin />}
     </Switch>

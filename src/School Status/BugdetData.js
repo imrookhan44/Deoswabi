@@ -44,7 +44,7 @@ const BudgetData = () => {
 
     const onDelete = key => {
         if (window.confirm('Are you sure to delete this record?')) {
-            debugger
+       
            firebaseDb.database().ref(`Budget/${key}`).remove(
                 err => {
                     if (err)
@@ -59,7 +59,7 @@ const BudgetData = () => {
     return (
         <>
            
-            <div className=" "  >
+            <div className="">
             <div className="row budgetdatarowschoolbgform " id="divrow"  >
             <div className="col-md-4 col-sm-12 col-xs-12 schoolbudgetformdiv" >
                     <SchoolBudgetForm {...({ addOrEdit, currentId, contactObjects })} />

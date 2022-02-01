@@ -5,37 +5,37 @@ import "./footer.css";
 const Footer = () => {
   return (
     <>
-
       <div className="fixed-bottom bg-dark text-primary ">
         <div className="row mb-3">
           <div className=" text-center mt-1">
-            Education Fund © 2021-22 &nbsp;
+            <a href="https://brainspk.com/" > Brainspk </a> © 2021-22 &nbsp;
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/search/top?q=brainspk/"
               target={"blank"}
-              className="fa fa-facebook"
-            ></a>{" "}
-            &nbsp;&nbsp;
+              className="fab fa-facebook"
+            ></a>
+            &nbsp;
             <a
-              href="https://twitter.com/?lang=en"
+              href="https://www.linkedin.com/in/brains-pk-77ba95191/"
               target={"blank"}
-              className="fa fa-twitter"
+              className="fa fa-linkedin"
             ></a>
             &nbsp;&nbsp;
-            {/* <a
-              href="https://www.google.com/"
-              target={"blank"}
-              className="fa fa-google"
-            ></a> */}
-            &nbsp;&nbsp;
             <a
+              href="https://www.instagram.com/brainspk2021/"
+              target={"blank"}
+              className="fab fa-instagram">
+            </a>
+            &nbsp;&nbsp;
+            {/* <a
               href="https://www.youtube.com/"
               target={"blank"}
               className="fa fa-youtube"
-            ></a>
+            ></a> */}
             &nbsp;&nbsp;
           </div>
         </div>
+
       </div>
 
     </>

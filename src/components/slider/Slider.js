@@ -33,15 +33,16 @@ const Slider = () => {
         onHide={() => setShow(false)}
         dialogClassName="modal-lg" style={{ display: "flex", alignItems: "center" }}
         aria-labelledby="contained-modal-title-vcenter"
-        centered
+
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Lorem Ipsum Dolor
+            Brainspk
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+          <p style={{fontWeight: "600", fontSize: "1.5rem"}}>The website deofswabi.com developed by brainspk(software company) and gifted to deofemale swabi "Miss Sofia Tabassum"
+            Special thanks to brainspk team for their work to make it possible.</p>
         </Modal.Body>
       </Modal>
       <div className="slider">
@@ -100,7 +101,7 @@ const Slider = () => {
                 history.push("/SchoolStatus");
               }}
             >
-              Accounts
+              Daily Attendance
             </Button>
           </div>
         </div>
@@ -157,13 +158,13 @@ const Slider = () => {
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 carddivslider">
             <div className="col-sm-6">
-              <h2 className="anno-header"> Announcement:</h2>
+              <h2 className="anno-header"> Notifications:</h2>
               <div className="anno">
                 <marquee
                   direction="up"
                   scrollamount="1"
-                  onmouseover="this.stop();"
-                  onmouseout="this.start();"
+                  onmouseover= "this.stop();"
+                  onmouseout= "this.start();"
                   style={{ height: "290px", textAlign: "justify" }}
                 >
                   <ul style={{ lineHeight: "36px" }}>
