@@ -5,6 +5,7 @@
 .nav-item {
   font-weight: 500;
 }
+
 #Main {
   background-color: #212529;
 }
@@ -21,9 +22,34 @@
 #ten {
   color: white;
 }
+
 .nav-item:hover {
-  box-shadow: 0 0 10px 0 white inset, 0 0 20px 2px white;
+  /* box-shadow: 0 0 10px 0 white inset, 0 0 20px 2px white; */
+
+
+
+  color: #fff;
+  border: 3px solid #0D6EFD;
+  background-image: -webkit-linear-gradient(30deg, #0D6EFD 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #0D6EFD 50%, transparent 50%);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+  background-position: 100%;
+  color: #0D6EFD;
 }
-.Logout{
-background-color: white;
+
+
+
+.Logout {
+  background-color: white;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.nav {
+
+  margin-right: 4.5rem !important;
 }

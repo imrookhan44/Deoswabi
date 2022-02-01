@@ -125,11 +125,11 @@ const User = () => {
                 Submit
               </button>
             </div>
-            <div className="mt-3  ms-2" >
+            {/* <div className="mt-3  ms-2" >
               <a onClick={() => history.push("/login")} href="" style={{ fontWeight: "400", fontSize: "1rem", color: "black"}}>
                 Already Have An Account SignIn
               </a>
-            </div>
+            </div> */}
           </form>
         </div>
       </div>

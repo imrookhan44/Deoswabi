@@ -10,16 +10,27 @@ const Contacts = () => {
     const [list, setList] = useState(null);
     const [currentUser, setCurrentUser] = useState(null)
 
-    useEffect(() => {
+    const getContactObjs = () => {
         firebaseDb.database().ref('contacts').on('value', snapshot => {
-            if (snapshot.val() != null)
-                setContactObjects({
-                    ...snapshot.val()
-                })
-            else
-                setContactObjects({})
+            if (snapshot.val() != null) {
+                // setContactObjects({ ...snapshot.val() });
+                setContactObjects(Object.values(snapshot.val()));
+                let data = Object.values(snapshot.val());
+                // console.log("data 0 : ", data);
+                // console.log("snapshot.val() 0 : ",snapshot.val() );
+                let keys = Object.keys(snapshot.val());
+                // console.log("keys 0 : ", keys);
+                data.map((item, index) => { item["key"] = keys[index] });
+                // console.log("snapshot.val() 0 : ", snapshot.val());
+                // console.log("contactObjects 0 : ", contactObjects);
+                getUserDetails(data);
+            }
+            else { setContactObjects({}) }
 
         })
+    }
+    useEffect(() => {
+        getContactObjs();
     }, [])
 
     useEffect(() => {
@@ -28,28 +39,21 @@ const Contacts = () => {
             else setCurrentUser(null);
             getUserDetails();
         });
-        getUserDetails();
     }, []);
 
-    const getUserDetails = () => {
+    const getUserDetails = (data) => {
         if (auth?.currentUser?.email) {
             console.log(" user ", auth?.currentUser?.email);
-            db.collection("clerksData")
-                .where("email", "==", auth?.currentUser?.email)
-                .get()
-                .then((res) => {
-                    console.log("user in contacts", res.docs.map((item) => item.data()));
-                    let user = res.docs.map((item) => item.data());
-                    user = user[0];
-                    setUserDetails(user);
-                    // console.log(" userdetails in contacts1 ", userDetails);
-                    
-                    let objs = Object.values(contactObjects);
-                    objs.filter(item => item.schoolName == userDetails.schoolName);
-                    // setUserDetails(objs);
-                    setList(objs);
-                    console.log("  ", objs);
-                })
+            db.collection("clerksData").where("email", "==", auth?.currentUser?.email).get().then((res) => {
+                console.log("user in contacts", res.docs.map((item) => item.data()));
+                let user = res.docs.map((item) => item.data());
+                user = user[0];
+                setUserDetails(user);
+                let filt = [];
+                filt = data.filter(item => item.schoolName == user.schoolName);
+                setList(filt);
+                console.log("filt in contacts 2 ", filt);
+            })
                 .catch((e) => console.error(e));
         }
     }
@@ -84,6 +88,7 @@ const Contacts = () => {
                         console.log(err)
                     else
                         setCurrentId('')
+                        window.location.reload();
                 }
             )
         }
@@ -93,7 +98,7 @@ const Contacts = () => {
         <div className="row" id="contactsfulldiv" >
             <div className="contactformdivincontact">
 
-                <div className=" col-lg-4 col-md-4 col-sm-12 col-xs-12  " >
+                <div className=" col-lg-4 col-md-4 col-sm-12 col-xs-12" >
                     <ContactForm {...({ addOrEdit, currentId, contactObjects })} />
                 </div>
             </div>
@@ -106,7 +111,7 @@ const Contacts = () => {
                     <table className="table table-dark" >
                         <thead className="" >
                             <tr>
-                                <th scope="col"  >SchoolName</th>
+                                <th scope="col">SchoolName</th>
                                 <th scope="col">Total Student</th>
                                 <th scope="col">First Doss </th>
                                 <th scope="col">Remaining First Doss </th>
@@ -117,8 +122,8 @@ const Contacts = () => {
                         </thead>
                         <tbody>
                             {
-                                list?.map((item,index) => {
-                                    return <tr key={index}>
+                                list?.map((item, id) => {
+                                    return <tr key={id}>
                                         <td>{item?.schoolName}</td>
                                         <td>{item?.totalStudent}</td>
                                         <td>{item?.firstDoss}</td>
@@ -126,16 +131,39 @@ const Contacts = () => {
                                         <td>{item?.secondDoss}</td>
                                         <td>{item?.remainingSecondDoss}</td>
                                         <td>
-                                            <a className="btn text-primary" onClick={() => { setCurrentId(index) }}>
+                                            <a className="btn text-primary" onClick={() => { setCurrentId(item.key) }}>
                                                 <i className="fas fa-pencil-alt">Edit</i>
                                             </a>
-                                            <a className="btn text-danger" onClick={() => { onDelete(index) }}>
+                                            <a className="btn text-danger" onClick={() => { onDelete(item.key) }}>
                                                 <i className="far fa-trash-alt">Delete</i>
                                             </a>
                                         </td>
                                     </tr>
                                 })
                             }
+
+                            {
+                                // Object.keys(contactObjects).map(id => {
+                                //     return <tr key={id}>
+                                //         <td>{contactObjects[id].schoolName}</td>
+                                //         <td>{contactObjects[id].totalStudent}</td>
+                                //         <td>{contactObjects[id].firstDoss}</td>
+                                //         <td>{contactObjects[id].remainingFirstDoss}</td>
+                                //         <td>{contactObjects[id].secondDoss}</td>
+                                //         <td>{contactObjects[id].remainingSecondDoss}</td>
+
+                                //         <td>
+                                //             <a className="btn text-primary" onClick={() => { setCurrentId(id) }}>
+                                //                 <i className="fas fa-pencil-alt">Edit</i>
+                                //             </a>
+                                //             <a className="btn text-danger" onClick={() => { onDelete(id) }}>
+                                //                 <i className="far fa-trash-alt">Delete</i>
+                                //             </a>
+                                //         </td>
+                                //     </tr>
+                                // })
+                            }
+
                         </tbody>
                     </table>
                 </div>

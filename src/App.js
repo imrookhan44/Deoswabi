@@ -7,27 +7,31 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "../src/components/footer/Footer";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import { db } from "./components/firebase";
+import ProtectedRoutes from "./components/ProtectedRoutes";
 
 const authentication = {
   isLoggedIn: false,
-  onAuthentication() { 
-    this.isLoggedIn  = true
-   },
-  getLogInStatus() {
-    return auth?.currentUser?.uid;
+  onAuthentication() {
+    this.isLoggedIn = true
+  },
+  getLogInStatus(userDetails) {
+    // return auth?.currentUser?.uid;
+    return userDetails?.admin;
   },
 };
 
-export function SecureRoute(props) {
-  console.log("auth user 2 ", auth?.currentUser?.email);
+export function SecuredRoute(props) {
+  let { userDetails } = props;
+  // debugger
+  console.log("userDetails test :  ", userDetails);
   return (
     <Route
       path={props.path}
       render={(data) =>
-        authentication.getLogInStatus() ? (
+        authentication.getLogInStatus(userDetails) ? (
           <props.component {...data}></props.component>
         ) : (
-          <Redirect to={{ pathname: "/login" }}></Redirect>
+          <Redirect to={{ pathname: "/notAdmin" }} ></Redirect>
         )
       }
     />
@@ -68,15 +72,12 @@ function App() {
     <BrowserRouter>
       <Navbar
         admin={userDetails?.role}
-
-
       // admin={currentUser?.email == "imrankhan@gmail.com" ? true : false}
       />
-
-
-      <Routes />
+      <Routes userDetails={userDetails} />
 
       <Footer />
+      {/* <ProtectedRoutes /> */}
     </BrowserRouter>
   );
 }
