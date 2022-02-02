@@ -8,7 +8,7 @@ import slidertwo from "../../assets/images/slidertwo.jpg";
 import sliderthree from "../../assets/images/sliderthree.jpg";
 import shahram from "../../assets/images/shahram.jpeg";
 import firebaseDb from "firebase";
-
+import brainspk from './../../images/brainspkn.png'
 const Slider = () => {
   var [contactObjects, setContactObjects] = useState({});
 
@@ -31,18 +31,59 @@ const Slider = () => {
       <Modal
         show={show}
         onHide={() => setShow(false)}
-        dialogClassName="modal-lg" style={{ display: "flex", alignItems: "center" }}
+        dialogClassName="modal-lg"
+        style={{ display: "flex", alignItems: "center"}}
         aria-labelledby="contained-modal-title-vcenter"
+        centered
 
       >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Brainspk
+
+        <Modal.Header style={{ backgroundColor: "black"}} >
+          <Modal.Title id="contained-modal-title-vcenter" 
+          style={{ textAlign: "center", justifyContent: "center", color: "white" }} 
+          >
+            {/* <center> */}
+            <img src={brainspk} style={{width: "5rem"}}></img>
+              Brainspk
+            
+            {/* </center> */}
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <p style={{fontWeight: "600", fontSize: "1.5rem"}}>The website deofswabi.com developed by brainspk(software company) and gifted to deofemale swabi "Miss Sofia Tabassum"
-            Special thanks to brainspk team for their work to make it possible.</p>
+        <Modal.Body style={{ backgroundColor: "black" ,color: "white" }} >
+          <ul>
+            <h5>
+            Welcome To DEO-Female-Swabi <br/>
+            This Website Is Gifted To Dr Mrs Sofia Tabassum By BrainsPk Software Company.
+            DEO-FEMALE-SWABI Maintain The Following Records:
+            </h5>
+            <li>
+              1: All Govt School Records.
+            </li>
+            <li>
+              2: Covid-19 Vaccination Record.
+            </li>
+            <li>
+              3: Budget Records.
+            </li>
+            <li>
+              4: Attendance Records.
+            </li>
+            <li>
+              5: Finance Records.
+            </li>
+            <li>
+              6: Important Files.
+            </li>
+            <li>
+              7: Education Related Downloadable PDF Forms.
+            </li>
+            <li>
+              8: Important Notification Related To Education.
+            </li>
+
+            This Website Is Developed By BrainsPk Software Company.
+            We Provide Modern-Technology Solutions In The Form Of Websites , Desktop & Mobile Applications.
+          </ul>
         </Modal.Body>
       </Modal>
       <div className="slider">
@@ -163,8 +204,8 @@ const Slider = () => {
                 <marquee
                   direction="up"
                   scrollamount="1"
-                  onmouseover= "this.stop();"
-                  onmouseout= "this.start();"
+                  onmouseover="this.stop();"
+                  onmouseout="this.start();"
                   style={{ height: "290px", textAlign: "justify" }}
                 >
                   <ul style={{ lineHeight: "36px" }}>

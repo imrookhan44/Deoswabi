@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import firebaseDb from "firebase";
 import { Tab, Tabs } from "react-bootstrap";
 import BudgetResult from "./BudgetResult";
-import ReactHTMLTableToExcel from "react-html-table-to-excel";
 import './school.css'
 
 const SchoolStatus = () => {
@@ -60,15 +59,7 @@ const SchoolStatus = () => {
                 })}
               </tbody>
             </table>
-            <ReactHTMLTableToExcel
-              id="table-to-xls"
-              className="download-table-xls-button"
-              table="table-to-xls"
-              filename="tablexls"
-              sheet="tablexls"
-              buttonText="Download in excel file"
-              
-            />
+           
           </div>
           <paki />
         </Tab>

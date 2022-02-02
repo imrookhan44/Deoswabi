@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import ContactForm from "./ContactForm"
 import firebaseDb from "firebase";
 import { auth, db } from "./../components/firebase"
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
+
 import './Contacts.css'
 const Contacts = () => {
     var [contactObjects, setContactObjects] = useState({})
@@ -88,7 +90,7 @@ const Contacts = () => {
                         console.log(err)
                     else
                         setCurrentId('')
-                        window.location.reload();
+                    window.location.reload();
                 }
             )
         }
@@ -166,6 +168,15 @@ const Contacts = () => {
 
                         </tbody>
                     </table>
+                    <ReactHTMLTableToExcel
+                        id="table-to-xls"
+                        className="download-table-xls-button"
+                        table="table-to-xls"
+                        filename="tablexls"
+                        sheet="tablexls"
+                        buttonText="Download in excel file"
+
+                    />
                 </div>
             </div>
         </div>

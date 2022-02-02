@@ -1,53 +1,61 @@
-.slider{
+.slider {
     margin-top: 0px;
-   position:relative;
-   height: 450px;
-   
-}
-.d-block{
     position: relative;
     height: 450px;
-    
+
 }
+
+.d-block {
+    position: relative;
+    height: 450px;
+
+}
+
 .buttonst {
-   
+
     /* display: flex;
     justify-content: space-evenly; */
     /* text-align: center; */
-   
-   
+
+
     margin-top: 30px !important;
 }
-.cardsfulldiv{
+
+.cardsfulldiv {
     /* border: solid black; */
-/* text-align: center; */
-    
-display: flex;
-justify-content: center;
+    /* text-align: center; */
+
+    display: flex;
+    justify-content: center;
 }
-#cardsfulldivrow{
+
+#cardsfulldivrow {
     margin: 0px !important;
-    
+
 
 }
-.carddivslider{
+
+.carddivslider {
     margin-top: 30px !important;
     /* display: flex; */
     justify-content: center;
-  
-   
+
+
 }
-.btngroupslider{
+
+.btngroupslider {
     width: 200px;
     height: 100px;
 }
-.cardtextsliderdiv{
+
+.cardtextsliderdiv {
     font-size: 12px;
     color: black;
     font-weight: 600;
     font-size: medium;
 }
-.quaidquotes{
+
+.quaidquotes {
     color: black;
     margin-top: 30px;
     padding-left: 30px;
@@ -56,56 +64,56 @@ justify-content: center;
     justify-content: center;
     font-size: large;
     font-weight: 600;
-    
+
 }
 
 
 .anno-header {
     color: black;
-    
+
     font-size: 18px;
-    border:  solid #0D6EFD;
+    border: solid #0D6EFD;
     padding: 10px;
     border-left: 5px solid #0D6EFD;
     border-radius: 10px;
- width:23rem;
+    width: 23rem;
 }
 
 
 .anno {
-    border:  solid #0D6EFD;
+    border: solid #0D6EFD;
     min-height: 300px;
-    padding:11px;
+    padding: 11px;
     border-radius: 5px;
-    width:23rem;
+    width: 23rem;
 }
 
 @media only screen and (max-width: 500px) {
 
 
-.anno, .anno-header
-{
-width:90% !important;
+    .anno,
+    .anno-header {
+        width: 90% !important;
 
-}
+    }
 
 }
 
 
 .buttondivinfo {
-   
- 
+
+
     display: flex;
-    justify-content:center;
+    justify-content: center;
 }
 
 
-.Anchor{
+.Anchor {
     /* border: 1px solid #e65858; */
     text-decoration: none;
-    
+
 }
 
-
-
-
+ul {
+    list-style-type: none;
+}

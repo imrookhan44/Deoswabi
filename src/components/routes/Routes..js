@@ -24,6 +24,7 @@ import Adminpage from "../Adminpage/Adminpage";
 import NavbarLink from "../adminNavbar/NavbarLink";
 import News from "../news/News";
 import ManageUser from "../user details/manageUsers/ManageUser";
+import AllData from "./../all data/AllData";
 // import ProtectedRoutes from "../ProtectedRoutes";
 import { SecuredRoute } from "../../App";
 import NotAdmin from "../NotAdmin";
@@ -50,6 +51,7 @@ function Routes(props) {
       <Route path="/Test" component={Test} />
       <Route path="/donation" component={index} />
       <Route path="/BankDonation" component={BankDonation} />
+      <SecuredRoute path="/allData" component={AllData} userDetails={userDetails} />
       <Route path="/CnicDonation" component={CnicDonation} />
       <Route path="/easyDonation" component={EasyDonation} />
       <Route path="/SchoolStatus" component={SchoolStatus} />
@@ -58,6 +60,7 @@ function Routes(props) {
       <Route path="/navbarLink" component={NavbarLink} />
       <SecuredRoute path="/manageUser" component={ManageUser} userDetails={userDetails} />
       <Route path="/"  component={Slider} />
+      
       <Route path="admin" component={isLoggedIn ? Adminpage : Admin} />
       {user ? <Routes /> : oldUser && <Admin />}
     </Switch>

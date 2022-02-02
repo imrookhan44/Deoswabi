@@ -58,12 +58,12 @@ export default function Home({ admin }) {
                   </Link>
                   <ul className="navbar-nav">
                     <li className="nav-item active">
-                      {!admin && (
+                    
                         <Link className="nav-link" to="/Home" id="first">
                           {" "}
                           Home{" "}
                         </Link>
-                      )}
+                    
                     </li>
                     <li className="nav-item">
                       {admin && (
@@ -106,7 +106,7 @@ export default function Home({ admin }) {
                     <li className="nav-item">
                       {admin && (
                         <Link className="nav-link" to="adminPage" id="sixth">
-                          Data Page
+                          School Status
                         </Link>
                       )}
                     </li>
@@ -135,24 +135,22 @@ export default function Home({ admin }) {
                         </Link>
                       )}
                     </li>
-                    {/* <li className="nav-item">
-                      {!admin && (
+                    <li className="nav-item">
+                      {admin && (
                         <Link
                           className="nav-link"
-                          to="admin"
+                          to="AllData"
                           id="second"
-                          onClick={() => {
-                            history.push("Admin");
-                          }}
+
                         >
-                          Admin
+                          All Data
                         </Link>
                       )}
-                    </li> */}
+                    </li>
                   </ul>
                   {auth?.currentUser?.uid && (
                     <NavDropdown
-                      title={auth?.currentUser?.email} className="Logout offset-6 mr-4"  >
+                      title={auth?.currentUser?.email} className="Logout offset-4"  >
 
                       <NavDropdown.Item
                         onClick={() => {
@@ -193,7 +191,7 @@ export default function Home({ admin }) {
                     Login
                   </NavDropdown.Item>
                 </NavDropdown> */}
-                <button on type="button" className="btn btn-primary me-2"
+                <button type="button" className="btn btn-primary me-2"
                   onClick={() => {
                     history.push("userDetails");
                   }}
