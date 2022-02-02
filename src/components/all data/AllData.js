@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import firebaseDb from "firebase";
 import SchoolBudgetForm from '../../School Status/SchoolBudgetForm';
 import ContactForm from '../../School Status/ContactForm';
+import './all.css'
 function AllData() {
 
     var [contactObjects, setContactObjects] = useState({})
@@ -64,7 +65,7 @@ function AllData() {
         <br/> */}
                 {/* <h2>Budget Data List</h2> */}
                 <br />
-                <div className="col-12 schoolbudgetformdiv p-4 " style={{ overflow: "auto" }} >
+                <div className="col-12  p-4 " style={{ overflow: "auto" }} >
                     <table className="table table-dark " >
                         <thead className="thead-light">
                             <tr>

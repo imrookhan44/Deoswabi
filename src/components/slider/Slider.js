@@ -32,29 +32,29 @@ const Slider = () => {
         show={show}
         onHide={() => setShow(false)}
         dialogClassName="modal-lg"
-        style={{ display: "flex", alignItems: "center"}}
+        style={{ display: "flex", alignItems: "center" }}
         aria-labelledby="contained-modal-title-vcenter"
         centered
 
       >
 
-        <Modal.Header style={{ backgroundColor: "black"}} >
-          <Modal.Title id="contained-modal-title-vcenter" 
-          style={{ textAlign: "center", justifyContent: "center", color: "white" }} 
+        <Modal.Header style={{ backgroundColor: "black" }} >
+          <Modal.Title id="contained-modal-title-vcenter"
+            style={{ textAlign: "center", justifyContent: "center", color: "white" }}
           >
             {/* <center> */}
-            <img src={brainspk} style={{width: "5rem"}}></img>
-              Brainspk
-            
+            <img src={brainspk} style={{ width: "5rem" }}></img>
+            Brainspk
+
             {/* </center> */}
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body style={{ backgroundColor: "black" ,color: "white" }} >
+        <Modal.Body style={{ backgroundColor: "black", color: "white" }} >
           <ul>
             <h5>
-            Welcome To DEO-Female-Swabi <br/>
-            This Website Is Gifted To Dr Mrs Sofia Tabassum By BrainsPk Software Company.
-            DEO-FEMALE-SWABI Maintain The Following Records:
+              Welcome To DEO-Female-Swabi <br />
+              This Website Is Gifted To Dr Mrs Sofia Tabassum By BrainsPk Software Company.
+              DEO-FEMALE-SWABI Maintain The Following Records:
             </h5>
             <li>
               1: All Govt School Records.
