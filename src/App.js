@@ -8,7 +8,7 @@ import Footer from "../src/components/footer/Footer";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import { db } from "./components/firebase";
 import ProtectedRoutes from "./components/ProtectedRoutes";
-
+import AllData from "./components/all data/AllData";
 const authentication = {
   isLoggedIn: false,
   onAuthentication() {
@@ -77,7 +77,7 @@ function App() {
       <Routes userDetails={userDetails} />
 
       <Footer />
-      {/* <ProtectedRoutes /> */}
+     {/* <AllData  /> */}
     </BrowserRouter>
   );
 }
