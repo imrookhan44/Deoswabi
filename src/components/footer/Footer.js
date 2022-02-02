@@ -16,13 +16,7 @@ const Footer = () => {
               className="fab fa-facebook fa-lg"
             ></a>
             &nbsp;
-            {/* <a
-              href="https://www.linkedin.com/in/brains-pk-77ba95191/"
-              style={{ color: "white", textDecorationColor: "white", textDecoration: "none" }}
-              target={"blank"}
-              className="fa fa-linkedin fa-lg"
-            ></a>
-            &nbsp;&nbsp; */}
+
             <a
               href="https://www.instagram.com/brainspk2021/"
               style={{ color: "white", textDecorationColor: "white", textDecoration: "none" }}
@@ -30,11 +24,7 @@ const Footer = () => {
               className="fab fa-instagram fa-lg">
             </a>
             &nbsp;&nbsp;
-            {/* <a
-              href="https://www.youtube.com/"
-              target={"blank"}
-              className="fa fa-youtube"
-            ></a> */}
+
             &nbsp;&nbsp;
           </div>
         </div>

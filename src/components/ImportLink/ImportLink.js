@@ -52,7 +52,7 @@ const ImportLink = () => {
   };
   return (
     <>
-      <div className="container" style={{border: "solid", marginTop: "1rem", marginLeft: "5.5rem"}}>
+      <div className="container" style={{ border: "solid", marginTop: "1rem", marginLeft: "5.5rem" }}>
         <div className="row p-5">
           <div className="col-md-5">
             <ContactForm {...{ addOrEdit, currentId, contactObjects }} />

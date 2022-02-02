@@ -202,6 +202,7 @@ export default function Home({ admin }) {
                     history.push("login");
                   }}
                 >Login</button>
+                
               </Navbar.Collapse>
             </Navbar>
           </div>
