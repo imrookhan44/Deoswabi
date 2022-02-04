@@ -51,7 +51,7 @@ const ImportLink = () => {
   };
   return (
     <>
-      <div className="container " style={{border: "solid", marginTop: "20px", marginLeft: "5.5rem"}}>
+      <div className="container " style={{ marginTop: "20px", marginLeft: "5.5rem"}}>
         
         <div className="row p-5">
           <div className="col-md-5">

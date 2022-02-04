@@ -56,7 +56,7 @@ function Routes(props) {
       <Route path="/easyDonation" component={EasyDonation} />
       <Route path="/SchoolStatus" component={SchoolStatus} />
       <Route path="/ImageUpload" component={ImageUpload} />
-      <SecuredRoute path="/importLink" component={ImportLink} userDetails={userDetails} />
+      <Route path="/importLink" component={ImportLink}  />
       <Route path="/navbarLink" component={NavbarLink} />
       <SecuredRoute path="/manageUser" component={ManageUser} userDetails={userDetails} />
       <Route path="/"  component={Slider} />
