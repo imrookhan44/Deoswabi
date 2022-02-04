@@ -61,7 +61,7 @@ const ImportLink = () => {
             <table className="table table-borderless table-stripped">
               <thead className="thead-light">
                 <tr>
-                  <th>Num</th>
+                  <th>Name</th>
 
                   <th>Link</th>
                   <th>Actions</th>
@@ -71,9 +71,9 @@ const ImportLink = () => {
                 {Object.keys(contactObjects).map((id) => {
                   return (
                     <tr key={id}>
-                      <td>{contactObjects[id].fullName}</td>
-
                       <td>{contactObjects[id].email}</td>
+
+                      <td>{contactObjects[id].address}</td>
                       <td>
                         <a
                           className="btn text-primary"
