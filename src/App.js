@@ -12,6 +12,8 @@ const authentication = {
   onAuthentication() {
     this.isLoggedIn = true
   },
+
+  
   getLogInStatus(userDetails) {
     // return auth?.currentUser?.uid;
     return userDetails?.admin;

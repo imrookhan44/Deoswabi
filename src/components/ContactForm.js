@@ -48,6 +48,18 @@ const ContactForm = (props) => {
             onChange={handleInputChange}
           />
         </div>
+        <div className="form-group input-group col-md-6 ">
+          {/* <div className="input-group-text">
+                         <i className="fas fa-envelope "></i>
+                        </div> */}
+          <input
+            className="form-control"
+            name="address"
+            style={{ marginTop: "25px" }}
+            value={values.address}
+            onChange={handleInputChange}
+          />
+        </div>
       </div>
 
       <div className="form-group mt-3">

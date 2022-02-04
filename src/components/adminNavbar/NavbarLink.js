@@ -39,9 +39,14 @@ function NavbarLink() {
               <table className="table table-borderLess table-stripped mt-4">
                 <thead className="thead-light">
                   <tr>
-                    {/* <th>Site Name</th> */}
 
-                    <th>Link</th>
+
+
+                  <th>Link</th>
+                    <th>Site Name</th>
+
+                    
+                    
                     {/* <th>Actions</th> */}
                   </tr>
                 </thead>
@@ -49,7 +54,7 @@ function NavbarLink() {
                   {Object.keys(contactObjects).map((id) => {
                     return (
                       <tr key={id}>
-                        {/* <td>{contactObjects[id].fullName}</td> */}
+                        <td>{contactObjects[id].address}</td>
 
                         <td>{contactObjects[id].email}</td>
                         <td></td>
