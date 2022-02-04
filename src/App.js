@@ -7,8 +7,6 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "../src/components/footer/Footer";
 import { BrowserRouter, Route, Redirect, HashRouter } from "react-router-dom";
 import { db } from "./components/firebase";
-import ProtectedRoutes from "./components/ProtectedRoutes";
-import AllData from "./components/all data/AllData";
 const authentication = {
   isLoggedIn: false,
   onAuthentication() {
