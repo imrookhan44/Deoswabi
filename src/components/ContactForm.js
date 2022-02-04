@@ -40,12 +40,15 @@ const ContactForm = (props) => {
           {/* <div className="input-group-text">
                          <i className="fas fa-envelope "></i>
                         </div> */}
+
+            
           <input
             className="form-control"
             name="email"
             style={{ marginTop: "25px" }}
             value={values.email}
             onChange={handleInputChange}
+            placeholder="Name"
           />
         </div>
         <div className="form-group input-group col-md-6 ">
@@ -58,6 +61,7 @@ const ContactForm = (props) => {
             style={{ marginTop: "25px" }}
             value={values.address}
             onChange={handleInputChange}
+            placeholder="Link"
           />
         </div>
       </div>
