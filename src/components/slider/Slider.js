@@ -38,7 +38,7 @@ const Slider = () => {
 
       >
 
-        <Modal.Header style={{ backgroundColor: "black" }} >
+        <Modal.Header style={{ backgroundColor: "grey" }} closeButton  >
           <Modal.Title id="contained-modal-title-vcenter"
             style={{ textAlign: "center", justifyContent: "center", color: "white" }}
           >
@@ -53,11 +53,11 @@ const Slider = () => {
           <ul>
             <h5>
               Welcome To DEO-Female-Swabi <br />
-              This Website Is Gifted To Dr Mrs Sofia Tabassum By BrainsPk Software Company.
+              This Website Is Gifted To Mrs Sofia Tabassum By BrainsPk Software Company.
               DEO-FEMALE-SWABI Maintain The Following Records:
             </h5>
             <li>
-              1: All Govt School Records.
+              1: Govt Girls School in District Swabi  Records.
             </li>
             <li>
               2: Covid-19 Vaccination Record.

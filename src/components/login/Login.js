@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import firebase from "firebase";
 import "./Login.css";
+import { useHistory } from "react-router-dom";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 toast.configure();
 
 function Login() {
+  let history = useHistory()
   const notify = () => {
     firebase
       .auth()
@@ -52,6 +54,9 @@ function Login() {
                 {" "}
                 <button
                   onClick={(signInHandler, notify)}
+
+                  // onClick = {()=> history.push("/")}
+                  
                   className="btn btn-primary mt-4"
                   id="button"
                 >

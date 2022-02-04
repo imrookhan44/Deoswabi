@@ -82,7 +82,7 @@ export default function Home({ admin }) {
                     <li className="nav-item">
                       {admin && (
                         <Link className="nav-link" to="ImageUpload" id="ten">
-                          Upload
+                          Download
                         </Link>
                       )}
                     </li>
@@ -155,6 +155,7 @@ export default function Home({ admin }) {
                       <NavDropdown.Item
                         onClick={() => {
                           auth?.signOut().then(res => console.log("sign out res ", res)).catch(e => console.error(e))
+                          history.push("/login")
                           console.log("signOut:", currentUser)
                           window.location.reload();
                         }}
