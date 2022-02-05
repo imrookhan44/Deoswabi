@@ -61,10 +61,10 @@ const ImportLink = () => {
             <table className="table table-borderless table-stripped">
               <thead className="thead-light">
                 <tr>
-                  <th>Name</th>
+                  {/* <th>Name</th> */}
 
                   <th>Link</th>
-                  <th>Actions</th>
+                  {/* <th>Actions</th> */}
                 </tr>
               </thead>
               <tbody>

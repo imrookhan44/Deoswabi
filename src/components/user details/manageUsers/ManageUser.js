@@ -16,8 +16,8 @@ function ManageUser() {
     // console.log("List2:", list);
   }, []);
   return (
-    <div className="container ms-5">
-      <div className="container ms-4 mt-5">
+   
+      <div className="container mt-5">
         <div className="row ">
           <div className="table-responsive">
             <table className="table">
@@ -91,7 +91,7 @@ function ManageUser() {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }
 

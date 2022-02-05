@@ -42,11 +42,11 @@ function NavbarLink() {
 
 
 
-                  <th>Link</th>
+                    <th>Link</th>
                     <th>Site Name</th>
 
-                    
-                    
+
+
                     {/* <th>Actions</th> */}
                   </tr>
                 </thead>
