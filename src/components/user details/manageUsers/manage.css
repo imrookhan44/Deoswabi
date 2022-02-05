@@ -1,13 +1,23 @@
-.table-responsive{
+.table-responsive {
     border: 1px solid #bbb9b9;
-    
+
+
 }
 
-@media screen and (max-width: 500px){
-    .table-responsive{
-    
+@media screen and (max-width: 500px) {
+    .table-responsive {
+
         margin-right: -5rem;
         /* width: 8rem; */
     }
-    
+
+}
+
+div.table-responsive{
+    width: revert;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }

@@ -176,7 +176,7 @@ const Slider = () => {
             <Card style={{ width: "18rem" }}>
               <Card.Img variant="top" src={image} />
               <Card.Body>
-                <Card.Title>DEO Female Swabi-Dr. Ms Sofia Tabassum</Card.Title>
+                <Card.Title>DEO Female Swabi Ms Sofia Tabassum</Card.Title>
                 <Card.Text className="cardtextsliderdiv">
                   <p>
                     Education is a fundamental human right. It is education,
