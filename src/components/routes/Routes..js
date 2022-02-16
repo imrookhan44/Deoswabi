@@ -49,7 +49,7 @@ function Routes(props) {
       <SecuredRoute path="/importLink" component={ImportLink} userDetails={userDetails} />
       <Route path="/attendance" component={Attendance} />
       <Route path="/navbarLink" component={NavbarLink} />
-      <Route path="/manageUser" component={ManageUser} userDetails={userDetails} />
+      <SecuredRoute path="/manageUser" component={ManageUser} userDetails={userDetails} />
       <Route path="/" component={Slider} />
       <Route path="admin" component={isLoggedIn ? Adminpage : Admin} />
       {user ? <Routes /> : oldUser && <Admin />}
