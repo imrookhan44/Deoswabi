@@ -8,7 +8,6 @@ import './school.css'
 const SchoolStatus = () => {
   var [contactObjects, setContactObjects] = useState({});
   var [currentId, setCurrentId] = useState("");
-
   useEffect(() => {
     firebaseDb
       .database()
@@ -20,18 +19,17 @@ const SchoolStatus = () => {
           });
         else setContactObjects({});
       });
-  }, []); // similar to componentDidMount
+  }, []);
   return (
     <div>
       <Tabs
-        defaultActiveKey="profile"
+        defaultActiveKey="home"
         id="uncontrolled-tab-example"
         className="mb-3"
       >
         <Tab eventKey="home" title="Covid-19">
           <div className="table-responsive ">
             <table className=" table table-dark " id="table-to-xls">
-              {/* <table class="table table-hover"> */}
               <thead>
                 <tr>
                   <th scope="col">#</th>
@@ -44,10 +42,10 @@ const SchoolStatus = () => {
                 </tr>
               </thead>
               <tbody>
-                {Object.keys(contactObjects).map((id) => {
+                {Object.keys(contactObjects).map((id, index) => {
                   return (
                     <tr key={id}>
-                      <td>{}</td>
+                      <td>{index + 1}</td>
                       <td>{contactObjects[id].schoolName}</td>
                       <td>{contactObjects[id].totalStudent}</td>
                       <td>{contactObjects[id].firstDoss}</td>
@@ -59,17 +57,15 @@ const SchoolStatus = () => {
                 })}
               </tbody>
             </table>
-           
+
           </div>
           <paki />
         </Tab>
         <Tab eventKey="profile" title="School Budget">
           <BudgetResult />
-          <paki />
+
         </Tab>
-        <Tab eventKey="contact" title="Daily Attendance">
-          <paki />
-        </Tab>
+
       </Tabs>
     </div>
   );

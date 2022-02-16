@@ -51,6 +51,7 @@ const User = () => {
         .createUserWithEmailAndPassword(email, password)
         .then((res) => {
           console.log("res ", res);
+          history.push("/");
         });
 
       console.log("RESULT CONST :", result);

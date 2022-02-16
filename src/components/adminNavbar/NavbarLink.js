@@ -23,11 +23,6 @@ function NavbarLink() {
         <div
           className="table mt-4"
           style={{
-            width: "50%",
-            border: "solid grey",
-            display: "flex",
-            justifyContent: "center",
-            margin: " auto",
             padding: "10px 10px 10px 10px",
           }}
         >
@@ -39,14 +34,8 @@ function NavbarLink() {
               <table className="table table-borderLess table-stripped mt-4">
                 <thead className="thead-light">
                   <tr>
-
-
-
-                    <th>Link</th>
                     <th>Site Name</th>
-
-
-
+                    <th>Link</th>
                     {/* <th>Actions</th> */}
                   </tr>
                 </thead>
@@ -54,9 +43,13 @@ function NavbarLink() {
                   {Object.keys(contactObjects).map((id) => {
                     return (
                       <tr key={id}>
-                        <td>{contactObjects[id].address}</td>
-
                         <td>{contactObjects[id].email}</td>
+                        <td>
+                          <a href={contactObjects[id].address} target="_blank">
+                            {contactObjects[id].address}
+                          </a>
+                          {/* {contactObjects[id].address}</td> */}
+                        </td>
                         <td></td>
                       </tr>
                     );

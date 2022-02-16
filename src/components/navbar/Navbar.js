@@ -5,30 +5,10 @@ import { useHistory } from "react-router-dom";
 import { auth, db } from "../firebase";
 import logo from "../../assets/images/apcalogo1.png";
 import { Navbar, NavDropdown } from "react-bootstrap";
-// import { auth } from "../firebase";
-import { BsThreeDotsVertical, RiAccountCircleFill } from "react-icons/all";
-
 export default function Home({ admin }) {
   console.log("admin:", admin);
   let history = useHistory();
   const [currentUser, setUserDetails] = useState(null);
-  // useEffect(() => {
-  //   if (auth?.currentUser?.email) {
-  //     console.log(" user ", auth?.currentUser?.email);
-  //     db.collection("clerksData")
-  //       .where("email", "==", auth?.currentUser?.email)
-  //       .get()
-  //       .then((res) => {
-  //         console.log("current user details", res.docs.map((item) => item.data()));
-  //         let user = res.docs.map((item) => item.data());
-  //         user = user[0];
-  //         setUserDetails(user);
-  //       })
-  //       .catch((e) => console.error(e));
-
-  //   }
-  //   // });
-  // }, []);
   return (
     <>
       <div className="container-fluid" id="Main">
@@ -58,22 +38,22 @@ export default function Home({ admin }) {
                   </Link>
                   <ul className="navbar-nav">
                     <li className="nav-item active">
-                    
-                        <Link className="nav-link" to="/Home" id="first">
-                          {" "}
-                          Home{" "}
-                        </Link>
-                    
+
+                      <Link className="nav-link" to="/Home" id="first">
+                        {" "}
+                        Home{" "}
+                      </Link>
+
                     </li>
                     <li className="nav-item">
                       {admin && (
                         <Link className="nav-link" to="importLink" id="ten">
-                          Links
+                          Upload Links
                         </Link>
                       )}
                     </li>
                     <li className="nav-item">
-                      {!admin && (
+                      {admin && (
                         <Link className="nav-link" to="navbarLink" id="ten">
                           Links
                         </Link>
@@ -82,18 +62,11 @@ export default function Home({ admin }) {
                     <li className="nav-item">
                       {admin && (
                         <Link className="nav-link" to="ImageUpload" id="ten">
-                          Download
+                          Upload Files
                         </Link>
                       )}
                     </li>
-                    <li className="nav-item"></li>
-                    {/* <li className="nav-item">
-                      {!admin && (
-                        <Link className="nav-link" to="userdetails" id="sixth">
-                          Registration
-                        </Link>
-                      )}
-                    </li> */}
+
                     <li className="nav-item">
 
 
@@ -118,7 +91,7 @@ export default function Home({ admin }) {
                       )}
                     </li>
                     <li className="nav-item">
-                      {!admin && (
+                      {admin && (
                         <Link className="nav-link" to="Download" id="ten">
                           Download
                         </Link>
@@ -147,10 +120,32 @@ export default function Home({ admin }) {
                         </Link>
                       )}
                     </li>
+                    <li className="nav-item">
+                      {admin && (
+                        <Link
+                          className="nav-link"
+                          to="attendance"
+                          id="second"
+                        >
+                          Attendance
+                        </Link>
+                      )}
+                    </li>
+                    <li className="nav-item">
+                      {!admin && (
+                        <Link
+                          className="nav-link"
+                          to="attendance1"
+                          id="second"
+                        >
+                          Attendance
+                        </Link>
+                      )}
+                    </li>
                   </ul>
                   {auth?.currentUser?.uid && (
                     <NavDropdown
-                      title={auth?.currentUser?.email} className="Logout offset-4"  >
+                      title={auth?.currentUser?.email} className="Logout"  >
 
                       <NavDropdown.Item
                         onClick={() => {
@@ -165,33 +160,7 @@ export default function Home({ admin }) {
                     </NavDropdown>
                   )}
                 </div>
-                {/* <NavDropdown
-                  className="nav "
-                  title={
-                    <span>
-                      <BsThreeDotsVertical />
-                    </span>
-                  }
-                  id="eleven"
-                >
-                  <NavDropdown.Item
-                  className="item"
-                    id="eleven"
-                    onClick={() => {
-                      history.push("userDetails");
-                    }}
-                  >
-                    Registration
-                  </NavDropdown.Item>
-                  <NavDropdown.Item
-                    id="eleven"
-                    onClick={() => {
-                      history.push("login");
-                    }}
-                  >
-                    Login
-                  </NavDropdown.Item>
-                </NavDropdown> */}
+
                 <button type="button" className="btn btn-primary me-2"
                   onClick={() => {
                     history.push("userDetails");
@@ -203,7 +172,7 @@ export default function Home({ admin }) {
                     history.push("login");
                   }}
                 >Login</button>
-                
+
               </Navbar.Collapse>
             </Navbar>
           </div>

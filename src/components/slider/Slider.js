@@ -110,7 +110,7 @@ const Slider = () => {
             <Carousel.Caption></Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-        <div className="row" id="cardsfulldivrow">
+        {/* <div className="row" id="cardsfulldivrow">
           <div className=" buttonst buttondivinfo ">
             <Button
               variant="danger"
@@ -145,7 +145,7 @@ const Slider = () => {
               Daily Attendance
             </Button>
           </div>
-        </div>
+        </div> */}
 
         <div className="row cardsfulldiv" id="cardsfulldivrow">
           <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 carddivslider">
