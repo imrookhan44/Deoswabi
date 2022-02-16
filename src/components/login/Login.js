@@ -15,6 +15,7 @@ function Login() {
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
         toast.success("Login Successfully");
+        history.push("/");
       })
       .catch((err) => {
         toast.error("Register First ");
