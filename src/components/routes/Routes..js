@@ -23,10 +23,11 @@ import NotAdmin from "../NotAdmin";
 import Attendance from "../attendance/Attendance";
 import Attendance1 from "../attendance/Attendance1";
 function Routes(props) {
+
+
   let { userDetails, isLoggedIn } = props;
   const [user] = useState();
   const [oldUser] = useState();
-
   return (
     <Switch>
       <Route path="/attendance1" component={Attendance1} />
@@ -47,7 +48,7 @@ function Routes(props) {
       <Route path="/SchoolStatus" component={SchoolStatus} />
       <SecuredRoute path="/ImageUpload" component={ImageUpload} userDetails={userDetails} />
       <SecuredRoute path="/importLink" component={ImportLink} userDetails={userDetails} />
-      <Route path="/attendance" component={Attendance} />
+      <SecuredRoute path="/attendance" component={Attendance} userDetails={userDetails} />
       <Route path="/navbarLink" component={NavbarLink} />
       <SecuredRoute path="/manageUser" component={ManageUser} userDetails={userDetails} />
       <Route path="/" component={Slider} />

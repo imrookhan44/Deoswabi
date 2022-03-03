@@ -1,7 +1,69 @@
-#btnbtn {
-  background-color: transparent;
-  border: 3px solid #0D6EFD;
-  color: #0D6EFD;
-  transition: .3s;
+.container-fluid-atted {
+  overflow: scroll !important;
+  height: 100vh;
 
+}
+
+body {
+  overflow: scroll;
+}
+
+.container-attend {
+  height: 90vh;
+  margin-top: 20px;
+}
+
+.row-attend {
+  /* height: 80vh; */
+  margin-top: 20px;
+  display: flex;
+}
+
+.left {
+  height: 50vh;
+  width: 10%;
+  display: flex;
+
+  align-items: center;
+}
+
+.center {
+  height: 50vh;
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  height: 50vh;
+  width: 50%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.inputat {
+  height: 50px;
+  width: 60%;
+  outline: none;
+  text-align: center;
+  border: solid rgb(104, 103, 103) 1px;
+
+}
+
+.input2 {
+  width: 80%;
+  border: solid 1px rgb(99, 98, 98);
+  outline: none;
+}
+
+#container {
+  /* height: 50vh; */
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.download-table-xls-button {
+  margin: 0px;
 }
