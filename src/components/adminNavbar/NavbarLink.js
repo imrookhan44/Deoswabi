@@ -34,15 +34,17 @@ function NavbarLink() {
               <table className="table table-borderLess table-stripped mt-4">
                 <thead className="thead-light">
                   <tr>
+                    <th>Numbers</th>
                     <th>Site Name</th>
                     <th>Link</th>
                     {/* <th>Actions</th> */}
                   </tr>
                 </thead>
                 <tbody>
-                  {Object.keys(contactObjects).map((id) => {
+                  {Object.keys(contactObjects).map((id, index) => {
                     return (
                       <tr key={id}>
+                        <td>{index + 1}</td>
                         <td>{contactObjects[id].email}</td>
                         <td>
                           <a href={contactObjects[id].address} target="_blank">

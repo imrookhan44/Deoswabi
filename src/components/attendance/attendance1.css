@@ -5,13 +5,21 @@
 }
 
 
-#nonTeaching{
+#nonTeaching {
     padding: 0 10px 0 10px;
     margin: 0 10px 0 10px;
 
 }
 
-#student{
+#student {
     padding: 0 10px 0 10px;
     margin: 0 10px 0 10px;
+}
+
+.row-attend {
+
+
+    padding: 0 10px 0 10px;
+    margin: 4px 10px 0 10px;
+
 }

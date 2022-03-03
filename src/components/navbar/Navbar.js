@@ -159,19 +159,24 @@ export default function Home({ admin }) {
                       </NavDropdown.Item>
                     </NavDropdown>
                   )}
+
+
+
+
+                  &nbsp;
+                  <button type="button" className="btn btn-primary me-2   "
+                    onClick={() => {
+                      history.push("userDetails");
+                    }}
+                  >Sign-up</button>&nbsp;
+                  <button type="button" className="btn btn-outline-primary me-2"
+
+                    onClick={() => {
+                      history.push("login");
+                    }}
+                  >Login</button>
                 </div>
 
-                <button type="button" className="btn btn-primary me-2"
-                  onClick={() => {
-                    history.push("userDetails");
-                  }}
-                >Sign-up</button>&nbsp;
-                <button type="button" className="btn btn-outline-primary me-2"
-
-                  onClick={() => {
-                    history.push("login");
-                  }}
-                >Login</button>
 
               </Navbar.Collapse>
             </Navbar>

@@ -1,9 +1,12 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 .nav-item {
-  font-weight: 500;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 10px;
 }
 
 #Main {
@@ -26,10 +29,13 @@
 .nav-item:hover {
   /* box-shadow: 0 0 10px 0 white inset, 0 0 20px 2px white; */
 
+  /* #FF5F5F */
 
+  background: #0D6EFD;
+  border: #0D6EFD solid 2px;
 
   /* color: #fff; */
-  border: 3px solid #0D6EFD;
+  /* border: 3px solid #0D6EFD;
   background-image: -webkit-linear-gradient(30deg, #0D6EFD 50%, transparent 50%);
   background-image: linear-gradient(30deg, #0D6EFD 50%, transparent 50%);
   background-size: 500px;
@@ -38,12 +44,10 @@
   -webkit-transition: background 700ms ease-in-out;
   transition: background 800ms ease-in-out;
   background-position: 100%;
-  color: #0D6EFD;
+  color: #0D6EFD; */
 }
 
-
-
-.Logout {
+nav-item .Logout {
   background-color: white;
   border-radius: 10px;
   margin: auto;
