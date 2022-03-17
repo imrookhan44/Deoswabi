@@ -4,6 +4,7 @@ import firebaseDb from "firebase";
 import BudgetData from "../../School Status/BugdetData";
 import Contacts from "../../School Status/Contacts";
 import { Table, Tab, Tabs } from 'react-bootstrap';
+import Pnd from "../../School Status/Pnd/Pnd";
 export default function Adminpage() {
   var [contactObjects, setContactObjects] = useState({})
   var [currentId, setCurrentId] = useState('')
@@ -52,6 +53,12 @@ export default function Adminpage() {
             <h2 className="Headinginadmin">Enter BudgetData</h2>
           </div>
           <BudgetData />
+        </Tab>
+        <Tab eventKey="PND" title="P & D">
+          <div className="text-center">
+            {/* <h2 className="Headinginadmin"></h2> */}
+          </div>
+          <Pnd />
         </Tab>
       </Tabs>
     </div>

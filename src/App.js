@@ -12,14 +12,11 @@ const authentication = {
   onAuthentication() {
     this.isLoggedIn = true
   },
-
-  
   getLogInStatus(userDetails) {
     // return auth?.currentUser?.uid;
     return userDetails?.admin;
   },
 };
-
 export function SecuredRoute(props) {
   let { userDetails } = props;
   // debugger
@@ -77,7 +74,7 @@ function App() {
       <Routes userDetails={userDetails} />
 
       <Footer />
-     {/* <AllData  /> */}
+      {/* <AllData  /> */}
     </HashRouter>
   );
 }

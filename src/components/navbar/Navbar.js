@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import { auth, db } from "../firebase";
 import logo from "../../assets/images/apcalogo1.png";
 import { Navbar, NavDropdown } from "react-bootstrap";
+import Navbar2 from "./Navbar2";
 export default function Home({ admin }) {
   console.log("admin:", admin);
   let history = useHistory();
@@ -12,6 +13,8 @@ export default function Home({ admin }) {
   return (
     <>
       <div className="container-fluid" id="Main">
+        <Navbar2 />
+
         <div className="row">
           <div className="col-lg-12 align-self-center">
             <Navbar collapseOnSelect expand="lg">
@@ -38,11 +41,12 @@ export default function Home({ admin }) {
                   </Link>
                   <ul className="navbar-nav">
                     <li className="nav-item active">
-
-                      <Link className="nav-link" to="/Home" id="first">
-                        {" "}
-                        Home{" "}
-                      </Link>
+                      {!admin && (
+                        <Link className="nav-link" to="/Home" id="first">
+                          {" "}
+                          Home{" "}
+                        </Link>
+                      )}
 
                     </li>
                     <li className="nav-item">
@@ -164,19 +168,20 @@ export default function Home({ admin }) {
 
 
                   &nbsp;
-                  <button type="button" className="btn btn-primary me-2   "
-                    onClick={() => {
-                      history.push("userDetails");
-                    }}
-                  >Sign-up</button>&nbsp;
-                  <button type="button" className="btn btn-outline-primary me-2"
+                  <div >
+                    <button type="button" className="btn btn-primary me-2   "
+                      onClick={() => {
+                        history.push("userDetails");
+                      }}
+                    >Sign-up</button>&nbsp;
+                    <button type="button" className="btn btn-outline-primary me-2"
 
-                    onClick={() => {
-                      history.push("login");
-                    }}
-                  >Login</button>
+                      onClick={() => {
+                        history.push("login");
+                      }}
+                    >Login</button>
+                  </div>
                 </div>
-
 
               </Navbar.Collapse>
             </Navbar>
