@@ -3,12 +3,16 @@ import { useHistory } from "react-router";
 import { Carousel, Button, Card, Modal, Row, Col } from "react-bootstrap";
 import "./slider.css";
 import image from "../../assets/images/forpic.png";
-import sliderone from "../../assets/images/sliderone.jpg";
-import slidertwo from "../../assets/images/slidertwo.jpg";
-import sliderthree from "../../assets/images/sliderthree.jpg";
+import sliderOne from "../../assets/images/sliderOne.jpg";
+import sliderTwo from "../../assets/images/slidertwo.jpg";
+import sliderThree from "../../assets/images/sliderThree.jpg";
 import shahram from "../../assets/images/shahram.jpeg";
 import firebaseDb from "firebase";
 import brainspk from './../../images/brainspkn.png'
+import slide1 from './../../assets/images/slide1.jpg'
+import slide2 from './../../assets/images/slide2.jpg'
+import slide3 from './../../assets/images/slide3.jpg'
+
 const Slider = () => {
   var [contactObjects, setContactObjects] = useState({});
 
@@ -89,12 +93,21 @@ const Slider = () => {
       <div className="slider">
         <Carousel>
           <Carousel.Item>
-            <img className="d-block w-100" alt="First slide" src={sliderone} />
+            <img
+              className="d-block w-100"
+              alt="Third slide"
+              src={slide1}
+            ></img>
+
+            <Carousel.Caption></Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" alt="First slide" src={sliderOne} />
             <Carousel.Caption>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100" src={slidertwo} alt="Second slide" />
+            <img className="d-block w-100" src={sliderTwo} alt="Second slide" />
 
             <Carousel.Caption>
 
@@ -104,11 +117,30 @@ const Slider = () => {
             <img
               className="d-block w-100"
               alt="Third slide"
-              src={sliderthree}
+              src={sliderThree}
             ></img>
 
             <Carousel.Caption></Carousel.Caption>
           </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              alt="Third slide"
+              src={slide2}
+            ></img>
+
+            <Carousel.Caption></Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              alt="Third slide"
+              src={slide3}
+            ></img>
+
+            <Carousel.Caption></Carousel.Caption>
+          </Carousel.Item>
+
         </Carousel>
         {/* <div className="row" id="cardsfulldivrow">
           <div className=" buttonst buttondivinfo ">

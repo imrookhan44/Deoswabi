@@ -1,16 +1,36 @@
-/* * {
+* {
   box-sizing: border-box;
-} */
+  padding: 0;
+  margin: 0;
+}
+
+.rowfirst {
+  color: white;
+  font-size: 30px;
+  font-family: 'KFGQPC Uthman Taha Naskh',
+    "KFGQPC_Naskh",
+    'traditional arabic';
+  font-weight: normal;
+  /* margin: 15px 0; */
+  text-align: center;
+  direction: rtl;
+}
+
+.rowfirst:hover {
+  color: #fec619;
+}
 
 .nav-item {
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   font-size: 16px;
-  line-height: 10px;
+  /* line-height: 10px; */
+
 }
 
 #Main {
-  background-color: #212529;
+  background-color: #003A6A;
+  height: 20vh;
 }
 
 #first,
@@ -27,24 +47,7 @@
 }
 
 .nav-item:hover {
-  /* box-shadow: 0 0 10px 0 white inset, 0 0 20px 2px white; */
-
-  /* #FF5F5F */
-
-  background: #0D6EFD;
-  border: #0D6EFD solid 2px;
-
-  /* color: #fff; */
-  /* border: 3px solid #0D6EFD;
-  background-image: -webkit-linear-gradient(30deg, #0D6EFD 50%, transparent 50%);
-  background-image: linear-gradient(30deg, #0D6EFD 50%, transparent 50%);
-  background-size: 500px;
-  background-repeat: no-repeat;
-  background-position: 0%;
-  -webkit-transition: background 700ms ease-in-out;
-  transition: background 800ms ease-in-out;
-  background-position: 100%;
-  color: #0D6EFD; */
+  border-bottom: solid 1px #fec619;
 }
 
 nav-item .Logout {

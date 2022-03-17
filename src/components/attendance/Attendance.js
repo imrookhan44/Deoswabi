@@ -412,7 +412,7 @@ function Attendance() {
 
 
 
-                        <Table className='max' id='max' responsive id="table-to-xls">
+                        <Table className='max' responsive id="table-to-xls">
 
                             <thead>
                                 <tr>
