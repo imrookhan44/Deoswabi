@@ -108,7 +108,7 @@ const Contacts = () => {
             <hr className="hrdivcontacts" />
             <br />
             <h2>Covid(19) Data List</h2>
-            <div className="col-12 tabledivcontacts "  >
+            <div className="tabledivcon tacts "  >
                 <div className="tablediv" style={{ overflow: "auto" }}>
                     <table className="table table-dark" id="table-to-xls"
                     >

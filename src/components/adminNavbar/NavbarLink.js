@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import firebaseDb from "firebase";
+import "./NavbarLink.css"
 
 function NavbarLink() {
   var [contactObjects, setContactObjects] = useState({});
@@ -18,10 +19,10 @@ function NavbarLink() {
       });
   }, []); // similar to componentDidMount
   return (
-    <div>
+    <div className="container-navbarlink">
       <>
         <div
-          className="table mt-4"
+          className="table"
           style={{
             padding: "10px 10px 10px 10px",
           }}

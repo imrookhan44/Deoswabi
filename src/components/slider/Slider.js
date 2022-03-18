@@ -3,9 +3,9 @@ import { useHistory } from "react-router";
 import { Carousel, Button, Card, Modal, Row, Col } from "react-bootstrap";
 import "./slider.css";
 import image from "../../assets/images/forpic.png";
-import sliderOne from "../../assets/images/sliderOne.jpg";
+import sliderOne from "../../assets/images/sliderone.jpg";
 import sliderTwo from "../../assets/images/slidertwo.jpg";
-import sliderThree from "../../assets/images/sliderThree.jpg";
+import sliderThree from "../../assets/images/sliderthree.jpg";
 import shahram from "../../assets/images/shahram.jpeg";
 import firebaseDb from "firebase";
 import brainspk from './../../images/brainspkn.png'
@@ -55,11 +55,11 @@ const Slider = () => {
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: "black", color: "white" }} >
           <ul>
-            <h5>
+            <h4 style={{fontSize:"18px"}}>
               Welcome To DEO-Female-Swabi <br />
               This Website Is Gifted To Mrs Sofia Tabassum By BrainsPk Software Company.
               DEO-FEMALE-SWABI Maintain The Following Records:
-            </h5>
+            </h4>
             <li>
               1: Govt Girls School in District Swabi  Records.
             </li>
@@ -179,9 +179,9 @@ const Slider = () => {
           </div>
         </div> */}
 
-        <div className="row cardsfulldiv" id="cardsfulldivrow">
+        <div style={{border:"2px solid"}} className="row cardsfulldiv" id="cardsfulldivrow">
           <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 carddivslider">
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "16 rem" }}>
               <Card.Img variant="top" src={shahram} />
               <Card.Body>
                 <Card.Title>
@@ -205,7 +205,7 @@ const Slider = () => {
           </div>
 
           <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 carddivslider">
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "16rem" }}>
               <Card.Img variant="top" src={image} />
               <Card.Body>
                 <Card.Title>DEO Female Swabi Ms Sofia Tabassum</Card.Title>

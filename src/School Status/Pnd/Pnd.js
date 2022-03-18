@@ -3,11 +3,11 @@ import './pnd.css'
 function Pnd() {
     return (
         <div>
-            <div className='container' style={{ marginLeft: "6rem" }}>
+            <div className='container-pnd' style={{ marginLeft: "1rem" }}>
                 <br />
                 <div className='pd'><h2>P & D</h2></div>
                 <div className='wise mt-2'>Class wise enrollment </div>
-                <div className='rows mt-4'>
+                <div className='rows-pnd mt-4 ms-2'>
                     <div className='col-2'>
                         <b>6th</b>
                         <input className="place" type="text" />

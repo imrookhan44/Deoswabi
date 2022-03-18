@@ -30,8 +30,10 @@
 }
 
 #cardsfulldivrow {
-    margin: 0px !important;
-
+    /* margin: 0px !important; */
+    border: 2px solid;
+    width: 97%;
+    margin-left: 22px;
 
 }
 
@@ -88,13 +90,138 @@
     width: 23rem;
 }
 
+@media only screen and (max-width: 1210px) {
+
+    .anno {
+        border: solid #0D6EFD;
+        min-height: 300px;
+        /* padding: 11px; */
+        border-radius: 5px;
+        width: 19rem;
+        margin-left: 50px;
+    }
+
+    .anno-header {
+        color: black;
+        font-size: 18px;
+        border: solid #0D6EFD;
+        padding: 10px;
+        border-left: 5px solid #0D6EFD;
+        border-radius: 10px;
+        width: 19rem;
+        margin-left: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 970px) {
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+        margin-left: 97px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+        margin-left: 30%;
+    }
+
+    .anno {
+        border: solid #0D6EFD;
+        min-height: 300px;
+        /* padding: 11px; */
+        border-radius: 5px;
+        width: 18rem;
+        margin-left: 58%;
+    }
+
+    .anno-header {
+        color: black;
+        font-size: 18px;
+        border: solid #0D6EFD;
+        padding: 10px;
+        border-left: 5px solid #0D6EFD;
+        border-radius: 10px;
+        width: 18rem;
+        margin-left: 58%;
+    }
+}
+@media only screen and (max-width: 580px) {
+
+    .anno {
+        border: solid #0D6EFD;
+        min-height: 300px;
+        /* padding: 11px; */
+        border-radius: 5px;
+        width: 18rem;
+        margin-left: 28%;
+    }
+
+    .anno-header {
+        color: black;
+        font-size: 18px;
+        border: solid #0D6EFD;
+        padding: 10px;
+        border-left: 5px solid #0D6EFD;
+        border-radius: 10px;
+        width: 18rem;
+        margin-left: 28%;
+    }
+
+}
+
 @media only screen and (max-width: 500px) {
 
+        
 
-    .anno,
+
+    .anno {
+        border: solid #0D6EFD;
+        min-height: 300px;
+        border-radius: 5px;
+        width: 17rem;
+        margin-left: 20%;
+    }
+
     .anno-header {
-        width: 90% !important;
+        color: black;
+        font-size: 18px;
+        border: solid #0D6EFD;
+        padding: 10px;
+        border-left: 5px solid #0D6EFD;
+        border-radius: 10px;
+        width: 17rem;
+        margin-left: 20%;
+    }
 
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+        margin-left: 21%;
     }
 
 }

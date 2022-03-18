@@ -61,10 +61,13 @@ const User = () => {
   };
 
   return (
-    <div className="userDetails mt-5">
-      <div className="row pt-4">
-        <div className="col-sm-12 col-lg-12 col-md-12 mt-1">
+    <div  className="userDetails mt-5">
+      <div  className="row-reg pt-4 ">
+        <div className=" col-reg">
+          <div className="textreg">
           <h3 className=" offset-4 userdetailtext">Registration</h3>
+          </div>
+          <br />
           <form
             onSubmit={submit}
             autoComplete=""
@@ -116,6 +119,8 @@ const User = () => {
               className="form-control1"
               onChange={(e) => setEmisCode(e.target.value)}
             />
+            <br />
+            
             <div className="submitbtnuser">
               <button
                 className="  controlbutton "

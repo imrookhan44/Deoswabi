@@ -113,30 +113,36 @@ class HrUpload extends Component {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
+
     };
 
     return (
 
 
 
-      <div className="container-fluid">
-        <div className="row" >
-          <div className="col-12">
+      <div  className="container-fluid">
+        <div  className="row" >
+          <div className="uploadfile">
+          <div className="col-uploadfile" >
 
             <div style={style}>
-              <div className="ab" style={{}}></div>
+              <div className="ab"></div>
               <input
+              className="btninput"
                 type="file"
                 onChange={this.handleChange}
-                style={{ height: "100px" }}
               />
-              <label>file name</label>
-              <input type="text" onChange={(e) => this.handleInputChange(e)} />
               <br />
-              <button onClick={this.handleUpload}>Upload</button>
+              <label>file name</label>
+              <input className="inputfname" type="text" onChange={(e) => this.handleInputChange(e)} />
+              <br />
+              <button className="btn btn-primary" onClick={this.handleUpload}>Upload</button>
+              <br />
               <progress value={this.state.progress} max="100" />
             </div>
           </div>
+          </div>
+          
           <hr />
 
           <div className="container-fluid">

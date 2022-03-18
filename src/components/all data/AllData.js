@@ -57,15 +57,17 @@ function AllData() {
     }
     return (
         <div>
-            <div className="row p-2"  >
+            <div className="row-alldata p-2"  >
                 {/* <div className="col-md-4 col-sm-12 col-xs-12" > */}
                 <ContactForm {...({ addOrEdit, currentId, contactObjects })} />
                 {/* </div> */}
                 {/* <hr/>
         <br/> */}
                 {/* <h2>Budget Data List</h2> */}
+                </div>
                 <br />
-                <div className="col-12  p-4 " style={{ overflow: "auto" }} >
+                <div className='row-alldata1' >
+                <div className="" style={{ overflow: "auto" }} >
                     <table className="table table-dark " >
                         <thead className="thead-light">
                             <tr>
@@ -106,6 +108,9 @@ function AllData() {
 
                 </div>
             </div>
+            <br />
+            <br />
+            <br />
         </div>
 
     )

@@ -6,8 +6,15 @@
 
 }
 
-
-
+.btninput {
+ 
+  height: 34px;
+  width: 101px;
+}
+.inputfname{
+  border: 1px solid gray;
+  outline: none;
+}
 
 .download {
 
@@ -44,4 +51,16 @@
 #uncontrolled-tab-example {
   text-align: center;
   color: red;
+}
+
+.uploadfile{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.col-uploadfile{
+  background-color: rgb(223, 226, 225);
+  box-shadow: 2px 2px 20px 0px;
+  width: 20rem;
 }

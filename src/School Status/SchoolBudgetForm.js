@@ -37,7 +37,7 @@ const SchoolBudgetForm = (props) => {
     
 
     return (
-        <div className="contactformfulldiv " style={{padding:'20px'}}>
+        <div className="contactformfulldiv ">
         <form autoComplete="off" onSubmit={handleFormSubmit} className="contactformfulldivform" >
             <div className="form-row">
             

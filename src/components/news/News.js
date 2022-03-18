@@ -51,12 +51,12 @@ const ImportLink = () => {
   };
   return (
     <>
-      <div className="container " style={{ marginTop: "20px", marginLeft: "5.5rem"}}>
+      <div className="container-news">
         
-        <div className="row p-5">
-          <div className="col-md-5">
+      <div className="row-importlink1 p-2">
             <ContactForm {...{ addOrEdit, currentId, contactObjects }} />
           </div>
+          <div className="row-importlink2 ms-2 mt-2 ">
           <div className="col-md-7">
             <table className="table table-borderLess table-stripped">
               <thead className="thead-light">

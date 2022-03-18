@@ -168,8 +168,8 @@ export default function Home({ admin }) {
 
 
                   &nbsp;
-                  <div >
-                    <button type="button" className="btn btn-primary me-2   "
+                  <div className="logaandSign" >
+                    <button type="button" className="btn btn-primary me-2"
                       onClick={() => {
                         history.push("userDetails");
                       }}

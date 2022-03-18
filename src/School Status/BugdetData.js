@@ -68,7 +68,7 @@ const BudgetData = () => {
                 <br/>
                 <h2>Budget Data List</h2>
                 <br/>
-                <div className="col-12 schoolbudgetformdiv " style={{overflow: "auto"}} >
+                <div className=" schoolbudgetformdiv " style={{overflow: "auto"}} >
                     <table className="table table-dark " >
                         <thead className="thead-light">
                             <tr>

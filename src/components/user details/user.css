@@ -1,30 +1,15 @@
-/* .apca {
-  width: 300px;
 
-  height: 400px;
-  float: right;
-
-  padding-top: 100px;
-} */
-
-.userdivform {
-  /* width: 260px; */
-  /* margin-right: 100px */
-}
 .submitbtnuser {
   display: flex;
   justify-content: center;
-  /* border: solid red; */
 }
 #bTN {
   background-color: black;
   color: white;
-  /* border: 1px solid #4CAF50; */
   border-radius: 20px;
   font-size: 15px;
   width: 70px;
   height: 40px;
-  /* transition-duration: 0.4s; */
 }
 #bTN:active {
   background-color: #3e8e41;
@@ -33,13 +18,14 @@
 }
 
 #bTN:hover {
-  /* background-color: #4CAF50; Green */
-  /* color: white; */
-  /* font-size: 27px; */
+
   box-shadow: 1px 2px 10px 2px rgb(61, 58, 58);
 }
+
 .userdetailtext {
   font-weight: bold;
+  margin-top: -20px;
+  padding-top: 8px;
 }
 
 .form-control1 {
@@ -51,34 +37,59 @@
   margin-bottom: 15px;
   border: none;
   border-bottom: 2px solid lightgrey;
-  /* border: solid black 1px; */
   border-radius: 20px;
   padding-left: 25px;
 }
 
 .form-control1:hover {
-  /* box-shadow: royalblue; */
   border: solid black 1px;
 }
+.userDetails{
+  /* border: 2px solid; */
+    height: 65vh;
+    width: 400px;
+}
+
+.row-reg{
+  /* border: 2px solid red; */
+    width: 100%;
+    margin-left: 0px;
+}
+
+.col-reg{
+  /* border: 2px solid green; */
+  width: 84%;
+}
+
+.textreg{
+  background-color: #000000;
+  color: aliceblue;
+  height: 50px;
+  width: 400px;
+}
+
 .userDetails {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  box-shadow: rgba(124, 124, 235, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.5) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.5) 0px -2px 6px 0px inset;
-  width: 420px;
-  height: 28rem;
-  margin-left: 33rem;
-  padding-right: 100px;
-  /* margin-bottom: 60px; */
-  /* border-radius: 20px !important; */
-  /* border: black 1px solid; */
+  /* width: 420px; */
+  /* height: 28rem; */
+  margin-left: 33%;
+  
 }
 
 @media screen and (max-width: 768px) {
   .userDetails {
     width: 50%;
-    border: solid;
+    /* border: solid; */
     height: 55vh;
     margin: auto;
+  }
+  .textreg{
+    background-color: #000000;
+    color: aliceblue;
+    height: 50px;
+    width: 119%;
   }
 }
 @media screen and(max-width:990) {
@@ -93,7 +104,7 @@
 }
 @media only screen and (max-width: 399px) {
   .userDetails {
-    width: 350px;
+    width: 90%;
   }
   .form {
     margin-right: 10px;

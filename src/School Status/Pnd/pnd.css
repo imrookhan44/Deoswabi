@@ -6,7 +6,7 @@
 
 }
 
-.container {
+.container-pnd {
     background-color: #4473c5;
     height: 58rem;
 
@@ -40,10 +40,10 @@
     justify-content: center;
 }
 
-.rows {
+.rows-pnd {
     display: flex;
-    width: 40rem;
-    margin-left: 15%;
+    width: 90%;
+
 
 
 
@@ -84,7 +84,7 @@ b {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px !important;
+    /* font-size: 15px */
 }
 
 .wall {
