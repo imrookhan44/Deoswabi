@@ -38,9 +38,9 @@ const ContactForm = (props) => {
 
 
     return (
-        <div className="contactformfulldiv">
+        <div className="contactformfulldiv2">
             <form autoComplete="off" onSubmit={handleFormSubmit} className=" contactformfulldivform">
-                <div className="form">
+                <div  className="form">
 
                     <div className="form-group input-group ">
 
