@@ -13,25 +13,18 @@
 
 .buttonst {
 
-    /* display: flex;
-    justify-content: space-evenly; */
-    /* text-align: center; */
-
-
     margin-top: 30px !important;
 }
 
 .cardsfulldiv {
-    /* border: solid black; */
-    /* text-align: center; */
+
 
     display: flex;
     justify-content: center;
 }
 
 #cardsfulldivrow {
-    /* margin: 0px !important; */
-    border: 2px solid;
+    
     width: 97%;
     margin-left: 22px;
 
@@ -39,7 +32,6 @@
 
 .carddivslider {
     margin-top: 30px !important;
-    /* display: flex; */
     justify-content: center;
 
 
@@ -95,7 +87,6 @@
     .anno {
         border: solid #0D6EFD;
         min-height: 300px;
-        /* padding: 11px; */
         border-radius: 5px;
         width: 19rem;
         margin-left: 50px;
@@ -146,7 +137,6 @@
     .anno {
         border: solid #0D6EFD;
         min-height: 300px;
-        /* padding: 11px; */
         border-radius: 5px;
         width: 18rem;
         margin-left: 58%;
@@ -168,7 +158,6 @@
     .anno {
         border: solid #0D6EFD;
         min-height: 300px;
-        /* padding: 11px; */
         border-radius: 5px;
         width: 18rem;
         margin-left: 28%;
@@ -236,7 +225,6 @@
 
 
 .Anchor {
-    /* border: 1px solid #e65858; */
     text-decoration: none;
 
 }

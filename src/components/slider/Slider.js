@@ -142,46 +142,10 @@ const Slider = () => {
           </Carousel.Item>
 
         </Carousel>
-        {/* <div className="row" id="cardsfulldivrow">
-          <div className=" buttonst buttondivinfo ">
-            <Button
-              variant="danger"
-              size="lg"
-              onClick={() => {
-                history.push("/SchoolStatus");
-              }}
-              className="btngroupslider col-lg-3 col-md-3 col-sm-12 col-xs-12"
-            >
-              Covid(19) Data
-            </Button>
-            &nbsp;
-            <Button
-              variant="primary"
-              size="lg"
-              onClick={() => {
-                history.push("/SchoolStatus");
-              }}
-              className="btngroupslider col-lg-3 col-md-3 col-sm-12 col-xs-12"
-            >
-              School Budget Data
-            </Button>
-            &nbsp;
-            <Button
-              variant="warning"
-              size="lg"
-              className="btngroupslider col-lg-3 col-md-3 col-sm-12 col-xs-12"
-              onClick={() => {
-                history.push("/SchoolStatus");
-              }}
-            >
-              Daily Attendance
-            </Button>
-          </div>
-        </div> */}
-
-        <div style={{border:"2px solid"}} className="row cardsfulldiv" id="cardsfulldivrow">
+      
+        <div className="row cardsfulldiv" id="cardsfulldivrow">
           <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 carddivslider">
-            <Card style={{ width: "16 rem" }}>
+            <Card style={{ width: "16rem"}}>
               <Card.Img variant="top" src={shahram} />
               <Card.Body>
                 <Card.Title>
@@ -199,7 +163,6 @@ const Slider = () => {
                   social media threads which will automatically be updated as
                   soon as we tweet and send Facebook posts.
                 </Card.Text>
-                {/* <Button variant="success">Details</Button> */}
               </Card.Body>
             </Card>
           </div>

@@ -34,7 +34,7 @@ export default function Home({ admin }) {
                 >
                   <Link className="navbar-brand" to="/">
                     <img
-                      style={{ height: "45px", width: "45px" }}
+                      style={{ height: "80px", width: "80px" }}
                       src={logo}
                       alt="logo"
                     />
@@ -168,13 +168,13 @@ export default function Home({ admin }) {
 
 
                   &nbsp;
-                  <div className="logaandSign" >
-                    <button type="button" className="btn btn-primary me-2"
+                  <div  style={{width:"50%"}} className="logaandSign" >
+                    <button style={{width:"45%",font:"15px"}} type="button" className="btn btn-primary me-2"
                       onClick={() => {
                         history.push("userDetails");
                       }}
                     >Sign-up</button>&nbsp;
-                    <button type="button" className="btn btn-outline-primary me-2"
+                    <button style={{width:"50%"}} type="button" className="btn btn-outline-primary me-2"
 
                       onClick={() => {
                         history.push("login");
