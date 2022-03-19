@@ -2,9 +2,31 @@
     margin-top: 10px;
    border: 1px solid black;
    border-radius: 10px;
-   
     display: flex;
     justify-content: center;
+}
+
+
+.contactformfulldiv{
+    padding: 20px;
+    background-color: rgb(223, 226, 225);
+    border: none;
+    box-shadow: 5px 5px 10px 3px;
+    width: 60%;
+    margin-left: 20%;
+
+
+}
+
+
+.contactformfulldiv2{
+  padding: 20px;
+  background-color: rgb(223, 226, 225);
+  border: none;
+  box-shadow: 5px 5px 10px 3px;
+  width: 80%;
+  margin-left: 10%;
+  outline: none;
 }
 .contactformfulldivform{
  margin-top: 20px;
@@ -40,17 +62,34 @@
         box-shadow: 5px 5px 10px 3px;
         width: 60%;
         margin-left: 24%;
+
     }
+    
+  .contactformfulldiv2{
+    padding: 20px;
+    background-color: rgb(223, 226, 225);
+    border: none;
+    box-shadow: 5px 5px 10px 3px;
+    width: 50%;
+    margin-left: 25%;
+  outline: none;
+
   }
 
-  .contactformfulldiv{
-      padding: 20px;
-      background-color: rgb(223, 226, 225);
-      border: none;
-      box-shadow: 5px 5px 10px 3px;
-      width: 60%;
-      margin-left: 20%;
+  }
 
+  @media screen and  (max-width: 580px) {
+    
+    
+  .contactformfulldiv2{
+    padding: 20px;
+    background-color: rgb(223, 226, 225);
+    border: none;
+    box-shadow: 5px 5px 10px 3px;
+    width: 100%;
+    margin-left: 0%;
+  outline: none;
 
   }
 
+  }

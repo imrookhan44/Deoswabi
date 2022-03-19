@@ -138,14 +138,14 @@ function Attendance() {
                         <div className='row-attend'>
 
 
-                            <div className='col-3 left'>
+                            <div className=' left'>
                                 <input className='inputat' type="number" placeholder='EMIS Code'
                                     name='emisCode'
                                     value={emisCode}
                                     onChange={(e) => setEmisCode(e.target.value)}
                                 />
                             </div>
-                            <div className='col-6 center'>
+                            <div className='center'>
                                 <Table>
                                     <thead>
                                         <tr>
@@ -257,7 +257,7 @@ function Attendance() {
                                             /></td>
                                         </tr>
                                     </tbody>
-                                    <button className='btn btn-primary mt-1 ' type='submit'
+                                    <button className='btnatt mt-1 ' type='submit'
                                         onClick={(e) => addData(e)}
                                     >Submit</button>
                                 </Table>
@@ -265,7 +265,7 @@ function Attendance() {
                             </div>
 
 
-                            <div className='col-3 right'>
+                            <div className=' right'>
                                 <input className='inputat' placeholder='Date/Time'
                                     value={date44}
                                     // onChange={(e) => setDate44(e.target.value)}
