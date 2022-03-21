@@ -1,10 +1,13 @@
 .alldivs{
   text-align: center;
 }
-.Headinginadmin{
+.Headinginadmin {
   font-weight: bold;
   color: goldenrod;
+  background-color: #212529;
   font-family: 'Mochiy Pop P One', sans-serif;
+  height: 66px;
+  padding: 12px;
 }
 .alldivs{
   overflow: scroll;

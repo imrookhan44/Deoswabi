@@ -2,11 +2,24 @@
   box-shadow: 2px 4px 17px 3px grey;
   border-radius: 20px;
   height: 360px;
-  width: 500px;
+  width: 330px;
   margin: auto;
 }
 .Checkbox {
   font: menu;
+}
+
+#inputs{
+  border: 1px solid #bbb9b9;
+    outline: none;
+    border-width: 0px 0px 1px 0;
+    width: 180px;
+    margin-left: -43px;
+}
+
+#buttons{
+  margin-left: -18px;
+    width: 75px;
 }
 /* .Anchor {
   text-decoration: none;
@@ -18,11 +31,11 @@
   width: 150px;
 } */
 .admin {
-  margin-left: 30px;
+  margin-left: 0px;
 }
 @media screen and (max-width: 580px) {
   #LoginForm {
-    width: auto;
+    /* width: ;  */
   }
 }
 @media screen and (max-width: 400px) {

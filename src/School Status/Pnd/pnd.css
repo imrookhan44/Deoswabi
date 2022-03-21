@@ -94,7 +94,7 @@ b {
 .checkbox {
     background-color: aliceblue;
     height: 100%;
-    width: 100%;
+    width: 40%;
     margin-left: 5px;
 }
 
@@ -111,7 +111,7 @@ b {
     height: 233px;
     margin-top: 20px;
     width: 24%;
-    margin-left: 100px;
+    margin-left: 60px;
 }
 
 .h51 {
@@ -268,6 +268,168 @@ b {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .abc {
+        display: flex;
+    }
+
+    .row3 {
+        display: flex;
+    }
+
+    .row4 {
+        display: flex;
+    }
+
+    .row5 {
+        display: flex;
+    }
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 435px) {
+    .container-fluid {
+        background-color: white;
+        height: 100%;
+    }
+
+    .container {
+        background-color: #4473c5;
+        height: 100%;
+    }
+
+    .pd {
+        background-color: #70ad47;
+        height: 60px;
+        border: solid white;
+        border-radius: 10px;
+        width: 50%;
+        font-size: 40px;
+        text-align: center;
+        margin-left: 25%;
+    }
+
+    .wise {
+
+        background-color: #fec619;
+        color: white;
+        height: 37px;
+        border-radius: 10px;
+        width: 40%;
+        font-size: 12px;
+        text-align: center;
+        margin-left: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .row1 {
+        display: flex;
+        /* margin-left: -10px; */
+        /* margin-right: 10px; */
+    }
+
+    .col-2 {
+        display: flex;
+        width: 15%;
+    }
+
+    .place {
+        width: 50%;
+        height: 30px;
+        margin-top: 5px;
+        font-size: 8px;
+    }
+
+    b {
+        background-color: #fec619;
+        height: 40px;
+        width: 50%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+
+    }
+
+    h6 {
+        background-color: #fec619;
+        color: white;
+        height: 40px;
+        border-radius: 10px;
+        width: 40%;
+        font-size: 8px;
+        text-align: center;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .wall {
+        display: flex;
+    }
+
+    .checkbox {
+        background-color: aliceblue;
+        height: 100%;
+        width: 63%;
+        margin-left: 5px;
+        font-size: 9px;
+    }
+
+    .row2 {
+        display: flex;
+    }
+
+    .time {
+        background-color: white;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        height: 233px;
+        margin-top: 20px;
+        width: 42%;
+        margin-left: 29px;
+    }
+
+    h5 {
+        background-color: #fec619;
+        color: white;
+        height: 50px;
+        border-radius: 10px;
+        width: 30%;
+        font-size: 8px;
+        text-align: center;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .h61 {
+        background-color: #fec619;
+        color: white;
+        height: 29px;
+        border-radius: 10px;
+        width: 35%;
+        font-size: 8px;
+        text-align: center;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* font-size: 15px; */
     }
 
     .abc {

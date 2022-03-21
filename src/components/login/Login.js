@@ -59,7 +59,7 @@ function Login() {
                   // onClick = {()=> history.push("/")}
                   
                   className="btn btn-primary mt-4"
-                  id="button"
+                  id="buttons"
                 >
                   Login
                 </button>{" "}
@@ -72,6 +72,8 @@ function Login() {
           </div>
         </div>
       </div>
+      <br />
+      <br />
     </div>
   );
 }
