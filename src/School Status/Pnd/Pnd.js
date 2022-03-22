@@ -9,43 +9,43 @@ function Pnd() {
                 <div className='wise mt-2'>Class wise enrollment </div>
                 <div className='rows-pnd mt-4 ms-2'>
                     <div className='col-2'>
-                        <b>6th</b>
+                        <b className='bb'>6th</b>
                         <input className="place" type="text" />
                     </div>
                     <div className='col-2'>
-                        <b >7th</b>
-                        <input className="place" type="text" />
-
-                    </div>
-                    <div className='col-2'>
-                        <b>8th</b>
+                        <b className='bb' >7th</b>
                         <input className="place" type="text" />
 
                     </div>
                     <div className='col-2'>
-                        <b>9th</b>
+                        <b className='bb'>8th</b>
                         <input className="place" type="text" />
 
                     </div>
                     <div className='col-2'>
-                        <b>10th</b>
+                        <b className='bb'>9th</b>
                         <input className="place" type="text" />
 
                     </div>
                     <div className='col-2'>
-                        <b>11th</b>
+                        <b className='bb'>10th</b>
                         <input className="place" type="text" />
 
                     </div>
                     <div className='col-2'>
-                        <b>12th</b></div>
+                        <b className='bb'>11th</b>
+                        <input className="place" type="text" />
+
+                    </div>
+                    <div className='col-2'>
+                        <b className='bb'>12th</b></div>
 
                 </div>
 
                 <div className='row2 mt-4'>
                     <div className='col-6'>
                         <div className='wall'>
-                            < h6 className='h61'>Boundary wall</ h6>
+                            <h6 className='h61'>Boundary wall</ h6>
                             <div className='checkbox'>
                                 <div className="form-group form-check ms-2 mt-2">
                                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />

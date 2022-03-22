@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import firebase from "firebase";
 import "./Login.css";
 import { useHistory } from "react-router-dom";
-
+import apcalogo from "../../assets/images/apcalogo.png"
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 toast.configure();
@@ -35,7 +35,10 @@ function Login() {
         <div className=" mt-5  " id="LoginForm">
           <div className="row ">
             <div className=" col-5 offset-4 ">
-              <h3 className="admin mt-5">Login</h3>
+              <div className="loginheader">
+              <img className="loginimge1" src={apcalogo} />
+              <h3 className="admin1 mt-2">LOGIN</h3>
+              </div>
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"

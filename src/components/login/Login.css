@@ -4,6 +4,7 @@
   height: 360px;
   width: 330px;
   margin: auto;
+  background-image: url(../../assets/images/regimage.jpg);
 }
 .Checkbox {
   font: menu;
@@ -15,32 +16,42 @@
     border-width: 0px 0px 1px 0;
     width: 180px;
     margin-left: -43px;
+    background-color: rgba(255, 255, 255, 0);
+    
+    
 }
+::placeholder{
+  color: aliceblue;
+}
+
 
 #buttons{
   margin-left: -18px;
     width: 75px;
 }
-/* .Anchor {
-  text-decoration: none;
+.loginheader{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -31px;
+  }
+
+.loginimge1{
+  height: 100px;
+    margin-top: 16px;
+    width: 100px;
 }
-.form-controls1 {
-  border: 1px solid #bbb9b9;
-  outline: none;
-  border-width: 0px 0px 1px 0;
-  width: 150px;
-} */
-.admin {
+.admin1{
   margin-left: 0px;
+  font-weight: bold;
 }
 @media screen and (max-width: 580px) {
   #LoginForm {
-    /* width: ;  */
   }
 }
 @media screen and (max-width: 400px) {
   #inputs {
-    /* border: black solid; */
     width: auto;
   }
 }
@@ -48,13 +59,9 @@
   height: 40px;
   display: flex;
   justify-content: center;
-
   animation-name: sample;
   animation-duration: 2s;
-  /* -o-animation-direction: alternate; */
   animation-iteration-count: infinite;
-  /* animation-delay: 2s; */
-  /* animation-timing-function: cubic-bezier(0.1, 0.4, 1.0, 0.1) ; */
   width: 700px;
 }
 

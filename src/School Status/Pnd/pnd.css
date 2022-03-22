@@ -60,7 +60,7 @@
     margin-top: 5px;
 }
 
-b {
+.bb{
     background-color: #fec619;
     height: 40px;
     width: 50%;
@@ -202,7 +202,7 @@ b {
         font-size: 8px;
     }
 
-    b {
+    .bb{
         background-color: #fec619;
         height: 40px;
         width: 50%;
@@ -214,7 +214,7 @@ b {
 
     }
 
-    h6 {
+    /* h6 {
         background-color: #fec619;
         color: white;
         height: 40px;
@@ -226,7 +226,7 @@ b {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
+    } */
 
     .wall {
         display: flex;
@@ -349,7 +349,7 @@ b {
         font-size: 8px;
     }
 
-    b {
+    .bb{
         background-color: #fec619;
         height: 40px;
         width: 50%;
@@ -361,7 +361,7 @@ b {
 
     }
 
-    h6 {
+    /* h6 {
         background-color: #fec619;
         color: white;
         height: 40px;
@@ -373,7 +373,7 @@ b {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
+    } */
 
     .wall {
         display: flex;
