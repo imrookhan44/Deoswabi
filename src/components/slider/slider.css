@@ -24,9 +24,11 @@
 }
 
 #cardsfulldivrow {
-    
-    width: 97%;
-    margin-left: 22px;
+    width: 103%;
+    background-image: url(../../assets/images/apca.jpg);
+    background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
 
 }
 

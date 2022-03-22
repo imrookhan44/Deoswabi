@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ContactForm from "../ContactForm";
+import "./News.css"
 import firebaseDb from "firebase";
 const ImportLink = () => {
   var [contactObjects, setContactObjects] = useState({});
@@ -56,7 +57,7 @@ const ImportLink = () => {
       <div className="row-importlink1 p-2">
             <ContactForm {...{ addOrEdit, currentId, contactObjects }} />
           </div>
-          <div className="row-importlink2 ms-2 mt-2 ">
+          <div className="rowimportlink2 ms-2 mt-2 ">
           <div className="col-md-7">
             <table className="table table-borderLess table-stripped">
               <thead className="thead-light">
@@ -100,6 +101,9 @@ const ImportLink = () => {
             </table>
           </div>
         </div>
+        <br />
+        <br />
+
       </div>
     </>
   );

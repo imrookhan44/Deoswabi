@@ -1,0 +1,12 @@
+.rowimportlink2{
+ display: flex;
+ justify-content: center;
+}
+
+.container-news{
+    height: 100%;
+    background-image: url(../../assets/images/apca.jpg);
+    background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+}
