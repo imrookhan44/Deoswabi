@@ -15,7 +15,7 @@ export default function Home({ admin }) {
       <div className="container-fluid" id="Main">
         <Navbar2 />
 
-        <div className="row">
+        <div className="row-navbar">
           <div className="col-lg-12 align-self-center">
             <Navbar collapseOnSelect expand="lg">
               <Navbar.Toggle
@@ -32,6 +32,8 @@ export default function Home({ admin }) {
                   className="collapse navbar-collapse"
                   id="navbarSupportedContent"
                 >
+                  
+
                   <Link className="navbar-brand" to="/">
                     <img
                       style={{ height: "80px", width: "80px" }}
@@ -39,6 +41,9 @@ export default function Home({ admin }) {
                       alt="logo"
                     />
                   </Link>
+                  <div className="mainaabc">
+              <div className="abccc">
+
                   <ul className="navbar-nav">
                     <li className="nav-item active">
                       {!admin && (
@@ -147,10 +152,11 @@ export default function Home({ admin }) {
                       )}
                     </li>
                   </ul>
+                  </div>
+                  <div className="aabc">
                   {auth?.currentUser?.uid && (
                     <NavDropdown
                       title={auth?.currentUser?.email} className="Logout"  >
-
                       <NavDropdown.Item
                         onClick={() => {
                           auth?.signOut().then(res => console.log("sign out res ", res)).catch(e => console.error(e))
@@ -163,10 +169,6 @@ export default function Home({ admin }) {
                       </NavDropdown.Item>
                     </NavDropdown>
                   )}
-
-
-
-
                   &nbsp;
                   <div  className="logaandSign" >
                     <button type="button" className="btn btn-primary me-2"
@@ -182,7 +184,8 @@ export default function Home({ admin }) {
                     >Login</button>
                   </div>
                 </div>
-
+                </div>
+                </div>
               </Navbar.Collapse>
             </Navbar>
           </div>

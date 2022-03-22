@@ -89,6 +89,16 @@ nav-item .Logout {
   margin: auto;
 }
 
+.aabc{
+  display: flex;
+  justify-content: end;
+  margin-left: -37%;
+}
+
+.mainaabc{
+  margin-left: 30%;
+}
+
 .nav {
 
   margin-right: 4.5rem !important;

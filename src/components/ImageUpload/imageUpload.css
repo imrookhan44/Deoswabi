@@ -58,9 +58,9 @@
   justify-content: center;
   padding: 20px;
 }
-
 .col-uploadfile{
   background-color: rgb(223, 226, 225);
   box-shadow: 2px 2px 20px 0px;
   width: 20rem;
+  border-radius: 20px;
 }

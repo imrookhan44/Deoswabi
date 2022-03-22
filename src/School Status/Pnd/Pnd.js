@@ -3,7 +3,7 @@ import './pnd.css'
 function Pnd() {
     return (
         <div>
-            <div className='container-pnd' style={{ marginLeft: "1rem" }}>
+            <div className='container-pnd'>
                 <br />
                 <div className='pd'><h2>P & D</h2></div>
                 <div className='wise mt-2'>Class wise enrollment </div>
