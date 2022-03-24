@@ -62,8 +62,14 @@
 
 
 #Main {
-  background-color: #003A6A;
-  height: 50%;
+  width: 100%;
+  /* height: 150px; */
+  background: red;
+  animation: mymove 10s infinite;
+}
+@keyframes mymove {
+  from {background-color: #212529;}
+  to {background-color: rgb(21, 21, 78);}
 }
 
 #first,
