@@ -142,15 +142,15 @@ const Slider = () => {
           </Carousel.Item>
 
         </Carousel>
-      
-        <div className="row cardsfulldiv" id="cardsfulldivrow" >
+        <div className="container-notification">
+          <div className="container-row2">
+        
+        <div className="row-cardsfulldiv">
+          <div className="col-shahram">
+              <img className="shahramimage" src={shahram} />
+              <h5 className="card-title">Education Minister Khyber Pakhtunkhwa-Shahram Khan Tarakai</h5>
 
-<div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 carddivslider">
-  <div className="card" style={{ width: "16rem" }}>
-    <img variant="top" src={shahram}/>
-    <div className="card-body">
-      <h5 className="card-title">Education Minister Khyber Pakhtunkhwa-Shahram Khan Tarakai</h5>
-      <p className="card-text"> I am delighted to welcome you on School Education and Literacy
+              <p className="card-text"> I am delighted to welcome you on School Education and Literacy
                   Department’s new website. The contents of the website convey a
                   complete picture of our reform agenda and overall functions of
                   the school education department. Our goal is to provide free
@@ -160,16 +160,12 @@ const Slider = () => {
                   the department are updated. Besides, the website carries our
                   social media threads which will automatically be updated as
                   soon as we tweet and send Facebook posts.</p>
-    </div>
-  </div>
-</div>
-
-<div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 carddivslider">
-  <div className="card" style={{ width: "16rem" }}>
-    <img variant="top" src={image}/>
-    <div className="card-body">
-      <h5 className="card-title">DEO Female Swabi Ms Sofia Tabassum</h5>
-      <p className="card-text"> Education is a fundamental human right. It is education,
+    
+          </div>
+          <div className="col-rabia">
+                <img className="rabiaimage" src={image} />
+                <h5 className="card-title">DEO Female Swabi Ms Sofia Tabassum</h5>
+                <p className="card-text"> Education is a fundamental human right. It is education,
                     which differentiate between being human or otherwise.
                     Besides, it is a powerful tool, which enables socially and
                     economically marginalized children and adults to lift
@@ -181,11 +177,11 @@ const Slider = () => {
                     efforts and potential to reach out every inch of the
                     motherland to equip every child with optimum level of
                     education so that they can make this country THE BEST.</p>
-    </div>
-  </div>
-</div>
-          
-          <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12 carddivslider">
+          </div>
+
+        </div>
+
+        <div className="row-notification mt-4">
             <div className="col-sm-6">
               <h2 className="anno-header"> Notifications:</h2>
               <div className="anno">
@@ -194,7 +190,7 @@ const Slider = () => {
                   scrollamount="1"
                   onmouseover="this.stop();"
                   onmouseout="this.start();"
-                  style={{ height: "290px", textAlign: "justify" }}
+                  style={{ height: "100%", textAlign: "justify" }}
                 >
                   <ul style={{ lineHeight: "36px" }}>
                     <div className="row">
@@ -227,6 +223,7 @@ const Slider = () => {
               </div>
             </div>
           </div>
+
         </div>
 
         <div>
@@ -239,6 +236,7 @@ const Slider = () => {
               nothing worthwhile that you cannot achieve.” ― Muhammad Ali Jinnah
             </p>
           </div>
+        </div>
         </div>
       </div>
     </>
