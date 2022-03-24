@@ -84,7 +84,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* font-size: 15px */
 }
 
 .wall {
@@ -186,8 +185,6 @@
 
     .row1 {
         display: flex;
-        /* margin-left: -10px; */
-        /* margin-right: 10px; */
     }
 
     .col-2 {
@@ -214,19 +211,7 @@
 
     }
 
-    /* h6 {
-        background-color: #fec619;
-        color: white;
-        height: 40px;
-        border-radius: 10px;
-        width: 40%;
-        font-size: 8px;
-        text-align: center;
-        margin-left: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } */
+
 
     .wall {
         display: flex;
@@ -256,20 +241,7 @@
         margin-left: 29px;
     }
 
-    h5 {
-        background-color: #fec619;
-        color: white;
-        height: 50px;
-        border-radius: 10px;
-        width: 30%;
-        font-size: 8px;
-        text-align: center;
-        margin-left: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
+    
     .abc {
         display: flex;
     }
@@ -333,8 +305,6 @@
 
     .row1 {
         display: flex;
-        /* margin-left: -10px; */
-        /* margin-right: 10px; */
     }
 
     .col-2 {
@@ -361,20 +331,7 @@
 
     }
 
-    /* h6 {
-        background-color: #fec619;
-        color: white;
-        height: 40px;
-        border-radius: 10px;
-        width: 40%;
-        font-size: 8px;
-        text-align: center;
-        margin-left: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } */
-
+  
     .wall {
         display: flex;
     }
@@ -403,19 +360,7 @@
         margin-left: 29px;
     }
 
-    h5 {
-        background-color: #fec619;
-        color: white;
-        height: 50px;
-        border-radius: 10px;
-        width: 30%;
-        font-size: 8px;
-        text-align: center;
-        margin-left: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+
 
     .h61 {
         background-color: #fec619;
