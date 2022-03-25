@@ -39,9 +39,7 @@ function NotAdmin() {
 </div>
 
 	</div>
-//   <div classNameName="offset-4  mt-5">
-//       <h1>This page is only for Admin </h1>
-//   </div>
+
   )
 }
 

@@ -37,13 +37,8 @@
     width :100%;
     border: solid black 1px !important ;
     border-radius: 30px !important;
-    /* box-sizing: border-box; */
 }
-.textfieldnameforstyle:hover{
-    /* box-shadow: royalblue; */
-   
-    
-  }
+
   .saveupdatecontactformbtn{
       margin-bottom: 10px;
       background-color: black !important;

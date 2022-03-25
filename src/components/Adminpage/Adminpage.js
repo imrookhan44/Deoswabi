@@ -22,24 +22,7 @@ export default function Adminpage() {
   return (
     <div className=" fullcontianerofhome">
 
-      {/* <div className="alldivs">
       
-        <Contacts />
-        <h1 className="Headinginadmin">Enter Budget Data</h1>
-
-        <BudgetData />
-      </div> */}
-      {/* <tbody className="unknowthings">
-          {
-            Object.keys(contactObjects).map(id => {
-              return <tr key={id}>
-                <td>{contactObjects[id].fullName}</td>
-                <br />
-                <td>{contactObjects[id].email}</td>
-              </tr>
-            })
-          }
-        </tbody> */}
       <Tabs defaultActiveKey="CovidData" id="uncontrolled-tab-example" className="mb-3">
 
         <Tab eventKey="CovidData" title="Covid Data">
@@ -56,7 +39,6 @@ export default function Adminpage() {
         </Tab>
         <Tab eventKey="PND" title="P & D">
           <div className="text-center">
-            {/* <h2 className="Headinginadmin"></h2> */}
           </div>
           <Pnd />
         </Tab>

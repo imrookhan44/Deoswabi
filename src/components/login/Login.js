@@ -52,14 +52,12 @@ function Login() {
                 placeholder="Password"
               />{" "}
               <div className="Checkbox mt-2">
-                {/* <input type="checkbox"></input> <b>Remember me</b> */}
               </div>
               <div className="ms-4">
                 {" "}
                 <button
                   onClick={(signInHandler, notify)}
 
-                  // onClick = {()=> history.push("/")}
                   
                   className="btn btn-primary mt-4"
                   id="buttons"

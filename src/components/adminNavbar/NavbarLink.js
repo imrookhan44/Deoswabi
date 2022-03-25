@@ -29,7 +29,6 @@ function NavbarLink() {
         >
           <div className="row">
             <div className="">
-              {/* <ContactForm {...{ currentId, contactObjects }} /> */}
             </div>
             <div className="" id="table">
               <table className="table table-borderLess table-stripped mt-4">
@@ -38,7 +37,6 @@ function NavbarLink() {
                     <th>Numbers</th>
                     <th>Site Name</th>
                     <th>Link</th>
-                    {/* <th>Actions</th> */}
                   </tr>
                 </thead>
                 <tbody>
@@ -51,7 +49,6 @@ function NavbarLink() {
                           <a href={contactObjects[id].address} target="_blank">
                             {contactObjects[id].address}
                           </a>
-                          {/* {contactObjects[id].address}</td> */}
                         </td>
                         <td></td>
                       </tr>

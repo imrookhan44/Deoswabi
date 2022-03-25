@@ -145,28 +145,6 @@ const Contacts = () => {
                                 })
                             }
 
-                            {
-                                // Object.keys(contactObjects).map(id => {
-                                //     return <tr key={id}>
-                                //         <td>{contactObjects[id].schoolName}</td>
-                                //         <td>{contactObjects[id].totalStudent}</td>
-                                //         <td>{contactObjects[id].firstDoss}</td>
-                                //         <td>{contactObjects[id].remainingFirstDoss}</td>
-                                //         <td>{contactObjects[id].secondDoss}</td>
-                                //         <td>{contactObjects[id].remainingSecondDoss}</td>
-
-                                //         <td>
-                                //             <a className="btn text-primary" onClick={() => { setCurrentId(id) }}>
-                                //                 <i className="fas fa-pencil-alt">Edit</i>
-                                //             </a>
-                                //             <a className="btn text-danger" onClick={() => { onDelete(id) }}>
-                                //                 <i className="far fa-trash-alt">Delete</i>
-                                //             </a>
-                                //         </td>
-                                //     </tr>
-                                // })
-                            }
-
                         </tbody>
                     </table>
                     <ReactHTMLTableToExcel

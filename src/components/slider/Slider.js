@@ -12,6 +12,9 @@ import brainspk from './../../images/brainspkn.png'
 import slide1 from './../../assets/images/slide1.jpg'
 import slide2 from './../../assets/images/slide2.jpg'
 import slide3 from './../../assets/images/slide3.jpg'
+import { AiOutlinePhone } from "react-icons/ai";
+import supportimage from "../../assets/images/supportimage.jpg"
+import Footers from "../Footers/Footers";
 
 const Slider = () => {
   var [contactObjects, setContactObjects] = useState({});
@@ -46,11 +49,9 @@ const Slider = () => {
           <Modal.Title id="contained-modal-title-vcenter"
             style={{ textAlign: "center", justifyContent: "center", color: "white" }}
           >
-            {/* <center> */}
             <img src={brainspk} style={{ width: "5rem" }}></img>
             Brainspk
 
-            {/* </center> */}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: "black", color: "white" }} >
@@ -226,6 +227,18 @@ const Slider = () => {
 
         </div>
 
+        <div className="row-question">
+              <div className="col-question1">
+                          <div><AiOutlinePhone className="phoneicon"/></div>
+                          <div>
+                          <h2 className="h3t ms-5 mt-3">Have a question or need support?</h2>
+                          <p className="emailapca ms-5">Visit FAQs or Contact page. You can drop us email on brainspk21@gmail.com</p>
+              </div>
+              </div>
+              <div className="col-question2 mt-5 ms-5">
+              </div>
+        </div>
+
         <div>
           <div
             className="quaidquotes m-4"
@@ -237,6 +250,8 @@ const Slider = () => {
             </p>
           </div>
         </div>
+        <Footers />
+
         </div>
       </div>
     </>

@@ -7,6 +7,7 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "../src/components/footer/Footer";
 import { BrowserRouter, Route, Redirect, HashRouter } from "react-router-dom";
 import { db } from "./components/firebase";
+import Footers from "./components/Footers/Footers";
 const authentication = {
   isLoggedIn: false,
   onAuthentication() {
@@ -69,12 +70,10 @@ function App() {
     <HashRouter>
       <Navbar
         admin={userDetails?.role}
-      // admin={currentUser?.email == "imrankhan@gmail.com" ? true : false}
       />
       <Routes userDetails={userDetails} />
-
-      <Footer />
-      {/* <AllData  /> */}
+      <Footers />
+      {/* <Footer /> */}
     </HashRouter>
   );
 }

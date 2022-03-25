@@ -19,7 +19,6 @@ const BudgetResult = () => {
         <div>
             <div className='table-responsive '>
                 <table class=" table table-dark ">
-                    {/* <table class="table table-hover"> */}
                     <thead>
                         <tr>
                             <th scope="col">#</th>

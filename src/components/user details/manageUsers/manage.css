@@ -1,17 +1,12 @@
 .table-responsive {
     border: 1px solid #bbb9b9;
-    /* margin-bottom: 50px; */
 
 
 }
 
 @media screen and (max-width: 500px) {
     .table-responsive {
-        /* display: flex; */
-        /* justify-content: center; */
-        /* border: solid; */
-        /* margin-right: -5rem; */
-        /* width: 8rem !important; */
+    
     }
 
 }

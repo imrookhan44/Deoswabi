@@ -20,7 +20,7 @@ function Admin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   console.log(firebase.auth());
-  const signInHandler = () => {};
+  const signInHandler = () => { };
 
   return (
     <div>

@@ -126,7 +126,6 @@ function Pnd() {
 
                     </div>
                     <div className='col-4 time'>
-                        {/* Time and date of last update me be automatic */}
                         Date and Time
                     </div>
 

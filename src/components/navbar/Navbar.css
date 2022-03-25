@@ -11,7 +11,6 @@
     "KFGQPC_Naskh",
     'traditional arabic';
   font-weight: normal;
-  /* margin: 15px 0; */
   text-align: center;
   direction: rtl;
 }
@@ -24,7 +23,6 @@
   font-weight: 600;
   font-style: normal;
   font-size: 15px;
-  /* line-height: 10px; */
 
 }
 
@@ -63,7 +61,6 @@
 
 #Main {
   width: 100%;
-  /* height: 150px; */
   background: red;
   animation: mymove 10s infinite;
 }
