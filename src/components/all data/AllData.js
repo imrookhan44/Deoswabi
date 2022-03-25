@@ -58,12 +58,8 @@ function AllData() {
     return (
         <div>
             <div className="row-alldata p-2"  >
-                {/* <div className="col-md-4 col-sm-12 col-xs-12" > */}
                 <ContactForm {...({ addOrEdit, currentId, contactObjects })} />
-                {/* </div> */}
-                {/* <hr/>
-        <br/> */}
-                {/* <h2>Budget Data List</h2> */}
+              
                 </div>
                 <br />
                 <div className='row-alldata1' >
@@ -71,7 +67,6 @@ function AllData() {
                     <table className="table table-dark " >
                         <thead className="thead-light">
                             <tr>
-                                {/* <th scope="col">#</th> */}
                                 <th scope="col">School Name</th>
                                 <th scope="col">Total</th>
                                 <th scope="col">1st Doss</th>

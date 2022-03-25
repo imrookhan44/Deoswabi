@@ -41,7 +41,6 @@ const User = () => {
         }))
       );
     });
-    // console.log("List:", list);
   }, []);
 
   const handleSubmit = async (e) => {
@@ -61,11 +60,11 @@ const User = () => {
   };
 
   return (
-    <div  className="userDetails mt-5">
-      <div  className="row-reg pt-4 ">
+    <div className="userDetails mt-5">
+      <div className="row-reg pt-4 ">
         <div className=" col-reg">
           <div className="textreg">
-          <h3 className=" offset-4 userdetailtext">Registration</h3>
+            <h3 className=" offset-4 userdetailtext">Registration</h3>
           </div>
           <br />
           <form
@@ -120,7 +119,7 @@ const User = () => {
               onChange={(e) => setEmisCode(e.target.value)}
             />
             <br />
-            
+
             <div className="submitbtnuser">
               <button
                 className="  controlbutton "
@@ -131,14 +130,11 @@ const User = () => {
                 Submit
               </button>
             </div>
-            {/* <div className="mt-3  ms-2" >
-              <a onClick={() => history.push("/login")} href="" style={{ fontWeight: "400", fontSize: "1rem", color: "black"}}>
-                Already Have An Account SignIn
-              </a>
-            </div> */}
           </form>
         </div>
       </div>
+      <br />
+      <br />
       <br />
       <br />
     </div>

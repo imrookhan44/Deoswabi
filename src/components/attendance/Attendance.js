@@ -268,7 +268,6 @@ function Attendance() {
                             <div className=' right'>
                                 <input className='inputat' placeholder='Date/Time'
                                     value={date44}
-                                    // onChange={(e) => setDate44(e.target.value)}
 
                                     name='date44'
                                 />
@@ -276,7 +275,6 @@ function Attendance() {
                         </div>
                     ) : (
 
-                        //updated form
 
                         <div className='row-attend'>
 
@@ -472,7 +470,6 @@ function Attendance() {
                                                     setUpdatedAbsent3(item.data.absent3);
                                                     setUpdatedPresent3(item.data.present3);
                                                     setUpdatedLeave3(item.data.leave3);
-                                                    // setUpdatedDateAndTime(item.data.dateAndTime);
 
 
 

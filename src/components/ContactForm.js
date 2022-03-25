@@ -37,9 +37,7 @@ const ContactForm = (props) => {
     <form autoComplete="off " onSubmit={handleFormSubmit}>
       <div className="form-row">
         <div className="form-group input-group col-md-6 ">
-          {/* <div className="input-group-text">
-                         <i className="fas fa-envelope "></i>
-                        </div> */}
+         
 
             
           <input
@@ -52,9 +50,7 @@ const ContactForm = (props) => {
           />
         </div>
         <div className="form-group input-group col-md-6 ">
-          {/* <div className="input-group-text">
-                         <i className="fas fa-envelope "></i>
-                        </div> */}
+     
           <input
             className="form-control"
             name="address"

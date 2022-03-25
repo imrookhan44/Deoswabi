@@ -22,6 +22,8 @@ import { SecuredRoute } from "../../App";
 import NotAdmin from "../NotAdmin";
 import Attendance from "../attendance/Attendance";
 import Attendance1 from "../attendance/Attendance1";
+import Footers from "../Footers/Footers";
+
 function Routes(props) {
 
 
@@ -30,6 +32,7 @@ function Routes(props) {
   const [oldUser] = useState();
   return (
     <Switch>
+      <Route path="/footers" component={Footers} />
       <Route path="/attendance1" component={Attendance1} />
       <Route path="/attendance" component={Attendance} />
       <Route path="/profile" component={Profile} />
