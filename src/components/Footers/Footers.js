@@ -12,28 +12,28 @@ function Footers() {
             <footer>
                 <div className="container-footers">
                     <div className="row-footers ms-5">
-                    <div className="col-sm-6 col-md-3 item ">
+                    <div className="col-sm-6 col-md-3 items ">
                           <img className='footerlogo' src={apcalogo} />
                         </div>
 
-                        <div className="col-sm-6 col-md-3 item ">
+                        <div className="col-sm-6 col-md-3 items ">
                             <h3>Deo female swabi</h3>
                             <ul>
-                                <li><a type='button' onClick={() => { history.push("/") }}>Home</a></li>
-                                <li><a type='button' onClick={() => { history.push("/importLink") }}>Upload Links</a></li>
-                                <li><a type='button' onClick={() => { history.push("/navbarLink") }}>Links</a></li>
-                                <li><a type='button' onClick={() => { history.push("/ImageUpload") }}>Upload files</a></li>
-                                <li><a type='button' onClick={() => { history.push("/news") }}>News</a></li>
-                                <li><a type='button' onClick={() => { history.push("/adminPage") }}>School Status</a></li>
-                                <li><a type='button' onClick={() => { history.push("/manageUser") }}>Manage Users</a></li>
-                                <li><a type='button' onClick={() => { history.push("/Download") }}>Download</a></li>
-                                <li><a type='button' onClick={() => { history.push("/AllData") }}>All Data</a></li>
-                                <li><a type='button' onClick={() => { history.push("/attendance") }}>Attendance</a></li>
+                                <li><a >Home</a></li>
+                                <li><a >Upload Links</a></li>
+                                <li><a >Links</a></li>
+                                <li><a >Upload files</a></li>
+                                <li><a >News</a></li>
+                                <li><a >School Status</a></li>
+                                <li><a >Manage Users</a></li>
+                                <li><a >Download</a></li>
+                                <li><a >All Data</a></li>
+                                <li><a >Attendance</a></li>
                             </ul>
                         </div>
                         <br />
                         <br />
-                        <div className="col-sm-6 col-md-3 items">
+                        <div className="col-sm-6 col-md-3 itemss">
                             <h3>About</h3>
                             <ul>
                                 <li><a href="#">Company</a></li>
@@ -43,7 +43,7 @@ function Footers() {
                         </div>
                         <br />
                         <br />
-                        <div className="col-sm-6 col-md-3 items">
+                        <div className="col-sm-6 col-md-3 itemss">
                         <h3>Follow Us</h3>
                         <ul>
                         <li><a

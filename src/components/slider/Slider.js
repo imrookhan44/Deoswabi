@@ -250,7 +250,6 @@ const Slider = () => {
             </p>
           </div>
         </div>
-        <Footers />
 
         </div>
       </div>
