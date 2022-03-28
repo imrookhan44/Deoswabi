@@ -15,7 +15,7 @@ export default function Home({ admin }) {
       <div className="container-fluid" id="Main">
         <Navbar2 />
 
-        <div className="row-navbar">
+        <div className="row">
           <div className="col-lg-12 align-self-center">
             <Navbar collapseOnSelect expand="lg">
               <Navbar.Toggle
@@ -34,13 +34,9 @@ export default function Home({ admin }) {
                 >
                   
 
-                  <Link className="navbar-brand" to="/">
-                    <img
-                      style={{ height: "80px", width: "80px" }}
-                      src={logo}
-                      alt="logo"
-                    />
-                  </Link>
+                  {/* <Link className="navbar-brand" to="/">
+                  
+                  </Link> */}
                   <div className="mainaabc">
               <div className="abccc">
 
