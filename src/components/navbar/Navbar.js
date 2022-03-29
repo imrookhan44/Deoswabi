@@ -32,7 +32,6 @@ export default function Home({ admin }) {
                   className="collapse navbar-collapse"
                   id="navbarSupportedContent"
                 >
-                  
 
                   {/* <Link className="navbar-brand" to="/">
                   

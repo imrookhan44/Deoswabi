@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './pnd.css'
+import PndTable from './PndTable'
 function Pnd() {
     return (
         <div>
@@ -10,7 +11,7 @@ function Pnd() {
                 <div className='rows-pnd mt-4 ms-2'>
                     <div className='col-2'>
                         <b className='bb'>6th</b>
-                        <input className="place" type="text" />
+                        <input className="place" type="text"/>
                     </div>
                     <div className='col-2'>
                         <b className='bb' >7th</b>
@@ -239,6 +240,9 @@ function Pnd() {
                 <br />
                 <br />
             </div>
+            <br />
+                <br />
+            <PndTable />
         </div>
 
     )
