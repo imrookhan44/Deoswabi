@@ -147,7 +147,7 @@ function Pnd() {
                             <input className='place ms-2' type="number" placeholder='input should number only' />
                         </div>
                     </div>
-                    <div className='col-5'>
+                    {/* <div className='col-5'>
                         <br />
                         <br />
                         <div className='wall mt-2'>
@@ -164,7 +164,7 @@ function Pnd() {
 
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className='row4'>
@@ -184,7 +184,7 @@ function Pnd() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-6'>
+                    {/* <div className='col-6'>
                         <div className='wall mt-2'>
                             < h6 className="h61">Space</ h6>
                             <div className='checkbox'>
@@ -199,7 +199,7 @@ function Pnd() {
 
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className='row5'>
@@ -219,7 +219,7 @@ function Pnd() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-6'>
+                    {/* <div className='col-6'>
                         <div className='wall mt-2'>
                             < h6 className="h61">Space</ h6>
                             <div className='checkbox'>
@@ -234,7 +234,7 @@ function Pnd() {
 
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <br />
                 <br />
