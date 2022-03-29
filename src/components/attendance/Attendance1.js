@@ -37,7 +37,7 @@ function Attendance1() {
         <>
             <div className='row-attend'>
                 <div className='col-12'>
-                    <Table>
+                    <Table className='max' responsive id="table-to-xls">
                         <thead>
                             <tr>
                                 <th>index</th>

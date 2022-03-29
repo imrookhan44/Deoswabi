@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './pnd.css'
+import PndTable from './PndTable'
 function Pnd() {
     return (
         <div>
@@ -10,7 +11,7 @@ function Pnd() {
                 <div className='rows-pnd mt-4 ms-2'>
                     <div className='col-2'>
                         <b className='bb'>6th</b>
-                        <input className="place" type="text" />
+                        <input className="place" type="text"/>
                     </div>
                     <div className='col-2'>
                         <b className='bb' >7th</b>
@@ -146,7 +147,7 @@ function Pnd() {
                             <input className='place ms-2' type="number" placeholder='input should number only' />
                         </div>
                     </div>
-                    <div className='col-5'>
+                    {/* <div className='col-5'>
                         <br />
                         <br />
                         <div className='wall mt-2'>
@@ -163,7 +164,7 @@ function Pnd() {
 
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className='row4'>
@@ -183,7 +184,7 @@ function Pnd() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-6'>
+                    {/* <div className='col-6'>
                         <div className='wall mt-2'>
                             < h6 className="h61">Space</ h6>
                             <div className='checkbox'>
@@ -198,7 +199,7 @@ function Pnd() {
 
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className='row5'>
@@ -218,7 +219,7 @@ function Pnd() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-6'>
+                    {/* <div className='col-6'>
                         <div className='wall mt-2'>
                             < h6 className="h61">Space</ h6>
                             <div className='checkbox'>
@@ -233,12 +234,15 @@ function Pnd() {
 
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <br />
                 <br />
                 <br />
             </div>
+            <br />
+                <br />
+            <PndTable />
         </div>
 
     )

@@ -392,8 +392,39 @@
         display: flex;
     }
 
+}
 
+.tr-pndtable{
+    font-size: 12px;
+}
+.tr-pndtable2{
+    font-size: 11px;
+    border: none;
+    border: 1px solid;
 
+}
 
+.max-pndtable{
+    border-collapse: collapse;
+    border: 1px solid;
+}
+.th-pndtable{
+    border: 1px solid;
 
+}
+.td-pndtable{
+    border: 1px solid;
+
+}
+.td-pndtable1{
+    padding: 9px;
+    border: 1px solid;
+    height: 25px;
+    text-align: center;
+}
+.th-pndtable1{
+    padding: 5px;
+    border: 1px solid;
+    height: 25px;
+    text-align: center;
 }
