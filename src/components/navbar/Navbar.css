@@ -4,9 +4,27 @@
   margin: 0;
 }
 
+.navbar-n2{
+  display: flex;
+  /* justify-content: center; */
+
+}
+.row-N2{
+  display: flex;
+  justify-content: center;
+  width: 100vh;
+}
+.row-N1{
+  display: flex;
+  /* justify-content: center; */
+  width: 40vh;
+}
+
 .rowfirst {
+  display: flex;
+  justify-content: center;
   color: white;
-  font-size: 30px;
+  font-size:30px;
   font-family: 'KFGQPC Uthman Taha Naskh',
     "KFGQPC_Naskh",
     'traditional arabic';
@@ -46,7 +64,7 @@
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: flex;
-      font-size: 40px;
+      font-size: 30px;
       text-align: center;
       justify-content: center;
       margin-top: 20px;

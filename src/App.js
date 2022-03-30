@@ -72,8 +72,8 @@ function App() {
         admin={userDetails?.role}
       />
       <Routes userDetails={userDetails} />
-      <Footers />
       {/* <Footer /> */}
+      <Footers />
     </HashRouter>
   );
 }

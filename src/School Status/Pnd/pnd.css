@@ -8,8 +8,15 @@
 
 .container-pnd {
     background-color: #4473c5;
-    height: 58rem;
+    height: 50rem;
 
+}
+
+.dropdownss {
+    width: 200px;
+    height: 42px;
+    border-radius: 10px;
+    outline: none;
 }
 
 .pd {
@@ -28,7 +35,7 @@
 
 .wise {
     background-color: #fec619;
-    color: white;
+    color: rgb(0, 0, 0);
     height: 50px;
     border-radius: 10px;
     width: 40%;
@@ -38,6 +45,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
 }
 
 .rows-pnd {
@@ -55,12 +63,12 @@
 }
 
 .place {
-    width: 50%;
+    width: 70%;
     height: 30px;
     margin-top: 5px;
 }
 
-.bb{
+.bb {
     background-color: #fec619;
     height: 40px;
     width: 50%;
@@ -74,16 +82,17 @@
 
 .h61 {
     background-color: #fec619;
-    color: white;
+    color: rgb(3, 3, 3);
     height: 40px;
     border-radius: 10px;
-    width: 40%;
+    width: 30%;
     font-size: 12px;
     text-align: center;
     margin-left: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
 }
 
 .wall {
@@ -102,13 +111,14 @@
 }
 
 .time {
-    background-color: white;
+    background-color: #70AD47;
     align-items: center;
     justify-content: center;
     text-align: center;
     display: flex;
-    height: 233px;
-    margin-top: 20px;
+    height: 100px;
+    flex-direction: column;
+    /* margin-top: 20px; */
     width: 24%;
     margin-left: 60px;
 }
@@ -143,12 +153,28 @@
     display: flex;
 }
 
+@media screen and (max-width: 780px) {
+    .dropdownss {
+        width: 150px;
+        height: 42px;
+        border-radius: 10px;
+        outline: none;
+    }
+}
+
 
 
 @media screen and (max-width: 500px) {
     .container-fluid {
         background-color: white;
         height: 100%;
+    }
+
+    .dropdownss {
+        width: 100px;
+        height: 42px;
+        border-radius: 10px;
+        outline: none;
     }
 
     .container {
@@ -199,7 +225,7 @@
         font-size: 8px;
     }
 
-    .bb{
+    .bb {
         background-color: #fec619;
         height: 40px;
         width: 50%;
@@ -241,7 +267,7 @@
         margin-left: 29px;
     }
 
-    
+
     .abc {
         display: flex;
     }
@@ -271,6 +297,13 @@
         height: 100%;
     }
 
+    .dropdownss {
+        width: 70px;
+        height: 32px;
+        border-radius: 10px;
+        outline: none;
+    }
+
     .container {
         background-color: #4473c5;
         height: 100%;
@@ -286,7 +319,7 @@
         text-align: center;
         margin-left: 25%;
     }
-   
+
     .wise {
 
         background-color: #fec619;
@@ -319,7 +352,7 @@
         font-size: 8px;
     }
 
-    .bb{
+    .bb {
         background-color: #fec619;
         height: 40px;
         width: 50%;
@@ -331,7 +364,7 @@
 
     }
 
-  
+
     .wall {
         display: flex;
     }
@@ -354,7 +387,7 @@
         justify-content: center;
         text-align: center;
         display: flex;
-        height: 233px;
+        height: 190px;
         margin-top: 20px;
         width: 42%;
         margin-left: 29px;
@@ -392,8 +425,63 @@
         display: flex;
     }
 
+}
 
+.tr-pndtable {
+    font-size: 12px;
+}
 
+.tr-pndtable2 {
+    font-size: 11px;
+    border: none;
+    border: 1px solid;
 
+}
 
+.max-pndtable {
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+.th-pndtable {
+    border: 1px solid;
+
+}
+
+.td-pndtable {
+    border: 1px solid;
+
+}
+
+.td-pndtable1 {
+    padding: 9px;
+    border: 1px solid;
+    height: 25px;
+    text-align: center;
+}
+
+.th-pndtable1 {
+    padding: 5px;
+    border: 1px solid;
+    height: 25px;
+    text-align: center;
+}
+
+.databtn {
+    background-color: #70AD47 !important;
+    border: none !important;
+    width: 10rem;
+    font-weight: bold !important;
+}
+
+.form-control111 {
+    border-radius: 5px;
+    border: none !important;
+    outline: none;
+    height: 1.7rem;
+    width: 10rem;
+}
+
+.dateandtime {
+    font-weight: bold;
 }
