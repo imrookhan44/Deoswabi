@@ -11,7 +11,7 @@ function Pnd() {
                 <div className='rows-pnd mt-4 ms-2'>
                     <div className='col-2'>
                         <b className='bb'>6th</b>
-                        <input className="place" type="text"/>
+                        <input className="place" type="text" />
                     </div>
                     <div className='col-2'>
                         <b className='bb' >7th</b>
@@ -47,87 +47,72 @@ function Pnd() {
                     <div className='col-6'>
                         <div className='wall'>
                             <h6 className='h61'>Boundary wall</ h6>
-                            <div className='checkbox'>
-                                <div className="form-group form-check ms-2 mt-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">upraising</label>
-                                </div>
-                                <div className="form-group form-check ms-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">Reconstruction</label>
-                                </div>
-                                <div className="form-group form-check ms-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">New</label>
-                                </div>
+
+                            <div className="boundarywall">
+                                <select className="dropdownss  ms-3">
+                                    <option className="abc" value="Select" > select </option>
+                                    <option className="abc" value="Upraising">Upraising</option>
+                                    <option className="abc" value="Reconstruction">Reconstruction</option>
+                                    <option className="abc" value="New">New</option>
+                                </select>
                             </div>
+
                         </div>
 
                         <div className='wall mt-2'>
                             < h6 className="h61">Group latrine</ h6>
-                            <div className='checkbox'>
-                                <div className="form-group form-check ms-2 mt-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">upraising</label>
-                                </div>
-                                <div className="form-group form-check ms-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">Reconstruction</label>
-                                </div>
-                                <div className="form-group form-check ms-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">New</label>
-                                </div>
+
+                            <div className="latrine">
+                                <select className="dropdownss  ms-3">
+                                    <option className="abc" value="Select" > select </option>
+                                    <option className="abc" value="Upraising">Upraising</option>
+                                    <option className="abc" value="Reconstruction">Reconstruction</option>
+                                    <option className="abc" value="New">New</option>
+                                </select>
                             </div>
+
+
                         </div>
                         <div className='wall mt-2'>
                             < h6 className="h61">Water Supply</ h6>
-                            <div className='checkbox'>
-                                <div className="form-group form-check ms-2 mt-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">Repair</label>
-                                </div>
-                                <div className="form-group form-check ms-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">New</label>
-                                </div>
 
+                            <div className="WaterSupply">
+                                <select className="dropdownss  ms-3">
+                                    <option className="abc" value="Select" > select </option>
+                                    <option className="abc" value="Repair">Repair</option>
+                                    <option className="abc" value="New">New</option>
+                                </select>
                             </div>
                         </div>
 
                         <div className='wall mt-2'>
                             < h6 className="h61">Solar System available</ h6>
-                            <div className='checkbox'>
-                                <div className="form-group form-check ms-2 mt-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">YES</label>
-                                </div>
-                                <div className="form-group form-check ms-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">NO</label>
-                                </div>
 
+                            <div className="Solar">
+                                <select className="dropdownss  ms-3">
+                                    <option className="abc" value="Select" > select </option>
+                                    <option className="abc" value="Yes">Yes</option>
+                                    <option className="abc" value="No">No</option>
+                                </select>
                             </div>
+
                         </div>
 
                         <div className='wall mt-2'>
                             < h6 className="h61">Electricity</ h6>
-                            <div className='checkbox'>
-                                <div className="form-group form-check ms-2 mt-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">Repair</label>
-                                </div>
-                                <div className="form-group form-check ms-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">New</label>
-                                </div>
 
+                            <div className="Electricity">
+                                <select className="dropdownss  ms-3">
+                                    <option className="abc" value="Select" > select </option>
+                                    <option className="abc" value="Repair">Repair</option>
+                                    <option className="abc" value="New">New</option>
+                                </select>
                             </div>
                         </div>
 
                     </div>
                     <div className='col-4 time'>
-                        Date and Time
+                        <input className='place' type="" placeholder='Date & time' />
                     </div>
 
                 </div>
@@ -171,17 +156,14 @@ function Pnd() {
                     <div className='col-6'>
                         <div className='wall mt-2'>
                             < h6 className="h61">IT Lab</ h6>
-                            <div className='checkbox'>
-                                <div className="form-group form-check ms-2 mt-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">Exist</label>
-                                </div>
-                                <div className="form-group form-check ms-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">Not Exist</label>
-                                </div>
-
+                            <div className="itlab">
+                                <select className="dropdownss  ms-3">
+                                    <option className="abc" value="Select" > select </option>
+                                    <option className="abc" value="Exist">Exist</option>
+                                    <option className="abc" value="Not Exist">Not Exist</option>
+                                </select>
                             </div>
+
                         </div>
                     </div>
                     {/* <div className='col-6'>
@@ -206,17 +188,15 @@ function Pnd() {
                     <div className='col-6'>
                         <div className='wall mt-2'>
                             < h6 className="h61">IT Lab</ h6>
-                            <div className='checkbox'>
-                                <div className="form-group form-check ms-2 mt-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">Exist</label>
-                                </div>
-                                <div className="form-group form-check ms-2">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label className="form-check-label" for="exampleCheck1">Not Exist</label>
-                                </div>
 
+                            <div className="Itlab">
+                                <select className="dropdownss  ms-3">
+                                    <option className="abc" value="Select" > select </option>
+                                    <option className="abc" value="Exist">Exist</option>
+                                    <option className="abc" value="Not Exist">Not Exist</option>
+                                </select>
                             </div>
+
                         </div>
                     </div>
                     {/* <div className='col-6'>
@@ -235,13 +215,14 @@ function Pnd() {
                             </div>
                         </div>
                     </div> */}
+
                 </div>
                 <br />
                 <br />
                 <br />
             </div>
             <br />
-                <br />
+            <br />
             <PndTable />
         </div>
 

@@ -11,6 +11,12 @@
     height: 58rem;
 
 }
+.dropdownss{
+    width: 200px;
+    height: 42px;
+    border-radius: 10px;
+    outline:none;
+}
 
 .pd {
     background-color: #70ad47;
@@ -143,12 +149,27 @@
     display: flex;
 }
 
+@media screen and (max-width: 780px) {
+    .dropdownss{
+        width: 150px;
+        height: 42px;
+        border-radius: 10px;
+        outline:none;
+    }
+}
+
 
 
 @media screen and (max-width: 500px) {
     .container-fluid {
         background-color: white;
         height: 100%;
+    }
+    .dropdownss{
+        width: 100px;
+        height: 42px;
+        border-radius: 10px;
+        outline:none;
     }
 
     .container {
@@ -270,6 +291,12 @@
         background-color: white;
         height: 100%;
     }
+    .dropdownss{
+        width: 70px;
+        height: 32px;
+        border-radius: 10px;
+        outline:none;
+    }
 
     .container {
         background-color: #4473c5;
@@ -354,7 +381,7 @@
         justify-content: center;
         text-align: center;
         display: flex;
-        height: 233px;
+        height: 190px;
         margin-top: 20px;
         width: 42%;
         margin-left: 29px;

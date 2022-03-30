@@ -23,7 +23,7 @@ export default function Adminpage() {
     <div className=" fullcontianerofhome">
 
       
-      <Tabs defaultActiveKey="CovidData" id="uncontrolled-tab-example" className="mb-3">
+      <Tabs defaultActiveKey="CovidData" id="uncontrolled-tab-example" className="CovidData12 mb-3">
 
         <Tab eventKey="CovidData" title="Covid Data">
           <div className="text-center">

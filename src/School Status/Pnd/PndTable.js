@@ -33,7 +33,6 @@ function PndTable() {
                         </tr>
                     </thead>
                     <tbody>
-
                         <tr className='tr-pndtable2'>
                             <td className='td-pndtable'>1</td>
                             <td className='td-pndtable'>GGHS MANERI</td>
