@@ -7,12 +7,14 @@ import { db } from './../../components/firebase'
 function PndTable() {
 
     const [data, setData] = useState([])
+function getdata() {
+    db.collection('PNDData').get().then((snapshot) => {
+        setData(snapshot.docs.map(doc => doc.data()))
 
+    })
+}
     useEffect(() => {
-        db.collection('PNDData').get().then((snapshot) => {
-            setData(snapshot.docs.map(doc => doc.data()))
-
-        })
+       getdata()
     }, [])
     return (
         <div className='conatiner-fluid-pndtable'>
@@ -48,7 +50,7 @@ function PndTable() {
                                 <tbody key={index}>
                                     <tr className='tr-pndtable'>
                                         <td className='td-pndtable'>{index + 1}</td>
-                                        <td className='td-pndtable'>{item.schoolName}</td>
+                                        <td className='td-pndtable'>{item.schoolname}</td>
                                         <td className='td-pndtable'>{item.classSix}</td>
                                         {/* <td className='td-pndtable1'>{item.sixth}</td>
                                         <td className='td-pndtable1'>{item.seventh}</td>
