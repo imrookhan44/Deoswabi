@@ -33,9 +33,7 @@ export default function Home({ admin }) {
                   id="navbarSupportedContent"
                 >
 
-                  {/* <Link className="navbar-brand" to="/">
                   
-                  </Link> */}
                   <div className="mainaabc">
                     <div className="abccc">
 

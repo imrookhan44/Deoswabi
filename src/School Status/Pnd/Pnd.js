@@ -20,7 +20,7 @@ function Pnd() {
     const [electricity, setElectricity] = useState("");
     const [existing, setExisting] = useState("");
     const [additional, setAdditional] = useState("");
-
+    const [schoolname, setSchoolName] = useState("");
     const [area, setArea] = useState("");
 
     const [itLab, setItLab] = useState("");
@@ -39,6 +39,7 @@ function Pnd() {
 
         db.collection("PNDData").add({
 
+            schoolname: schoolname,
             classSix: classSix,
             // classSeven: classSeven,
             // classEight: classEight,
@@ -57,6 +58,7 @@ function Pnd() {
             itLab: itLab,
             date44: date44,
         });
+        setSchoolName("");
         setClassSix("");
         // setClassSeven("");
         // setClassEight("");
@@ -94,7 +96,6 @@ function Pnd() {
             <div className='container-pnd'>
                 <br />
                 <div className='pd'><h2>P & D</h2></div>
-                <div className='wise mt-2'>Class wise enrollment </div>
 
                 {/* <div className='rows-pnd mt-4 ms-2'>
                     <div className='col-2'>
@@ -149,8 +150,16 @@ function Pnd() {
 
                 <div className='row2 mt-4'>
                     <div className='col-6'>
-                        <div className='d-flex'>
+                    <div className='d-flex'>
                             <div className='h61'>School Name</div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <span>
+
+                                <input type="text" className="form-control111 mt-1" placeholder=" Enter your class" name='schoolname' value={schoolname} onChange={(e) => setSchoolName(e.target.value)} /></span>
+                        </div>
+<br />
+                        <div className='d-flex'>
+                            <div className='h61'>Class wise enrollment </div>&nbsp;&nbsp;&nbsp;&nbsp;
 
                             <span>
 

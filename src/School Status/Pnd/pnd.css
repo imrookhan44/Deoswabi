@@ -66,6 +66,8 @@
     width: 70%;
     height: 30px;
     margin-top: 5px;
+    outline: none;
+
 }
 
 .bb {
@@ -153,6 +155,66 @@
     display: flex;
 }
 
+.tr-pndtable {
+    font-size: 12px;
+}
+
+.tr-pndtable2 {
+    font-size: 11px;
+    border: none;
+    border: 1px solid;
+
+}
+
+.max-pndtable {
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+.th-pndtable {
+    border: 1px solid;
+
+}
+
+.td-pndtable {
+    border: 1px solid;
+
+}
+
+.td-pndtable1 {
+    padding: 9px;
+    border: 1px solid;
+    height: 25px;
+    text-align: center;
+}
+
+.th-pndtable1 {
+    padding: 5px;
+    border: 1px solid;
+    height: 25px;
+    text-align: center;
+}
+
+.databtn {
+    background-color: #70AD47 !important;
+    border: none !important;
+    width: 10rem;
+    font-weight: bold !important;
+}
+
+.form-control111 {
+    border-radius: 5px;
+    border: none !important;
+    outline: none;
+    height: 1.7rem;
+    width: 10rem;
+    font-size: 12px;
+}
+
+.dateandtime {
+    font-weight: bold;
+}
+
 @media screen and (max-width: 780px) {
     .dropdownss {
         width: 150px;
@@ -168,6 +230,30 @@
     .container-fluid {
         background-color: white;
         height: 100%;
+    }
+
+    .form-control111 {
+        border-radius: 5px;
+        border: none !important;
+        outline: none;
+        height: 1.7rem;
+        width: 6rem;
+        font-size: 11px;
+    }
+
+    .h61 {
+        background-color: #fec619;
+        color: rgb(3, 3, 3);
+        height: 40px;
+        border-radius: 10px;
+        width: 30%;
+        font-size: 11px;
+        text-align: center;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
     }
 
     .dropdownss {
@@ -255,16 +341,18 @@
         display: flex;
     }
 
+
     .time {
-        background-color: white;
+        background-color: #70AD47;
         align-items: center;
         justify-content: center;
         text-align: center;
         display: flex;
-        height: 233px;
-        margin-top: 20px;
-        width: 42%;
-        margin-left: 29px;
+        height: 100px;
+        flex-direction: column;
+        margin-top: 20px;   
+        width: 24%;
+        margin-left: 60px;
     }
 
 
@@ -295,6 +383,14 @@
     .container-fluid {
         background-color: white;
         height: 100%;
+    }
+    .form-control111 {
+        border-radius: 5px;
+        border: none !important;
+        outline: none;
+        height: 1.7rem;
+        width: 5rem;
+        font-size: 6px;
     }
 
     .dropdownss {
@@ -382,33 +478,34 @@
     }
 
     .time {
-        background-color: white;
+        background-color: #70AD47;
         align-items: center;
         justify-content: center;
         text-align: center;
         display: flex;
-        height: 190px;
-        margin-top: 20px;
-        width: 42%;
-        margin-left: 29px;
+        height: 100px;
+        flex-direction: column;
+        margin-top: 20px;   
+        width: 24%;
+        margin-left: 40px;
     }
 
 
 
     .h61 {
         background-color: #fec619;
-        color: white;
-        height: 29px;
+        color: rgb(3, 3, 3);
+        height: 30px;
         border-radius: 10px;
-        width: 35%;
+        width: 80px;
         font-size: 8px;
         text-align: center;
         margin-left: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-weight: bold;
     }
-
     .abc {
         display: flex;
     }
@@ -427,61 +524,3 @@
 
 }
 
-.tr-pndtable {
-    font-size: 12px;
-}
-
-.tr-pndtable2 {
-    font-size: 11px;
-    border: none;
-    border: 1px solid;
-
-}
-
-.max-pndtable {
-    border-collapse: collapse;
-    border: 1px solid;
-}
-
-.th-pndtable {
-    border: 1px solid;
-
-}
-
-.td-pndtable {
-    border: 1px solid;
-
-}
-
-.td-pndtable1 {
-    padding: 9px;
-    border: 1px solid;
-    height: 25px;
-    text-align: center;
-}
-
-.th-pndtable1 {
-    padding: 5px;
-    border: 1px solid;
-    height: 25px;
-    text-align: center;
-}
-
-.databtn {
-    background-color: #70AD47 !important;
-    border: none !important;
-    width: 10rem;
-    font-weight: bold !important;
-}
-
-.form-control111 {
-    border-radius: 5px;
-    border: none !important;
-    outline: none;
-    height: 1.7rem;
-    width: 10rem;
-}
-
-.dateandtime {
-    font-weight: bold;
-}
