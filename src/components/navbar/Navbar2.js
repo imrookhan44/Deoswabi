@@ -8,16 +8,16 @@ function Navbar2() {
     return (
         <div className='navbar-n2'>
             <div className='row-N1 mt-2'>
-              <img onClick={()=>history.push("/")}
-                      style={{ height: "80px", width: "80px" }}
-                      src={logo}
-                      alt="logo"
-                    />
-                    </div>
-                    <div className='row-N2'>
-            <div className="rowfirst" >    بسم الله الرحمن الرحيم
+                <img onClick={() => history.push("/")}
+                    style={{ height: "80px", width: "80px" }}
+                    src={logo}
+                    alt="logo"
+                />
             </div>
- </div>
+            <div className='row-N2'>
+                <div className="rowfirst" >    بسم الله الرحمن الرحيم
+                </div>
+            </div>
         </div>
     )
 }
