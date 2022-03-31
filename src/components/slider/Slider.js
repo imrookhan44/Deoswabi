@@ -3,9 +3,9 @@ import { useHistory } from "react-router";
 import { Carousel, Button, Card, Modal, Row, Col } from "react-bootstrap";
 import "./slider.css";
 import image from "../../assets/images/forpic.png";
-import sliderOne from "../../assets/images/sliderone.jpg";
+import sliderOne from "../../assets/images/sliderOne.jpg";
 import sliderTwo from "../../assets/images/slidertwo.jpg";
-import sliderThree from "../../assets/images/sliderthree.jpg";
+import sliderThree from "../../assets/images/sliderThree.jpg";
 import shahram from "../../assets/images/shahram.jpeg";
 import firebaseDb from "firebase";
 import brainspk from './../../images/brainspkn.png'

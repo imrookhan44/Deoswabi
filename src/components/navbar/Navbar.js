@@ -33,7 +33,7 @@ export default function Home({ admin }) {
                   id="navbarSupportedContent"
                 >
 
-                  
+
                   <div className="mainaabc">
                     <div className="abccc">
 
