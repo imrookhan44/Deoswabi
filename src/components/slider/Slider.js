@@ -32,7 +32,7 @@ const Slider = () => {
       });
   }, []);
   const history = useHistory();
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   return (
     <>
       <Modal
@@ -250,7 +250,6 @@ const Slider = () => {
               </p>
             </div>
           </div>
-          <Footers />
 
         </div>
       </div>
