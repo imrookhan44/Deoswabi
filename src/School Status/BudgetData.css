@@ -1,19 +1,8 @@
-.budgetdatarowschoolbgform{
-display: flex;
-justify-content: center;
-}
-.adfaslkdsjafk{
-    display: none;
-}
-.schoolbudgetformdiv{
-    margin-top: 20px !important;
+* {
 
-    text-align: center;
-    padding: 20px;
+    box-sizing: border-box;
 }
-#divrow{
-    margin: 0px;
-}
-.schoolbudgetformdiv{
-    margin-bottom: 30px;
+
+#table-xls {
+    overflow-x: auto;
 }

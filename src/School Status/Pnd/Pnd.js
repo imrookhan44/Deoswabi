@@ -22,31 +22,12 @@ function Pnd() {
     const [additional, setAdditional] = useState("");
     const [schoolname, setSchoolName] = useState("");
     const [area, setArea] = useState("");
-
     const [itLab, setItLab] = useState("");
-
-
-
-
-
-
-
-
     const addData = (e) => {
         e.preventDefault();
-
-
-
         db.collection("PNDData").add({
-
             schoolname: schoolname,
             classSix: classSix,
-            // classSeven: classSeven,
-            // classEight: classEight,
-            // classNine: classNine,
-            // classTen: classTen,
-            // classEleven: classEleven,
-            // classTwelth: classTwelth,
             boundaryWall: boundaryWall,
             group: group,
             waterSupply: waterSupply,
@@ -60,13 +41,6 @@ function Pnd() {
         });
         setSchoolName("");
         setClassSix("");
-        // setClassSeven("");
-        // setClassEight("");
-        // setClassNine("");
-        // setClassTen("");
-        // setClassEleven("");
-
-        // setClassTwelth("");
         setBoundaryWall("");
         setGroup("");
         setWaterSupply("");
@@ -150,14 +124,14 @@ function Pnd() {
 
                 <div className='row2 mt-4'>
                     <div className='col-6'>
-                    <div className='d-flex'>
+                        <div className='d-flex'>
                             <div className='h61'>School Name</div>&nbsp;&nbsp;&nbsp;&nbsp;
 
                             <span>
 
-                                <input type="text" className="form-control111 mt-1" placeholder=" Enter your class" name='schoolname' value={schoolname} onChange={(e) => setSchoolName(e.target.value)} /></span>
+                                <input type="text" className="form-control111 mt-1" placeholder=" Enter your School Name" name='schoolname' value={schoolname} onChange={(e) => setSchoolName(e.target.value)} /></span>
                         </div>
-<br />
+                        <br />
                         <div className='d-flex'>
                             <div className='h61'>Class wise enrollment </div>&nbsp;&nbsp;&nbsp;&nbsp;
 

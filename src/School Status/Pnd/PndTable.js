@@ -3,23 +3,24 @@ import { Table } from "react-bootstrap"
 import "./pnd.css"
 import { db } from './../../components/firebase'
 
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
 
 function PndTable() {
 
     const [data, setData] = useState([])
-function getdata() {
-    db.collection('PNDData').get().then((snapshot) => {
-        setData(snapshot.docs.map(doc => doc.data()))
+    function getdata() {
+        db.collection('PNDData').get().then((snapshot) => {
+            setData(snapshot.docs.map(doc => doc.data()))
 
-    })
-}
+        })
+    }
     useEffect(() => {
-       getdata()
+        getdata()
     }, [])
     return (
         <div className='conatiner-fluid-pndtable'>
             <div className='container-pndtable'>
-                <Table className='max-pndtable' responsive id="table-to-xls">
+                <Table className='max-pndtable' responsive id="example-table">
 
                     <thead>
                         <tr className='tr-pndtable'>
@@ -111,6 +112,15 @@ function getdata() {
                         </tr>
                     </tbody> */}
                 </Table>
+
+                <ReactHTMLTableToExcel
+                    id="example-table"
+                    className="btn btn-primary  mb-2 offset-5"
+                    table="example-table"
+                    filename="tablexls"
+                    sheet="tablexls"
+                    buttonText="Download as Excel"
+                />
 
             </div>
         </div>

@@ -4,6 +4,7 @@ import "firebase/database";
 import "firebase/firestore";
 import 'firebase/storage';
 const firebaseConfig = {
+
   apiKey: "AIzaSyDKxFOIrlmHD-qy6hMBPsFP1mZlqjC4n0A",
   authDomain: "brainspk.firebaseapp.com",
   databaseURL: "https://brainspk-default-rtdb.firebaseio.com",

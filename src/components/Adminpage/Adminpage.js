@@ -22,7 +22,7 @@ export default function Adminpage() {
   return (
     <div className=" fullcontianerofhome">
 
-      
+
       <Tabs defaultActiveKey="CovidData" id="uncontrolled-tab-example" className="CovidData12 mb-3">
 
         <Tab eventKey="CovidData" title="Covid Data">
@@ -33,7 +33,7 @@ export default function Adminpage() {
         </Tab>
         <Tab eventKey="profile" title="BudgetData">
           <div className="text-center">
-            <h2 className="Headinginadmin">Enter BudgetData</h2>
+            {/* <h2 className="Headinginadmin">Enter BudgetData</h2> */}
           </div>
           <BudgetData />
         </Tab>

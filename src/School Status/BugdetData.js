@@ -1,113 +1,275 @@
 import React, { useState, useEffect } from "react";
-import SchoolBudgetForm from "./SchoolBudgetForm";
-import firebaseDb from "firebase";
+import { db } from "../../src/components/firebase";
+import { Table } from "react-bootstrap";
 import './BudgetData.css'
-
 const BudgetData = () => {
+    const [data, setData] = useState([]);
+    const [emisCode, setEmisCode] = useState("");
+    const [totalBudget, setTotalBudget] = useState("");
+    const [Utilize, setUtilize] = useState("");
+    const [remaining, setRemaining] = useState("");
+    const [TelePhoneBudget, setTelePhoneBudget] = useState("")
+    const [TelePhoneUtilize, setTelePhoneUtilize] = useState("")
+    const [TelePhoneRemaining, setTelePhoneRemaining] = useState("")
+    const [budgetConveyance, setBudgetConveyance] = useState("")
+    const [utilizeConveyance, setUtilizeConveyance] = useState("")
+    const [remainingConveyance, setRemainingConveyance] = useState("")
+    const [TAbudget, setTABudget] = useState("")
+    const [TAutilize, setTAUtilize] = useState("")
+    const [TAremaining, setTARemaining] = useState("")
+    const [pettyBudget, setPettyBudget] = useState("")
+    const [pettyUtilize, setPettyUtilize] = useState("")
+    const [pettyRemaining, setPettyRemaining] = useState("")
+    const [crcBudget, setCrcBudget] = useState("")
+    const [crcUtilize, setCrcUtilize] = useState("")
+    const [crcRemaining, setCrcRemaining] = useState("")
 
-    var [contactObjects, setContactObjects] = useState({})
-    var [currentId, setCurrentId] = useState('')
 
+
+
+    const add = (e) => {
+        e.preventDefault();
+        db.collection("budgetData").add({
+            emisCode: emisCode,
+            totalBudget: totalBudget,
+            Utilize: Utilize,
+            remaining: remaining,
+            TelePhoneBudget: TelePhoneBudget,
+            TelePhoneUtilize: TelePhoneUtilize,
+            TelePhoneRemaining: TelePhoneRemaining,
+            budgetConveyance: budgetConveyance,
+            utilizeConveyance: utilizeConveyance,
+            remainingConveyance: remainingConveyance,
+            TAbudget: TAbudget,
+            TAutilize: TAutilize,
+            TAremaining: TAremaining,
+            pettyBudget: pettyBudget,
+            pettyUtilize: pettyUtilize,
+            pettyRemaining: pettyRemaining,
+            crcBudget: crcBudget,
+            crcUtilize: crcUtilize,
+            crcRemaining: crcRemaining,
+        });
+        setEmisCode("");
+        setTotalBudget("");
+        setUtilize("");
+        setRemaining("");
+        setTelePhoneBudget("");
+        setTelePhoneUtilize("");
+        setTelePhoneRemaining("");
+        setBudgetConveyance("");
+        setUtilizeConveyance("");
+        setRemainingConveyance("");
+        setTABudget("");
+        setTAUtilize("");
+        setTARemaining("");
+        setPettyBudget("");
+        setPettyUtilize("");
+        setPettyRemaining("");
+        setCrcBudget("");
+        setCrcUtilize("");
+        setCrcRemaining("");
+
+
+    }
     useEffect(() => {
-        firebaseDb.database().ref('Budget').on('value', snapshot => {
-            if (snapshot.val() != null)
-                setContactObjects({
-                    ...snapshot.val()
-                })
-            else
-                setContactObjects({})
-        })
-    }, [])// similar to componentDidMount
-
-    const addOrEdit = obj => {
-        if (currentId == '')
-        firebaseDb.database().ref('Budget').push(
-                obj,
-                err => {
-                    if (err)
-                        console.log(err)
-                    else
-                        setCurrentId('')
-                }
-            )
-        else
-        firebaseDb.database().ref(`Budget/${currentId}`).set(
-                obj,
-                err => {
-                    if (err)
-                        console.log(err)
-                    else
-                        setCurrentId('')
-                }
-            )
-    }
-
-    const onDelete = key => {
-        if (window.confirm('Are you sure to delete this record?')) {
-       
-           firebaseDb.database().ref(`Budget/${key}`).remove(
-                err => {
-                    if (err)
-                        console.log(err)
-                    else
-                        setCurrentId('')
-                }
-            )
-        }
-    }
-
+        db.collection("budgetData").onSnapshot((snapshot) => {
+            setData(
+                snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    data: doc.data(),
+                }))
+            );
+        });
+        console.log("budgetData:", data);
+    }, []);
     return (
-        <>
-           
-            <div className="">
-            <div className="row budgetdatarowschoolbgform " id="divrow"  >
-            <div className="col-md-4 col-sm-12 col-xs-12 schoolbudgetformdiv" >
-                    <SchoolBudgetForm {...({ addOrEdit, currentId, contactObjects })} />
+        <div>
+            <div className=" d-flex  flex-column align-items-center ">
+                <div className=" bg-warning p-2 w-25  ">
+                    <h6 className="text-center">Non-Salary Budget</h6>
                 </div>
-                <hr/>
-                <br/>
-                <h2>Budget Data List</h2>
-                <br/>
-                <div className=" schoolbudgetformdiv " style={{overflow: "auto"}} >
-                    <table className="table table-dark " >
-                        <thead className="thead-light">
-                            <tr>
-                                <th>School Name</th>
-                                <th>Total Budget</th>
-                                <th>Spending Budget </th>
-                                <th>Remaining Budget </th>
-                              
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                Object.keys(contactObjects).map(id => {
-                                    return <tr key={id}>
-                                        <td>{contactObjects[id].schoolNames}</td>
-                                        <td>{contactObjects[id].totalBudget}</td>
-                                        <td>{contactObjects[id].spendingBudget}</td>
-                                        <td>{contactObjects[id].remainingBudget}</td>
-                                      
-                                        <td>
-                                            <a className="btn text-primary" onClick={() => { setCurrentId(id) }}>
-                                                <i className="fas fa-pencil-alt">Edit</i>
-                                            </a>
-                                            <a className="btn text-danger" onClick={() => { onDelete(id) }}>
-                                                <i className="far fa-trash-alt">Delete</i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                })
-                            }
-                        </tbody>
-                    </table>
+                <div className="mt-4 mb-3">
+                    <input type="number" placeholder="Emis Code" value={emisCode}
+                        onChange={(e) => setEmisCode(e.target.value)}
+                    />
+                </div>
+            </div>
+            <div className="row mt-2">
+                <div className="col-3 ">
+                    <span className="bg-primary p-1 ms-5">Electricity</span>
 
                 </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Total Budget" value={totalBudget}
+                        onChange={(e) => setTotalBudget(e.target.value)} />
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Utilize" value={Utilize}
+                        onChange={(e) => setUtilize(e.target.value)} />
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Remaining" value={remaining}
+                        onChange={(e) => setRemaining(e.target.value)} />
+                </div>
+
             </div>
+            <div className="row mt-2">
+                <div className="col-3 ">
+                    <span className="bg-primary p-1  ms-5">TelePhone</span>
+
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Total Budget" value={TelePhoneBudget}
+                        onChange={(e) => setTelePhoneBudget(e.target.value)} />
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Utilize" value={TelePhoneUtilize}
+                        onChange={(e) => setTelePhoneUtilize(e.target.value)} />
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Remaining" value={TelePhoneRemaining}
+                        onChange={(e) => setTelePhoneRemaining(e.target.value)} />
+                </div>
+
             </div>
-        </>
+            <div className="row mt-2">
+                <div className="col-3 ">
+                    <span className="bg-primary p-1 ms-5">Conveyance</span>
+
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Total Budget" value={budgetConveyance}
+                        onChange={(e) => setBudgetConveyance(e.target.value)} />
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Utilize" value={utilizeConveyance}
+                        onChange={(e) => setUtilizeConveyance(e.target.value)} />
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Remaining" value={remainingConveyance}
+                        onChange={(e) => setRemainingConveyance(e.target.value)} />
+                </div>
+
+            </div>
+            <div className="row mt-2">
+                <div className="col-3 ">
+                    <span className="bg-primary p-1 ms-5">TA/DA</span>
+
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Total Budget" value={TAbudget}
+                        onChange={(e) => setTABudget(e.target.value)} />
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Utilize" value={TAutilize}
+                        onChange={(e) => setTAUtilize(e.target.value)} />
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Remaining" value={TAremaining}
+                        onChange={(e) => setTARemaining(e.target.value)} />
+                </div>
+
+            </div>
+            <div className="row mt-2">
+                <div className="col-3 ">
+                    <span className="bg-primary p-1 w-25 ms-5">Petty Repair</span>
+
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Total Budget" value={pettyBudget}
+                        onChange={(e) => setPettyBudget(e.target.value)} />
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Utilize" value={pettyUtilize}
+                        onChange={(e) => setPettyUtilize(e.target.value)} />
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Remaining" value={pettyRemaining}
+                        onChange={(e) => setPettyRemaining(e.target.value)} />
+                </div>
+
+            </div>
+            <div className="row mt-2">
+                <div className="col-3  w-25">
+                    <span className="bg-primary p-1  ms-5">CRC</span>
+
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Total Budget" value={crcBudget} onChange={(e) => setCrcBudget(e.target.value)} />
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Utilize" value={crcUtilize} onChange={(e) => setCrcUtilize(e.target.value)} />
+                </div>
+                <div className="col-3">
+                    <input type="number" placeholder="Remaining" value={crcRemaining} onChange={(e) => setCrcRemaining(e.target.value)} />
+                </div>
+
+            </div>
+
+            <div className="d-flex justify-content-center">
+                <button className="mt-3 mb-2 btn btn-success" onClick={add}>Save</button>
+            </div>
+
+            <Table striped bordered hover responsive id="table-xls">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Electricity Budget</th>
+                        <th>Utilize</th>
+                        <th>Remaining</th>
+                        <th>Telephone Budget</th>
+                        <th>Utilize</th>
+                        <th>Remaining</th>
+                        <th>Conveyance Budget</th>
+                        <th>Utilize</th>
+                        <th>Remaining</th>
+                        <th>TA/DA Budget</th>
+                        <th>Utilize</th>
+                        <th>Remaining</th>
+                        <th>Petty Repair Budget</th>
+                        <th>Utilize</th>
+                        <th>Remaining</th>
+                        <th>CRC Total Budget</th>
+                        <th>Utilize</th>
+                        <th>Remaining</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {
+                        data.map((item, index) => {
+                            return (
+                                <tr key={index}>
+                                    <td>{index + 1}</td>
+                                    <td>{item?.data.totalBudget}</td>
+                                    <td>{item?.data.Utilize}</td>
+                                    <td>{item?.data.remaining}</td>
+                                    <td>{item?.data.TelePhoneBudget}</td>
+                                    <td>{item?.data.TelePhoneUtilize}</td>
+                                    <td>{item?.data.TelePhoneRemaining}</td>
+                                    <td>{item?.data.budgetConveyance}</td>
+                                    <td>{item?.data.utilizeConveyance}</td>
+                                    <td>{item?.data.remainingConveyance}</td>
+                                    <td>{item?.data.TAbudget}</td>
+                                    <td>{item?.data.TAutilize}</td>
+                                    <td>{item?.data.TAremaining}</td>
+                                    <td>{item?.data.pettyBudget}</td>
+                                    <td>{item?.data.pettyUtilize}</td>
+                                    <td>{item?.data.pettyRemaining}</td>
+                                    <td>{item?.data.crcBudget}</td>
+                                    <td>{item?.data.crcUtilize}</td>
+                                    <td>{item?.data.crcRemaining}</td>
+                                </tr>
+                            )
+                        })
+                    }
+                </tbody>
+
+            </Table>
+        </div>
     );
+
 }
 
 export default BudgetData;

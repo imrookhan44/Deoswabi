@@ -110,7 +110,7 @@ const Contacts = () => {
             <h2>Covid(19) Data List</h2>
             <div className="tabledivcon tacts "  >
                 <div className="tablediv" style={{ overflow: "auto" }}>
-                    <table className="table table-dark" id="table-to-xls"
+                    <table className="table table-dark" id="table-to-xlss"
                     >
                         <thead className="" >
                             <tr>
@@ -148,8 +148,8 @@ const Contacts = () => {
                         </tbody>
                     </table>
                     <ReactHTMLTableToExcel
-                        id="table-to-xls"
-                        className="download-table-xls-button"
+                        id="table-to-xlss"
+                        className="btn btn-outline-success mb-2 offset-5"
                         table="table-to-xls"
                         filename="tablexls"
                         sheet="tablexls"
