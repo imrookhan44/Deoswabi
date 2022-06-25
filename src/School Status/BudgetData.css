@@ -6,3 +6,10 @@
 #table-xls {
     overflow-x: auto;
 }
+
+.tableBudget {
+    width: 90% !important;
+    overflow: scroll;
+    /* border: solid 1px; */
+
+}

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../../src/components/firebase";
 import { Table } from "react-bootstrap";
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
+
 import './BudgetData.css'
 const BudgetData = () => {
     const [data, setData] = useState([]);
@@ -83,6 +85,7 @@ const BudgetData = () => {
         });
         console.log("budgetData:", data);
     }, []);
+
     return (
         <div>
             <div className=" d-flex  flex-column align-items-center ">
@@ -210,63 +213,78 @@ const BudgetData = () => {
             <div className="d-flex justify-content-center">
                 <button className="mt-3 mb-2 btn btn-success" onClick={add}>Save</button>
             </div>
+            <div id="budgetData">
+                <Table className="tableBudget" striped bordered hover responsive id="tableBudget" style={{ border: "solid 1px" }}>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>EMiS Code</th>
+                            <th>Electricity Budget</th>
+                            <th>Utilize</th>
+                            <th>Remaining</th>
+                            <th>Telephone Budget</th>
+                            <th>Utilize</th>
+                            <th>Remaining</th>
+                            <th>Conveyance Budget</th>
+                            <th>Utilize</th>
+                            <th>Remaining</th>
+                            <th>TA/DA Budget</th>
+                            <th>Utilize</th>
+                            <th>Remaining</th>
+                            <th>Petty Repair Budget</th>
+                            <th>Utilize</th>
+                            <th>Remaining</th>
+                            <th>CRC Total Budget</th>
+                            <th>Utilize</th>
+                            <th>Remaining</th>
+                        </tr>
+                    </thead>
 
-            <Table striped bordered hover responsive id="table-xls">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Electricity Budget</th>
-                        <th>Utilize</th>
-                        <th>Remaining</th>
-                        <th>Telephone Budget</th>
-                        <th>Utilize</th>
-                        <th>Remaining</th>
-                        <th>Conveyance Budget</th>
-                        <th>Utilize</th>
-                        <th>Remaining</th>
-                        <th>TA/DA Budget</th>
-                        <th>Utilize</th>
-                        <th>Remaining</th>
-                        <th>Petty Repair Budget</th>
-                        <th>Utilize</th>
-                        <th>Remaining</th>
-                        <th>CRC Total Budget</th>
-                        <th>Utilize</th>
-                        <th>Remaining</th>
-                    </tr>
-                </thead>
+                    <tbody>
+                        {
+                            data.map((item, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>{index + 1}</td>
+                                        <td>{item?.data.emisCode}</td>
+                                        <td>{item?.data.totalBudget}</td>
+                                        <td>{item?.data.Utilize}</td>
+                                        <td>{item?.data.remaining}</td>
+                                        <td>{item?.data.TelePhoneBudget}</td>
+                                        <td>{item?.data.TelePhoneUtilize}</td>
+                                        <td>{item?.data.TelePhoneRemaining}</td>
+                                        <td>{item?.data.budgetConveyance}</td>
+                                        <td>{item?.data.utilizeConveyance}</td>
+                                        <td>{item?.data.remainingConveyance}</td>
+                                        <td>{item?.data.TAbudget}</td>
+                                        <td>{item?.data.TAutilize}</td>
+                                        <td>{item?.data.TAremaining}</td>
+                                        <td>{item?.data.pettyBudget}</td>
+                                        <td>{item?.data.pettyUtilize}</td>
+                                        <td>{item?.data.pettyRemaining}</td>
+                                        <td>{item?.data.crcBudget}</td>
+                                        <td>{item?.data.crcUtilize}</td>
+                                        <td>{item?.data.crcRemaining}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
 
-                <tbody>
-                    {
-                        data.map((item, index) => {
-                            return (
-                                <tr key={index}>
-                                    <td>{index + 1}</td>
-                                    <td>{item?.data.totalBudget}</td>
-                                    <td>{item?.data.Utilize}</td>
-                                    <td>{item?.data.remaining}</td>
-                                    <td>{item?.data.TelePhoneBudget}</td>
-                                    <td>{item?.data.TelePhoneUtilize}</td>
-                                    <td>{item?.data.TelePhoneRemaining}</td>
-                                    <td>{item?.data.budgetConveyance}</td>
-                                    <td>{item?.data.utilizeConveyance}</td>
-                                    <td>{item?.data.remainingConveyance}</td>
-                                    <td>{item?.data.TAbudget}</td>
-                                    <td>{item?.data.TAutilize}</td>
-                                    <td>{item?.data.TAremaining}</td>
-                                    <td>{item?.data.pettyBudget}</td>
-                                    <td>{item?.data.pettyUtilize}</td>
-                                    <td>{item?.data.pettyRemaining}</td>
-                                    <td>{item?.data.crcBudget}</td>
-                                    <td>{item?.data.crcUtilize}</td>
-                                    <td>{item?.data.crcRemaining}</td>
-                                </tr>
-                            )
-                        })
-                    }
-                </tbody>
+                </Table>
+            </div>
 
-            </Table>
+            <ReactHTMLTableToExcel
+                id="tableBudget"
+                className="btn btn-primary  mb-2 offset-5"
+                table="tableBudget"
+                filename="tablexls"
+                sheet="tablexls"
+                buttonText="Download as Excel"
+            />
+
+
+
         </div>
     );
 

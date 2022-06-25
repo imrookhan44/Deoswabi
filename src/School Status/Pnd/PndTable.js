@@ -21,18 +21,19 @@ function PndTable() {
         <div className='conatiner-fluid-pndtable'>
             <div className='container-pndtable'>
                 <Table className='max-pndtable' responsive id="example-table">
-
                     <thead>
                         <tr className='tr-pndtable'>
                             <th className='th-pndtable' >S.No</th>
                             <th className='th-pndtable'>School Name</th>
                             <th className='th-pndtable'>Class wise enrollement
                                 <br />
-                                {/* <th className='th-pndtable1'>6th</th>
+                                <th className='th-pndtable1'>6th</th>
                                 <th className='th-pndtable1'>7th</th>
                                 <th className='th-pndtable1'>8th</th>
                                 <th className='th-pndtable1'>9th</th>
-                                <th className='th-pndtable1'>10th</th> */}
+                                <th className='th-pndtable1'>10th</th>
+                                <th className='th-pndtable1'>11th</th>
+                                <th className='th-pndtable1'>12th</th>
                             </th>
                             <th className='th-pndtable'>Boundary wall</th>
                             <th className='th-pndtable'>Group latrine</th>
@@ -52,12 +53,8 @@ function PndTable() {
                                     <tr className='tr-pndtable'>
                                         <td className='td-pndtable'>{index + 1}</td>
                                         <td className='td-pndtable'>{item.schoolname}</td>
-                                        <td className='td-pndtable'>{item.classSix}</td>
-                                        {/* <td className='td-pndtable1'>{item.sixth}</td>
-                                        <td className='td-pndtable1'>{item.seventh}</td>
-                                        <td className='td-pndtable1'>{item.eighth}</td>
-                                        <td className='td-pndtable1'>{item.ninth}</td>
-                                        <td className='td-pndtable1'>{item.tenth}</td> */}
+                                        <td className='td-pndtable' id='classWise'>{item.classSix}  | {item.classSeven} | {item.classEight} | {item.classNine} | {item.classTen} | {item.classEleven} | {item.classTwelth}</td>
+
                                         <td className='td-pndtable'>{item.boundaryWall}</td>
                                         <td className='td-pndtable'>{item.group}</td>
                                         <td className='td-pndtable'>{item.waterSupply}</td>

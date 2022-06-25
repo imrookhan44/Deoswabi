@@ -4,25 +4,25 @@
   margin: 0;
 }
 
-.navbar-n2{
+.navbar-n2 {}
 
-}
-.row-N2{
+.row-N2 {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.row-N1{
-  display: flex;
+
+.row-N1 {
+  /* display: flex; */
   /* justify-content: center; */
-  width: 40vh;
+  /* width: 40vh; */
 }
 
 .rowfirst {
   display: flex;
   justify-content: center;
   color: white;
-  font-size:30px;
+  font-size: 30px;
   font-family: 'KFGQPC Uthman Taha Naskh',
     "KFGQPC_Naskh",
     'traditional arabic';
@@ -42,16 +42,13 @@
 
 }
 
-.rowfirst
-{
-   text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #f0eff1 0%,
-    #fcf04c 29%,
-    #55fd50 67%,
-    #fff800 100%
-  );
+.rowfirst {
+  text-transform: uppercase;
+  background-image: linear-gradient(-225deg,
+      #f0eff1 0%,
+      #fcf04c 29%,
+      #55fd50 67%,
+      #fff800 100%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -62,10 +59,10 @@
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: flex;
-      font-size: 30px;
-      text-align: center;
-      justify-content: center;
-      margin-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 @keyframes textclip {
@@ -80,9 +77,15 @@
   background: red;
   animation: mymove 10s infinite;
 }
+
 @keyframes mymove {
-  from {background-color: #212529;}
-  to {background-color: rgb(21, 21, 78);}
+  from {
+    background-color: #212529;
+  }
+
+  to {
+    background-color: rgb(21, 21, 78);
+  }
 }
 
 #first,
@@ -99,26 +102,28 @@
 }
 
 .nav-item:hover {
-  border-bottom: solid 1px #fec619;
+  /* border-bottom: solid 1px #fec619; */
+  background-color: #868586;
+
 }
 
 nav-item .Logout {
   background-color: white;
   border-radius: 10px;
-  margin: auto;
+  /* margin: auto; */
 }
 
-.aabc{
+.aabc {
   display: flex;
-  justify-content: end;
-  margin-left: -37%;
+  /* justify-content: end; */
+  /* margin-left: -37%; */
 }
 
-.mainaabc{
-  margin-left: 30%;
+.mainaabc {
+  /* margin-left: 30%; */
 }
 
 .nav {
 
-  margin-right: 4.5rem !important;
+  /* margin-right: 4.5rem !important; */
 }

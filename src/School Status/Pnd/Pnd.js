@@ -7,12 +7,12 @@ function Pnd() {
 
     const [data, setData] = useState([]);
     const [classSix, setClassSix] = useState("");
-    // const [classSeven, setClassSeven] = useState("");
-    // const [classEight, setClassEight] = useState("");
-    // const [classNine, setClassNine] = useState("");
-    // const [classTen, setClassTen] = useState("");
-    // const [classEleven, setClassEleven] = useState("");
-    // const [classTwelth, setClassTwelth] = useState("");
+    const [classSeven, setClassSeven] = useState("");
+    const [classEight, setClassEight] = useState("");
+    const [classNine, setClassNine] = useState("");
+    const [classTen, setClassTen] = useState("");
+    const [classEleven, setClassEleven] = useState("");
+    const [classTwelth, setClassTwelth] = useState("");
     const [boundaryWall, setBoundaryWall] = useState("");
     const [group, setGroup] = useState("");
     const [waterSupply, setWaterSupply] = useState("");
@@ -23,11 +23,19 @@ function Pnd() {
     const [schoolname, setSchoolName] = useState("");
     const [area, setArea] = useState("");
     const [itLab, setItLab] = useState("");
+
+
     const addData = (e) => {
         e.preventDefault();
         db.collection("PNDData").add({
             schoolname: schoolname,
             classSix: classSix,
+            classSeven: classSeven,
+            classEight: classEight,
+            classNine: classNine,
+            classTen: classTen,
+            classEleven: classEleven,
+            classTwelth: classTwelth,
             boundaryWall: boundaryWall,
             group: group,
             waterSupply: waterSupply,
@@ -41,6 +49,12 @@ function Pnd() {
         });
         setSchoolName("");
         setClassSix("");
+        setClassSeven("");
+        setClassEight("");
+        setClassNine("");
+        setClassTen("");
+        setClassEleven("");
+        setClassTwelth("");
         setBoundaryWall("");
         setGroup("");
         setWaterSupply("");
@@ -53,8 +67,6 @@ function Pnd() {
         setDate44("");
 
     };
-
-
     const date = new Date();
     const day = date.getDate();
     const month = date.getMonth() + 1;
@@ -64,20 +76,17 @@ function Pnd() {
     const [date44, setDate44] = useState(today);
     // console.log("date44:", date44);
 
-
     return (
         <div>
             <div className='container-pnd'>
                 <br />
                 <div className='pd'><h2>P & D</h2></div>
 
-                {/* <div className='rows-pnd mt-4 ms-2'>
+                <div className='rows-pnd mt-4 ms-2'>
                     <div className='col-2'>
                         <b className='bb'>6th</b>
                         <input className="place" name='classSix' type="text" value={classSix}
                             onChange={(e) => setClassSix(e.target.value)}
-
-
                         />
                     </div>
                     <div className='col-2'>
@@ -116,11 +125,12 @@ function Pnd() {
 
                     </div>
                     <div className='col-2'>
-                        <b className='bb'>12th</b></div>
-                    <input className="place" type="text" name='classTwelth' value={classTwelth}
-                        onChange={(e) => setClassTwelth(e.target.value)}
-                    />
-                </div> */}
+                        <b className='bb'>12th</b>
+                        <input className="place" type="text" name='classTwelth' value={classTwelth}
+                            onChange={(e) => setClassTwelth(e.target.value)}
+                        />
+                    </div>
+                </div>
 
                 <div className='row2 mt-4'>
                     <div className='col-6'>
@@ -132,13 +142,13 @@ function Pnd() {
                                 <input type="text" className="form-control111 mt-1" placeholder=" Enter your School Name" name='schoolname' value={schoolname} onChange={(e) => setSchoolName(e.target.value)} /></span>
                         </div>
                         <br />
-                        <div className='d-flex'>
+                        {/* <div className='d-flex'>
                             <div className='h61'>Class wise enrollment </div>&nbsp;&nbsp;&nbsp;&nbsp;
 
                             <span>
 
                                 <input type="text" className="form-control111 mt-1" placeholder=" Enter your class" name='classSix' value={classSix} onChange={(e) => setClassSix(e.target.value)} /></span>
-                        </div>
+                        </div> */}
 
 
                         <br />
@@ -148,19 +158,16 @@ function Pnd() {
                             <div className="boundarywall">
                                 <select className="dropdownss  ms-3" onChange={(e) => setBoundaryWall(e.target.value)}
                                     value={boundaryWall}>
-
                                     <option className="abc" value="Select" > select </option>
                                     <option className="abc" value="Upraising">Upraising</option>
                                     <option className="abc" value="Reconstruction">Reconstruction</option>
                                     <option className="abc" value="New">New</option>
+                                    <option className="abc" value="N/A">N/A</option>
                                 </select>
                             </div>
-
                         </div>
-
                         <div className='wall mt-2'>
-                            < h6 className="h61">Group latrine</ h6>
-
+                            <h6 className="h61">Group latrine</ h6>
                             <div className="latrine">
                                 <select className="dropdownss  ms-3" onChange={(e) => setGroup(e.target.value)}
                                     value={group}>
@@ -169,6 +176,8 @@ function Pnd() {
                                     <option className="abc" value="Upraising">Upraising</option>
                                     <option className="abc" value="Reconstruction">Reconstruction</option>
                                     <option className="abc" value="New">New</option>
+                                    <option className="abc" value="N/A">N/A</option>
+
                                 </select>
                             </div>
 
@@ -183,6 +192,8 @@ function Pnd() {
                                     <option className="abc" value="Select" > select </option>
                                     <option className="abc" value="Repair">Repair</option>
                                     <option className="abc" value="New">New</option>
+                                    <option className="abc" value="N/A">N/A</option>
+
                                 </select>
                             </div>
                         </div>
@@ -196,6 +207,8 @@ function Pnd() {
                                     <option className="abc" value="Select" > select </option>
                                     <option className="abc" value="Yes">Yes</option>
                                     <option className="abc" value="No">No</option>
+                                    <option className="abc" value="N/A">N/A</option>
+
                                 </select>
                             </div>
 
@@ -210,6 +223,8 @@ function Pnd() {
                                     <option className="abc" value="Select" > select </option>
                                     <option className="abc" value="Repair">Repair</option>
                                     <option className="abc" value="New">New</option>
+                                    <option className="abc" value="N/A">N/A</option>
+
                                 </select>
                             </div>
                         </div>

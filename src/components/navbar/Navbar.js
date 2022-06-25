@@ -34,149 +34,158 @@ export default function Home({ admin }) {
                 >
 
 
-                  <div className="mainaabc">
-                    <div className="abccc">
 
-                      <ul className="navbar-nav">
-                        <li className="nav-item active">
-                          {!admin && (
-                            <Link className="nav-link" to="/Home" id="first">
-                              {" "}
-                              Home{" "}
-                            </Link>
-                          )}
+                  <div className="abccc">
 
-                        </li>
-                        <li className="nav-item">
-                          {admin && (
-                            <Link className="nav-link" to="importLink" id="ten">
-                              Upload Links
-                            </Link>
-                          )}
-                        </li>
-                        <li className="nav-item">
-                          {admin && (
-                            <Link className="nav-link" to="navbarLink" id="ten">
-                              Links
-                            </Link>
-                          )}
-                        </li>
-                        <li className="nav-item">
-                          {admin && (
-                            <Link className="nav-link" to="ImageUpload" id="ten">
-                              Upload Files
-                            </Link>
-                          )}
-                        </li>
+                    <ul className="navbar-nav">
+                      <li className="nav-item active">
+                        {!admin && (
+                          <Link className="nav-link" to="/Home" id="first">
+                            {" "}
+                            Home{" "}
+                          </Link>
+                        )}
 
-                        <li className="nav-item">
+                      </li>
+                      <li className="nav-item">
+                        {admin && (
+                          <Link className="nav-link" to="importLink" id="ten">
+                            Upload Links
+                          </Link>
+                        )}
+                      </li>
+                      <li className="nav-item">
+                        {admin && (
+                          <Link className="nav-link" to="navbarLink" id="ten">
+                            Links
+                          </Link>
+                        )}
+                      </li>
+                      <li className="nav-item">
+                        {admin && (
+                          <Link className="nav-link" to="ImageUpload" id="ten">
+                            Upload Files
+                          </Link>
+                        )}
+                      </li>
+
+                      <li className="nav-item">
 
 
-                          {admin && (
-                            <Link className="nav-link" to="news" id="sixth">
-                              News
-                            </Link>
-                          )}
-                        </li>
-                        <li className="nav-item">
-                          {admin && (
-                            <Link className="nav-link" to="adminPage" id="sixth">
-                              School Status
-                            </Link>
-                          )}
-                        </li>
-                        <li className="nav-item">
-                          {admin && (
-                            <Link className="nav-link" to="manageUser" id="sixth">
-                              ManageUsers
-                            </Link>
-                          )}
-                        </li>
-                        <li className="nav-item">
-                          {admin && (
-                            <Link className="nav-link" to="Download" id="ten">
-                              Download
-                            </Link>
-                          )}
-                        </li>
-                        <li className="nav-item">
-                          {!admin && (
-                            <Link
-                              className="nav-link"
-                              to="SchoolStatus"
-                              id="second"
-                            >
-                              School Status
-                            </Link>
-                          )}
-                        </li>
-                        <li className="nav-item">
-                          {admin && (
-                            <Link
-                              className="nav-link"
-                              to="AllData"
-                              id="second"
-
-                            >
-                              All Data
-                            </Link>
-                          )}
-                        </li>
-                        <li className="nav-item">
-                          {admin && (
-                            <Link
-                              className="nav-link"
-                              to="attendance"
-                              id="second"
-                            >
-                              Attendance
-                            </Link>
-                          )}
-                        </li>
-                        <li className="nav-item">
-                          {!admin && (
-                            <Link
-                              className="nav-link"
-                              to="attendance1"
-                              id="second"
-                            >
-                              Attendance
-                            </Link>
-                          )}
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="aabc">
-                      {auth?.currentUser?.uid && (
-                        <NavDropdown
-                          title={auth?.currentUser?.email} className="Logout"  >
-                          <NavDropdown.Item
-                            onClick={() => {
-                              auth?.signOut().then(res => console.log("sign out res ", res)).catch(e => console.error(e))
-                              history.push("/login")
-                              console.log("signOut:", currentUser)
-                              window.location.reload();
-                            }}
+                        {admin && (
+                          <Link className="nav-link" to="news" id="sixth">
+                            News
+                          </Link>
+                        )}
+                      </li>
+                      <li className="nav-item">
+                        {admin && (
+                          <Link className="nav-link" to="adminPage" id="sixth">
+                            School Status
+                          </Link>
+                        )}
+                      </li>
+                      <li className="nav-item">
+                        {admin && (
+                          <Link className="nav-link" to="manageUser" id="sixth">
+                            ManageUsers
+                          </Link>
+                        )}
+                      </li>
+                      <li className="nav-item">
+                        {admin && (
+                          <Link className="nav-link" to="Download" id="ten">
+                            Download
+                          </Link>
+                        )}
+                      </li>
+                      <li className="nav-item">
+                        {!admin && (
+                          <Link
+                            className="nav-link"
+                            to="SchoolStatus"
+                            id="second"
                           >
-                            Logout
-                          </NavDropdown.Item>
-                        </NavDropdown>
-                      )}
-                      &nbsp;
-                      <div className="logaandSign" >
-                        <button type="button" className="btn btn-primary me-2"
-                          onClick={() => {
-                            history.push("userDetails");
-                          }}
-                        >Sign-up</button>&nbsp;
-                        <button type="button" className="btn btn-outline-primary me-2"
+                            School Status
+                          </Link>
+                        )}
+                      </li>
+                      <li className="nav-item">
+                        {admin && (
+                          <Link
+                            className="nav-link"
+                            to="AllData"
+                            id="second"
 
+                          >
+                            All Data
+                          </Link>
+                        )}
+                      </li>
+                      <li className="nav-item">
+                        {admin && (
+                          <Link
+                            className="nav-link"
+                            to="attendance"
+                            id="second"
+                          >
+                            Attendance
+                          </Link>
+                        )}
+                      </li>
+                      <li className="nav-item">
+                        {!admin && (
+                          <Link
+                            className="nav-link"
+                            to="attendance1"
+                            id="second"
+                          >
+                            Attendance
+                          </Link>
+                        )}
+                      </li>
+                      <li className="nav-item">
+                        {!admin && (
+                          <Link
+                            className="nav-link"
+                            to="donation"
+                            id="second"
+                          >
+                            Donation
+                          </Link>
+                        )}
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="aabc" style={{ backgroundColor: "white" }}>
+                    {auth?.currentUser?.uid && (
+                      <NavDropdown
+                        title={auth?.currentUser?.email} className="Logout"  >
+                        <NavDropdown.Item
                           onClick={() => {
-                            history.push("login");
+                            auth?.signOut().then(res => console.log("sign out res ", res)).catch(e => console.error(e))
+                            history.push("/login")
+                            console.log("signOut:", currentUser)
+                            window.location.reload();
                           }}
-                        >Login</button>
-                      </div>
-                    </div>
+                        >
+                          Logout
+                        </NavDropdown.Item>
+                      </NavDropdown>
+                    )}
+                  </div>&nbsp;
+                  <div className="logaandSign" >
+                    <button type="button" className="btn btn-info mx-2"
+                      onClick={() => {
+                        history.push("userDetails");
+                      }}
+                    >Sign-up</button>
+                    <button type="button" className="btn btn-outline-info "
+
+                      onClick={() => {
+                        history.push("login");
+                      }}
+                    >Login</button>
                   </div>
                 </div>
               </Navbar.Collapse>

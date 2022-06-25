@@ -23,6 +23,7 @@ import NotAdmin from "../NotAdmin";
 import Attendance from "../attendance/Attendance";
 import Attendance1 from "../attendance/Attendance1";
 import PndTable from "../../School Status/Pnd/PndTable";
+import Donation from "../donation/Donation";
 
 function Routes(props) {
 
@@ -53,6 +54,7 @@ function Routes(props) {
       <SecuredRoute path="/importLink" component={ImportLink} userDetails={userDetails} />
       <SecuredRoute path="/attendance" component={Attendance} userDetails={userDetails} />
       <Route path="/navbarLink" component={NavbarLink} />
+      <Route path="/donation" component={Donation} />
       <SecuredRoute path="/manageUser" component={ManageUser} userDetails={userDetails} />
       <Route path="/" component={Slider} />
       <Route path="admin" component={isLoggedIn ? Adminpage : Admin} />

@@ -3,7 +3,6 @@ import ContactForm from "./ContactForm"
 import firebaseDb from "firebase";
 import { auth, db } from "./../components/firebase"
 import ReactHTMLTableToExcel from "react-html-table-to-excel";
-
 import './Contacts.css'
 const Contacts = () => {
     var [contactObjects, setContactObjects] = useState({})
